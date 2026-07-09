@@ -17,4 +17,4 @@ Static HTML website for **dream-team.biz**, hosted on GitHub Pages. Created by B
 ## Deployment
 
 GitHub Pages serves from the `main` branch root (`.nojekyll` present, no build step). Live at:
-https://dream-team-biz.github.io/dreamteam-public-web/
+https://www.dream-team.biz/
