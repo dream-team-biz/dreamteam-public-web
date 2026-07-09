@@ -251,12 +251,13 @@
             DreamTeam is launching soon for enterprises around the world.
             Leave your email and we'll notify you the moment it's available.
           </p>
-          <!-- Third-party form backend: FormSubmit (formsubmit.co) -->
-          <form class="notify-form" action="https://formsubmit.co/boris@daich.biz" method="POST">
-            <input type="hidden" name="_subject" value="DreamTeam launch notification signup">
-            <input type="hidden" name="_next" value="https://dream-team-biz.github.io/dreamteam-public-web/thanks.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
+          <!-- Third-party form backend: Web3Forms (web3forms.com) -->
+          <form class="notify-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="bb5c01a9-a874-480c-98c6-1fab0a289935">
+            <input type="hidden" name="subject" value="DreamTeam launch notification signup">
+            <input type="hidden" name="from_name" value="DreamTeam Website">
+            <input type="hidden" name="redirect" value="https://dream-team-biz.github.io/dreamteam-public-web/thanks.html">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <input type="email" name="email" placeholder="you@company.com" required>
             <button type="submit">Notify me</button>
           </form>
