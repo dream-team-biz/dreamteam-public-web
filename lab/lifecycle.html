@@ -4,61 +4,441 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
   <title>The Dream Team Life Cycle — DreamTeam Lab</title>
-  <meta name="description" content="The Dream Team Life Cycle: an AI-driven software development cycle with humans in control.">
+  <meta name="description" content="The Dream Team Life Cycle: you decide at set points, and AI agents do the work in between. One real task, measured end to end, and how control works.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="index.html">DreamTeam <span class="lab">Lab</span></a>
+      <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
       <nav class="site-nav" aria-label="Main">
         <a href="lifecycle.html" aria-current="page">The Life Cycle</a>
-        <a href="program.html">Your Dream Team in 8 weeks</a>
+        <a href="program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
-        <a class="btn btn-primary" href="index.html#contact">Talk to us</a>
       </nav>
+      <a class="btn btn-primary header-cta" href="index.html#contact">Talk to us</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-head">
-      <div class="wrap">
-        <h1>The Dream Team Life Cycle</h1>
-        <p>An AI-driven software development cycle with humans in control.</p>
+    <section class="page-head" aria-labelledby="page-title">
+      <div class="wrap head-84">
+        <div class="head-main">
+          <h1 id="page-title">The Dream Team Life Cycle</h1>
+          <p class="lead">You decide at set points — the vision, the plan, each task's start and its result — and AI agents do the work in between.</p>
+          <p class="gets"><strong>What it is:</strong> the method DreamTeam runs — AI agents built for companies with their own engineering team, with the engineers in control. An idea becomes a vision, a plan and tasks; each task is built, reviewed, tested and merged through CI.</p>
+        </div>
+        <div class="head-side">
+          <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+          <a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
-    <section class="section slim" aria-labelledby="team-title">
-      <div class="wrap">
-        <p class="status"><strong>Still to come:</strong> the full life-cycle diagrams and a walk through each&nbsp;stage.</p>
-        <h2 id="team-title">You approve the vision, the plan, each task's readiness and the&nbsp;result</h2>
-        <figure style="margin:0 auto; max-width:880px">
-          <picture>
-            <source media="(min-width: 768px)" srcset="diagrams/team-wide.svg" width="880" height="558">
-            <img src="diagrams/team-narrow.svg" width="360" height="900" alt="The engineer in control approves the vision, the plan, each task's readiness and the result. An orchestrator agent hands the work to specialist AI agents, who report back to it. They are an architect, backend and frontend developers, DevOps, a reviewer with no editing tools, a tester and a technical writer. The agents do not hand work to each other." style="display:block; margin:0 auto">
-          </picture>
-          <figcaption class="runlog-caption" style="margin-top:12px">You approve the vision, the plan, each task's readiness and the result; in between, an orchestrator agent hands the work to specialist AI agents. Generated from DreamTeam's own agent and step definitions as of 4 October 2026.</figcaption>
+    <section class="section" aria-labelledby="proof-title">
+      <div class="wrap stack">
+        <p class="sec-label">01 · An example</p>
+        <div class="record frame">
+          <header class="record-head">
+            <p class="fig-tag">Fig. 1 · The record</p>
+            <h2 id="proof-title">One real task, measured end to end</h2>
+            <p class="record-source"><span class="task-id">T-707</span> · a DreamTeam feature, built by DreamTeam · the engineer: Alex Rapoport, our founder · 18–19 September 2026 · UTC</p>
+          </header>
+          <p class="record-goal"><span class="k">The task's goal:</span> give every task dependency a kind and a reason <span class="gloss">so our task board says why one task waits for another</span></p>
+
+          <figure class="rchart bp" aria-labelledby="rc-takeaway">
+            <div class="rchart-grid">
+              <div class="rchart-lanes" aria-hidden="true"><span>Stage</span><span>Elapsed</span><span>Who</span></div>
+              <ol class="rchart-rail" role="list" aria-label="T-707's stages, the time between them, and who worked in each" style="--rc-cols: 1fr 1fr .62fr 1.6fr 1fr .9fr .9fr 1fr .8fr">
+                <li class="rc-stop is-stage">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Init</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">40&nbsp;min</span> <span class="rc-note">excluding the wait at the gate</span></p>
+                  <div class="rc-who"><ul class="rc-roles" role="list"><li>4&nbsp;agents</li></ul><p class="rc-who-note">alignment review</p></div>
+                </li>
+                <li class="rc-stop is-gate is-wait">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">Gate</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">4&nbsp;h 18&nbsp;min</span> <span class="rc-note">waiting for Alex's decision</span></p>
+                  <div class="rc-who"><p class="rc-call">Engineer</p></div>
+                </li>
+                <li class="rc-stop is-link">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span></div>
+                  <p class="rc-elapsed"><span class="rc-t">28&nbsp;min</span> <span class="rc-note">between stages</span></p>
+                  <div class="rc-who"></div>
+                </li>
+                <li class="rc-stop is-stage">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Run</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">8&nbsp;h 15&nbsp;min</span></p>
+                  <div class="rc-who"><ul class="rc-roles" role="list"><li>developer&nbsp;×4</li><li>reviewer&nbsp;×3</li><li>architect&nbsp;×2</li><li>tester&nbsp;×1</li><li>technical writer&nbsp;×1</li></ul></div>
+                </li>
+                <li class="rc-stop is-gate is-wait">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">Gate</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">5&nbsp;h 56&nbsp;min</span> <span class="rc-note">waiting for Alex's decision to start Finalize</span></p>
+                  <div class="rc-who"><p class="rc-call">Engineer</p></div>
+                </li>
+                <li class="rc-stop is-stage">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Finalize</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">14&nbsp;min</span> <span class="rc-note">demo replay: 5 of 5 runnable steps passed</span></p>
+                  <div class="rc-who"><ul class="rc-roles" role="list"><li>tester&nbsp;×1</li></ul></div>
+                </li>
+                <li class="rc-stop is-gate is-wait">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">Gate</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">4&nbsp;min</span> <span class="rc-note">the engineer's sign-off: Alex starts Close</span></p>
+                  <div class="rc-who"><p class="rc-call">Engineer</p></div>
+                </li>
+                <li class="rc-stop is-stage">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Close</span></div>
+                  <p class="rc-elapsed"><span class="rc-t">30&nbsp;min</span> <span class="rc-note">to the merge</span></p>
+                  <div class="rc-who"><p class="rc-who-note">merge queue: 9 check runs</p></div>
+                </li>
+                <li class="rc-stop is-end">
+                  <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span></div>
+                  <p class="rc-elapsed"><span class="rc-t">09:44:21Z</span> <span class="rc-note">merged</span></p>
+                  <div class="rc-who"></div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="rc-scale">
+              <p class="rc-sum"><span class="rc-key k-stage">stages 9&nbsp;h&nbsp;39&nbsp;min</span> <span class="op">+</span> <span class="rc-key k-wait">waiting for the engineer 10&nbsp;h&nbsp;18&nbsp;min</span> <span class="op">+</span> <span class="rc-key k-gap">other time between stages 28&nbsp;min</span> <span class="op">=</span> <strong>20&nbsp;h&nbsp;25&nbsp;min</strong></p>
+              <details class="rc-details">
+                <summary>How the parts add up</summary>
+                <p class="rc-between">Waiting for the engineer: at Init's gate, from the end of Run until Alex started Finalize, and before his sign-off at Close; he starts every stage. Other time: before Run, including 3 more minutes waiting for Alex and adding the demo he chose.</p>
+                <p class="rc-seconds">The record, in seconds: 2,425 + 15,465 + 1,653 + 29,723 + 21,336 + 816 + 268 + 1,807 = 73,493. Minutes are rounded so the parts add up.</p>
+              </details>
+            </div>
+            <figcaption class="rc-takeaway" id="rc-takeaway"><strong>Takeaway:</strong> the agents' stages were less than half of the time; most of the rest, the task waited for the engineer, and it moved on only when he decided.</figcaption>
+          </figure>
+
+          <div class="record-results">
+            <p class="results-label">Results</p>
+            <ul class="results" role="list">
+              <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">20&nbsp;h 25&nbsp;min</strong> <span class="num-label">elapsed, from the first step to the merge</span></a></li>
+              <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">at least</span> $163</strong> <span class="num-label">at Claude API list prices</span></a></li>
+              <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">about</span> $5</strong> <span class="num-label">on our Claude subscription</span></a></li>
+              <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">1–2 hours</strong> <span class="num-label">of human time</span></a></li>
+              <li><a class="num-link" href="notes/anatomy-of-one-task.html#action"><strong class="num-value">2 blockers</strong> <span class="num-label">from a 22-minute review by 4 agents, before any code</span></a></li>
+            </ul>
+            <p class="results-note"><span><strong>Claude API list prices:</strong> what this work costs bought by the token. <strong>Claude Team subscription:</strong> the flat price that makes it about $5 — this task's share of one seat's week. <strong>DreamTeam's cost optimization</strong> records every step's tokens and time and gives each step the model its job needs. We keep optimizing the process to do more work for the same money.</span></p>
+            <p class="record-link"><a href="notes/anatomy-of-one-task.html">Anatomy of one task</a>: the full record, step by step</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section control" aria-labelledby="control-title">
+      <div class="wrap stack">
+        <p class="sec-label">02 · How control works</p>
+        <h2 id="control-title">Three kinds of control around the one step that builds</h2>
+        <p class="intro"><strong>First you approve the vision and the plan.</strong> Then a feature task runs like this: one step builds, and the engineer, the agents and the system check the work around it.</p>
+
+        <figure class="control-trees" aria-labelledby="ct-caption">
+          <div class="ct-grid">
+            <span class="ct-trunk is-eng" aria-hidden="true"></span>
+            <span class="ct-trunk is-run" aria-hidden="true"></span>
+            <span class="ct-trunk is-agents" aria-hidden="true"></span>
+            <span class="ct-trunk is-system" aria-hidden="true"></span>
+            <span class="ct-h is-eng" aria-hidden="true">Engineer in control</span>
+            <span class="ct-h is-run" aria-hidden="true">Run · the work</span>
+            <span class="ct-h is-agents" aria-hidden="true">Agents' control</span>
+            <span class="ct-h is-system" aria-hidden="true">System control</span>
+
+            <p class="ct-stage is-init">Init</p>
+            <p class="ct-cell ct-agents ct-at-2"><span class="ct-tag">Agents' control</span><span class="ct-text"><strong>Alignment review:</strong> the agents who will do the task each say what they need and what is missing before it starts; the orchestrator collects it.</span></p>
+            <p class="ct-cell ct-system ct-at-2"><span class="ct-tag">System control</span><span class="ct-text"><strong>The pipeline checks</strong> that every dependency is done and no branch holds the task.</span><span class="ct-rec"><b>T-707:</b> first of its epic, no dependency</span></p>
+            <p class="ct-cell ct-eng ct-at-3"><span class="ct-tag">Engineer in control</span><span class="ct-text"><strong>You confirm it's ready.</strong> The task waits for your decision.</span></p>
+
+            <p class="ct-stage is-run">Run</p>
+            <div class="ct-run run-ring">
+              <p class="run-ring-title">Run <small>Where the work gets made; everything else is control around it.</small></p>
+              <svg class="run-ring-pic" viewBox="0 0 440 312" role="img" aria-labelledby="lc-ring-title lc-ring-desc">
+                <title id="lc-ring-title">The Run loop, and what it made in one task</title>
+                <desc id="lc-ring-desc">Build, then review; review and fix go round at most twice; then test, and on to Finalize. A review still failing, or a failing test, stops the run and goes to the engineer. In T-707, Run made 1,125 lines of code and 3,091 lines of tests.</desc>
+                <defs>
+                  <marker id="lc-rr-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path class="rr-head" d="M0,0 L10,5 L0,10 z"/></marker>
+                  <marker id="lc-rr-arrow-s" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="rr-head" d="M0,0 L10,5 L0,10 z"/></marker>
+                  <marker id="lc-rr-arrow-x" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="rr-head-x" d="M0,0 L10,5 L0,10 z"/></marker>
+                </defs>
+                <path class="rr-ring" d="M118.3 91.4 A110 110 0 0 1 281.7 91.4" marker-end="url(#lc-rr-arrow)"/>
+                <path class="rr-ring" d="M307.6 142.1 A110 110 0 0 1 244.7 265.5" marker-end="url(#lc-rr-arrow)"/>
+                <path class="rr-twice" d="M334 92 C 342 70, 364 70, 372 90" marker-end="url(#lc-rr-arrow-s)"/>
+                <path class="rr-twice" d="M372 128 C 364 150, 342 150, 336 130" marker-end="url(#lc-rr-arrow-s)"/>
+                <text class="rr-lbl" x="332" y="166">at most twice</text>
+                <path class="rr-exit" d="M155 275 H 96" marker-end="url(#lc-rr-arrow-x)"/>
+                <text class="rr-lbl-x" x="8" y="303">passes: on to Finalize</text>
+                <rect class="rr-node is-build" x="59.7" y="92" width="90" height="36" rx="4"/>
+                <text class="rr-nt rr-on" x="104.7" y="110" text-anchor="middle">Build</text><text class="rr-ns rr-on" x="104.7" y="123" text-anchor="middle">builder agent</text>
+                <rect class="rr-node" x="250.3" y="92" width="90" height="36" rx="4"/>
+                <text class="rr-nt" x="295.3" y="110" text-anchor="middle">Review</text><text class="rr-ns" x="295.3" y="123" text-anchor="middle">reviewer</text>
+                <rect class="rr-node" x="366" y="92" width="64" height="36" rx="4"/>
+                <text class="rr-nt" x="398" y="110" text-anchor="middle">Fix</text><text class="rr-ns" x="398" y="123" text-anchor="middle">builder</text>
+                <rect class="rr-node" x="155" y="257" width="90" height="36" rx="4"/>
+                <text class="rr-nt" x="200" y="275" text-anchor="middle">Test</text><text class="rr-ns" x="200" y="288" text-anchor="middle">tester</text>
+                <text class="rr-big" x="200" y="160" text-anchor="middle">+1,125</text>
+                <text class="rr-cap" x="200" y="177" text-anchor="middle">lines of code</text>
+                <text class="rr-big" x="200" y="215" text-anchor="middle">+3,091</text>
+                <text class="rr-cap" x="200" y="232" text-anchor="middle">lines of tests · T-707</text>
+              </svg>
+            </div>
+            <p class="ct-cell ct-agents ct-at-5"><span class="ct-tag">Agents' control</span><span class="ct-text"><strong>A reviewer agent checks the change.</strong> It has no editing tools, though it can run commands.</span><span class="ct-rec"><b>T-707:</b> 1 medium, 5 low; the medium fixed with a test that failed first</span></p>
+            <p class="ct-cell ct-agents ct-at-6"><span class="ct-tag">Agents' control</span><span class="ct-text"><strong>A tester agent checks every acceptance criterion.</strong></span><span class="ct-rec"><b>T-707:</b> all 9 checked</span></p>
+            <p class="ct-cell ct-system ct-at-6"><span class="ct-tag">System control</span><span class="ct-text"><strong>The full test suite runs;</strong> a failure stops the task.</span><span class="ct-rec"><b>T-707:</b> 15,680 passed, 0 failed</span></p>
+
+            <p class="ct-stage is-finalize">Finalize</p>
+            <p class="ct-cell ct-eng ct-at-7"><span class="ct-tag">Engineer in control</span><span class="ct-text"><strong>You start Finalize;</strong> Run never starts it by itself.</span></p>
+
+            <p class="ct-stage is-close">Close</p>
+            <p class="ct-cell ct-eng ct-at-8"><span class="ct-tag">Engineer in control</span><span class="ct-text"><strong>You approve the result:</strong> starting the close is your sign-off.</span></p>
+            <p class="ct-cell ct-system ct-at-9"><span class="ct-tag">System control</span><span class="ct-text"><strong>GitHub's merge queue runs 5 required checks</strong> before the change reaches the main branch.</span><span class="ct-rec"><b>T-707:</b> all 9 check runs successful</span></p>
+          </div>
+          <figcaption class="cm-caption" id="ct-caption"><strong>Run writes the code; everything around it is control.</strong> The engineer decides at each amber diamond, agents review and test, and the system checks before the start, after the build and before the merge.</figcaption>
         </figure>
-        <p class="people-cta"><a class="btn btn-primary" href="index.html#contact">Talk to us</a></p>
+
+        <div class="callout">
+          <p class="callout-title">The setup behind it</p>
+          <ul role="list">
+            <li><strong>Claude Code is set to ask a person</strong> before a force push, a hard reset or a rebase.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="team-title">
+      <div class="wrap stack">
+        <p class="sec-label">03 · The team</p>
+        <h2 id="team-title">You approve the vision, the plan, each task's readiness and the&nbsp;result</h2>
+
+        <figure class="diagram-figure">
+<svg xmlns="http://www.w3.org/2000/svg" class="team-dg team-dg-wide" lang="en" width="880" height="558" viewBox="0 0 880 558" role="img" aria-labelledby="team-wide-title team-wide-desc" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif">
+<title id="team-wide-title">The engineer in control, the orchestrator agent and the specialist agents</title>
+<desc id="team-wide-desc">The engineer in control approves the vision, the plan, each task's readiness and the result. An orchestrator agent hands the work to specialist AI agents, who report back to it. They are an architect, backend and frontend developers, DevOps, a reviewer with no editing tools, a tester and a technical writer. The agents do not hand work to each other.</desc>
+<style>
+.team-dg {
+  --tm-surface: var(--surface, #FFFFFF);
+  --tm-surface-2: var(--surface-2, #F8FAFD);
+  --tm-ink: var(--ink, #0E1726);
+  --tm-graphite: var(--graphite, #4B5565);
+  --tm-line: var(--line, #DCE3EE);
+  --tm-blue: var(--blue, #2F6BFF);
+  --tm-blue-wash: var(--blue-wash, #EAF0FF);
+  --tm-human: var(--human, #E8A33D);
+  --tm-human-ink: var(--human-ink, #8A5300);
+  --tm-human-wash: var(--human-wash, #FFF4E0);
+}
+@media (prefers-color-scheme: dark) {
+  .team-dg {
+    --tm-surface: var(--surface, #111A2C);
+    --tm-surface-2: var(--surface-2, #0E1626);
+    --tm-ink: var(--ink, #E6EAF2);
+    --tm-graphite: var(--graphite, #B4BDCD);
+    --tm-line: var(--line, #24314A);
+    --tm-blue: var(--blue, #7FA3FF);
+    --tm-blue-wash: var(--blue-wash, #16213A);
+    --tm-human: var(--human, #F2B04C);
+    --tm-human-ink: var(--human-ink, #F6C77A);
+    --tm-human-wash: var(--human-wash, #2A2113);
+  }
+}
+.team-dg text { font-family: var(--font-body, 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-display { font-family: var(--font-display, 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-card { fill: var(--tm-surface); stroke: var(--tm-line); }
+.team-dg .tm-human { fill: var(--tm-human-wash); stroke: var(--tm-human); }
+.team-dg .tm-mark { fill: var(--tm-human); }
+.team-dg .tm-orch { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-agents { fill: var(--tm-surface-2); stroke: var(--tm-line); }
+.team-dg .tm-group { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-role { fill: var(--tm-surface); stroke: var(--tm-blue); }
+.team-dg .tm-arrow { stroke: var(--tm-graphite); }
+.team-dg .tm-head { fill: var(--tm-graphite); }
+.team-dg .tm-t-human { fill: var(--tm-human-ink); }
+.team-dg .tm-t-ink { fill: var(--tm-ink); }
+.team-dg .tm-t-soft { fill: var(--tm-graphite); }
+</style>
+<rect class="tm-card" x="0.5" y="0.5" width="879" height="557" rx="12" fill="#FFFFFF" stroke="#DCE3EE" stroke-width="1"/>
+<rect class="tm-human" x="16" y="16" width="848" height="82" rx="10" fill="#FFF4E0" stroke="#E8A33D" stroke-width="1.5"/>
+<text class="tm-t-human tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#8A5300"><tspan x="440" y="48.3">Engineer in control</tspan></text>
+<polygon class="tm-mark" points="39.13,74 45.13,68 51.13,74 45.13,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="58.63" y="79.25">You approve the vision</tspan></text>
+<polygon class="tm-mark" points="250.53,74 256.53,68 262.53,74 256.53,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="270.03" y="79.25">You approve the plan</tspan></text>
+<polygon class="tm-mark" points="448.85,74 454.85,68 460.85,74 454.85,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="468.35" y="79.25">You confirm it's ready</tspan></text>
+<polygon class="tm-mark" points="654.58,74 660.58,68 666.58,74 660.58,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="674.08" y="79.25">You approve the result</tspan></text>
+<line class="tm-arrow" x1="410" y1="100" x2="410" y2="142" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="410,152 404.5,142 415.5,142" fill="#4B5565"/>
+<line class="tm-arrow" x1="470" y1="152" x2="470" y2="110" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="470,100 475.5,110 464.5,110" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="400" y="131.25">Goals and decisions</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="480" y="131.25">Plan, result, open questions</tspan></text>
+<rect class="tm-orch" x="250" y="154" width="380" height="70" rx="10" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="2"/>
+<text class="tm-t-ink tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="440" y="184.3">Orchestrator agent</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="middle" fill="#4B5565"><tspan x="440" y="207.25">Runs the steps and keeps the record</tspan></text>
+<line class="tm-arrow" x1="410" y1="226" x2="410" y2="268" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="410,278 404.5,268 415.5,268" fill="#4B5565"/>
+<line class="tm-arrow" x1="470" y1="278" x2="470" y2="236" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="470,226 475.5,236 464.5,236" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="400" y="257.25">Hands out the work</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="480" y="257.25">Results</tspan></text>
+<rect class="tm-agents" x="16" y="280" width="848" height="228" rx="10" fill="#F8FAFD" stroke="#DCE3EE" stroke-width="1.5"/>
+<text class="tm-t-ink tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="440" y="308.3">Specialist agents</tspan></text>
+<rect class="tm-group" x="26" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="36" y="347.25">Design —</tspan><tspan x="36" y="367.25">when a task needs one</tspan></text>
+<rect class="tm-role" x="36" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="45" y="402.25">Architect</tspan></text>
+<rect class="tm-group" x="235.5" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="245.5" y="347.25">Build —</tspan><tspan x="245.5" y="367.25">chosen for each task</tspan></text>
+<rect class="tm-role" x="245.5" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="402.25">Backend developer</tspan></text>
+<rect class="tm-role" x="245.5" y="420" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="440.25">Frontend developer</tspan></text>
+<rect class="tm-role" x="245.5" y="458" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="478.25">DevOps</tspan></text>
+<rect class="tm-group" x="445" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="455" y="347.25">Review and test</tspan><tspan x="455" y="367.25">the change</tspan></text>
+<rect class="tm-role" x="455" y="382" width="179.5" height="50" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="464" y="402.25">Reviewer</tspan><tspan x="464" y="422.25">(no editing tools)</tspan></text>
+<rect class="tm-role" x="455" y="440" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="464" y="460.25">Tester</tspan></text>
+<rect class="tm-group" x="654.5" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="664.5" y="347.25">Record the change</tspan></text>
+<rect class="tm-role" x="664.5" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="673.5" y="402.25">Technical writer</tspan></text>
+<polygon class="tm-mark" points="20,532 26,526 32,532 26,538" fill="#E8A33D"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="39.5" y="537.25">Amber: a decision you make.</tspan></text>
+<rect class="tm-role" x="271.9" y="525" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="293.9" y="537.25">Blue: an AI agent.</tspan></text>
+<line class="tm-arrow" x1="454.45" y1="532" x2="468.45" y2="532" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="478.45,532 468.45,537.5 468.45,526.5" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="486.45" y="537.25">Arrows: who passes work or results to whom.</tspan></text>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="team-dg team-dg-narrow" lang="en" width="360" height="900" viewBox="0 0 360 900" role="img" aria-labelledby="team-narrow-title team-narrow-desc" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif">
+<title id="team-narrow-title">The engineer in control, the orchestrator agent and the specialist agents</title>
+<desc id="team-narrow-desc">The engineer in control approves the vision, the plan, each task's readiness and the result. An orchestrator agent hands the work to specialist AI agents, who report back to it. They are an architect, backend and frontend developers, DevOps, a reviewer with no editing tools, a tester and a technical writer. The agents do not hand work to each other.</desc>
+<style>
+.team-dg {
+  --tm-surface: var(--surface, #FFFFFF);
+  --tm-surface-2: var(--surface-2, #F8FAFD);
+  --tm-ink: var(--ink, #0E1726);
+  --tm-graphite: var(--graphite, #4B5565);
+  --tm-line: var(--line, #DCE3EE);
+  --tm-blue: var(--blue, #2F6BFF);
+  --tm-blue-wash: var(--blue-wash, #EAF0FF);
+  --tm-human: var(--human, #E8A33D);
+  --tm-human-ink: var(--human-ink, #8A5300);
+  --tm-human-wash: var(--human-wash, #FFF4E0);
+}
+@media (prefers-color-scheme: dark) {
+  .team-dg {
+    --tm-surface: var(--surface, #111A2C);
+    --tm-surface-2: var(--surface-2, #0E1626);
+    --tm-ink: var(--ink, #E6EAF2);
+    --tm-graphite: var(--graphite, #B4BDCD);
+    --tm-line: var(--line, #24314A);
+    --tm-blue: var(--blue, #7FA3FF);
+    --tm-blue-wash: var(--blue-wash, #16213A);
+    --tm-human: var(--human, #F2B04C);
+    --tm-human-ink: var(--human-ink, #F6C77A);
+    --tm-human-wash: var(--human-wash, #2A2113);
+  }
+}
+.team-dg text { font-family: var(--font-body, 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-display { font-family: var(--font-display, 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-card { fill: var(--tm-surface); stroke: var(--tm-line); }
+.team-dg .tm-human { fill: var(--tm-human-wash); stroke: var(--tm-human); }
+.team-dg .tm-mark { fill: var(--tm-human); }
+.team-dg .tm-orch { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-agents { fill: var(--tm-surface-2); stroke: var(--tm-line); }
+.team-dg .tm-group { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-role { fill: var(--tm-surface); stroke: var(--tm-blue); }
+.team-dg .tm-arrow { stroke: var(--tm-graphite); }
+.team-dg .tm-head { fill: var(--tm-graphite); }
+.team-dg .tm-t-human { fill: var(--tm-human-ink); }
+.team-dg .tm-t-ink { fill: var(--tm-ink); }
+.team-dg .tm-t-soft { fill: var(--tm-graphite); }
+</style>
+<rect class="tm-card" x="0.5" y="0.5" width="359" height="899" rx="12" fill="#FFFFFF" stroke="#DCE3EE" stroke-width="1"/>
+<rect class="tm-human" x="12" y="12" width="336" height="151" rx="10" fill="#FFF4E0" stroke="#E8A33D" stroke-width="1.5"/>
+<text class="tm-t-human tm-display" font-size="17" font-weight="700" text-anchor="middle" fill="#8A5300"><tspan x="180" y="41.45">Engineer in control</tspan></text>
+<polygon class="tm-mark" points="92.55,66.5 98.15,60.9 103.75,66.5 98.15,72.1" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="14" font-weight="600" fill="#8A5300"><tspan x="110.75" y="71.4">You approve the vision</tspan></text>
+<polygon class="tm-mark" points="92.55,91.5 98.15,85.9 103.75,91.5 98.15,97.1" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="14" font-weight="600" fill="#8A5300"><tspan x="110.75" y="96.4">You approve the plan</tspan></text>
+<polygon class="tm-mark" points="92.55,116.5 98.15,110.9 103.75,116.5 98.15,122.1" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="14" font-weight="600" fill="#8A5300"><tspan x="110.75" y="121.4">You confirm it's ready</tspan></text>
+<polygon class="tm-mark" points="92.55,141.5 98.15,135.9 103.75,141.5 98.15,147.1" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="14" font-weight="600" fill="#8A5300"><tspan x="110.75" y="146.4">You approve the result</tspan></text>
+<line class="tm-arrow" x1="160" y1="165" x2="160" y2="213" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="160,223 154.5,213 165.5,213" fill="#4B5565"/>
+<line class="tm-arrow" x1="200" y1="223" x2="200" y2="175" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="200,165 205.5,175 194.5,175" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="14" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="150" y="198.9">Goals and decisions</tspan></text>
+<text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="210" y="189.4">Plan, result,</tspan><tspan x="210" y="208.4">open questions</tspan></text>
+<rect class="tm-orch" x="12" y="225" width="336" height="64" rx="10" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="2"/>
+<text class="tm-t-ink tm-display" font-size="17" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="180" y="252.45">Orchestrator agent</tspan></text>
+<text class="tm-t-soft" font-size="14" font-weight="400" text-anchor="middle" fill="#4B5565"><tspan x="180" y="274.4">Runs the steps and keeps the record</tspan></text>
+<line class="tm-arrow" x1="160" y1="291" x2="160" y2="333" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="160,343 154.5,333 165.5,333" fill="#4B5565"/>
+<line class="tm-arrow" x1="200" y1="343" x2="200" y2="301" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="200,291 205.5,301 194.5,301" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="14" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="150" y="321.9">Hands out the work</tspan></text>
+<text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="210" y="321.9">Results</tspan></text>
+<rect class="tm-agents" x="12" y="345" width="336" height="441" rx="10" fill="#F8FAFD" stroke="#DCE3EE" stroke-width="1.5"/>
+<text class="tm-t-ink tm-display" font-size="17" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="180" y="372.45">Specialist agents</tspan></text>
+<rect class="tm-group" x="22" y="386" width="316" height="75" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="32" y="411.25">Design — when a task needs one</tspan></text>
+<rect class="tm-role" x="32" y="424" width="82" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="73" y="442.4">Architect</tspan></text>
+<rect class="tm-group" x="22" y="469" width="316" height="141" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="32" y="494.25">Build — chosen for each task</tspan></text>
+<rect class="tm-role" x="32" y="507" width="151" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="107.5" y="525.4">Backend developer</tspan></text>
+<rect class="tm-role" x="32" y="540" width="154" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="109" y="558.4">Frontend developer</tspan></text>
+<rect class="tm-role" x="32" y="573" width="71" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="67.5" y="591.4">DevOps</tspan></text>
+<rect class="tm-group" x="22" y="618" width="316" height="75" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="32" y="643.25">Review and test the change</tspan></text>
+<rect class="tm-role" x="32" y="656" width="206" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="135" y="674.4">Reviewer (no editing tools)</tspan></text>
+<rect class="tm-role" x="244" y="656" width="64" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="276" y="674.4">Tester</tspan></text>
+<rect class="tm-group" x="22" y="701" width="316" height="75" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="32" y="726.25">Record the change</tspan></text>
+<rect class="tm-role" x="32" y="739" width="132" height="27" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="14" font-weight="400" text-anchor="middle" fill="#0E1726"><tspan x="98" y="757.4">Technical writer</tspan></text>
+<polygon class="tm-mark" points="16,809.5 21.6,803.9 27.2,809.5 21.6,815.1" fill="#E8A33D"/>
+<text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="34.2" y="814.4">Amber: a decision you make.</tspan></text>
+<rect class="tm-role" x="16" y="827.5" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="38" y="839.4">Blue: an AI agent.</tspan></text>
+<line class="tm-arrow" x1="16" y1="859.5" x2="30" y2="859.5" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="40,859.5 30,865 30,854" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="48" y="864.4">Arrows: who passes work or results</tspan><tspan x="48" y="883.4">to whom.</tspan></text>
+</svg>
+          <figcaption>You approve the vision, the plan, each task's readiness and the result; in between, an orchestrator agent hands the work to specialist AI agents. Generated from DreamTeam's own agent and step definitions as of 4 October 2026.</figcaption>
+        </figure>
+
+        <p class="still"><span class="k">Still to come</span>The full life-cycle diagrams and a walk through each stage.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</span>
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
       <nav aria-label="Footer">
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team in 8 weeks</a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
       </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
     </div>
   </footer>
 </body>

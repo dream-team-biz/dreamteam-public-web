@@ -4,63 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
   <title>DreamTeam Lab — Give every engineer a dream team</title>
-  <meta name="description" content="An AI-driven software development cycle with humans in control.">
+  <meta name="description" content="DreamTeam Lab builds DreamTeam, AI agents that do a software team's work with engineers in control. Today we run it with your team, as a pilot.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="index.html">DreamTeam <span class="lab">Lab</span></a>
+      <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
       <nav class="site-nav" aria-label="Main">
         <a href="lifecycle.html">The Life Cycle</a>
-        <a href="program.html">Your Dream Team in 8 weeks</a>
+        <a href="program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
-        <a class="btn btn-primary" href="index.html#contact">Talk to us</a>
       </nav>
+      <a class="btn btn-primary header-cta" href="#contact">Talk to us</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <div>
-          <h1 id="hero-title">Give every engineer a dream&nbsp;team.</h1>
-          <p class="subtitle">An AI-driven software development cycle with humans in control.</p>
-          <p class="status"><strong>Still to come:</strong> the rest of this site. <strong>Ready&nbsp;now:</strong> <a href="about.html">About</a> and a diagram on <a href="lifecycle.html">The&nbsp;Dream&nbsp;Team&nbsp;Life&nbsp;Cycle</a> page, showing AI agents working between your approvals, from vision to&nbsp;result.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#contact">Talk to us</a>
-          </div>
+    <section class="page-head" id="contact" aria-labelledby="page-title">
+      <div class="wrap head-84">
+        <div class="head-main">
+          <h1 id="page-title">Give every engineer a dream&nbsp;team.</h1>
+          <p class="lead">DreamTeam Lab builds DreamTeam: AI agents built for companies with their own engineering team, doing a software team's work with the engineers in control.</p>
+        </div>
+        <div class="head-side">
+          <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+          <a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
-        <p class="tag">Contact</p>
-        <h2 id="contact-title">Start a&nbsp;conversation</h2>
-        <div class="body">
-          <p>Whether you'd give your engineers a dream team, invest in the lab, or build it with us, we'd like to hear from you.</p>
+    <section class="section" aria-labelledby="results-title">
+      <div class="wrap stack">
+        <div class="record-results is-band frame">
+          <h2 class="results-label" id="results-title">Results of one real task · <a href="notes/anatomy-of-one-task.html">Anatomy of one task</a></h2>
+          <p class="results-task"><strong>The task</strong> taught our task board to say why one task waits for another. It was built, reviewed, tested and merged.</p>
+          <ul class="results" role="list">
+            <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">20&nbsp;h 25&nbsp;min</strong> <span class="num-label">end to end</span></a></li>
+            <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">at least</span> $163</strong> <span class="num-label">at Claude API list prices</span></a></li>
+            <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">about</span> $5</strong> <span class="num-label">on our Claude subscription</span></a></li>
+            <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">1–2 hours</strong> <span class="num-label">of human time</span></a></li>
+            <li><a class="num-link" href="notes/anatomy-of-one-task.html#action"><strong class="num-value">2 blockers</strong> <span class="num-label">from a 22-minute review by 4 agents, before any code</span></a></li>
+          </ul>
+          <p class="results-note"><span><strong>Claude API list prices:</strong> what this work costs bought by the token. <strong>Claude Team subscription:</strong> the flat price that makes it about $5 — this task's share of one seat's week. <strong>DreamTeam's cost optimization</strong> records every step's tokens and time and gives each step the model its job needs. We keep optimizing the process to do more work for the same money.</span></p>
         </div>
-        <p class="people-cta"><a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Email us</a></p>
+        <p class="still"><span class="k">Still to come</span>The rest of this site.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</span>
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
       <nav aria-label="Footer">
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team in 8 weeks</a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
       </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
     </div>
   </footer>
 </body>
