@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" class="team-dg team-dg-wide" lang="en" width="880" height="558" viewBox="0 0 880 558" role="img" aria-labelledby="team-wide-title team-wide-desc" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif">
+<title id="team-wide-title">The engineer in control, the orchestrator agent and the specialist agents</title>
+<desc id="team-wide-desc">The engineer in control approves the vision, the plan, each task's readiness and the result. An orchestrator agent hands the work to specialist AI agents, who report back to it. They are an architect, backend and frontend developers, DevOps, a reviewer with no editing tools, a tester and a technical writer. The agents do not hand work to each other.</desc>
+<style>
+.team-dg {
+  --tm-surface: var(--surface, #FFFFFF);
+  --tm-surface-2: var(--surface-2, #F8FAFD);
+  --tm-ink: var(--ink, #0E1726);
+  --tm-graphite: var(--graphite, #4B5565);
+  --tm-line: var(--line, #DCE3EE);
+  --tm-blue: var(--blue, #2F6BFF);
+  --tm-blue-wash: var(--blue-wash, #EAF0FF);
+  --tm-human: var(--human, #E8A33D);
+  --tm-human-ink: var(--human-ink, #8A5300);
+  --tm-human-wash: var(--human-wash, #FFF4E0);
+}
+@media (prefers-color-scheme: dark) {
+  .team-dg {
+    --tm-surface: var(--surface, #111A2C);
+    --tm-surface-2: var(--surface-2, #0E1626);
+    --tm-ink: var(--ink, #E6EAF2);
+    --tm-graphite: var(--graphite, #B4BDCD);
+    --tm-line: var(--line, #24314A);
+    --tm-blue: var(--blue, #7FA3FF);
+    --tm-blue-wash: var(--blue-wash, #16213A);
+    --tm-human: var(--human, #F2B04C);
+    --tm-human-ink: var(--human-ink, #F6C77A);
+    --tm-human-wash: var(--human-wash, #2A2113);
+  }
+}
+.team-dg text { font-family: var(--font-body, 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-display { font-family: var(--font-display, 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif); }
+.team-dg .tm-card { fill: var(--tm-surface); stroke: var(--tm-line); }
+.team-dg .tm-human { fill: var(--tm-human-wash); stroke: var(--tm-human); }
+.team-dg .tm-mark { fill: var(--tm-human); }
+.team-dg .tm-orch { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-agents { fill: var(--tm-surface-2); stroke: var(--tm-line); }
+.team-dg .tm-group { fill: var(--tm-blue-wash); stroke: var(--tm-blue); }
+.team-dg .tm-role { fill: var(--tm-surface); stroke: var(--tm-blue); }
+.team-dg .tm-arrow { stroke: var(--tm-graphite); }
+.team-dg .tm-head { fill: var(--tm-graphite); }
+.team-dg .tm-t-human { fill: var(--tm-human-ink); }
+.team-dg .tm-t-ink { fill: var(--tm-ink); }
+.team-dg .tm-t-soft { fill: var(--tm-graphite); }
+</style>
+<rect class="tm-card" x="0.5" y="0.5" width="879" height="557" rx="12" fill="#FFFFFF" stroke="#DCE3EE" stroke-width="1"/>
+<rect class="tm-human" x="16" y="16" width="848" height="82" rx="10" fill="#FFF4E0" stroke="#E8A33D" stroke-width="1.5"/>
+<text class="tm-t-human tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#8A5300"><tspan x="440" y="48.3">Engineer in control</tspan></text>
+<polygon class="tm-mark" points="39.13,74 45.13,68 51.13,74 45.13,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="58.63" y="79.25">You approve the vision</tspan></text>
+<polygon class="tm-mark" points="250.53,74 256.53,68 262.53,74 256.53,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="270.03" y="79.25">You approve the plan</tspan></text>
+<polygon class="tm-mark" points="448.85,74 454.85,68 460.85,74 454.85,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="468.35" y="79.25">You confirm it's ready</tspan></text>
+<polygon class="tm-mark" points="654.58,74 660.58,68 666.58,74 660.58,80" fill="#E8A33D"/>
+<text class="tm-t-human" font-size="15" font-weight="600" fill="#8A5300"><tspan x="674.08" y="79.25">You approve the result</tspan></text>
+<line class="tm-arrow" x1="410" y1="100" x2="410" y2="142" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="410,152 404.5,142 415.5,142" fill="#4B5565"/>
+<line class="tm-arrow" x1="470" y1="152" x2="470" y2="110" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="470,100 475.5,110 464.5,110" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="400" y="131.25">Goals and decisions</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="480" y="131.25">Plan, result, open questions</tspan></text>
+<rect class="tm-orch" x="250" y="154" width="380" height="70" rx="10" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="2"/>
+<text class="tm-t-ink tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="440" y="184.3">Orchestrator agent</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="middle" fill="#4B5565"><tspan x="440" y="207.25">Runs the steps and keeps the record</tspan></text>
+<line class="tm-arrow" x1="410" y1="226" x2="410" y2="268" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="410,278 404.5,268 415.5,268" fill="#4B5565"/>
+<line class="tm-arrow" x1="470" y1="278" x2="470" y2="236" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="470,226 475.5,236 464.5,236" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" text-anchor="end" fill="#4B5565"><tspan x="400" y="257.25">Hands out the work</tspan></text>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="480" y="257.25">Results</tspan></text>
+<rect class="tm-agents" x="16" y="280" width="848" height="228" rx="10" fill="#F8FAFD" stroke="#DCE3EE" stroke-width="1.5"/>
+<text class="tm-t-ink tm-display" font-size="18" font-weight="700" text-anchor="middle" fill="#0E1726"><tspan x="440" y="308.3">Specialist agents</tspan></text>
+<rect class="tm-group" x="26" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="36" y="347.25">Design —</tspan><tspan x="36" y="367.25">when a task needs one</tspan></text>
+<rect class="tm-role" x="36" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="45" y="402.25">Architect</tspan></text>
+<rect class="tm-group" x="235.5" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="245.5" y="347.25">Build —</tspan><tspan x="245.5" y="367.25">chosen for each task</tspan></text>
+<rect class="tm-role" x="245.5" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="402.25">Backend developer</tspan></text>
+<rect class="tm-role" x="245.5" y="420" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="440.25">Frontend developer</tspan></text>
+<rect class="tm-role" x="245.5" y="458" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="254.5" y="478.25">DevOps</tspan></text>
+<rect class="tm-group" x="445" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="455" y="347.25">Review and test</tspan><tspan x="455" y="367.25">the change</tspan></text>
+<rect class="tm-role" x="455" y="382" width="179.5" height="50" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="464" y="402.25">Reviewer</tspan><tspan x="464" y="422.25">(no editing tools)</tspan></text>
+<rect class="tm-role" x="455" y="440" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="464" y="460.25">Tester</tspan></text>
+<rect class="tm-group" x="654.5" y="322" width="199.5" height="176" rx="8" fill="#EAF0FF" stroke="#2F6BFF" stroke-width="1.5"/>
+<text class="tm-t-ink" font-size="15" font-weight="600" fill="#0E1726"><tspan x="664.5" y="347.25">Record the change</tspan></text>
+<rect class="tm-role" x="664.5" y="382" width="179.5" height="30" rx="6" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-ink" font-size="15" font-weight="400" fill="#0E1726"><tspan x="673.5" y="402.25">Technical writer</tspan></text>
+<polygon class="tm-mark" points="20,532 26,526 32,532 26,538" fill="#E8A33D"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="39.5" y="537.25">Amber: a decision you make.</tspan></text>
+<rect class="tm-role" x="271.9" y="525" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#2F6BFF" stroke-width="1"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="293.9" y="537.25">Blue: an AI agent.</tspan></text>
+<line class="tm-arrow" x1="454.45" y1="532" x2="468.45" y2="532" fill="none" stroke="#4B5565" stroke-width="2"/>
+<polygon class="tm-head" points="478.45,532 468.45,537.5 468.45,526.5" fill="#4B5565"/>
+<text class="tm-t-soft" font-size="15" font-weight="400" fill="#4B5565"><tspan x="486.45" y="537.25">Arrows: who passes work or results to whom.</tspan></text>
+</svg>
