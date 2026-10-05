@@ -10,6 +10,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* The note card on this index. On a phone its header wraps between the two spans, never inside one. */
+    .note-card { margin-top: 0; max-width: 760px; }
+    .note-card .card-head { flex-wrap: wrap; row-gap: 2px; }
+    .note-card .card-head span { white-space: nowrap; }
+    .section .note-card h2 { margin: 0 0 10px; font-size: clamp(24px, 3vw, 32px); max-width: none; }
+    .note-card h2 a { color: inherit; text-decoration: none; }
+    .note-card p { margin: 0; color: var(--graphite); }
+    /* The status line keeps its 20 px gap below the card */
+    .note-card + .status { margin: 20px 0 0; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,20 +41,27 @@
     <section class="page-head">
       <div class="wrap">
         <h1>Lab notes</h1>
-        <p>What we are learning while building DreamTeam, one experiment at&nbsp;a&nbsp;time.</p>
+        <p>What we are learning while building DreamTeam, one experiment at a time.</p>
       </div>
     </section>
-
-    <section class="section slim">
+    <section class="section">
       <div class="wrap">
-        <p class="status"><strong>Still to come:</strong> the first note. <strong>Ready&nbsp;now:</strong> <a href="../about.html">About</a> and a diagram on <a href="../lifecycle.html">The&nbsp;Dream&nbsp;Team&nbsp;Life&nbsp;Cycle</a> page, showing AI agents working between your approvals, from vision to&nbsp;result. In the meantime, <a href="../index.html#contact">talk to&nbsp;us</a>.</p>
+        <article class="card note-card" aria-labelledby="note-anatomy-title">
+          <div class="card-head"><span>Lab note · Alex Rapoport</span><span>October 2026</span></div>
+          <h2 id="note-anatomy-title">
+            <a href="anatomy-of-one-task.html">Anatomy of one task</a>
+          </h2>
+          <p>One real feature, from an approved plan to merged code: what the AI agents built and checked, the calls I made, and what the record shows it took in time and money.</p>
+          <a class="more" href="anatomy-of-one-task.html">Read the note →</a>
+        </article>
+        <p class="status"><strong>Still to come:</strong> “So I built one” — why DreamTeam exists.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</span>
+      <span>DreamTeam Lab · Built on Claude Code and GitHub · © 2026</span>
       <nav aria-label="Footer">
         <a href="../lifecycle.html">The Life Cycle</a>
         <a href="../program.html">Your Dream Team in 8 weeks</a>
