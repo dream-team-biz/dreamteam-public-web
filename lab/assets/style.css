@@ -394,9 +394,12 @@ h1, h2, h3 { color: var(--ink); }
   .cycle li:nth-child(2n) { border-right: 0; }
   .steps { grid-template-columns: 1fr; }
 }
-@media (max-width: 760px) {
+@media (max-width: 880px) {
   .site-header .wrap { flex-wrap: wrap; gap: 10px 24px; padding-top: 12px; padding-bottom: 12px; }
-  .site-nav { width: 100%; margin-left: 0; gap: 18px; overflow-x: auto; padding-bottom: 4px; }
+  .site-nav { width: calc(100% + 12px); margin: -6px; gap: 18px; overflow-x: auto; padding: 6px 6px 10px; }
+  .site-nav a.btn-primary { margin-left: auto; }
+}
+@media (max-width: 760px) {
   .people { grid-template-columns: 1fr; }
   .person { padding: 18px; }
   .person-photo { width: 88px; height: 88px; }
