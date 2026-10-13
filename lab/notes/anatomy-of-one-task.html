@@ -9,23 +9,24 @@
   <meta name="description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where I decided, and what it took in time and money.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     /* One visual note (Brief delta 3) on the shared system (assets/style.css, The Blueprint): the page head
        (.head-84), the names picture and the results band; section labels; stage cards; the record chart as on
        the Life Cycle page. Only what the system has no component for lives here: the before/after, the
        dependency diagram, the Run loop, the acceptance-criteria list, the cost table's plan cell and the
-       folded small print. Tokens only; mobile first. */
+       folded small print. Tokens only; mobile first.
+       The site's system pass (standards/design-system.md): this page's faces, sizes and weights for the byline,
+       the before/after, the captions, the criteria numerals, the stage strip, the data tables, the plan cell, the notes,
+       the setup and the schema moved to assets/style.css (CSS §22); what stays here is layout. */
 
     .lab-note strong, .lab-note code { color: var(--ink); }
-    .byline { font: 400 13px/1.5 var(--mono); color: var(--muted); }
     .head-ba { margin-top: 28px; }
     .head-results { margin-top: 24px; border: 1px solid var(--rule); border-top: 2px solid var(--accent); background: var(--panel); }
-    .record-head h3 { font-size: 20px; line-height: 1.2; }
 
     /* Captions under the artifact, no wider than the text (the chart's takeaway keeps its shared style) */
-    .lab-note figcaption:not(.rc-takeaway), .table-note, .steps-key { max-width: var(--measure); font-size: 14px; line-height: 1.5; color: var(--muted); }
+    .lab-note figcaption:not(.rc-takeaway), .table-note, .steps-key { max-width: var(--measure); }
     .lab-note figcaption:not(.rc-takeaway), .table-note { margin-top: 10px; }
     .fig-wide { max-width: 1040px; }
 
@@ -34,15 +35,14 @@
     .code { margin: 0; padding: 12px 14px; font: 400 13px/1.6 var(--mono); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); white-space: pre-wrap; overflow-wrap: anywhere; }
     .code .k { color: var(--accent); font-weight: 500; }
     .ba { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-items: center; }
-    .ba .label { margin-bottom: 8px; font: 400 13px/1.4 var(--mono); color: var(--muted); }
-    .ba .label b { display: block; font: 700 24px/1.15 var(--head); color: var(--ink); }
+    .ba .label { margin-bottom: 8px; }
+    .ba .label b { display: block; }
     /* The "before" row stays on one line at every width: 30 characters fit 320 px at 15 px */
     .ba .before .code { padding: 12px 14px; font-size: 15px; font-weight: 500; white-space: pre; overflow-wrap: normal; }
     .ba .after .code { padding: 14px 16px; font-size: 14px; border: 2px solid var(--accent); }
-    .ba-arrow { margin: 0; text-align: center; font: 700 34px/1 var(--head); color: var(--accent); transform: rotate(90deg); }
+    .ba-arrow { margin: 0; text-align: center; transform: rotate(90deg); }
     .ba-plain { margin-top: 16px; max-width: 760px; }
     .ba-plain p + p { margin-top: 4px; }
-    .ba-plain p:first-child strong { font-size: 17px; }
     @media (min-width: 900px) {
       .ba { grid-template-columns: max-content auto minmax(0, 1fr); column-gap: 18px; }
       .ba .before .code { padding: 16px 18px; font-size: 18px; }
@@ -89,12 +89,11 @@
     /* The acceptance criteria: nine bold one-liners, two columns from 900 px */
     .ac-list { list-style: none; padding: 0; max-width: 1040px; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; border-top: 1px solid var(--line); }
     .ac-list li { display: grid; grid-template-columns: 3.4em minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--line); line-height: 1.45; }
-    .ac-list .n { font: 500 13px/1.4 var(--mono); color: var(--accent); }
     @media (min-width: 900px) { .ac-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
     /* AC-3 verbatim, folded: only the summary line and the caption show until it is opened */
     .contract-box { max-width: 880px; }
-    .contract { font-size: 12.5px; background: var(--sunken); }
+    .contract { background: var(--sunken); }
     .contract-box details summary { cursor: pointer; font-weight: 600; color: var(--accent); }
     .contract-box details[open] summary { margin: 0 0 10px; color: var(--muted); }
 
@@ -102,10 +101,9 @@
        decisions as the cards' amber gate lines; one column below 1024 px */
     .strip { list-style: none; padding: 0; grid-template-columns: minmax(0, 1fr); row-gap: 28px; }
     .strip > li { position: relative; display: flex; flex-direction: column; }
-    .strip > li + li::before { content: "↓"; position: absolute; top: -24px; left: 18px; font: 500 16px/1 var(--mono); color: var(--accent); }
+    .strip > li + li::before { content: "↓"; position: absolute; top: -24px; left: 18px; }
     .strip .sc-body { flex: 1 1 auto; padding: 12px 14px 14px; }
     .strip .sc-body > * + * { margin-top: 10px; }
-    .strip .sc-body p { font-size: 15px; line-height: 1.5; }
     .strip .sc-catch { color: var(--muted); }
     .strip .is-run { border: 1.5px solid var(--accent); }
     .strip .is-run .stage-card-head { background: var(--wash-solid); }
@@ -126,30 +124,24 @@
 
     /* Tables: values in mono; below 560 px each row stacks into one block */
     .table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--panel); }
-    table.data { width: 100%; border-collapse: collapse; font-size: 14.5px; line-height: 1.45; }
-    table.data caption { padding: 12px 14px 4px; text-align: left; font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+    table.data { width: 100%; border-collapse: collapse; }
+    table.data caption { padding: 12px 14px 4px; text-align: left; }
     table.data th, table.data td { padding: 9px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); color: var(--muted); }
-    table.data thead th { font: 500 12px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
     table.data tbody th { font-weight: 600; color: var(--ink); }
     table.data tbody tr:last-child th, table.data tbody tr:last-child td { border-bottom: 0; }
     table.data tfoot th, table.data tfoot td { border-top: 2px solid var(--line); border-bottom: 0; font-weight: 600; color: var(--ink); }
-    table.data .num { text-align: right; font: 400 13px/1.45 var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink); }
-    table.data tfoot .num { font-weight: 500; }
-    table.data code { font-size: 12.5px; }
+    table.data .num { text-align: right; white-space: nowrap; }
 
     /* The cost table: the subscription's dollars large, in a column of their own with two short lines under them */
     .costs-fig { max-width: 780px; }
-    table.costs { font-size: 15px; }
-    table.costs tbody .num { font-size: 15px; }
     /* Scoped past table.data .num, so the "At Claude API list prices" header wraps at 375 px */
-    table.costs thead th, table.costs thead th.num { font: 500 12px/1.3 var(--mono); letter-spacing: .06em; white-space: normal; color: var(--muted); }
+    table.costs thead th, table.costs thead th.num { white-space: normal; }
     table.costs tr.total th, table.costs tr.total td { border-top: 2px solid var(--line); font-weight: 600; color: var(--ink); }
     table.costs th.plan { text-align: center; color: var(--accent); }
     table.costs td.plan { width: 17em; vertical-align: middle; text-align: left; border-left: 1px solid var(--rule); background: var(--wash); }
-    .plan-big { display: block; font: 700 clamp(30px, 22px + 1.6vw, 42px)/1.05 var(--head); color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
-    .plan-sub { display: block; margin-top: 8px; font-size: 13.5px; line-height: 1.45; color: var(--ink); }
-    .plan-sub.plan-open { font-size: 13px; color: var(--muted); }
-    .plan-list { margin: 10px 0 0; padding-left: 16px; font-size: 13.5px; line-height: 1.4; color: var(--ink); }
+    .plan-big { display: block; white-space: nowrap; }
+    .plan-sub { display: block; margin-top: 8px; }
+    .plan-list { margin: 10px 0 0; padding-left: 16px; }
     .plan-list li + li { margin-top: 4px; }
 
     /* The small print: compact folds at the bottom */
@@ -158,23 +150,21 @@
     .fold summary { cursor: pointer; font-weight: 600; color: var(--accent); text-wrap: balance; }
     .fold[open] > summary { color: var(--muted); }
     .fold > * + * { margin-top: 12px; }
-    .notes { max-width: var(--measure); padding-left: 20px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+    .notes { max-width: var(--measure); padding-left: 20px; }
     .notes > li + li { margin-top: 8px; }
     .notes .fn-list { margin: 4px 0; padding-left: 22px; }
-    .setup dl { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px 16px; font-size: 14px; line-height: 1.5; }
-    .setup dt { font: 500 12px/1.8 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .setup dl { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px 16px; }
     .setup dd { margin-bottom: 8px; overflow-wrap: anywhere; }
 
     /* The schema, inside the small print */
     .schema-body { padding: 14px 16px 16px; }
     .fields { display: grid; gap: 10px; }
     .fields > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; background: var(--sunken); border: 1px solid var(--line); }
-    .fields dd { font-size: 15px; line-height: 1.5; color: var(--muted); }
     .kinds { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
     .kinds li { display: flex; align-items: center; gap: 8px; }
-    .schema .rule { margin-top: 12px; max-width: var(--measure); font-size: 15px; line-height: 1.5; color: var(--muted); }
+    .schema .rule { margin-top: 12px; max-width: var(--measure); }
     .schema .rule.def { margin: 0 0 12px; }
-    .schema-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font: 400 12.5px/1.6 var(--mono); color: var(--muted); }
+    .schema-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
     .schema-foot > span { display: block; text-wrap: balance; }
 
     @media (min-width: 561px) {
@@ -183,7 +173,6 @@
       .setup dd { margin-bottom: 0; }
     }
     @media (max-width: 560px) {
-      .plan-big { font-size: 26px; }
       table.costs td.plan { width: auto; }
       .diagram { padding: 12px 8px; }
       table.data th, table.data td { padding: 8px; }
@@ -196,7 +185,7 @@
       table.stacked tfoot tr { border-top: 2px solid var(--line); border-bottom: 0; }
       table.stacked th, table.stacked td, table.stacked tfoot th, table.stacked tfoot td { padding: 2px 0; border: 0; text-align: left; }
       table.stacked td[data-label] { display: flex; justify-content: space-between; gap: 12px; }
-      table.stacked td[data-label]::before { content: attr(data-label); font: 500 12px/1.6 var(--mono); color: var(--muted); text-align: left; }
+      table.stacked td[data-label]::before { content: attr(data-label); text-align: left; }
       table.stacked.links td[data-label], table.stacked.log td[data-label] { display: block; }
       table.stacked.links td[data-label]::before, table.stacked.log td[data-label]::before { content: attr(data-label) ": "; }
     }
@@ -208,6 +197,7 @@
     <div class="wrap">
       <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
       <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
         <a href="../lifecycle.html">The Life Cycle</a>
         <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
         <a href="index.html">Lab notes</a>
@@ -820,6 +810,7 @@
     <div class="wrap">
       <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
       <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
         <a href="../lifecycle.html">The Life Cycle</a>
         <a href="../program.html">Your Dream Team in 8 weeks</a>
         <a href="index.html">Lab notes</a>

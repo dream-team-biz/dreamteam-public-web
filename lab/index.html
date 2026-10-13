@@ -9,7 +9,7 @@
   <meta name="description" content="An AI-driven software development cycle with humans in control. DreamTeam Lab builds DreamTeam, AI agents that do a software team's work while your engineers make the decisions, and runs it with your team as a pilot.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     /* Home's own layout. Its shared pieces (the task log, the result chips, the review card, the task schema and
@@ -24,19 +24,6 @@
     .pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .pair-text > * + * { margin-top: 16px; }
     .pair-text > .sec-label + * { margin-top: 0; }
-    .more { font-weight: 600; }
-
-    /* The small print, folded at the bottom */
-    .small-print { padding: 32px 0 40px; }
-    .provenance { max-width: 1040px; padding: 10px 14px; border: 1px solid var(--line); background: var(--panel); }
-    .provenance summary { cursor: pointer; width: fit-content; font: 500 13px/1.5 var(--mono); color: var(--accent); }
-    .provenance[open] summary { margin-bottom: 8px; }
-    .provenance h3 { margin-top: 14px; font: 500 12.5px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-    .provenance p, .provenance li { max-width: var(--measure); font-size: 14px; line-height: 1.55; color: var(--muted); }
-    .provenance ul { margin: 4px 0 0; padding-left: 18px; }
-    .provenance li + li { margin-top: 4px; }
-    .provenance b { font-weight: 600; color: var(--ink); }
-    .provenance code { font-size: 12.5px; overflow-wrap: anywhere; }
 
     @media (min-width: 1024px) {
       /* The log is taller than the head: the head and its actions stay at the top of the first screen */
@@ -52,6 +39,7 @@
     <div class="wrap">
       <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
       <nav class="site-nav" aria-label="Main">
+        <a href="why.html">Why DreamTeam?</a>
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
         <a href="notes/index.html">Lab notes</a>
@@ -107,8 +95,9 @@
           <h2 id="problem-title">The traditional software process is broken.</h2>
         </div>
         <div class="pair-text">
-          <p class="lead">It was built for people writing and understanding code, and AI now writes much of it.</p>
-          <p class="lead">Who understands the code today, and who is responsible for it?</p>
+          <p class="lead">It was built for people who wrote and understood their own code. Now AI can write the code — and someone still has to understand it and answer for it.</p>
+          <p class="lead"><strong>AI-driven development isn't a tool you install.<br>It's a process you build.</strong></p>
+          <p class="more"><a href="why.html">Why DreamTeam? <span aria-hidden="true">→</span></a></p>
         </div>
       </div>
     </section>
@@ -305,6 +294,7 @@
     <div class="wrap">
       <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
       <nav aria-label="Footer">
+        <a href="why.html">Why DreamTeam?</a>
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team in 8 weeks</a>
         <a href="notes/index.html">Lab notes</a>
