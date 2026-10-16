@@ -17,13 +17,17 @@
 
     /* First screen: one button and one text link */
     .hero-split .actions { align-items: center; gap: 12px 24px; }
-    .text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
     .hero-log { min-width: 0; }
 
     /* Two columns from 1024 px: the point on the left (5), its statement or picture on the right (7) */
     .pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .pair-text > * + * { margin-top: 16px; }
     .pair-text > .sec-label + * { margin-top: 0; }
+    /* Section 02 (G3-A): the core cards, the T-687 card and the link, 24 px apart (variants-spec-r3.md §2); the fourth
+       card's second sentence 12 below its line, as vetted on the variants page */
+    .stack > h2 + .bn-core, .stack > .bn-core + .review-card, .stack > .review-card + .more { margin-top: 24px; }
+    .bn-core-line + .bf-why { margin-top: 12px; }
 
     @media (min-width: 1024px) {
       /* The log is taller than the head: the head and its actions stay at the top of the first screen */
@@ -40,6 +44,7 @@
       <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
       <nav class="site-nav" aria-label="Main">
         <a href="why.html">Why DreamTeam?</a>
+        <a href="benefits.html">Benefits</a>
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
         <a href="notes/index.html">Lab notes</a>
@@ -66,8 +71,8 @@
             <p class="runlog-head"><span><strong>T-707</strong> · our task board learns to say why a task waits</span><span>UTC</span></p>
             <ol class="runlog-list" role="list" aria-label="The log of one DreamTeam task, T-707, from its first step to the merge, shortened" style="--mid:52.29%">
               <li class="runlog-day" style="--i:0">18 September 2026 <span class="runlog-start"><span aria-hidden="true">· ▶</span> 13:19 the task starts</span></li>
-              <li class="runlog-row" style="--i:2; --l:.08%; --w:1.77%"><span class="t">13:20–13:42</span><span class="who">4 agents</span><span><span class="chip changes">CONCERNS</span></span><span class="note">team meeting: are we ready? 2 blockers</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:3; --l:22.96%; --wl:1.92%; --ww:21.04%"><span class="t">18:00</span><span class="who">engineer</span><span><span class="chip human">CONFIRMED</span></span><span class="note">ready, with a design change</span><span class="runlog-bar" aria-hidden="true"></span></li>
+              <li class="runlog-row" style="--i:2; --l:.08%; --w:1.77%"><span class="t">13:20–13:42</span><span class="who">4 agents</span><span><span class="chip raise">CONCERNS</span></span><span class="note">team meeting: are we ready? 2 blockers</span><span class="runlog-bar" aria-hidden="true"></span></li>
+              <li class="runlog-row is-human" style="--i:3; --l:22.96%; --wl:1.92%; --ww:21.04%"><span class="t">18:00</span><span class="who">engineer</span><span></span><span class="note">ready, with a design change</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-row is-build" style="--i:4; --l:26.73%; --w:31.08%"><span class="t">18:46–01:07</span><span class="who">developer</span><span><span class="chip build">BUILT</span></span><span class="note">the feature, in three parts</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-day" style="--i:5">19 September 2026</li>
               <li class="runlog-group" style="--i:6"><span aria-hidden="true">↻ </span>Review, fix and test · each review at most 2 rounds</li>
@@ -77,9 +82,9 @@
               <li class="runlog-row in-group" style="--i:10; --l:64.79%; --w:.58%"><span class="t">02:33–02:40</span><span class="who">reviewer</span><span><span class="chip changes">CHANGES</span></span><span class="note">sent the design documents back</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-row in-group" style="--i:11; --l:65.38%; --w:.36%"><span class="t">02:40–02:44</span><span class="who">architect</span><span><span class="chip">FIXED</span></span><span class="note">the design documents</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-row in-group" style="--i:12; --l:65.73%; --w:.49%"><span class="t">02:44–02:50</span><span class="who">reviewer</span><span><span class="chip pass">APPROVED</span></span><span class="note">the design, in round 2 of 2</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:13; --l:95.96%; --wl:67.03%; --ww:28.93%"><span class="t">08:54</span><span class="who">engineer</span><span><span class="chip human">SENT ON</span></span><span class="note">the task to Finalize</span><span class="runlog-bar" aria-hidden="true"></span></li>
+              <li class="runlog-row is-human" style="--i:13; --l:95.96%; --wl:67.03%; --ww:28.93%"><span class="t">08:54</span><span class="who">engineer</span><span></span><span class="note">started Finalize</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-row" style="--i:14; --l:96.07%; --w:1.11%"><span class="t">08:56–09:09</span><span class="who">agents</span><span><span class="chip pass">PASSED</span></span><span class="note">Finalize: a last review, the demo replayed</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:15; --l:97.43%; --wl:97.18%; --ww:.25%"><span class="t">09:12</span><span class="who">engineer</span><span><span class="chip human">APPROVED</span></span><span class="note">the result, by starting Close</span><span class="runlog-bar" aria-hidden="true"></span></li>
+              <li class="runlog-row is-human" style="--i:15; --l:97.43%; --wl:97.18%; --ww:.25%"><span class="t">09:12</span><span class="who">engineer</span><span></span><span class="note">approved the result, by starting Close</span><span class="runlog-bar" aria-hidden="true"></span></li>
               <li class="runlog-row is-end" style="--i:16; --l:99.04%; --w:.96%"><span class="t">09:32–09:44</span><span class="who">GitHub</span><span><span class="chip">MERGED</span></span><span class="note">after 9 automated checks passed</span><span class="runlog-bar" aria-hidden="true"></span></li>
             </ol>
           </div>
@@ -102,9 +107,39 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="benefits-title">
+      <div class="wrap stack">
+        <p class="sec-label">02 · The core benefits</p>
+        <h2 id="benefits-title">A team behind every engineer, on record</h2>
+        <ul class="bn-core" role="list">
+          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect class="is-panel" x="10" y="3" width="15" height="11"/><rect class="is-panel" x="6.5" y="8.5" width="15" height="11"/><rect class="is-panel" x="3" y="14" width="15" height="11"/></svg><h3 class="bn-core-line">Each task gets the roles it needs, from architect to tester</h3></li>
+          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 4H17M3 8H12"/><path d="M5 11V17"/><path d="M5 20H23"/><rect class="is-panel" x="2" y="17" width="6" height="6"/><rect class="is-panel" x="11" y="17" width="6" height="6"/><polygon class="is-amber-fill" points="23,15.5 27.5,20 23,24.5 18.5,20"/></svg><h3 class="bn-core-line">A line of code leads back to its task and its decision</h3></li>
+          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M4 3H17L21 7V25H4Z"/><path d="M17 3V7H21"/><path d="M8 11H16M8 15H13"/><circle class="is-panel" cx="19" cy="19" r="4.5"/><path d="M22.2 22.2 26 26"/></svg><h3 class="bn-core-line">Agents find design mistakes in the contract before any code</h3></li>
+          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><polygon class="is-amber" points="14,3 25,14 14,25 3,14"/><polygon class="is-amber-fill" points="14,9.5 18.5,14 14,18.5 9.5,14"/></svg><h3 class="bn-core-line">A person decides on every task.</h3><p class="bf-why">Your own branch protection and required reviews apply, as you set them.</p></li>
+        </ul>
+
+        <figure class="review-card is-row" aria-labelledby="t687-title">
+          <figcaption class="review-card-head" id="t687-title"><span><strong>T-687</strong> · one readiness review</span><span>before any code</span></figcaption>
+          <ol class="findings" role="list">
+            <li class="finding">
+              <p class="finding-k"><span>Readiness review</span> <span class="chip raise">BLOCKED</span></p>
+              <p class="finding-point">As specified, the report would have rendered empty</p>
+              <p class="finding-detail">One of the four agents found it in the task's contract.</p>
+            </li>
+            <li class="finding is-human">
+              <p class="finding-k"><span>Engineer, at the gate</span></p>
+              <p class="finding-point">Changed the design before the build</p>
+              <p class="finding-detail">Two decisions at the gate shaped what was built.</p>
+            </li>
+          </ol>
+        </figure>
+        <p class="more"><a href="benefits.html">All benefits, by role <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="cycle-title">
       <div class="wrap stack">
-        <p class="sec-label">02 · The life cycle</p>
+        <p class="sec-label">03 · The life cycle</p>
         <h2 id="cycle-title">The agents build. You decide.</h2>
 
         <figure class="rchart bp is-schema" aria-labelledby="schema-cap">
@@ -156,7 +191,7 @@
     <section class="section" aria-labelledby="engineers-title">
       <div class="wrap pair">
         <div class="pair-text">
-          <p class="sec-label">03 · Engineers in control</p>
+          <p class="sec-label">04 · Engineers in control</p>
           <h2 id="engineers-title">AI agents do the work. Your engineers make the decisions.</h2>
           <p class="intro">Agents find the problems; the engineer decides at the gates. From one real task:</p>
           <p class="more"><a href="lifecycle.html#control-title">Three kinds of control, on the Life Cycle page <span aria-hidden="true">→</span></a></p>
@@ -166,7 +201,7 @@
           <figcaption class="review-card-head" id="review-title"><span><strong>T-707</strong> · what the reviewers found, and the engineer's call</span><span>before and after the code</span></figcaption>
           <ol class="findings" role="list">
             <li class="finding">
-              <p class="finding-k"><span>Before any code</span> <span class="chip changes">CONCERNS</span></p>
+              <p class="finding-k"><span>Before any code</span> <span class="chip raise">CONCERNS</span></p>
               <p class="finding-point">One word, read two ways</p>
               <p class="finding-detail">A dependency typed the natural way: one YAML parser reads the word <code>on</code> as <em>true</em>; another keeps it as text.</p>
 <pre class="finding-ex"><span class="k">typed     </span>{on: T-187}
@@ -174,7 +209,7 @@
 <span class="k">YAML 1.2  </span>{'on': 'T-187'}  <span class="ok">✓</span></pre>
             </li>
             <li class="finding is-human">
-              <p class="finding-k"><span>Engineer, at the gate</span> <span class="chip human">CONFIRMED</span></p>
+              <p class="finding-k"><span>Engineer, at the gate</span></p>
               <p class="finding-point">Chose the architect's redesign</p>
               <p class="finding-detail">A task whose dependency list disagrees with its record is corrected and logged, instead of stopping the whole board.</p>
             </li>
@@ -195,7 +230,7 @@
 
     <section class="section" aria-labelledby="record-title">
       <div class="wrap stack">
-        <p class="sec-label">04 · What you can see</p>
+        <p class="sec-label">05 · What you can see</p>
         <h2 id="record-title">Every step records what it took</h2>
         <div class="record-results is-band frame">
           <p class="results-label">Results · <span class="nw">T-707</span>, 18–19 September 2026</p>
@@ -215,7 +250,7 @@
 
     <section class="section" aria-labelledby="pilot-title">
       <div class="wrap stack">
-        <p class="sec-label">05 · The pilot</p>
+        <p class="sec-label">06 · The pilot</p>
         <h2 id="pilot-title">Your Dream Team in 8 weeks</h2>
         <ol class="nsteps is-row" role="list">
           <li><span class="nstep-text"><strong>Set up.</strong> The cycle, in your repositories.</span></li>
@@ -259,7 +294,7 @@
             <li><b>01:16–01:45</b> — code review, 01:16:05–01:38:37: approved with 0 critical, 0 high and 1 medium finding (L25–L26); the developer's fix, 01:38:38–01:45:18 (L27).</li>
             <li><b>01:45–02:32</b> — the tester, 01:45:19–02:32:13: all 9 acceptance criteria checked against the code, not taken from the developer's report; the test run, which leaves out the local end-to-end tests, 15,680 passed and 0 failed (L28–L29).</li>
             <li><b>02:33–02:50</b> — the design review asks for changes, 02:33:07–02:40:13 (L32–L33); the architect's fix, 02:40:14–02:44:35 (L34); approved in round 2 of at most 2, 02:44:36–02:50:39 (L35–L36).</li>
-            <li><b>08:54, 09:12</b> — the engineer's commands that start Finalize (08:54:53) and Close (09:12:53), from the session transcripts; Run had ended at 03:00:34 (L40). Finalize expects a person to start it, and asks one if an agent does (DreamTeam's <code>config/workflows.yaml</code> L2775–2781); starting Close is the approval (L5413, “invocation = approval”).</li>
+            <li><b>08:54, 09:12</b> — the engineer's commands that start Finalize (08:54:53) and Close (09:12:53), from the session transcripts; Run had ended at 03:00:34 (L40). Finalize expects a person to start it, and asks one if an agent does (DreamTeam's <code>config/workflows.yaml</code> L2775–2781); starting Close is the approval (L5953, “invocation = approval”).</li>
             <li><b>08:56–09:09</b> — Finalize, 08:56:10–09:09:47: the tester's last review (L44–L45) and the replay of the task's demo, every step that runs a command passed (L46–L51).</li>
             <li><b>09:32–09:44</b> — GitHub's merge queue, which runs automated checks before it merges a change: in the queue at 09:32:32, merged at 09:44:21 after 9 check runs, all successful, including the 5 the branch requires (<code>squash-trace.json</code> L114–120, L291–352; the required five: <code>reports/close-receipt-T-707.md</code> L15–28).</li>
             <li><b>The bars</b> — each step's start and length, in seconds from 13:19:28, over the 73,493 s to the merge; a short step is drawn at least 3 px wide. Amber: the task waiting for the engineer, 13:42:58–18:00:43 at the readiness gate (<code>rollup.json</code>, the gate's recorded wait), 03:00:34–08:54:53 and 09:09:47–09:12:53. The hairline is midnight.</li>
@@ -284,7 +319,7 @@
           </ul>
 
           <h3>The schema</h3>
-          <p>The stages and the engineer's three points, in DreamTeam's <code>config/workflows.yaml</code>: the readiness decision (L1225–1262), Finalize started by a person (L2775–2781), Close as the approval (L5413). Review and fix: at most 2 rounds, then the task goes to the engineer (L2363–2375). Who worked in <span class="nw">T-707</span>'s Run: its subagent records.</p>
+          <p>The stages and the engineer's three points, in DreamTeam's <code>config/workflows.yaml</code>: the readiness decision (L1225–1262), Finalize started by a person (L2775–2781), Close as the approval (L5953). Review and fix: at most 2 rounds, then the task goes to the engineer (L2363–2375). Who worked in <span class="nw">T-707</span>'s Run: its subagent records.</p>
         </details>
       </div>
     </section>
@@ -295,6 +330,7 @@
       <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
       <nav aria-label="Footer">
         <a href="why.html">Why DreamTeam?</a>
+        <a href="benefits.html">Benefits</a>
         <a href="lifecycle.html">The Life Cycle</a>
         <a href="program.html">Your Dream Team in 8 weeks</a>
         <a href="notes/index.html">Lab notes</a>
