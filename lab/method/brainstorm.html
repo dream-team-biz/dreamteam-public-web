@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>The brainstorm: the planning session — DreamTeam Lab</title>
+  <meta name="description" content="How a DreamTeam brainstorm takes your idea through vision, architecture and design to a plan you approve, in six stages: the interview, the design, the draft plan, the panel, the plan and the tasks created.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* The method page: layout only. Its figures are the infographic family, assets/style.css §24; the onward link and
+       the small print are the shared components (§15, §20). */
+    /* The first screen, 8/4 from 1180 on this page (§4, .head-84; design-r3 §1, so the one-line chain fits the 8): the
+       label, h1, chain, strip (below 1024), lead and action in the 8, the record card in the 4; at 1024–1179 the head
+       stacks, the card after the action. V1 and the line under it across the wrap. id="stages" is where each stage's
+       way back up lands */
+    @media (min-width: 1024px) and (max-width: 1179px) { .pg-first .head-84 { grid-template-columns: minmax(0, 1fr); } }
+    /* Below 1024 the strip follows the action, so the action stays high on the first screen (review r3) */
+    .pg-first .head-main { display: flex; flex-direction: column; }
+    .pg-first .ig-strip, .pg-first .ig-strip-key { order: 1; }
+    .pg-first .ig-strip { margin-top: 16px; }
+    .pg-first .lead { margin-top: 16px; max-width: var(--col); }
+    .pg-first .more { margin-top: 16px; }
+    .pg-first .ig-rec { max-width: none; }
+    .pg-first .stack { margin-top: 8px; }
+    /* V1: the wide drawing and its key from 1024; below, the strip carries them and the figure keeps its caption */
+    .pg-ov .ig-frame, .pg-ov .ig-legend { display: none; }
+    /* The stages: the benefit line with its fold under the h2, the figure (its record card inside the frame), the
+       text, then the way back up */
+    .stack > p, .stack > .benefits { max-width: var(--col); }
+    .stack > h2 + .benefits { margin-top: 16px; }
+    .stack > .bn-back { margin-top: 24px; }
+    .bf-body > .bf-why + .bf-why, .bf-body > .bf-why + .bf-ex { margin-top: 8px; }
+    #leaves .proof-strip { max-width: var(--col); }
+    #sp-sources ul { margin: 8px 0 0; padding-left: 20px; }
+    #sp-sources li + li { margin-top: 4px; }
+    /* S3: the three task cards, then the waves 16 below, on the frame's left edge, the rule in text beside them from
+       1024 and under them below (so no ground stays empty beside the drawing) */
+    .pg-s3-waves { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 48px; margin-top: 16px; }
+    .pg-s3-waves > .ig-pic { margin-inline: 0; }
+    .pg-s3-rule { flex: 1 1 20rem; max-width: var(--col); }
+    .pg-s3-rule > * + * { margin-top: 4px; }
+    @media (min-width: 1024px) {
+      .pg-ov .ig-frame { display: block; }
+      .pg-ov .ig-legend { display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="../index.html#contact">Talk to us</a>
+    </div>
+  </header>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ig-mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ig-mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-need" d="M1,1 L9,5 L1,9 z"/></marker>
+      <marker id="ig-mk-dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse"><circle class="ig-mk-dot" cx="5" cy="5" r="4"/></marker>
+    </defs>
+  </svg>
+
+  <main id="main" class="method">
+    <section class="page-head pg-first" id="stages" aria-labelledby="page-title">
+      <div class="wrap head-84">
+       <div class="head-main">
+        <p class="sec-label">The method</p>
+        <h1 id="page-title">A DreamTeam brainstorm is the planning session</h1>
+        <ol class="ig-chain" aria-label="From your idea to the plan">
+          <li class="is-end"><svg class="ig-chain-ring" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="5"/></svg>Idea<svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg></li>
+          <li>vision<svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg></li>
+          <li>architecture and design<svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg></li>
+          <li class="is-end"><span class="ig-chain-dia" aria-hidden="true"></span>a plan you approve</li>
+        </ol>
+
+        <ol class="ig-strip" data-zone="figure" aria-label="The six stages">
+          <li><a class="ig-strip-stop" href="#s1"><span class="ig-caps is-stage">S1</span><span class="ig-name">Vision</span><span class="visually-hidden">, you approve</span></a></li>
+          <li><a class="ig-strip-stop" href="#s2"><span class="ig-caps is-stage">S2</span><span class="ig-name">Design</span><span class="visually-hidden">, you approve</span></a></li>
+          <li><a class="ig-strip-stop" href="#s3"><span class="ig-caps is-stage">S3</span><span class="ig-name">Draft plan</span><span class="visually-hidden">, you approve</span></a></li>
+          <li><a class="ig-strip-stop" href="#s4"><span class="ig-caps is-stage">S4</span><span class="ig-name">Panel</span><span class="visually-hidden">, you approve</span></a></li>
+          <li><a class="ig-strip-stop" href="#s5"><span class="ig-caps is-stage">S5</span><span class="ig-name">Plan</span><span class="visually-hidden">, you approve</span></a></li>
+          <li><span class="ig-strip-check" aria-hidden="true"></span><a class="ig-strip-stop" href="#s6"><span class="ig-caps is-stage">S6</span><span class="ig-name">Materialize</span><span class="visually-hidden">, after a check in code</span></a></li>
+        </ol>
+        <ul class="ig-legend ig-strip-key" data-zone="figure" aria-label="Key">
+          <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>you approve</li>
+          <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+        </ul>
+
+        <p class="lead">After it, the tasks are ready to run; each still gets its own readiness check and your yes.</p>
+        <p class="more"><a href="#s1">Walk the six stages <span aria-hidden="true">↓</span></a></p>
+       </div>
+       <div class="head-side">
+        <div class="ig-rec" data-zone="figure">
+          <p class="ig-rec-head">In <code>BS-117</code> · the vision</p>
+          <pre class="ig-rec-ex">Status: **APPROVED v1**
+(… — "approve")</pre>
+          <p class="ig-rec-src"><span class="tid">BS-117</span> is one real DreamTeam brainstorm, about DreamTeam's own dependency record: which task waits for which, and why. Its excerpts below are about that. Here, its vision's approval line, word for word, cut with "…".</p>
+        </div>
+       </div>
+      </div>
+      <div class="wrap stack">
+        <figure class="ig pg-ov" aria-labelledby="v1-cap">
+          <div class="ig-frame bp">
+            <svg class="ig-pic is-wide" width="920" height="132" viewBox="0 0 920 132" role="img" aria-labelledby="v1-t v1-d">
+              <title id="v1-t">Six stages for a larger goal; your yes closes the first five.</title>
+              <desc id="v1-d">Your idea, then six stages on one line: S1 Vision, S2 Design, S3 Draft plan, S4 Panel, S5 Plan and S6 Materialize, then the tasks created. On the line after each of S1 to S5, an amber diamond: you approve. Between S5 and S6, also on the line, a teal square with a tick: the check in code.</desc>
+              <g aria-hidden="true">
+                <path class="ig-rail" d="M20 64 H908"/>
+                <circle class="ig-start" cx="20" cy="64" r="6"/>
+                <text class="ig-name" x="0" y="108">Your idea</text>
+                <rect class="ig-stage" x="48" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="58" y="55">S1</text>
+                <text class="ig-name" x="58" y="78">Vision</text>
+                <rect class="ig-stage" x="188" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="198" y="55">S2</text>
+                <text class="ig-name" x="198" y="78">Design</text>
+                <rect class="ig-stage" x="328" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="338" y="55">S3</text>
+                <text class="ig-name" x="338" y="78">Draft plan</text>
+                <rect class="ig-stage" x="468" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="478" y="55">S4</text>
+                <text class="ig-name" x="478" y="78">Panel</text>
+                <rect class="ig-stage" x="608" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="618" y="55">S5</text>
+                <text class="ig-name" x="618" y="78">Plan</text>
+                <rect class="ig-stage" x="774" y="36" width="100" height="56" rx="2"/>
+                <text class="ig-caps is-stage" x="784" y="55">S6</text>
+                <text class="ig-name" x="784" y="78">Materialize</text>
+                <polygon class="ig-dia" points="168,57 175,64 168,71 161,64"/>
+                <text class="ig-verb" x="168" y="108" text-anchor="middle">approve</text>
+                <polygon class="ig-dia" points="308,57 315,64 308,71 301,64"/>
+                <text class="ig-verb" x="308" y="108" text-anchor="middle">approve</text>
+                <polygon class="ig-dia" points="448,57 455,64 448,71 441,64"/>
+                <text class="ig-verb" x="448" y="108" text-anchor="middle">approve</text>
+                <polygon class="ig-dia" points="588,57 595,64 588,71 581,64"/>
+                <text class="ig-verb" x="588" y="108" text-anchor="middle">approve</text>
+                <polygon class="ig-dia" points="727,57 734,64 727,71 720,64"/>
+                <text class="ig-verb" x="727" y="108" text-anchor="middle">approve</text>
+                <text class="ig-caps is-check" x="754" y="26" text-anchor="middle">CHECK IN CODE</text>
+                <rect class="ig-check-bg" x="746" y="56" width="16" height="16"/>
+                <rect class="ig-check" x="746" y="56" width="16" height="16"/>
+                <path class="ig-check" d="M749.5 64 L752.5 67 L758.5 60.5"/>
+                <circle class="ig-end" cx="908" cy="64" r="6"/>
+                <text class="ig-name" x="920" y="108" text-anchor="end">Tasks created</text>
+              </g>
+            </svg>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>you approve</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+            </ul>
+          </div>
+          <figcaption id="v1-cap"><strong>Six stages for a larger goal; your yes closes the first five.</strong> Reviewer agents read the plan apart; every finding gets a decision; a blocker is deferred only with your sign-off; a script reads your approvals before tasks are written.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="s1" aria-labelledby="s1-title">
+      <div class="wrap stack">
+        <p class="sec-label">S1 · Vision</p>
+        <h2 id="s1-title">DreamTeam interviews you hard on eight dimensions and quotes your answers</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> a plan built on what you require.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">Each stage's file is committed as soon as it is written, so a fresh session resumes from the files.</p>
+                <p class="bf-why">The vision leaves out data fields, module names, command contracts, algorithms, task lists and library choices: they are the design's job. A requirement is proven wrong by a person, not by the repository.</p>
+                <p class="bf-why">Leaving S1 early takes an explicit override, and its reason is recorded.</p>
+                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, dimension 7, Partial: “Not probed. … file scope and executor assignment are S2 and S3 output, which the rubric excludes from a vision.” The executor is the agent role that will do a task.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v2-cap">
+          <div class="ig-frame bp">
+            <div class="ig-ring-fig">
+              <ol class="ig-dims is-left" aria-label="The eight dimensions, 1 to 4">
+                <li class="ig-dim"><span class="ig-dim-badge">1</span><div><p class="ig-dim-name">Problem and goal</p><p class="ig-dim-desc">What is broken or needed, and why is it worth doing now.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">2</span><div><p class="ig-dim-name">Scope and non-goals</p><p class="ig-dim-desc">What is explicitly in scope, and what is explicitly excluded.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">3</span><div><p class="ig-dim-name">How success is checked</p><p class="ig-dim-desc">How each resulting task will be verified; this feeds its acceptance criteria.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">4</span><div><p class="ig-dim-name">Constraints</p><p class="ig-dim-desc">Technical, process, or environment limits that bound the solution space.</p></div></li>
+              </ol>
+              <div class="ig-ring">
+                <svg class="ig-pic" width="288" height="288" viewBox="0 0 288 288" role="img" aria-labelledby="v2-t v2-d">
+                  <title id="v2-t">Eight dimensions around the vision.</title>
+                  <desc id="v2-d">A ring of eight parts around the words "the vision", in alternating shades, each with an icon and its number: 1, a target, problem and goal; 2, a square inside a dashed square, scope; 3, a flag, how success is checked; 4, two bars with a double arrow, constraints; 5, box to box, dependencies and order; 6, a warning triangle, risks and unknowns; 7, a person beside a page, files and who does the work; 8, a square with a diagonal double arrow, size. 1 to 4 run down the left side, 5 to 8 down the right, each level with its dimension in the lists.</desc>
+                  <g aria-hidden="true">
+                    <path class="ig-ring-sec is-shade" d="M49.26 46.43 A136 136 0 0 1 142 8.02 L142 80.03 A64 64 0 0 0 100.18 97.35 Z"/>
+                    <path class="ig-ring-sec" d="M8.02 142 A136 136 0 0 1 46.43 49.26 L97.35 100.18 A64 64 0 0 0 80.03 142 Z"/>
+                    <path class="ig-ring-sec is-shade" d="M46.43 238.74 A136 136 0 0 1 8.02 146 L80.03 146 A64 64 0 0 0 97.35 187.82 Z"/>
+                    <path class="ig-ring-sec" d="M142 279.99 A136 136 0 0 1 49.26 241.57 L100.18 190.65 A64 64 0 0 0 142 207.97 Z"/>
+                    <path class="ig-ring-sec is-shade" d="M146 8.02 A136 136 0 0 1 238.74 46.43 L187.82 97.35 A64 64 0 0 0 146 80.03 Z"/>
+                    <path class="ig-ring-sec" d="M241.57 49.26 A136 136 0 0 1 279.99 142 L207.97 142 A64 64 0 0 0 190.65 100.18 Z"/>
+                    <path class="ig-ring-sec is-shade" d="M279.99 146 A136 136 0 0 1 241.57 238.74 L190.65 187.82 A64 64 0 0 0 207.97 146 Z"/>
+                    <path class="ig-ring-sec" d="M238.74 241.57 A136 136 0 0 1 146 279.99 L146 207.97 A64 64 0 0 0 187.82 190.65 Z"/>
+                    <g class="ig-ring-icon" transform="translate(92.2 35.92)"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle class="is-fill" cx="12" cy="12" r="1.5"/></g>
+                    <g class="ig-ring-icon" transform="translate(35.92 92.2)"><rect x="2" y="2" width="20" height="20" stroke-dasharray="3 2"/><rect class="is-fill" x="8" y="8" width="8" height="8"/></g>
+                    <g class="ig-ring-icon" transform="translate(35.92 171.8)"><path d="M5 22 V2 M5 3 H19 L16 7.5 L19 12 H5"/></g>
+                    <g class="ig-ring-icon" transform="translate(92.2 228.08)"><path d="M3 3 V21 M21 3 V21 M7 12 H17 M9.5 9.5 L7 12 L9.5 14.5 M14.5 9.5 L17 12 L14.5 14.5"/></g>
+                    <g class="ig-ring-icon" transform="translate(171.8 35.92)"><rect x="1.5" y="8" width="7" height="8"/><rect x="15.5" y="8" width="7" height="8"/><path d="M8.5 12 H15 M12.5 9.5 L15 12 L12.5 14.5"/></g>
+                    <g class="ig-ring-icon" transform="translate(228.08 92.2)"><path d="M12 2.5 L22 20.5 H2 Z M12 9 V14"/><circle class="is-fill" cx="12" cy="17.5" r="1.25"/></g>
+                    <g class="ig-ring-icon" transform="translate(228.08 171.8)"><circle cx="6" cy="8" r="3"/><path d="M1 20 A5 5 0 0 1 11 20 M13 3 H19 L22 6 V21 H13 Z M19 3 V6 H22"/></g>
+                    <g class="ig-ring-icon" transform="translate(171.8 228.08)"><rect x="2.5" y="2.5" width="19" height="19"/><path d="M7 17 L17 7 M7 12 V17 H12 M12 7 H17 V12"/></g>
+                    <text class="ig-ring-n" x="114.15" y="76.94" text-anchor="middle">1</text>
+                    <text class="ig-ring-n" x="71.94" y="119.15" text-anchor="middle">2</text>
+                    <text class="ig-ring-n" x="71.94" y="178.85" text-anchor="middle">3</text>
+                    <text class="ig-ring-n" x="114.15" y="221.06" text-anchor="middle">4</text>
+                    <text class="ig-ring-n" x="173.85" y="76.94" text-anchor="middle">5</text>
+                    <text class="ig-ring-n" x="216.06" y="119.15" text-anchor="middle">6</text>
+                    <text class="ig-ring-n" x="216.06" y="178.85" text-anchor="middle">7</text>
+                    <text class="ig-ring-n" x="173.85" y="221.06" text-anchor="middle">8</text>
+                    <text class="ig-ring-hole" x="144" y="150" text-anchor="middle">the vision</text>
+                  </g>
+                </svg>
+              </div>
+              <ol class="ig-dims is-right" start="5" aria-label="The eight dimensions, 5 to 8">
+                <li class="ig-dim"><span class="ig-dim-badge">5</span><div><p class="ig-dim-name">Dependencies and order</p><p class="ig-dim-desc">What must exist first, and in what order downstream work should land.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">6</span><div><p class="ig-dim-name">Risks and unknowns</p><p class="ig-dim-desc">Failure modes, speculative areas, and things nobody is sure about yet.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">7</span><div><p class="ig-dim-name">Files and who does the work</p><p class="ig-dim-desc">Which files will be touched, and which role is the right one to do it.</p></div></li>
+                <li class="ig-dim"><span class="ig-dim-badge">8</span><div><p class="ig-dim-name">Size</p><p class="ig-dim-desc">Rough size of the resulting work, and whether to split it into smaller tasks.</p></div></li>
+              </ol>
+              <div class="ig-gate is-small">
+                <p>Stated confidence</p>
+                <p><span class="ig-note">at least</span> <span class="ig-gate-num">0.80</span></p>
+                <ul class="ig-yes" aria-label="Your answer"><li><span class="ig-yes-text"><span>you approve</span> <span>→ on to the design</span></span></li></ul>
+              </div>
+            </div>
+          </div>
+          <figcaption id="v2-cap"><strong>The eight dimensions DreamTeam interviews you on, around the vision.</strong> A dimension counts only with your answer quoted; the 0.80 is the agent's own estimate, and you can dispute it.</figcaption>
+        </figure>
+
+        <p>The grilling: DreamTeam <strong>interviews you on each dimension</strong>, in rounds, and looks the facts up in your code itself. It goes on until it can state that the whole task set could be written from the vision.</p>
+        <p>The eight are <strong>tuned to DreamTeam</strong>: one person decides, and tasks are scheduled by priority and readiness, not by date. So there is no stakeholder or timeline dimension; who does the work is asked instead.</p>
+        <p>The <strong>vision</strong> states the goal, the requirements and the non-goals. It <strong>holds no design</strong>: “orders are kept in one database table” could only be proven wrong by reading the code, so it moves to S2.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="s2" aria-labelledby="s2-title">
+      <div class="wrap stack">
+        <p class="sec-label">S2 · Design</p>
+        <h2 id="s2-title">Every requirement is traced to a component or contract</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> the design is decided once, while changing it is cheap.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">Each contract is numbered, so the plan and the reviewers can cite it on its own.</p>
+                <p class="bf-why">The low-level design adds exact data shapes, command contracts, algorithms and the file plan; where the two differ, the high level governs.</p>
+                <p class="bf-why">Rejected alternatives are named, each with the reason it was rejected.</p>
+                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, the engineer took the low-level design in his own words: “Yes, write the LLD”.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v3-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <ol class="ig-gen" aria-label="The general case: each requirement is traced to a part of the design">
+              <li><span class="ig-gen-box is-req">Requirement</span></li>
+              <li><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-gen-box is-stage">Component or contract</span></li>
+              <li><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-gen-box is-lld is-optional">Low-level part<span class="visually-hidden">, when there is a low-level design</span></span></li>
+            </ol>
+            <svg class="ig-pic is-wide" width="920" height="392" viewBox="-0.5 0 920 392" role="img" aria-labelledby="v3-t v3-d">
+              <title id="v3-t">For example, BS-117's map: from requirement to contract to low-level part.</title>
+              <desc id="v3-d">BS-117's real design in three columns joined by arrows. Requirements: R3, collision without ordering is expressible; R1, dependencies recorded where the board reads; R2, each dependency carries its reason; R4, "none" is deliberate and justified. High-level design: R3 leads to contract E9, Board marker; R3, R1 and R2 lead to contract E1, Dependency Record; R4 leads to contract E2, Reason-bearing None. Low-level design: E9 leads to section 11, Board marker; E1 to section 3, the CSV cell, and to section 1, the schema; E2 to section 1, the schema.</desc>
+              <g aria-hidden="true">
+                <text class="ig-caps is-stage" x="0" y="14">BS-117 · FOR EXAMPLE</text>
+                <text class="ig-caps" x="0" y="44">REQUIREMENTS</text>
+                <text class="ig-caps" x="328" y="44">HIGH-LEVEL DESIGN</text>
+                <text class="ig-caps" x="656" y="44">LOW-LEVEL DESIGN</text>
+                <path class="ig-l-build" d="M264 88 H328" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M264 104 H296 M264 176 H296 M264 256 H296 M296 104 V256"/>
+                <path class="ig-l-build" d="M296 176 H328" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M264 336 H328" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M592 96 H656" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M592 168 H656" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M592 184 H624 V248 H656" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M592 336 H640 V264 H656" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-req" x="0" y="64" width="264" height="64"/>
+                <text class="ig-id" x="12" y="90">R3</text><text class="ig-sent" x="44" y="90">Collision without</text><text class="ig-sent" x="44" y="110">ordering is expressible</text>
+                <rect class="ig-req" x="0" y="144" width="264" height="64"/>
+                <text class="ig-id" x="12" y="170">R1</text><text class="ig-sent" x="44" y="170">Dependencies recorded</text><text class="ig-sent" x="44" y="190">where the board reads</text>
+                <rect class="ig-req" x="0" y="224" width="264" height="64"/>
+                <text class="ig-id" x="12" y="250">R2</text><text class="ig-sent" x="44" y="250">Each dependency carries</text><text class="ig-sent" x="44" y="270">its reason</text>
+                <rect class="ig-req" x="0" y="304" width="264" height="64"/>
+                <text class="ig-id" x="12" y="330">R4</text><text class="ig-sent" x="44" y="330">“None” is deliberate</text><text class="ig-sent" x="44" y="350">and justified</text>
+                <rect class="ig-stage" x="328" y="64" width="264" height="64"/>
+                <text class="ig-id" x="340" y="90">E9</text><text class="ig-name" x="376" y="90">Board marker</text><text class="ig-note" x="376" y="110">“these two collide”</text>
+                <rect class="ig-stage" x="328" y="144" width="264" height="64"/>
+                <text class="ig-id" x="340" y="170">E1</text><text class="ig-name" x="376" y="170">Dependency Record</text><text class="ig-note" x="376" y="190">typed relation kind + why</text>
+                <rect class="ig-stage" x="328" y="304" width="264" height="64"/>
+                <text class="ig-id" x="340" y="330">E2</text><text class="ig-name" x="376" y="330">Reason-bearing None</text><text class="ig-note" x="376" y="350">“none” needs a reason</text>
+                <rect class="ig-lld" x="656" y="64" width="263" height="64"/>
+                <text class="ig-caps" x="668" y="88">LLD §11</text><text class="ig-sent is-strong" x="668" y="110">Board marker (E9)</text>
+                <rect class="ig-lld" x="656" y="144" width="263" height="64"/>
+                <text class="ig-caps" x="668" y="168">LLD §3</text><text class="ig-sent is-strong" x="668" y="190">CSV cell (E1, …)</text>
+                <rect class="ig-lld" x="656" y="224" width="263" height="64"/>
+                <text class="ig-caps" x="668" y="248">LLD §1</text><text class="ig-sent is-strong" x="668" y="270">Schema (E1, E2)</text>
+              </g>
+            </svg>
+            <div class="ig-map">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · for example</p>
+              <ol class="ig-map-groups" aria-label="Each contract, with its requirements and its low-level parts">
+                <li class="ig-map-group">
+                  <p class="ig-caps">Requirements</p>
+                  <div class="ig-req"><span class="ig-id">R3</span><span class="ig-sent">Collision without ordering is expressible</span></div>
+                  <span class="ig-down"><span class="visually-hidden">leads to</span></span>
+                  <p class="ig-caps">High-level design</p>
+                  <div class="ig-stage"><span class="ig-id">E9</span><span class="ig-name">Board marker</span><span class="ig-note">“these two collide”</span></div>
+                  <span class="ig-down"><span class="visually-hidden">leads to</span></span>
+                  <p class="ig-caps">Low-level design</p>
+                  <div class="ig-lld"><span class="ig-caps">LLD §11</span><span class="ig-sent is-strong">Board marker (E9)</span></div>
+                </li>
+                <li class="ig-map-group">
+                  <p class="ig-caps">Requirements</p>
+                  <div class="ig-req"><span class="ig-id">R3</span><span class="ig-sent">Collision without ordering is expressible</span></div>
+                  <div class="ig-req"><span class="ig-id">R1</span><span class="ig-sent">Dependencies recorded where the board reads</span></div>
+                  <div class="ig-req"><span class="ig-id">R2</span><span class="ig-sent">Each dependency carries its reason</span></div>
+                  <span class="ig-down"><span class="visually-hidden">lead to</span></span>
+                  <p class="ig-caps">High-level design</p>
+                  <div class="ig-stage"><span class="ig-id">E1</span><span class="ig-name">Dependency Record</span><span class="ig-note">typed relation kind + why</span></div>
+                  <span class="ig-down"><span class="visually-hidden">leads to</span></span>
+                  <p class="ig-caps">Low-level design</p>
+                  <div class="ig-lld"><span class="ig-caps">LLD §3</span><span class="ig-sent is-strong">CSV cell (E1, …)</span></div>
+                  <div class="ig-lld"><span class="ig-caps">LLD §1</span><span class="ig-sent is-strong">Schema (E1, E2)</span></div>
+                </li>
+                <li class="ig-map-group">
+                  <p class="ig-caps">Requirements</p>
+                  <div class="ig-req"><span class="ig-id">R4</span><span class="ig-sent">“None” is deliberate and justified</span></div>
+                  <span class="ig-down"><span class="visually-hidden">leads to</span></span>
+                  <p class="ig-caps">High-level design</p>
+                  <div class="ig-stage"><span class="ig-id">E2</span><span class="ig-name">Reason-bearing None</span><span class="ig-note">“none” needs a reason</span></div>
+                  <span class="ig-down"><span class="visually-hidden">leads to</span></span>
+                  <p class="ig-caps">Low-level design</p>
+                  <div class="ig-lld"><span class="ig-caps">LLD §1</span><span class="ig-sent is-strong">Schema (E1, E2)</span></div>
+                </li>
+              </ol>
+            </div>
+            <ul class="ig-gloss" aria-label="In plain words">
+              <li><b>Board marker</b> — the board marks two tasks that would collide.</li>
+              <li><b>Reason-bearing None</b> — a task with no dependencies must say why.</li>
+              <li><b>CSV cell</b> — the column that carries a task's dependencies when tasks are imported or exported as a CSV (comma-separated values) file.</li>
+            </ul>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key"><li>R = requirement · E = contract · LLD § = a section of the low-level design</li><li>dashed: if there is one</li></ul>
+            <ul class="ig-yes" aria-label="Your answers">
+              <li>approve the high level</li>
+              <li>approve the low level</li>
+            </ul>
+          </div>
+          <figcaption id="v3-cap"><strong>A requirement is traced to a component or contract, then, when there is a low-level design, to a low-level part.</strong> A contract is a named interface in the design. The example is <span class="tid">BS-117</span>'s map, its words kept; every arrow is in its design files.</figcaption>
+        </figure>
+
+        <p>The <strong>high-level design (HLD)</strong> maps every requirement to a named component or a contract: a numbered piece of the design that tasks build on.</p>
+        <p>The <strong>low-level design (LLD)</strong>, offered at this stage, fixes the exact shapes. HLD and LLD are software design's standard stages; DreamTeam develops both with you, and you approve each.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="s3" aria-labelledby="s3-title">
+      <div class="wrap stack">
+        <p class="sec-label">S3 · Draft plan</p>
+        <h2 id="s3-title">The design is broken into tasks, each with its role, files, criteria and confidence</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> each task arrives with its conditions of done already written.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">Ids are local to the plan; real task ids come when the tasks are created.</p>
+                <p class="bf-why">A task with no dependency says why, in one sentence. An order stated only in a sentence, not as a link, makes the draft incomplete.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v4-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <div class="ig-tasks">
+              <article class="ig-task" aria-label="Task A, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task A</p><p class="ig-task-role">Backend developer</p></div>
+                <dl class="ig-task-dl">
+                  <div><dt>Files</dt><dd><code>src/orders/store.py</code> · <code>tests/test_store.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>Every order is saved with its id and time.</li><li>A saved order reads back unchanged.</li></ol></dd></div>
+                  <div><dt>Confidence</dt><dd>High — a known pattern, files named.</dd></div>
+                  <div><dt>Depends on</dt><dd><p class="ig-task-none">none · why: the first task; nothing to wait for.</p></dd></div>
+                </dl>
+              </article>
+              <article class="ig-task" aria-label="Task B, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task B</p><p class="ig-task-role">Backend developer</p></div>
+                <dl class="ig-task-dl">
+                  <div><dt>Files</dt><dd><code>src/orders/export.py</code> · <code>src/orders/__init__.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>Every order is exported as one CSV row.</li><li>An empty store exports the header only.</li></ol></dd></div>
+                  <div><dt>Confidence</dt><dd>High — one module, its tests named.</dd></div>
+                  <div><dt>Depends on</dt><dd>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on A · build order</b><span>why: must land after A's schema change.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with C · would collide</b><span>why: both edit the package file.</span></div></div>
+                  </dd></div>
+                </dl>
+              </article>
+              <article class="ig-task" aria-label="Task C, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task C</p><p class="ig-task-role">Backend developer</p></div>
+                <dl class="ig-task-dl">
+                  <div><dt>Files</dt><dd><code>src/orders/search.py</code> · <code>src/orders/__init__.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>Orders are found by customer or by date.</li><li>A search with no match returns an empty list.</li></ol></dd></div>
+                  <div><dt>Confidence</dt><dd>Medium-High — one query is still open.</dd></div>
+                  <div><dt>Depends on</dt><dd>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg><div><b>on A · needs an output</b><span>why: it reads the order index A writes.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with B · would collide</b><span>why: both edit the package file.</span></div></div>
+                  </dd></div>
+                </dl>
+              </article>
+            </div>
+            <div class="pg-s3-waves">
+              <svg class="ig-pic is-wide" width="362" height="128" viewBox="-1 0 362 128" role="img" aria-labelledby="v4-t v4-d">
+                <title id="v4-t">Task A in wave 0; tasks B and C in wave 1.</title>
+                <desc id="v4-d">Two waves. Wave 0: task A. Wave 1: task B, which waits for A, build order; and task C, which needs an output from A. B and C would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="10">WAVE 0</text>
+                  <text class="ig-caps" x="240" y="10">WAVE 1</text>
+                  <path class="ig-l-build" d="M120 52 H180 V36 H240" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M120 68 H180 V100 H240" marker-end="url(#ig-mk-need)"/>
+                  <rect class="ig-task-box" x="0" y="40" width="120" height="40"/><path class="ig-task-top" d="M0 40 H120"/><text class="ig-name" x="60" y="65" text-anchor="middle">Task A</text>
+                  <rect class="ig-task-box" x="240" y="16" width="120" height="40"/><path class="ig-task-top" d="M240 16 H360"/><text class="ig-name" x="300" y="41" text-anchor="middle">Task B</text>
+                  <rect class="ig-task-box" x="240" y="80" width="120" height="40"/><path class="ig-task-top" d="M240 80 H360"/><text class="ig-name" x="300" y="105" text-anchor="middle">Task C</text>
+                  <path class="ig-l-collide" d="M300 56 V80" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="128" viewBox="-1 0 288 128" role="img" aria-labelledby="v4n-t v4n-d">
+                <title id="v4n-t">Task A in wave 0; tasks B and C in wave 1.</title>
+                <desc id="v4n-d">Two waves. Wave 0: task A. Wave 1: task B, which waits for A, build order; and task C, which needs an output from A. B and C would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="10">WAVE 0</text>
+                  <text class="ig-caps" x="168" y="10">WAVE 1</text>
+                  <path class="ig-l-build" d="M96 52 H132 V36 H168" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M96 68 H132 V100 H168" marker-end="url(#ig-mk-need)"/>
+                  <rect class="ig-task-box" x="0" y="40" width="96" height="40"/><path class="ig-task-top" d="M0 40 H96"/><text class="ig-name" x="48" y="65" text-anchor="middle">Task A</text>
+                  <rect class="ig-task-box" x="168" y="16" width="96" height="40"/><path class="ig-task-top" d="M168 16 H264"/><text class="ig-name" x="216" y="41" text-anchor="middle">Task B</text>
+                  <rect class="ig-task-box" x="168" y="80" width="96" height="40"/><path class="ig-task-top" d="M168 80 H264"/><text class="ig-name" x="216" y="105" text-anchor="middle">Task C</text>
+                  <path class="ig-l-collide" d="M216 56 V80" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                </g>
+              </svg>
+              <div class="pg-s3-rule">
+                <p class="ig-sent is-strong">wave = 1 + the highest wave it builds on: a task runs in the wave after the last task it waits for</p>
+                <p class="ig-sent">would collide: never orders the work; flagged if one starts while the other runs</p>
+              </div>
+            </div>
+            <div class="ig-rec">
+              <p class="ig-rec-head">In <code>BS-117</code> · the draft plan</p>
+              <pre class="ig-rec-ex">Status: **APPROVED v1** (… — "Approve"; … P3 executor: "DevOps")</pre>
+              <p class="ig-rec-src">Its draft plan's approval line, word for word, cut with "…": the engineer's own decisions at S3, in his words. P3 is a task in the plan; its executor is the agent role that will do it.</p>
+            </div>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs an output</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
+            </ul>
+          </div>
+          <figcaption id="v4-cap"><strong>Three tasks of a draft plan, and the waves their links set.</strong> The tasks are invented; the card is <span class="tid">BS-117</span>'s own draft-plan approval.</figcaption>
+        </figure>
+
+        <p>The <strong>draft plan</strong> breaks the design into tasks like those above. <strong>Acceptance criteria</strong> are the conditions of done, written to be copied word for word into the task.</p>
+        <p>Then its <strong>dependencies</strong>, each a typed link with a one-sentence reason: build order, needs an output, or would collide. <strong>Waves</strong>, tasks that can start at the same point, are derived from the links.</p>
+        <p>This draft is what the panel reads next.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="s4" aria-labelledby="s4-title">
+      <div class="wrap stack">
+        <p class="sec-label">S4 · Panel</p>
+        <h2 id="s4-title">At least two reviewer agents check the plan, and every finding gets a decision</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> a defect is found in the plan, not in the code.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">A finding is a problem a reviewer agent reports; a blocker is one that must be resolved — built into the plan, or deferred only with your sign-off.</p>
+                <p class="bf-why">The reviewer has no editing tools, and may not defer to another agent's verdict. A specialist such as DevOps may run on a cheaper model.</p>
+                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, the engineer's decisions came as a table, each with a recommendation.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v5-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <ul class="ig-lanes" aria-label="The reviewer agents, each a separate agent">
+              <li class="ig-lane">
+                <svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>
+                <span class="ig-name">Reviewer</span>
+                <span class="ig-note">reads the draft alone</span>
+                <span class="ig-note">verdict · confidence · blockers · findings</span>
+                <svg width="44" height="16" viewBox="0 0 44 16" aria-hidden="true"><circle class="ig-finding" cx="6" cy="8" r="4"/><circle class="ig-finding" cx="18" cy="8" r="4"/><circle class="ig-finding" cx="35" cy="8" r="4"/><circle class="ig-finding is-blocker" cx="35" cy="8" r="7"/></svg>
+                <span class="visually-hidden">Reads the draft alone and returns its verdict, confidence, blockers and findings.</span>
+              </li>
+              <li class="ig-lane">
+                <svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>
+                <span class="ig-name">Architect</span>
+                <span class="ig-note">reads the draft alone</span>
+                <span class="ig-note">verdict · confidence · blockers · findings</span>
+                <svg width="44" height="16" viewBox="0 0 44 16" aria-hidden="true"><circle class="ig-finding" cx="6" cy="8" r="4"/><circle class="ig-finding" cx="22" cy="8" r="4"/><circle class="ig-finding is-blocker" cx="22" cy="8" r="7"/><circle class="ig-finding" cx="38" cy="8" r="4"/></svg>
+                <span class="visually-hidden">Reads the draft alone and returns its verdict, confidence, blockers and findings.</span>
+              </li>
+              <li class="ig-lane is-optional">
+                <svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>
+                <span class="ig-name">Specialist</span>
+                <span class="ig-note">reads the draft alone</span>
+                <span class="ig-note">verdict · confidence · blockers · findings</span>
+                <svg width="44" height="16" viewBox="0 0 44 16" aria-hidden="true"><circle class="ig-finding" cx="6" cy="8" r="4"/></svg>
+                <span class="visually-hidden">When the plan touches its field. Reads the draft alone and returns its verdict, confidence, blockers and findings.</span>
+              </li>
+            </ul>
+            <div class="ig-meet">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <p><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span class="ig-name">The orchestrator</span>, the agent that runs the brainstorm, records a decision on every finding.</p>
+              <table class="ig-decide">
+                <thead>
+                  <tr><th scope="col">Finding</th><th scope="col">What the reviewer found</th><th scope="col">Decision</th><th scope="col">What changed in the plan</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row"><span class="ig-decide-id">A3 ≡ R1</span><span class="ig-decide-seat">architect · reviewer: the same defect, found by both</span></th><td data-label="What the reviewer found">the import modify path clears … on a blank cell<span class="ig-decide-gloss">In plain words: an ordinary export, edit and import could clear a task's dependency list, and the board would then fail to load.</span></td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td data-label="What changed in the plan">P1 <span class="tid">AC-4</span>: on any row carrying a record, the <code>Depends On</code> cell is ignored …<span class="ig-decide-gloss">In plain words: on such a row, an import now leaves the dependency list alone.</span></td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A2 ≡ R6</span><span class="ig-decide-seat">architect · reviewer: the same defect, found by both</span></th><td data-label="What the reviewer found">the HLD's E6 was silently weakened by the LLD and P4<span class="ig-decide-gloss">In plain words: the low-level design and one task had quietly turned a section the high-level design requires into a warning.</span></td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td data-label="What changed in the plan">E6 stands as approved: … <span class="tid">LLD §8</span> corrected …<span class="ig-decide-gloss">In plain words: the section stays required, and the low-level design was corrected to match.</span></td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A7</span><span class="ig-decide-seat">architect</span></th><td data-label="What the reviewer found"><span class="ig-decide-seat">Recommended to you as the gate's second question:</span>Materialising a cross-row join into a per-row field is stale the moment a provider is renamed …<span class="ig-decide-gloss">In plain words: a stored link to the task that provides what another needs goes stale when that task is renamed, so it is worked out each time the board loads.</span></td><td data-label="Decision"><span class="chip">ADAPTED</span><ul class="ig-yes is-row" aria-label="Your answer"><li>Your answer: “Approve”</li></ul></td><td data-label="What changed in the plan">P8 … matching computed on load by the board loader, never by a writer<span class="ig-decide-gloss">In plain words: a later task in the plan makes the board work the link out each time it loads, instead of storing it.</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>an agent</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-finding" cx="8" cy="8" r="4"/></svg>a finding</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-finding" cx="8" cy="8" r="4"/><circle class="ig-finding is-blocker" cx="8" cy="8" r="7"/></svg>a blocker</li>
+              <li class="is-wide">A, R = the architect's and the reviewer's findings · ≡ the same defect, found by two reviewer agents · adopted = taken as found · adapted = taken in another form · P1, P4, P8 = tasks in the plan · AC = acceptance criterion · E = contract</li>
+            </ul>
+          </div>
+          <figcaption id="v5-cap"><strong>Separate reviewer agents, one decision table.</strong> The lanes are schematic; the table holds three of <span class="tid">BS-117</span>'s real findings and decisions, word for word, each glossed in plain words.</figcaption>
+        </figure>
+
+        <p>One more check: until now the orchestrator, the agent running the brainstorm, wrote alone. Now at least two <strong>reviewer agents</strong> read the draft, each asked to report, not to edit.</p>
+        <p>The reviewer and the architect run on the strongest model. In <span class="tid">BS-117</span> the reviewer agents ran in parallel.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="s5" aria-labelledby="s5-title">
+      <div class="wrap stack">
+        <p class="sec-label">S5 · Plan</p>
+        <h2 id="s5-title">You approve the plan&nbsp;— all at once or task by task&nbsp;— before any task is created</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> one decision, made once, with every task in view.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">Confidence comes in four named tiers, from High — a well-understood pattern, clear files, no open unknowns — to Low, which is escalated before the task is created.</p>
+                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, the design's approval reads v1.2: v1 at S2, then the amendments the panel brought.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v6-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <svg class="ig-pic is-wide" width="920" height="332" viewBox="-1 -1 920 332" role="img" aria-labelledby="v6-t v6-d">
+              <title id="v6-t">The plan in waves, and your three answers.</title>
+              <desc id="v6-d">Four waves of tasks, as bands whose length is their number of tasks. Wave 0: task A, data; task B, auth. Wave 1: task C, service; task D, import; task E, export; task F, search; D and E would collide. Wave 2: task G, screens; task H, report; task I, docs. Wave 3: task J, the closing task; a bracket over all the bands above leads into it. Build order: C and D wait for A, F for B, G for C, H for D, I for F. Needs an output: E needs B's, H needs E's.</desc>
+              <g aria-hidden="true">
+                <text class="ig-caps" x="0" y="36">WAVE 0</text>
+                <text class="ig-caps" x="0" y="124">WAVE 1</text>
+                <text class="ig-caps" x="0" y="212">WAVE 2</text>
+                <text class="ig-caps" x="0" y="300">WAVE 3</text>
+                <rect class="ig-band" x="96" y="0" width="264" height="64"/>
+                <rect class="ig-band" x="96" y="88" width="528" height="64"/>
+                <rect class="ig-band" x="96" y="176" width="396" height="64"/>
+                <rect class="ig-band is-closing" x="96" y="264" width="822" height="64"/>
+                <path class="ig-l-build" d="M88 0 H80 V296 H96" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M80 240 H88"/>
+                <path class="ig-l-build" d="M156 56 V96" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M196 56 V72 H264 V96" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-need" d="M280 56 V80 H436 V96" marker-end="url(#ig-mk-need)"/>
+                <path class="ig-l-build" d="M320 56 V68 H564 V96" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M156 144 V184" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M294 144 V184" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-need" d="M400 144 V164 H334 V184" marker-end="url(#ig-mk-need)"/>
+                <path class="ig-l-build" d="M524 144 V170 H452 V184" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-task-box" x="96" y="8" width="120" height="48"/><path class="ig-task-top" d="M96 8 H216"/><text class="ig-box-key" x="108" y="26">Task A</text><text class="ig-name" x="108" y="46">Data</text>
+                <rect class="ig-task-box" x="240" y="8" width="120" height="48"/><path class="ig-task-top" d="M240 8 H360"/><text class="ig-box-key" x="252" y="26">Task B</text><text class="ig-name" x="252" y="46">Auth</text>
+                <rect class="ig-task-box" x="96" y="96" width="120" height="48"/><path class="ig-task-top" d="M96 96 H216"/><text class="ig-box-key" x="108" y="114">Task C</text><text class="ig-name" x="108" y="134">Service</text>
+                <rect class="ig-task-box" x="224" y="96" width="120" height="48"/><path class="ig-task-top" d="M224 96 H344"/><text class="ig-box-key" x="236" y="114">Task D</text><text class="ig-name" x="236" y="134">Import</text>
+                <rect class="ig-task-box" x="376" y="96" width="120" height="48"/><path class="ig-task-top" d="M376 96 H496"/><text class="ig-box-key" x="388" y="114">Task E</text><text class="ig-name" x="388" y="134">Export</text>
+                <rect class="ig-task-box" x="504" y="96" width="120" height="48"/><path class="ig-task-top" d="M504 96 H624"/><text class="ig-box-key" x="516" y="114">Task F</text><text class="ig-name" x="516" y="134">Search</text>
+                <path class="ig-l-collide" d="M344 120 H376" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                <rect class="ig-task-box" x="96" y="184" width="120" height="48"/><path class="ig-task-top" d="M96 184 H216"/><text class="ig-box-key" x="108" y="202">Task G</text><text class="ig-name" x="108" y="222">Screens</text>
+                <rect class="ig-task-box" x="234" y="184" width="120" height="48"/><path class="ig-task-top" d="M234 184 H354"/><text class="ig-box-key" x="246" y="202">Task H</text><text class="ig-name" x="246" y="222">Report</text>
+                <rect class="ig-task-box" x="372" y="184" width="120" height="48"/><path class="ig-task-top" d="M372 184 H492"/><text class="ig-box-key" x="384" y="202">Task I</text><text class="ig-name" x="384" y="222">Docs</text>
+                <rect class="ig-task-box is-closing" x="96" y="272" width="240" height="48"/><path class="ig-task-top" d="M96 272 H336"/><text class="ig-box-key" x="108" y="290">Task J</text><text class="ig-name" x="108" y="310">Closing task</text>
+              </g>
+            </svg>
+            <svg class="ig-pic is-narrow" width="288" height="424" viewBox="-0.5 -0.5 288 424" role="img" aria-labelledby="v6n-t v6n-d">
+              <title id="v6n-t">The plan in waves, and your three answers.</title>
+              <desc id="v6n-d">Four waves of tasks, as bands whose length is their number of tasks. Wave 0: task A, data; task B, auth. Wave 1: task C, service; task D, import; task E, export; task F, search; D and E would collide. Wave 2: task G, screens; task H, report; task I, docs. Wave 3: task J, the closing task; a bracket over all the bands above leads into it. Build order: C and D wait for A, F for B, G for C, H for D, I for F. Needs an output: E needs B's, H needs E's.</desc>
+              <g aria-hidden="true">
+                <text class="ig-caps" x="12" y="16">WAVE 0</text>
+                <text class="ig-caps" x="12" y="132">WAVE 1</text>
+                <text class="ig-caps" x="12" y="240">WAVE 2</text>
+                <text class="ig-caps" x="12" y="348">WAVE 3</text>
+                <rect class="ig-band" x="12" y="24" width="130" height="64"/>
+                <rect class="ig-band" x="12" y="140" width="274" height="64"/>
+                <rect class="ig-band" x="12" y="248" width="198" height="64"/>
+                <rect class="ig-band is-closing" x="12" y="356" width="274" height="64"/>
+                <path class="ig-l-build" d="M10 24 H4 V388 H12" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M4 312 H10"/>
+                <path class="ig-l-build" d="M40 80 V148" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M56 80 V112 H111 V148" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M134 80 V96 H255 V148" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-need" d="M120 80 V104 H187 V148" marker-end="url(#ig-mk-need)"/>
+                <path class="ig-l-build" d="M40 196 V256" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-build" d="M111 196 V256" marker-end="url(#ig-mk-build)"/>
+                <path class="ig-l-need" d="M170 196 V212 H124 V256" marker-end="url(#ig-mk-need)"/>
+                <path class="ig-l-build" d="M248 196 V220 H190 V256" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-task-box" x="12" y="32" width="62" height="48"/><path class="ig-task-top" d="M12 32 H74"/><text class="ig-box-key" x="20" y="50">Task A</text><text class="ig-box-name" x="43" y="70" text-anchor="middle">Data</text>
+                <rect class="ig-task-box" x="80" y="32" width="62" height="48"/><path class="ig-task-top" d="M80 32 H142"/><text class="ig-box-key" x="88" y="50">Task B</text><text class="ig-box-name" x="111" y="70" text-anchor="middle">Auth</text>
+                <rect class="ig-task-box" x="12" y="148" width="62" height="48"/><path class="ig-task-top" d="M12 148 H74"/><text class="ig-box-key" x="20" y="166">Task C</text><text class="ig-box-name" x="43" y="186" text-anchor="middle">Service</text>
+                <rect class="ig-task-box" x="80" y="148" width="62" height="48"/><path class="ig-task-top" d="M80 148 H142"/><text class="ig-box-key" x="88" y="166">Task D</text><text class="ig-box-name" x="111" y="186" text-anchor="middle">Import</text>
+                <rect class="ig-task-box" x="156" y="148" width="62" height="48"/><path class="ig-task-top" d="M156 148 H218"/><text class="ig-box-key" x="164" y="166">Task E</text><text class="ig-box-name" x="187" y="186" text-anchor="middle">Export</text>
+                <rect class="ig-task-box" x="224" y="148" width="62" height="48"/><path class="ig-task-top" d="M224 148 H286"/><text class="ig-box-key" x="232" y="166">Task F</text><text class="ig-box-name" x="255" y="186" text-anchor="middle">Search</text>
+                <path class="ig-l-collide" d="M142 172 H156" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                <rect class="ig-task-box" x="12" y="256" width="62" height="48"/><path class="ig-task-top" d="M12 256 H74"/><text class="ig-box-key" x="20" y="274">Task G</text><text class="ig-box-name" x="43" y="294" text-anchor="middle">Screens</text>
+                <rect class="ig-task-box" x="80" y="256" width="62" height="48"/><path class="ig-task-top" d="M80 256 H142"/><text class="ig-box-key" x="88" y="274">Task H</text><text class="ig-box-name" x="111" y="294" text-anchor="middle">Report</text>
+                <rect class="ig-task-box" x="148" y="256" width="62" height="48"/><path class="ig-task-top" d="M148 256 H210"/><text class="ig-box-key" x="156" y="274">Task I</text><text class="ig-box-name" x="179" y="294" text-anchor="middle">Docs</text>
+                <rect class="ig-task-box is-closing" x="12" y="364" width="130" height="48"/><path class="ig-task-top" d="M12 364 H142"/><text class="ig-box-key" x="20" y="382">Task J</text><text class="ig-box-name" x="77" y="402" text-anchor="middle">Closing task</text>
+              </g>
+            </svg>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs an output</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box" x="1" y="1" width="38" height="10"/><path class="ig-task-top" d="M1 1 H39"/></svg>a task</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-closing" x="1" y="1" width="38" height="10"/></svg>closing task</li>
+            </ul>
+            <ul class="ig-yes" aria-label="Your answers">
+              <li>approve all</li>
+              <li>one by one</li>
+              <li>stop</li>
+            </ul>
+          </div>
+          <figcaption id="v6-cap"><strong>The plan in waves, and your three answers.</strong> A band's length is its tasks — work, not time; the closing task's band spans them all: it waits for every task.</figcaption>
+        </figure>
+
+        <p>The compiled plan is the draft plus every panel decision, with <strong>what changed since the draft</strong>; each task appears as a full card, criteria word for word.</p>
+        <p>An approved stage can still be amended: its approval gets a new version that says what changed.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="s6" aria-labelledby="s6-title">
+      <div class="wrap stack">
+        <p class="sec-label">S6 · Materialize</p>
+        <h2 id="s6-title">Before any task is written, a script reads the approval line in each stage file</h2>
+        <ul class="benefits" role="list">
+          <li>
+            <details class="benefit">
+              <summary><span class="bf-head"><span class="bf-line"><strong>What it buys:</strong> tasks that say exactly what was approved.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+              <div class="bf-body">
+                <p class="bf-why">The check finds that an approval line is there, not who wrote it, so your yes is asked at every stage.</p>
+                <p class="bf-why">The other stage gates are the agent's instructions, and you are present for each; the check in code stands where a miss would cost most.</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+
+        <figure class="ig" aria-labelledby="v7-cap">
+          <div class="ig-frame bp">
+            <svg class="ig-pic is-wide" width="920" height="282" viewBox="-1 0 920 282" role="img" aria-labelledby="v7-t v7-d">
+              <title id="v7-t">A script reads the approval line in each stage file before any task is written.</title>
+              <desc id="v7-d">Five stage files, each with an amber diamond for your approval: vision, high-level design, low-level design (dashed: if there is one), panel review, plan. They lead to a check in code: is the approval line in every stage file? If one is missing, the step stops. If all are there, the plan is copied, not written, with no agent dispatched: the tasks, into the task registry; the epic with its criteria; a closing task that waits for every task; the stage files, kept with the epic. The registry is checked, then committed.</desc>
+              <g aria-hidden="true">
+                <path class="ig-file-card" d="M0 16 H208 L216 24 V56 H0 Z M208 16 V24 H216"/>
+                <text class="ig-file-name" x="16" y="42">Vision</text>
+                <polygon class="ig-dia" points="196,29 203,36 196,43 189,36"/>
+                <path class="ig-file-card" d="M0 68 H208 L216 76 V108 H0 Z M208 68 V76 H216"/>
+                <text class="ig-file-name" x="16" y="94">High-level design</text>
+                <polygon class="ig-dia" points="196,81 203,88 196,95 189,88"/>
+                <path class="ig-file-card is-optional" d="M0 120 H208 L216 128 V160 H0 Z M208 120 V128 H216"/>
+                <text class="ig-file-name" x="16" y="146">Low-level design</text>
+                <polygon class="ig-dia" points="196,133 203,140 196,147 189,140"/>
+                <path class="ig-file-card" d="M0 172 H208 L216 180 V212 H0 Z M208 172 V180 H216"/>
+                <text class="ig-file-name" x="16" y="198">Panel review</text>
+                <polygon class="ig-dia" points="196,185 203,192 196,199 189,192"/>
+                <path class="ig-file-card" d="M0 224 H208 L216 232 V264 H0 Z M208 224 V232 H216"/>
+                <text class="ig-file-name" x="16" y="250">Plan</text>
+                <polygon class="ig-dia" points="196,237 203,244 196,251 189,244"/>
+                <path class="ig-rail" d="M216 36 H240 M216 88 H240 M216 140 H240 M216 192 H240 M216 244 H240 M240 36 V244"/>
+                <path class="ig-l-build" d="M240 140 H272" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-check-bg" x="272" y="92" width="224" height="96"/>
+                <rect class="ig-check" x="272" y="92" width="224" height="96"/>
+                <rect class="ig-check-bg" x="288" y="104" width="16" height="16"/>
+                <rect class="ig-check" x="288" y="104" width="16" height="16"/>
+                <path class="ig-check" d="M291.5 112 L294.5 115 L300.5 108.5"/>
+                <text class="ig-caps is-check" x="312" y="117">CHECK IN CODE</text>
+                <text class="ig-sent" x="288" y="152">Is the approval line in</text>
+                <text class="ig-sent" x="288" y="174">every stage file?</text>
+                <path class="ig-l-stop" d="M384 188 V226 M374 226 H394"/>
+                <text class="ig-sent" x="384" y="250" text-anchor="middle">missing → the step stops</text>
+                <path class="ig-l-build" d="M496 140 H592" marker-end="url(#ig-mk-build)"/>
+                <text class="ig-sent" x="544" y="132" text-anchor="middle">all there</text>
+                <rect class="ig-band" x="592" y="12" width="326" height="180"/>
+                <text class="ig-caps" x="604" y="36">COPIED, NOT WRITTEN</text>
+                <text class="ig-caps" x="604" y="54">NO AGENT DISPATCHED</text>
+                <rect class="ig-task-box" x="604" y="74" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="640" y="87">Tasks<tspan class="ig-note">, into the task registry</tspan></text>
+                <rect class="ig-stage" x="604" y="104" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="640" y="117">Epic, with its criteria</text>
+                <rect class="ig-task-box is-closing" x="604" y="134" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="640" y="147">Closing task<tspan class="ig-note"> · waits for every task</tspan></text>
+                <path class="ig-file" d="M605 160 H618 L623 165 V182 H605 Z M618 160 V165 H623"/>
+                <text class="ig-name" x="640" y="177">Stage files<tspan class="ig-note"> kept with the epic</tspan></text>
+                <path class="ig-l-build" d="M612 192 V216" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-check-bg" x="604" y="216" width="16" height="16"/>
+                <rect class="ig-check" x="604" y="216" width="16" height="16"/>
+                <path class="ig-check" d="M607.5 224 L610.5 227 L616.5 220.5"/>
+                <text class="ig-caps is-check" x="628" y="229">TASK REGISTRY CHECKED</text>
+                <path class="ig-l-build" d="M612 232 V256" marker-end="url(#ig-mk-build)"/>
+                <text class="ig-name" x="604" y="274">committed</text>
+              </g>
+            </svg>
+            <svg class="ig-pic is-narrow" width="288" height="756" viewBox="-1 -1 288 756" role="img" aria-labelledby="v7n-t v7n-d">
+              <title id="v7n-t">A script reads the approval line in each stage file before any task is written.</title>
+              <desc id="v7n-d">Five stage files, each with an amber diamond for your approval: vision, high-level design, low-level design (dashed: if there is one), panel review, plan. They lead to a check in code: is the approval line in every stage file? If one is missing, the step stops. If all are there, the plan is copied, not written, with no agent dispatched: the tasks, into the task registry; the epic with its criteria; a closing task that waits for every task; the stage files, kept with the epic. The registry is checked, then committed.</desc>
+              <g aria-hidden="true">
+                <path class="ig-file-card" d="M0 0 H224 L232 8 V40 H0 Z M224 0 V8 H232"/>
+                <text class="ig-file-name" x="16" y="26">Vision</text>
+                <polygon class="ig-dia" points="212,13 219,20 212,27 205,20"/>
+                <path class="ig-file-card" d="M0 52 H224 L232 60 V92 H0 Z M224 52 V60 H232"/>
+                <text class="ig-file-name" x="16" y="78">High-level design</text>
+                <polygon class="ig-dia" points="212,65 219,72 212,79 205,72"/>
+                <path class="ig-file-card is-optional" d="M0 104 H224 L232 112 V144 H0 Z M224 104 V112 H232"/>
+                <text class="ig-file-name" x="16" y="130">Low-level design</text>
+                <polygon class="ig-dia" points="212,117 219,124 212,131 205,124"/>
+                <path class="ig-file-card" d="M0 156 H224 L232 164 V196 H0 Z M224 156 V164 H232"/>
+                <text class="ig-file-name" x="16" y="182">Panel review</text>
+                <polygon class="ig-dia" points="212,169 219,176 212,183 205,176"/>
+                <path class="ig-file-card" d="M0 208 H224 L232 216 V248 H0 Z M224 208 V216 H232"/>
+                <text class="ig-file-name" x="16" y="234">Plan</text>
+                <polygon class="ig-dia" points="212,221 219,228 212,235 205,228"/>
+                <path class="ig-rail" d="M232 20 H256 M232 72 H256 M232 124 H256 M232 176 H256 M232 228 H256 M256 20 V228"/>
+                <path class="ig-l-build" d="M256 228 V244 H144 V264" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-check-bg" x="24" y="264" width="240" height="96"/>
+                <rect class="ig-check" x="24" y="264" width="240" height="96"/>
+                <rect class="ig-check-bg" x="40" y="276" width="16" height="16"/>
+                <rect class="ig-check" x="40" y="276" width="16" height="16"/>
+                <path class="ig-check" d="M43.5 284 L46.5 287 L52.5 280.5"/>
+                <text class="ig-caps is-check" x="64" y="289">CHECK IN CODE</text>
+                <text class="ig-sent" x="40" y="322">Is the approval line in</text>
+                <text class="ig-sent" x="40" y="344">every stage file?</text>
+                <path class="ig-l-stop" d="M224 360 V384 M214 384 H234"/>
+                <text class="ig-sent" x="286" y="406" text-anchor="end">missing → the step stops</text>
+                <path class="ig-l-build" d="M80 360 V448" marker-end="url(#ig-mk-build)"/>
+                <text class="ig-sent" x="72" y="408" text-anchor="end">all there</text>
+                <rect class="ig-band" x="0" y="448" width="286" height="216"/>
+                <text class="ig-caps" x="12" y="472">COPIED, NOT WRITTEN</text>
+                <text class="ig-caps" x="12" y="490">NO AGENT DISPATCHED</text>
+                <rect class="ig-task-box" x="12" y="508" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="48" y="521">Tasks</text>
+                <text class="ig-note" x="48" y="539">into the task registry</text>
+                <rect class="ig-stage" x="12" y="552" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="48" y="565">Epic, with its criteria</text>
+                <rect class="ig-task-box is-closing" x="12" y="580" width="24" height="16" rx="2"/>
+                <text class="ig-name" x="48" y="593">Closing task</text>
+                <text class="ig-note" x="48" y="611">waits for every task</text>
+                <path class="ig-file" d="M13 624 H26 L31 629 V646 H13 Z M26 624 V629 H31"/>
+                <text class="ig-name" x="48" y="637">Stage files</text>
+                <text class="ig-note" x="48" y="655">kept with the epic</text>
+                <path class="ig-l-build" d="M80 664 V688" marker-end="url(#ig-mk-build)"/>
+                <rect class="ig-check-bg" x="72" y="688" width="16" height="16"/>
+                <rect class="ig-check" x="72" y="688" width="16" height="16"/>
+                <path class="ig-check" d="M75.5 696 L78.5 699 L84.5 692.5"/>
+                <text class="ig-caps is-check" x="96" y="701">TASK REGISTRY</text>
+                <text class="ig-caps is-check" x="96" y="717">CHECKED</text>
+                <path class="ig-l-build" d="M80 704 V728" marker-end="url(#ig-mk-build)"/>
+                <text class="ig-name" x="80" y="748" text-anchor="middle">committed</text>
+              </g>
+            </svg>
+            <div class="ig-rec">
+              <p class="ig-rec-head">What the check reads, and what it prints</p>
+              <div class="ig-rec-pair">
+                <div>
+                  <pre class="ig-rec-ex">Status: **APPROVED v1** (… — "approve")</pre>
+                  <p class="ig-rec-src">The line it looks for, as <span class="tid">BS-117</span>'s vision holds it, cut with "…".</p>
+                </div>
+                <div>
+                  <pre class="ig-rec-ex">missing approval line in … (expected a line matching 'Status: **APPROVED...')</pre>
+                  <p class="ig-rec-src">What it prints when a stage file lacks one, as the code writes it, the path cut; no recorded refusal exists in <span class="tid">BS-117</span>'s record.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ig-foot">
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>you approve</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-file-card is-optional" x="1" y="1" width="38" height="10"/></svg>dashed: if there is one</li>
+            </ul>
+          </div>
+          <figcaption id="v7-cap"><strong>If one approval line is missing, nothing is written.</strong> The draft plan is not checked: the compiled plan replaces it.</figcaption>
+        </figure>
+
+        <p>The <strong>check in code</strong> is not the agent's judgment: the orchestrator runs it as the step's first instruction, and nothing else forces it.</p>
+        <p>Then <strong>materialize</strong>: the plan is copied, not rewritten, into the task registry, the file that lists every task. The registry is checked before it is committed; from then on, the tasks can be started.</p>
+        <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="industry" aria-labelledby="industry-title">
+      <div class="wrap stack">
+        <p class="sec-label">The industry's standard</p>
+        <h2 id="industry-title">How each stage compares with the industry's practice — sources linked</h2>
+
+        <figure class="ig" aria-labelledby="v8-cap">
+          <div class="ig-frame">
+            <table class="ig-compare">
+              <thead>
+                <tr><th scope="col">Stage</th><th scope="col">The industry's standard</th><th scope="col">DreamTeam</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">S1 · Vision</th><td data-label="The industry's standard">Needs drawn out by interview; goals and non-goals; work deemed ready before planning</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> eight fixed dimensions, tuned to DreamTeam, in rounds until its stated confidence reaches 0.80.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> each covered dimension quotes your answer; a test keeps design out of the requirements.</p></td></tr>
+                <tr><th scope="row">S2 · Design</th><td data-label="The industry's standard">Design documents naming rejected alternatives; decision records; high- and low-level design; requirements traced to design</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> every requirement traced to a component or contract; a low-level design offered, and approved by you; rejected alternatives named; each design approved in your words.</p></td></tr>
+                <tr><th scope="row">S3 · Draft plan</th><td data-label="The industry's standard">Requirements with acceptance criteria; tasks traced to them; dependencies between tasks; work scheduled from them</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> criteria written to be copied as they are; typed dependencies with reasons; waves derived from them; collisions flagged at start.</p></td></tr>
+                <tr><th scope="row">S4 · Panel</th><td data-label="The industry's standard">Review beyond the authors, in rounds; a final comment period; inspections grading defects by severity</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> at least two reviewer agents, each with a verdict, a confidence and its blockers; reviewers prepare apart; every finding gets a decision.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> a blocker is deferred only with your sign-off.</p></td></tr>
+                <tr><th scope="row">S5 · Plan</th><td data-label="The industry's standard">You verify each phase, then refine it</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> full task cards, a confidence each; what changed since the draft; approve all or one by one.</p></td></tr>
+                <tr><th scope="row">S6 · Materialize</th><td data-label="The industry's standard">Tasks listed from the specification, traced back to its requirements</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> tasks, the epic and a closing task created in one batch; criteria copied word for word.</p></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption id="v8-cap"><strong>Each stage beside the industry's practice; S1 and S4 go beyond it, and their rows say how.</strong> The industry's sources are linked in the small print.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="leaves" aria-labelledby="leaves-title">
+      <div class="wrap stack">
+        <p class="sec-label">What it leaves</p>
+        <h2 id="leaves-title">After the brainstorm, the tasks are ready to run</h2>
+
+        <figure class="ig" aria-labelledby="v10-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <div class="ig-board" role="group" aria-label="The board: the tasks created, by wave">
+              <div class="ig-board-col is-ready" role="group" aria-label="Wave 0, nothing to wait for">
+                <p class="ig-board-head">Wave 0 · nothing to wait for</p>
+                <ul class="ig-board-cards">
+                  <li class="ig-board-card"><span class="ig-board-id">Task A</span><span class="ig-board-name">Data</span><span class="ig-board-role">Backend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task B</span><span class="ig-board-name">Auth</span><span class="ig-board-role">Backend developer</span></li>
+                </ul>
+              </div>
+              <div class="ig-board-col" role="group" aria-label="Wave 1">
+                <p class="ig-board-head">Wave 1</p>
+                <ul class="ig-board-cards">
+                  <li class="ig-board-card"><span class="ig-board-id">Task C</span><span class="ig-board-name">Service</span><span class="ig-board-role">Backend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task D</span><span class="ig-board-name">Import</span><span class="ig-board-role">Backend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task E</span><span class="ig-board-name">Export</span><span class="ig-board-role">Backend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task F</span><span class="ig-board-name">Search</span><span class="ig-board-role">Backend developer</span></li>
+                </ul>
+              </div>
+              <div class="ig-board-col" role="group" aria-label="Wave 2">
+                <p class="ig-board-head">Wave 2</p>
+                <ul class="ig-board-cards">
+                  <li class="ig-board-card"><span class="ig-board-id">Task G</span><span class="ig-board-name">Screens</span><span class="ig-board-role">Frontend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task H</span><span class="ig-board-name">Report</span><span class="ig-board-role">Backend developer</span></li>
+                  <li class="ig-board-card"><span class="ig-board-id">Task I</span><span class="ig-board-name">Docs</span><span class="ig-board-role">Technical writer</span></li>
+                </ul>
+              </div>
+              <div class="ig-board-col" role="group" aria-label="Closes the goal">
+                <p class="ig-board-head">Closes the goal</p>
+                <ul class="ig-board-cards">
+                  <li class="ig-board-card"><span class="ig-board-id">Task J</span><span class="ig-board-name">Closing task</span><span class="ig-board-role">waits for every task</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <figcaption id="v10-cap"><strong>The tasks created, on the board, by wave.</strong> The same ten tasks as the plan in S5; their ids are given when the tasks are created.</figcaption>
+        </figure>
+
+        <p>The tasks are <strong>on the board</strong>, wave by wave; the first wave has nothing to wait for.</p>
+        <p>From here <strong>each task runs on its own</strong>: when it starts, it gets its own readiness check and your yes.</p>
+        <p><strong>The cost:</strong> each stage takes a conversation, and the panel takes agent time; it pays off where rework costs more.</p>
+        <a class="proof-strip" href="../notes/anatomy-of-one-task.html"><span class="task-id">T-707</span><span><span class="ps-title">Anatomy of one task</span><span class="ps-text"><span class="tid">BS-117</span>'s first planned task, from plan to merge.</span></span><span class="arr" aria-hidden="true">→</span></a>
+        <p class="more"><a href="../lifecycle.html">How DreamTeam runs each task, from its start to the result you approve <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section small-print essay-sp" aria-labelledby="sp-title">
+      <div class="wrap">
+        <h2 class="sec-label" id="sp-title">The small print</h2>
+        <details class="provenance">
+          <summary>DreamTeam's files behind each stage</summary>
+          <p>All at commit <code>6b947dfb1</code> of DreamTeam's repository: the interview rubric and stage contracts, <code>docs/system/BS_INTERVIEW_RUBRIC.md</code>; the brainstorm pipeline, <code>config/workflows.yaml</code>, steps <code>step_bs_init_brainstorm</code> (S1), <code>step_bs_init_architecture</code> (S2), <code>step_bs_init_draft_plan</code> (S3), <code>step_bs_init_panel</code> (S4), <code>step_bs_init_staging_report</code> (S5) and <code>step_bs_init_materialize</code> (S6); the check before S6, <code>bs-gate-check</code> in <code>tools/task_ops/query.py</code>; the reviewer agents, <code>.claude/agents/dt-reviewer.md</code>, <code>dt-architect.md</code> and <code>dt-devops.md</code>; <span class="tid">BS-117</span>'s stage files, <code>vision.md</code>, <code>architecture.md</code>, <code>plan-draft.md</code>, <code>panel-review.md</code> and <code>plan.md</code>, in its own folder.</p>
+        </details>
+        <details class="provenance" id="sp-sources">
+          <summary>The industry's sources</summary>
+          <p>Each row of the comparison, at its source:</p>
+          <ul>
+            <li><a href="https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs">A government service manual</a>: users' needs learned by interview (S1).</li>
+            <li><a href="https://www.industrialempathy.com/posts/design-docs-at-google/">An essay on design documents at a large software company</a>: goals and non-goals, alternatives, review beyond the authors (S1, S2, S4).</li>
+            <li><a href="https://scrumguides.org/scrum-guide.html">The guide to a widely used agile framework</a>: work deemed ready before planning (S1).</li>
+            <li><a href="https://www.computer.org/education/bodies-of-knowledge/software-engineering/topics">A professional society's body of knowledge for software engineering</a>: high-level and detailed design (S2).</li>
+            <li><a href="https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions">An early, widely cited essay on architecture decision records (2011)</a> (S2).</li>
+            <li><a href="https://swehb.nasa.gov/x/moHeB">A space agency's software engineering handbook, on traceability</a>: requirements traced to design (S2).</li>
+            <li><a href="https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html">A review of spec-driven work with AI coding agents</a>: acceptance criteria, tasks traced to requirements, each phase verified (S3, S5, S6).</li>
+            <li><a href="https://swehb.nasa.gov/spaces/SWEHBVC/pages/50888875/SWE-016+-+Software+Schedule">The same handbook, on schedules</a>: dependencies between tasks, work scheduled from them (S3).</li>
+            <li><a href="https://github.com/rust-lang/rfcs/blob/master/README.md">A programming-language community's process for requests for comments</a>: a final comment period (S4).</li>
+            <li><a href="https://swehb.nasa.gov/x/2AIfBg">The same handbook, on inspections</a>: defects graded by severity (S4).</li>
+          </ul>
+        </details>
+        <details class="provenance">
+          <summary>The method</summary>
+          <p>DreamTeam read at one commit; no measured number on this page (counts, durations and costs are in the worked examples); every excerpt word for word, cut only with "…"; a figure tagged "Schematic" is invented, and everything marked <span class="tid">BS-117</span> is its real record.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
+      <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team in 8 weeks</a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+    </div>
+  </footer>
+</body>
+</html>
