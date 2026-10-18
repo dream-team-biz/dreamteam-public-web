@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>How a brainstorm turned a problem into nine tasks — DreamTeam Lab</title>
+  <meta name="description" content="One real DreamTeam brainstorm, BS-117, from an engineer's problem to nine tasks, stage by stage, from its files and its recorded session: where it asked, where it was wrong, and where the engineer changed its course.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="index.html" aria-current="page">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="../index.html#contact">Talk to us</a>
+    </div>
+  </header>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ig-mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ig-mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-need" d="M1,1 L9,5 L1,9 z"/></marker>
+      <marker id="ig-mk-dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse"><circle class="ig-mk-dot" cx="5" cy="5" r="4"/></marker>
+      <marker id="ig-mk-missing" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-missing" d="M1,1 L9,5 L1,9 z"/></marker>
+    </defs>
+  </svg>
+
+  <main id="main">
+    <article class="essay note" aria-labelledby="page-title">
+
+      <header class="page-head">
+        <div class="wrap stack">
+          <p class="sec-label">Lab note</p>
+          <h1 id="page-title">How a brainstorm turned a problem into nine tasks</h1>
+          <div class="note-problem">
+            <p class="note-problem-k">The problem it solves</p>
+            <p class="note-problem-line"><svg class="ig-chain-ring" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="5"/></svg><span><span class="tidied">Tasks run out of order and stop halfway</span><span class="tidied-k">(tidied)</span></span></p>
+          </div>
+          <p class="note-real"><b>A real example:</b> <span class="tid">BS-117</span>, from its own records, and where the engineer changed its course. Its numbers are in <b class="v">teal</b>. <a href="../method/brainstorm.html">The method <span aria-hidden="true">→</span></a></p>
+
+          <figure class="ig" aria-labelledby="v1-cap">
+            <ol class="ig-strip" data-zone="figure" aria-label="The six stages of BS-117">
+              <li><a class="ig-strip-stop" href="#s1"><span class="ig-caps is-stage">S1</span><span class="ig-name">Vision</span><span class="visually-hidden">, the engineer approved by typing “approve”</span></a></li>
+              <li><a class="ig-strip-stop" href="#s2"><span class="ig-caps is-stage">S2</span><span class="ig-name">Design</span><span class="visually-hidden">, the engineer approved, choosing the option</span></a></li>
+              <li><a class="ig-strip-stop" href="#s3"><span class="ig-caps is-stage">S3</span><span class="ig-name">Draft plan</span><span class="visually-hidden">, the engineer approved, choosing the option</span></a></li>
+              <li><a class="ig-strip-stop" href="#s4"><span class="ig-caps is-stage">S4</span><span class="ig-name">Panel</span><span class="visually-hidden">, the engineer approved, choosing the option; the design proved wrong, he ruled again</span></a></li>
+              <li><a class="ig-strip-stop" href="#s5"><span class="ig-caps is-stage">S5</span><span class="ig-name">Plan</span><span class="visually-hidden">, the engineer approved all, choosing the option</span></a></li>
+              <li><span class="ig-strip-check" aria-hidden="true"></span><a class="ig-strip-stop" href="#s5"><span class="ig-caps is-stage">S6</span><span class="ig-name">Materialize</span><span class="visually-hidden">, after a check in code</span></a></li>
+            </ol>
+            <p class="ig-strip-facts"><span class="ig-tag is-real">BS-117</span> <span class="ig-caps is-stage">S1</span> <b class="v">12 questions</b> · <span class="ig-caps is-stage">S4</span> <b class="v">3 reviewers + 2, 39 findings</b>; design proved wrong · the engineer ruled again · <span class="ig-caps is-stage">S6</span> <b class="v">9 tasks</b></p>
+            <ul class="ig-legend ig-strip-key" data-zone="figure" aria-label="Key">
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>the engineer approved: at S1 by typing <span class="ig-verb is-typed">“approve”</span>, at <span class="nw">S2–S5</span> by choosing the option</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+            </ul>
+            <div class="ig-frame bp ig-pic is-wide">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <svg class="ig-pic is-wide" width="920" height="156" viewBox="0 0 920 156" role="img" aria-labelledby="v1-t v1-d">
+                <title id="v1-t">One real brainstorm, from a problem to nine tasks, with the engineer's approval after each of the first five stages.</title>
+                <desc id="v1-d">The problem, then six stages on one line: S1 Vision, with BS-117's 12 questions; S2 Design; S3 Draft plan; S4 Panel, with 3 reviewers and the orchestrator's 2, 39 findings; S5 Plan; S6 Materialize; then BS-117's 9 tasks created. After each of S1 to S5 an amber diamond: the engineer approved. Under S1, the one word he typed, “approve”; under S2 to S4, approve, the option he chose, and under S4 also: design proved wrong, he ruled again; under S5, approve all. Before S6, a teal square with a tick: a check in code.</desc>
+                <g aria-hidden="true">
+                  <path class="ig-rail" d="M20 72 H908"/>
+                  <circle class="ig-start" cx="20" cy="72" r="6"/>
+                  <text class="ig-name" x="0" y="124">The problem</text>
+                  <text class="ig-sent is-strong is-real" x="98" y="32" text-anchor="middle">12 questions</text>
+                  <text class="ig-sent is-strong is-real" x="518" y="32" text-anchor="middle">3 reviewers + 2 · 39 findings</text>
+                  <rect class="ig-stage" x="48" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="58" y="63">S1</text>
+                  <text class="ig-name" x="58" y="86">Vision</text>
+                  <rect class="ig-stage" x="188" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="198" y="63">S2</text>
+                  <text class="ig-name" x="198" y="86">Design</text>
+                  <rect class="ig-stage" x="328" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="338" y="63">S3</text>
+                  <text class="ig-name" x="338" y="86">Draft plan</text>
+                  <rect class="ig-stage" x="468" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="478" y="63">S4</text>
+                  <text class="ig-name" x="478" y="86">Panel</text>
+                  <rect class="ig-stage" x="608" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="618" y="63">S5</text>
+                  <text class="ig-name" x="618" y="86">Plan</text>
+                  <rect class="ig-stage" x="774" y="44" width="100" height="56"/>
+                  <text class="ig-caps is-stage" x="784" y="63">S6</text>
+                  <text class="ig-name" x="784" y="86">Materialize</text>
+                  <polygon class="ig-dia" points="168,65 175,72 168,79 161,72"/>
+                  <text class="ig-verb is-typed" x="168" y="124" text-anchor="middle">“approve”</text>
+                  <polygon class="ig-dia" points="308,65 315,72 308,79 301,72"/>
+                  <text class="ig-verb" x="308" y="124" text-anchor="middle">approve</text>
+                  <polygon class="ig-dia" points="448,65 455,72 448,79 441,72"/>
+                  <text class="ig-verb" x="448" y="124" text-anchor="middle">approve</text>
+                  <polygon class="ig-dia" points="588,65 595,72 588,79 581,72"/>
+                  <text class="ig-verb" x="588" y="124" text-anchor="middle">approve</text>
+                  <text class="ig-verb" x="588" y="146" text-anchor="middle"><tspan class="ig-note">design proved wrong · </tspan>the engineer ruled again</text>
+                  <polygon class="ig-dia" points="727,65 734,72 727,79 720,72"/>
+                  <text class="ig-verb" x="727" y="124" text-anchor="middle">approve all</text>
+                  <text class="ig-caps is-check" x="754" y="32" text-anchor="middle">CHECK IN CODE</text>
+                  <rect class="ig-check-bg" x="746" y="64" width="16" height="16"/>
+                  <rect class="ig-check" x="746" y="64" width="16" height="16"/>
+                  <path class="ig-check" d="M749.5 72 L752.5 75 L758.5 68.5"/>
+                  <circle class="ig-end" cx="908" cy="72" r="6"/>
+                  <text class="ig-name" x="920" y="124" text-anchor="end"><tspan class="is-real">9 tasks</tspan> created</text>
+                </g>
+              </svg>
+            </div>
+            <div class="ig-foot ig-pic is-wide">
+              <ul class="ig-legend" aria-label="Key">
+                <li><span class="ig-key-v">12</span>BS-117's own numbers</li>
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>approve: the engineer chose the option</li>
+                <li><span class="ig-verb is-typed">“approve”</span>: the one word he typed</li>
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+              </ul>
+            </div>
+            <figcaption id="v1-cap"><strong>One real brainstorm, from a problem to nine tasks, with the engineer's approval after each of the first five stages.</strong></figcaption>
+          </figure>
+
+          <p class="byline">Lab note · <a href="../about.html">DreamTeam Lab</a> · <span class="nw">October 2026</span></p>
+        </div>
+      </header>
+
+      <section class="section" id="problem" aria-labelledby="problem-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">The problem</p>
+              <h2 id="problem-title">Two tasks listed as ready at once; their order lived only in a note</h2>
+              <p><strong>DreamTeam traced his case to two tasks the board listed as ready at once</strong>: a safety guard for unattended runs, and a board-report command. Both rewrite the same two generated files. The guard task also needed a third task's output.</p>
+              <p><strong>A fourth had stopped before any code</strong>, assuming two mechanisms no task had built.</p>
+            </div>
+            <aside class="bn-split-r" aria-label="The two tasks, on record">
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">BS-117</code> · the vision</p>
+                <pre class="ig-rec-ex">the board lists both as ready to dispatch simultaneously.</pre>
+                <p class="ig-rec-src">The vision (its goal and requirements) on the two tasks, word for word.</p>
+              </div>
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">tasks.yaml</code> · <span class="nw">T-693</span>'s notes</p>
+                <pre class="ig-rec-ex">… Lands before <span class="nw">T-687</span> when both are ready (shared generated files). …<br>depends_on: []</pre>
+                <p class="ig-rec-src"><span class="nw">T-693</span>'s record on 18 September, word for word.</p>
+              </div>
+            </aside>
+          </div>
+
+          <figure class="ig" aria-labelledby="p2-cap">
+            <div class="ig-frame bp">
+              <div class="ig-halves">
+                <div>
+                  <p class="ig-tag is-real"><span class="tid">BS-117</span> · on the board</p>
+                  <div class="ig-board-col is-ready" role="group" aria-label="The board's list of tasks ready to start">
+                    <p class="ig-board-head">Ready to dispatch</p>
+                    <ul class="ig-board-cards is-stack">
+                      <li class="ig-board-card"><span class="ig-board-id">T-693</span><span class="ig-board-name">Build the guard and the command allow-list</span></li>
+                      <li class="ig-board-gap"><svg width="12" height="32" viewBox="0 0 12 32" aria-hidden="true" focusable="false"><path class="ig-l-missing" d="M6 0 V32" marker-end="url(#ig-mk-missing)"/></svg> <span class="ig-note">should land first: never written</span><span class="visually-hidden">: T-693 should land first; that order was never written where the board reads.</span></li>
+                      <li class="ig-board-card"><span class="ig-board-id">T-687</span><span class="ig-board-name">Write the 15-minute board story: the command and its report</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <p class="ig-tag">Schematic · and again</p>
+                  <ol class="ig-gen is-v" aria-label="And again: a task stops on what no task has built">
+                    <li><span class="ig-gen-box is-stage">A task starts</span></li>
+                    <li><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-gen-box is-req">needs another task's mechanism</span></li>
+                    <li><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-gen-box is-lld is-optional">not built yet: it stops</span></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <figcaption id="p2-cap"><strong>In the vision's words, the cost is “rework, and time and tokens spent on work that is thrown away”.</strong></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="s1" aria-labelledby="s1-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">S1 · Vision</p>
+              <h2 id="s1-title">Twelve questions, and one answer that turned the job</h2>
+              <p>A <strong>brainstorm</strong> is an interview that turns an idea into a plan. <strong>DreamTeam set up and researched before it asked</strong>: <b class="v">two agents</b> searched the repository; it ran <b class="v">six web searches</b> itself.</p>
+              <p>Then it <strong>interviewed the engineer in <b class="v">three rounds</b></strong>, until its own confidence estimate reached 0.80; it stated <b class="v">0.86</b>.</p>
+            </div>
+            <aside class="bn-split-r" aria-label="DreamTeam's first findings">
+              <div class="ig-rec is-pull" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">BS-117</code> · the session, S1</p>
+                <p class="ig-rec-q">“Your diagnosis is right, and the mechanism is weaker than you think.”</p>
+                <p class="ig-rec-src">How DreamTeam's findings began, after its research, word for word.</p>
+              </div>
+            </aside>
+          </div>
+
+          <figure class="ig" aria-labelledby="v2-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <ol class="ig-rounds" aria-label="The twelve questions of S1, in three rounds">
+                <li>
+                  <p class="ig-caps">Round 1</p>
+                  <ol class="ig-qs">
+                    <li class="ig-q is-typed"><span class="visually-hidden">Question 1: four options offered; the engineer chose none and typed his own answer.</span><span class="ig-q-n" aria-hidden="true">1</span><span class="ig-q-topic">Where a missing link should stop work</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol><p class="ig-q-said is-long"><b>The engineer typed:</b> <span class="tidied">The problem is that dependencies are not set, not that a block is missing. Every task's start already checks them and stops if needed; that part is fine. Missing dependencies are not.</span><span class="tidied-k">(tidied)</span></p><p class="ig-q-said is-short"><b>The engineer typed his own answer</b></p></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 2: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">2</span><span class="ig-q-topic">What each task must declare</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 3: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">3</span><span class="ig-q-topic">Problems that are not about order</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 4: four options offered; he chose the third, not the recommended one.</span><span class="ig-q-n" aria-hidden="true">4</span><span class="ig-q-topic">Which existing tasks to bring up to date</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec"></li><li class="ig-opt"></li><li class="ig-opt is-pick"></li><li class="ig-opt"></li></ol><p class="ig-q-said">chose <q>All 85 <span class="nw">non-DONE</span> tasks</q>, every open task</p></li>
+                  </ol>
+                </li>
+                <li>
+                  <p class="ig-caps">Round 2</p>
+                  <ol class="ig-qs">
+                    <li class="ig-q"><span class="visually-hidden">Question 5: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">5</span><span class="ig-q-topic">What makes a link get written</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 6: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">6</span><span class="ig-q-topic">A need no task provides</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 7: four options offered; he chose the third, not the recommended one.</span><span class="ig-q-n" aria-hidden="true">7</span><span class="ig-q-topic">What would prove it worked</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec"></li><li class="ig-opt"></li><li class="ig-opt is-pick"></li><li class="ig-opt"></li></ol><p class="ig-q-said">chose <q>No task stalls on a missing mechanism for a full epic</q></p></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 8: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">8</span><span class="ig-q-topic">How big the work may grow</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                  </ol>
+                </li>
+                <li>
+                  <p class="ig-caps">Round 3</p>
+                  <ol class="ig-qs">
+                    <li class="ig-q"><span class="visually-hidden">Question 9: three options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">9</span><span class="ig-q-topic">Counts to check the day it lands</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 10: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">10</span><span class="ig-q-topic">Keeping “none” honest</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 11: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">11</span><span class="ig-q-topic">How the update gets done</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                    <li class="ig-q"><span class="visually-hidden">Question 12: four options offered; he chose the first, the recommended one.</span><span class="ig-q-n" aria-hidden="true">12</span><span class="ig-q-topic">Update first, or the rule first</span><ol class="ig-opts" aria-hidden="true"><li class="ig-opt is-rec is-pick"></li><li class="ig-opt"></li><li class="ig-opt"></li><li class="ig-opt"></li></ol></li>
+                  </ol>
+                </li>
+              </ol>
+              <p class="ig-typed"><b>Q1 · He typed:</b> <span class="tidied">The problem is that dependencies are not set, not that a block is missing. Every task's start already checks them and stops if needed; that part is fine. Missing dependencies are not.</span><span class="tidied-k">(tidied)</span></p>
+              <div class="ig-rec">
+                <p class="ig-rec-head">In <code class="nw">BS-117</code> · the vision</p>
+                <div class="ig-rec-pair is-3">
+                  <div>
+                    <pre class="ig-rec-ex">A constraint that exists in reality must be impossible to leave out of the record.</pre>
+                    <p class="ig-rec-src">The goal his typed answer led to, word for word.</p>
+                  </div>
+                  <div>
+                    <pre class="ig-rec-ex">Answers marked *(selected)* were chosen from offered options rather than typed freely.</pre>
+                    <p class="ig-rec-src">The vision's own note on its interview, word for word.</p>
+                  </div>
+                  <div>
+                    <pre class="ig-rec-ex">The dispatch check that the … judged adequate is prose inside a prompt, with nothing executable behind it, unlike the steps on either side of it. It has held because the agent reading it complies.</pre>
+                    <p class="ig-rec-src">The vision on the check he judged fine, kept out of scope; word for word, the role cut with “…”.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><span class="ig-opt is-rec" aria-hidden="true"></span>the option DreamTeam recommended, always offered first</li>
+                <li><span class="ig-opt is-pick" aria-hidden="true"></span>the engineer's answer</li>
+                <li><span class="ig-sw is-typed" aria-hidden="true"></span>amber row: he typed his own, tidied</li>
+              </ul>
+            </div>
+            <figcaption id="v2-cap"><strong>DreamTeam found the questions and the options; the one answer the engineer typed narrowed the goal.</strong> “Chosen” means the answer matches an option; the small print says why that is the most the record shows.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>Where he changed course.</strong> His one typed answer said the check that stops a task was fine and the links were never written, so the vision narrowed to writing them down. Two more answers went against its recommendation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="s2" aria-labelledby="s2-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">S2 · Design</p>
+              <h2 id="s2-title">His question took the authoring rule to every place a task is born</h2>
+              <p><strong>The design came in <b class="v">ten numbered parts</b>.</strong> Then the engineer asked: <span class="tidied">Does it cover tasks born outside a brainstorm, such as follow-ups and splits?</span><span class="tidied-k">(tidied)</span> DreamTeam answered: “Good catch, and the honest answer is: partly.”</p>
+              <p>The design already refused, in code, to save a task without its links, in the one command that creates task rows. But <strong>the authoring rule</strong>, an instruction wherever a task is written, covered only the brainstorm's plan.</p>
+              <p><strong>It widened that rule to all <b class="v">five places</b> a task is born</strong>, and he took the low-level design it offered, choosing its recommended option.</p>
+            </div>
+
+            <aside class="bn-split-r" aria-label="The five places a task is born">
+          <figure class="ig" aria-labelledby="v3-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <div class="ig-map is-all is-stack">
+                <div class="ig-stage"><span class="ig-id">E5</span><span class="ig-name">Authoring rule, all origins</span><span class="ig-note">was: the plan card's rule, for (a) only</span></div>
+                <span class="ig-down"><span class="visually-hidden">applies to</span></span>
+                <ol class="ig-fan is-v" aria-label="The five places a task is born">
+                  <li><div class="ig-req"><span class="ig-id">a</span><span class="ig-sent">a brainstorm's plan card<br><span class="ig-caps is-stage">Covered before the engineer's question</span></span></div></li>
+                  <li><div class="ig-req"><span class="ig-id"><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>b</span><span class="ig-sent">a split or follow-up filed when a task starts<span class="visually-hidden">, added after his question</span></span></div></li>
+                  <li><div class="ig-req"><span class="ig-id"><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>c</span><span class="ig-sent">a follow-up filed as a task finishes<span class="visually-hidden">, added after his question</span></span></div></li>
+                  <li><div class="ig-req"><span class="ig-id"><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>d</span><span class="ig-sent">an edit at plan review<span class="visually-hidden">, added after his question</span></span></div></li>
+                  <li><div class="ig-req"><span class="ig-id"><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>e</span><span class="ig-sent">a task written by hand<span class="visually-hidden">, added after his question</span></span></div></li>
+                </ol>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>added after the engineer's question</li>
+              </ul>
+            </div>
+            <figcaption id="v3-cap"><strong>One question took the authoring rule from the brainstorm's plan to every place a task is born.</strong> The five are the design's own list, in plain words.</figcaption>
+          </figure>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="s3" aria-labelledby="s3-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">S3 · Draft plan</p>
+              <h2 id="s3-title">Nine tasks in waves, each link saying why</h2>
+              <p><strong>The plan came out as <b class="v">eight tasks</b> and one that closes the epic</strong>, the larger goal they serve. A <dfn>wave</dfn> is the tasks that can run together, worked out from the links; a collision never orders.</p>
+              <p><strong>It flagged its own size</strong>: one task over the <b class="v">five to seven</b> the engineer had set. He kept them all, the option it recommended. The drawing shows the plan after his later ruling of 19 September, marked ◆.</p>
+            </div>
+            <aside class="bn-split-r" aria-label="T-701's link to T-700">
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">tasks.yaml</code> · <span class="nw">T-701</span>'s link to <span class="nw">T-700</span></p>
+                <pre class="ig-rec-ex">- on: <span class="nw">T-700</span><br>  kind: <span class="nw">build-order</span><br>  why: waits for <span class="nw">T-700</span> to close (…); both edit <span class="nw">`config/workflows.yaml`</span> and regenerate the same commands, and <span class="nw">T-700</span> leads because it is already in flight</pre>
+                <p class="ig-rec-src">His ruling of 19 September, as the board records it, word for word, the role cut with “…”.</p>
+              </div>
+            </aside>
+          </div>
+
+          <figure class="ig" aria-labelledby="v4-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <svg class="ig-pic is-wide" width="920" height="506" viewBox="-1 -1 920 506" role="img" aria-labelledby="v4-t v4-d">
+                <title id="v4-t">The nine tasks after the engineer's ruling of 19 September: T-701 now waits for T-700.</title>
+                <desc id="v4-d">Wave 0: T-707. Wave 1: T-699, T-700, and a dashed box where T-701 stood before his ruling. Wave 2: T-702, T-705, T-701. Wave 3: T-703. Wave 4: T-704. Wave 5: T-706, the closing task, bracketed to every wave. T-699 and T-700 wait for T-707; a brace takes T-707 into all of wave 2. T-702 needs T-699's output; T-705 waits for T-699. A diamond marks his ruling: T-701 waits for T-700. T-703 waits for T-702; T-704 for T-703 and T-701.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="36">WAVE 0</text>
+                  <text class="ig-caps" x="0" y="124">WAVE 1</text>
+                  <text class="ig-caps" x="0" y="212">WAVE 2</text>
+                  <text class="ig-caps" x="0" y="300">WAVE 3</text>
+                  <text class="ig-caps" x="0" y="388">WAVE 4</text>
+                  <text class="ig-caps" x="0" y="476">WAVE 5</text>
+                  <rect class="ig-band" x="96" y="0" width="176" height="64"/>
+                  <rect class="ig-band" x="96" y="88" width="376" height="64"/>
+                  <rect class="ig-band" x="96" y="176" width="576" height="64"/>
+                  <rect class="ig-band" x="96" y="264" width="176" height="64"/>
+                  <rect class="ig-band" x="96" y="352" width="176" height="64"/>
+                  <rect class="ig-band is-closing" x="96" y="440" width="822" height="64"/>
+                  <path class="ig-l-build" d="M88 0 H80 V472 H96" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M80 416 H88"/>
+                  <path class="ig-l-build" d="M152 56 V96" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M232 56 V72 H360 V96" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M272 32 H760 V208 H704"/>
+                  <path class="ig-l-build" d="M704 184 V232"/>
+                  <path class="ig-l-build" d="M704 208 H672" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M152 144 V184" marker-end="url(#ig-mk-need)"/>
+                  <path class="ig-l-build" d="M232 144 V156 H344 V184" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M440 144 V168 H584 V184" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M184 232 V272" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M584 232 V340 H232 V360" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M152 320 V360" marker-end="url(#ig-mk-build)"/>
+                  <polygon class="ig-dia" points="512,161 519,168 512,175 505,168"/>
+                  <text class="ig-verb" x="600" y="173">he ruled</text>
+                  <rect class="ig-task-box" x="96" y="8" width="176" height="48"/><path class="ig-task-top" d="M96 8 H272"/><text class="ig-id" x="108" y="26">T-707</text><text class="ig-name" x="108" y="46">Dependency record</text>
+                  <rect class="ig-task-box" x="96" y="96" width="176" height="48"/><path class="ig-task-top" d="M96 96 H272"/><text class="ig-id" x="108" y="114">T-699</text><text class="ig-name" x="108" y="134">Checks task text</text>
+                  <rect class="ig-task-box" x="296" y="96" width="176" height="48"/><path class="ig-task-top" d="M296 96 H472"/><text class="ig-id" x="308" y="114">T-700</text><text class="ig-name" x="308" y="134">New-task rules</text>
+                  <rect class="ig-task-box is-was" x="496" y="96" width="176" height="48"/><text class="ig-id is-was" x="508" y="114">T-701</text><text class="ig-note" x="508" y="134">before his ruling</text>
+                  <rect class="ig-task-box" x="96" y="184" width="176" height="48"/><path class="ig-task-top" d="M96 184 H272"/><text class="ig-id" x="108" y="202">T-702</text><text class="ig-name" x="108" y="222">Proposes records</text>
+                  <rect class="ig-task-box" x="296" y="184" width="176" height="48"/><path class="ig-task-top" d="M296 184 H472"/><text class="ig-id" x="308" y="202">T-705</text><text class="ig-name" x="308" y="222">Unmet needs</text>
+                  <rect class="ig-task-box" x="496" y="184" width="176" height="48"/><path class="ig-task-top" d="M496 184 H672"/><text class="ig-id" x="508" y="202">T-701</text><text class="ig-name" x="508" y="222">Board checks</text>
+                  <rect class="ig-task-box" x="96" y="272" width="176" height="48"/><path class="ig-task-top" d="M96 272 H272"/><text class="ig-id" x="108" y="290">T-703</text><text class="ig-name" x="108" y="310">Fills open tasks</text>
+                  <rect class="ig-task-box" x="96" y="360" width="176" height="48"/><path class="ig-task-top" d="M96 360 H272"/><text class="ig-id" x="108" y="378">T-704</text><text class="ig-name" x="108" y="398">Record required</text>
+                  <rect class="ig-task-box is-closing" x="96" y="448" width="376" height="48"/><path class="ig-task-top" d="M96 448 H472"/><text class="ig-id" x="108" y="466">T-706</text><text class="ig-name" x="108" y="486">Closes the epic</text>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="434" viewBox="-0.5 -0.5 288 434" role="img" aria-labelledby="v4n-t v4n-d">
+                <title id="v4n-t">The nine tasks after the engineer's ruling of 19 September: T-701 now waits for T-700.</title>
+                <desc id="v4n-d">Wave 0: T-707. Wave 1: T-699, T-700, and a dashed box where T-701 stood before his ruling. Wave 2: T-702, T-705, T-701. Wave 3: T-703. Wave 4: T-704. Wave 5: T-706, the closing task, bracketed to every wave. T-699 and T-700 wait for T-707; a brace takes T-707 into all of wave 2. T-702 needs T-699's output; T-705 waits for T-699. A diamond marks his ruling: T-701 waits for T-700. T-703 waits for T-702; T-704 for T-703 and T-701.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="13">WAVE</text>
+                  <text class="ig-caps" x="4" y="53">0</text>
+                  <text class="ig-caps" x="4" y="125">1</text>
+                  <text class="ig-caps" x="4" y="197">2</text>
+                  <text class="ig-caps" x="4" y="269">3</text>
+                  <text class="ig-caps" x="4" y="341">4</text>
+                  <text class="ig-caps" x="4" y="413">5</text>
+                  <rect class="ig-band" x="32" y="24" width="64" height="48"/>
+                  <rect class="ig-band" x="32" y="96" width="140" height="48"/>
+                  <rect class="ig-band" x="32" y="168" width="216" height="48"/>
+                  <rect class="ig-band" x="32" y="240" width="64" height="48"/>
+                  <rect class="ig-band" x="32" y="312" width="64" height="48"/>
+                  <rect class="ig-band is-closing" x="32" y="384" width="254" height="48"/>
+                  <path class="ig-l-build" d="M28 24 H20 V408 H32" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M20 360 H28"/>
+                  <path class="ig-l-build" d="M48 64 V104" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M80 64 V84 H140 V104" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M96 40 H280 V192 H264"/>
+                  <path class="ig-l-build" d="M264 172 V212"/>
+                  <path class="ig-l-build" d="M264 192 H248" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M48 136 V176" marker-end="url(#ig-mk-need)"/>
+                  <path class="ig-l-build" d="M80 136 V152 H124 V176" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M156 136 V160 H200 V176" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M64 208 V248" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M232 208 V300 H80 V320" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M48 280 V320" marker-end="url(#ig-mk-build)"/>
+                  <polygon class="ig-dia" points="178,153 185,160 178,167 171,160"/>
+                  <rect class="ig-task-box" x="32" y="32" width="64" height="32"/><path class="ig-task-top" d="M32 32 H96"/><text class="ig-id" x="64" y="53" text-anchor="middle">T-707</text>
+                  <rect class="ig-task-box" x="32" y="104" width="64" height="32"/><path class="ig-task-top" d="M32 104 H96"/><text class="ig-id" x="64" y="125" text-anchor="middle">T-699</text>
+                  <rect class="ig-task-box" x="108" y="104" width="64" height="32"/><path class="ig-task-top" d="M108 104 H172"/><text class="ig-id" x="140" y="125" text-anchor="middle">T-700</text>
+                  <rect class="ig-task-box is-was" x="184" y="104" width="64" height="32"/><text class="ig-id is-was" x="216" y="125" text-anchor="middle">T-701</text>
+                  <rect class="ig-task-box" x="32" y="176" width="64" height="32"/><path class="ig-task-top" d="M32 176 H96"/><text class="ig-id" x="64" y="197" text-anchor="middle">T-702</text>
+                  <rect class="ig-task-box" x="108" y="176" width="64" height="32"/><path class="ig-task-top" d="M108 176 H172"/><text class="ig-id" x="140" y="197" text-anchor="middle">T-705</text>
+                  <rect class="ig-task-box" x="184" y="176" width="64" height="32"/><path class="ig-task-top" d="M184 176 H248"/><text class="ig-id" x="216" y="197" text-anchor="middle">T-701</text>
+                  <rect class="ig-task-box" x="32" y="248" width="64" height="32"/><path class="ig-task-top" d="M32 248 H96"/><text class="ig-id" x="64" y="269" text-anchor="middle">T-703</text>
+                  <rect class="ig-task-box" x="32" y="320" width="64" height="32"/><path class="ig-task-top" d="M32 320 H96"/><text class="ig-id" x="64" y="341" text-anchor="middle">T-704</text>
+                  <rect class="ig-task-box is-closing" x="32" y="392" width="140" height="32"/><path class="ig-task-top" d="M32 392 H172"/><text class="ig-id" x="102" y="413" text-anchor="middle">T-706</text>
+                </g>
+              </svg>
+              <ol class="ig-key" aria-label="The nine tasks in plain words, by wave">
+                <li><span class="ig-caps">0</span><span class="ig-id">T-707</span><span>Dependency record</span></li>
+                <li><span class="ig-caps">1</span><span class="ig-id">T-699</span><span>Checks task text</span></li>
+                <li><span class="ig-caps">1</span><span class="ig-id">T-700</span><span>New-task rules</span></li>
+                <li><span class="ig-caps">2</span><span class="ig-id">T-702</span><span>Proposes records</span></li>
+                <li><span class="ig-caps">2</span><span class="ig-id">T-705</span><span>Unmet needs</span></li>
+                <li><span class="ig-caps">2</span><span class="ig-id">T-701</span><span>Board checks</span></li>
+                <li><span class="ig-caps">3</span><span class="ig-id">T-703</span><span>Fills open tasks</span></li>
+                <li><span class="ig-caps">4</span><span class="ig-id">T-704</span><span>Record required</span></li>
+                <li><span class="ig-caps">5</span><span class="ig-id">T-706</span><span>Closes the epic</span></li>
+              </ol>
+              <div class="ig-gloss">
+                <p class="ig-caps">Would collide · never orders the work</p>
+                <ul class="ig-collide" aria-label="The two pairs that would collide">
+                  <li><span class="ig-id nw">T-699</span><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><span class="ig-id nw">T-701</span><p>both edit one checking module; found by the orchestrator at S4</p></li>
+                  <li><span class="ig-id nw">T-700</span><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><span class="ig-id nw">T-705</span><p>both edit the brainstorm pipeline's steps and the same rules files</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order (18)</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs an output (1)</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide (2)</li>
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>the engineer's ruling, 19 September</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-was" x="1" y="1" width="38" height="10"/></svg>grey dashed box: where it stood before</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M34 1 V11"/><path class="ig-l-build" d="M34 6 H4" marker-end="url(#ig-mk-build)"/></svg>arrow into a band: every task in that wave</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-closing" x="1" y="1" width="38" height="10"/></svg>closing task</li>
+              </ul>
+            </div>
+            <figcaption id="v4-cap"><strong>The nine tasks after the engineer's ruling of 19 September: <span class="nw">T-701</span> now waits for <span class="nw">T-700</span>.</strong> <em>Anatomy of one task</em> draws the plan before it.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="s4" aria-labelledby="s4-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">S4 · Panel</p>
+              <h2 id="s4-title">Three reviewers and the orchestrator: 39 findings, a decision on each</h2>
+              <p><strong>Three reviewer agents</strong>, run separately and told not to edit, read the plan; none edited a file, and all asked for changes. The <strong>orchestrator</strong>, the agent that runs the session, put four items to the engineer.</p>
+            </div>
+
+            <aside class="bn-split-r" aria-label="Who acted at S4">
+              <figure class="ig" aria-labelledby="cast-cap">
+                <div class="ig-frame bp">
+                  <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+                  <ol class="ig-lanes is-col" aria-label="The three reviewer agents, each run separately">
+                    <li class="ig-lane"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span class="ig-name">Architect</span><span class="ig-lane-n">15 findings</span></li>
+                    <li class="ig-lane"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span class="ig-name">Reviewer</span><span class="ig-lane-n">17 findings</span></li>
+                    <li class="ig-lane"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span class="ig-name">DevOps</span><span class="ig-lane-n">5 findings</span></li>
+                  </ol>
+                  <div class="ig-meet">
+                    <p class="ig-tag">The orchestrator</p>
+                    <p>checked findings against the code; added 2; decided each</p>
+                  </div>
+                  <ul class="ig-yes" aria-label="The engineer"><li>The engineer rules on four</li></ul>
+                </div>
+                <figcaption id="cast-cap"><strong>Who acted at S4.</strong></figcaption>
+              </figure>
+            </aside>
+          </div>
+
+          <figure class="ig" aria-labelledby="v5-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <ul class="ig-counts" aria-label="The panel's findings, counted from its tables">
+                <li><span class="ig-count">39</span>findings in all (37 from three reviewers, 2 the orchestrator's own)</li>
+                <li><span class="ig-count">9</span>blockers, in eight rows</li>
+                <li><span class="ig-count">34</span>adopted</li>
+                <li><span class="ig-count">5</span>adapted</li>
+                <li><span class="ig-count">0</span>rejected</li>
+              </ul>
+              <table class="ig-decide is-compact">
+                <caption class="visually-hidden">The eight blocker rows: what was found, the decision, and how it was resolved</caption>
+                <thead><tr><th scope="col">Finding</th><th scope="col">What was found</th><th scope="col">Decision</th><th scope="col">How it was resolved</th></tr></thead>
+                <tbody>
+                  <tr class="is-key"><th scope="row"><span class="ig-decide-id">D1</span><span class="ig-decide-seat">DevOps</span></th><td data-label="What was found"><span class="ig-decide-k">The wrong statement</span>The LLD states <code>registry-selfcheck</code> is "not a registered required check" and … "never blocks a merge". False: <span class="nw">T-558</span> registered it as a PR-required context …<span class="ig-decide-gloss">In plain words: the registry check was already required.</span></td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">Switched on only after the backfill <span class="ig-opt is-rec is-pick" aria-hidden="true"></span><b>Q1</b><span class="visually-hidden">: the engineer ruled on it, taking the recommended option</span></td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A1</span><span class="ig-decide-seat">architect</span></th><td data-label="What was found">Renaming a task breaks the board</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">Renames rewrite the links too</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A2 ≡ R6</span><span class="ig-decide-seat">architect · reviewer</span></th><td data-label="What was found">A required section became a warning</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">It stays required, as designed <span class="ig-opt is-rec is-pick" aria-hidden="true"></span><b>Q3</b><span class="visually-hidden">: he confirmed it, taking the recommended option</span></td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A3 ≡ R1</span><span class="ig-decide-seat">architect · reviewer</span></th><td data-label="What was found">An import could clear a task's links</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">Import keeps a recorded task's links</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">A4</span><span class="ig-decide-seat">architect</span></th><td data-label="What was found">Evidence sat in the task contract</td><td data-label="Decision"><span class="chip">ADAPTED</span></td><td class="is-res" data-label="How it was resolved">The scan reads task contracts too <span class="ig-opt is-rec is-pick" aria-hidden="true"></span><b>Q4</b><span class="visually-hidden">: he confirmed it, taking the recommended option</span></td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">R2</span><span class="ig-decide-seat">reviewer</span></th><td data-label="What was found">Refusal in the data schema breaks tests</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">Only writing commands and the check refuse</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">R3 ≡ A12</span><span class="ig-decide-seat">reviewer · architect</span></th><td data-label="What was found">Some findings could not be waived</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">Waivers need a reason, all listed</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">R4</span><span class="ig-decide-seat">reviewer</span></th><td data-label="What was found">The template lacked the new section</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="How it was resolved">The template gains the section</td></tr>
+                </tbody>
+              </table>
+              <div class="ig-gloss">
+                <p class="ig-caps">The engineer's rulings</p>
+                <ul class="ig-picks" aria-label="The engineer's rulings">
+                  <li><span class="ig-opt is-rec is-pick" aria-hidden="true"></span><span><b>Q1 · on D1</b><q>Include, gated on refuse</q>: switched on only after the backfill<span class="visually-hidden">; the recommended option</span></span></li>
+                  <li><span class="ig-opt is-rec is-pick" aria-hidden="true"></span><span><b>Q2 · on A7</b><q>Approve</q>: the board works links out on load<span class="visually-hidden">; the recommended option</span></span></li>
+                  <li><span aria-hidden="true"><span class="ig-opt is-rec is-pick"></span><span class="ig-opt is-rec is-pick"></span></span><span><b>Q3 + Q4 · on <span class="nw">A2 ≡ R6</span> and A4</b><q>E6 restored …</q> and <q>E4 widened …</q>: the section stays required, and the scan reads task contracts<span class="visually-hidden">; both the recommended options</span></span></li>
+                </ul>
+              </div>
+              <details class="ig-fold">
+                <summary>The other 30 findings, none a blocker</summary>
+                <table class="ig-decide is-compact">
+                  <caption class="visually-hidden">The 30 findings that were not blockers: severity, decision and what changed</caption>
+                  <thead><tr><th scope="col">Finding</th><th scope="col">Severity</th><th scope="col">Decision</th><th scope="col">What changed</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row"><span class="ig-decide-id">A5</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Registry check waits for the switch</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A6</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Epic tool suggests the record form</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A7</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADAPTED</span></td><td class="is-res" data-label="What changed">Needs matched when the board loads <span class="ig-opt is-rec is-pick" aria-hidden="true"></span><b>Q2</b><span class="visually-hidden">: he approved it, taking the recommended option</span></td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A8</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Collisions written on one side only</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A9</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Agent files join each tool's scope</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A10</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADAPTED</span></td><td class="is-res" data-label="What changed">One warning per board load</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A11</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Epic is a label, not branch</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A12</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADAPTED</span></td><td class="is-res" data-label="What changed">Folded into the waiver list</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A13</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Three bypassing writers carry records too</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A14</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Weak reasons flagged and rewritten</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">A15</span><span class="ig-decide-seat">architect</span></th><td data-label="Severity">nit</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Line references fixed; no bootstrap gap</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R5</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADAPTED</span></td><td class="is-res" data-label="What changed">The section leads; the bullet points</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R6</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Same defect as A2</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R7</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Covered by the batch write</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R8</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Each backfill batch saved at once</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R9</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">One commit per criterion</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R10</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">The lint joins the health check</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R11</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Wave rule narrowed; count corrected</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R12</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Loops checked across every task</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R13</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Import refusal raises a typed error</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R14</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Refusal message says how to fix</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R15</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">A fallback pair if tasks move</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R16</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Each test file states its tier</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">R17</span><span class="ig-decide-seat">reviewer</span></th><td data-label="Severity">nit</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">A guide, a catalog, narrower exceptions</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">D2</span><span class="ig-decide-seat">DevOps</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Pipeline map regenerated too</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">D3</span><span class="ig-decide-seat">DevOps</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">New tools listed as file writers</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">D4</span><span class="ig-decide-seat">DevOps</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Tools print <span class="nw">UTF-8</span> everywhere</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">D5</span><span class="ig-decide-seat">DevOps</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">One pull request per batch</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">C1</span><span class="ig-decide-seat">the orchestrator</span></th><td data-label="Severity">minor</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Exact column names on import</td></tr>
+                    <tr><th scope="row"><span class="ig-decide-id">C2</span><span class="ig-decide-seat">the orchestrator</span></th><td data-label="Severity">major</td><td data-label="Decision"><span class="chip">ADOPTED</span></td><td class="is-res" data-label="What changed">Two tasks marked as colliding</td></tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li class="is-wide">A, R, D, C: the architect's, the reviewer's, DevOps' and the orchestrator's findings · ≡ the same defect, found by two on their own · ADOPTED taken as found · ADAPTED in another form · task contract: the brief every agent works from · <dfn>blocker</dfn>: a finding that stops the plan until it is resolved · backfill: the records written for the open tasks · D1's finding: an excerpt, word for word; every other cell in plain words</li>
+                <li><span class="ig-opt is-rec is-pick" aria-hidden="true"></span>the engineer's pick, the option DreamTeam recommended</li>
+              </ul>
+            </div>
+            <figcaption id="v5-cap"><strong>Every finding got a decision; none was rejected.</strong> The engineer ruled again where the design had been wrong.</figcaption>
+          </figure>
+
+          <div class="bn-split is-84 is-after">
+            <div class="bn-split-l essay-col stack">
+              <p><strong>The finding that mattered most was about the design itself.</strong> The <strong>registry check</strong> is a CI job the repository's ruleset makes required: a pull request that fails it cannot merge without an admin's bypass.</p>
+
+          <figure class="chain" aria-labelledby="v5b-cap">
+            <figcaption class="review-card-head" id="v5b-cap"><span>The wrong statement, step by step</span><span class="tid">BS-117</span></figcaption>
+            <ol class="chain-list" role="list">
+              <li class="chain-stop"><span class="chain-mark" aria-hidden="true"></span><span class="chain-k">The low-level design</span><span class="chain-id">lld.md, v1</span><span class="chain-what">The registry check turns red “without ever blocking a merge”.</span></li>
+              <li class="chain-stop"><span class="chain-mark" aria-hidden="true"></span><span class="chain-k">The draft plan</span><span class="chain-id">plan-draft.md</span><span class="chain-what">The same check is “not a registered required check”.</span></li>
+              <li class="chain-stop"><span class="chain-mark" aria-hidden="true"></span><span class="chain-k">The DevOps reviewer · D1</span><span class="chain-id">panel-review.md</span><span class="chain-what">“False”: an earlier task made it required, so the registry check would fail every pull request until the <dfn>backfill</dfn>, the records written for the open tasks.</span></li>
+              <li class="chain-stop"><span class="chain-mark" aria-hidden="true"></span><span class="chain-k">The orchestrator's correction</span><span class="chain-id">panel-review.md</span><span class="chain-what">“Your earlier ‘Include it’ was given under a false statement of fact by …”; it asked again.</span></li>
+              <li class="chain-stop is-human"><span class="chain-mark" aria-hidden="true"></span><span class="chain-k">The engineer rules again</span><span class="chain-id">panel-review.md</span><span class="chain-what">“Include, gated on refuse”: the registry check's new rule is switched on only after the backfill.</span></li>
+            </ol>
+          </figure>
+            </div>
+
+            <aside class="bn-split-r" aria-label="What it saved, and what it missed">
+              <div class="callout">
+                <p class="callout-title">What it saved · an assumption</p>
+                <ul>
+                  <li><strong>Had the new rule been on before the backfill, every pull request would have failed it, whatever it changed: the check reads the whole board.</strong> About <b class="v">54 pull requests</b> over some <b class="v">40 hours</b> were exposed.</li>
+                  <li>The repository's own precedent: a check of the same kind “actually broke on master” when it was switched on ahead of its rows.</li>
+                  <li><b>R2:</b> <b class="v">24 tests</b> broke at the narrower refusal R2 asked for, as predicted; the broader one, never run, would have hit about <b class="v">125 of 156</b> fixtures, by the orchestrator's estimate.</li>
+                </ul>
+              </div>
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">T-701</code> · its runlog</p>
+                <pre class="ig-rec-ex">AC-1 originally named dead code, AC-3 originally named an already-allocated invariant number</pre>
+                <p class="ig-rec-src">Its closure notes, an excerpt, word for word. Its lesson: check a contract against the live code when the task starts, “not just at plan time”.</p>
+              </div>
+            </aside>
+
+            <div class="bn-split-l essay-col stack">
+              <p><strong>What the panel did not catch.</strong> <span class="nw">T-701</span>, the fourth planned task, found both errors before its work began, <b class="v">19 September</b>, 20:27–20:39 UTC. The design named a function nothing called, and the reviewer took it for the live one; no reviewer was asked to check callers. The invariant number was free at review and taken <b class="v">two days</b> later.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="s5" aria-labelledby="s5-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">S5–S6 · Plan and materialize</p>
+              <h2 id="s5-title">One approval, then nine tasks on the board</h2>
+              <p><strong>The compiled plan lists every change by the finding behind it.</strong> He approved it whole, with the option “Approve all”. After S1, every answer matched an offered option; wherever one was recommended, he took it.</p>
+              <p><strong>Then S6 materialized the plan</strong>, writing it onto the board: a script wrote the <b class="v">nine tasks</b>, their criteria copied word for word from the approved plan.</p>
+              <a class="proof-strip" href="anatomy-of-one-task.html"><span class="task-id">T-707</span><span><span class="ps-title">Anatomy of one task</span><span class="ps-text"><span class="tid">BS-117</span>'s first planned task, from plan to merge.</span></span><span class="arr" aria-hidden="true">→</span></a>
+            </div>
+            <aside class="bn-split-r" aria-label="The check before S6">
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In <code class="nw">config/workflows.yaml</code> · the S6 step</p>
+                <pre class="ig-rec-ex">bs-gate-check requires vision.md/<wbr>architecture.md/<wbr>plan.md/<wbr>panel-review.md for … KNOWN LIMITATION: it does not check plan-draft.md</pre>
+                <p class="ig-rec-src">Before anything is written, a check in code reads these files' approval lines: that they are there, not who wrote them.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="time" aria-labelledby="time-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <p class="sec-label">The time</p>
+            <h2 id="time-title">The day: 54 minutes in the log, thirteen hours on the clock</h2>
+            <p><strong>Two clocks, each labeled:</strong> the log times DreamTeam's own steps; the day runs from the session's first record to its last.</p>
+          </div>
+
+          <figure class="ig" aria-labelledby="v6-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <div class="ig-clock">
+                <div>
+                  <div class="ig-clock-head"><p class="ig-caps">The day · first record to last · derived</p><p class="ig-clock-v">12 h 51 min</p></div>
+                  <div class="ig-bar" aria-hidden="true"><span class="is-sys" style="--s:4934"></span><span class="is-wait" style="--s:3541"></span><span class="is-gap" style="--s:37826"></span></div>
+                  <ul class="ig-clock-key" aria-label="The parts of the day">
+                    <li><span class="ig-sw is-sys" aria-hidden="true"></span><span>DreamTeam working</span><span class="ig-clock-t">1 h 22 min</span></li>
+                    <li><span class="ig-sw is-wait" aria-hidden="true"></span><span>the engineer's answers, the session open</span><span class="ig-clock-t">59 min</span></li>
+                    <li><span class="ig-sw is-gap" aria-hidden="true"></span><span>two breaks, the session closed and later reopened</span><span class="ig-clock-t">10 h 30 min</span></li>
+                  </ul>
+                </div>
+                <div class="ig-clock-log">
+                  <p class="ig-caps">DreamTeam's log · recorded step time</p>
+                  <p class="ig-clock-v"><span class="ig-clock-pre">about</span> 54 min</p>
+                  <p class="ig-clock-note">a different clock: the steps DreamTeam timed itself; the small print says why they differ</p>
+                </div>
+              </div>
+              <div class="ig-rec">
+                <p class="ig-rec-head">In <code class="nw">BS-117</code> · the runlog</p>
+                <pre class="ig-rec-ex">step_bs_init_brainstorm<br>  duration=929s<br>…<br>step_bs_init_panel<br>  duration=1032s<br>Pipeline Total<br>  total_duration=3219s</pre>
+                <p class="ig-rec-src">An excerpt of BS-117's run log, word for word; the agent column and the times dropped.</p>
+              </div>
+            </div>
+            <figcaption id="v6-cap"><strong>DreamTeam's work was a small part of the day; most of it was two breaks, the session closed and later reopened.</strong> The bar is counted from the session's records; the log measures only its own steps.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="after" aria-labelledby="after-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <p class="sec-label">After the brainstorm</p>
+              <h2 id="after-title">Nine became fourteen, and the engineer closed the epic</h2>
+              <p><strong>One task split in two and four were added</strong>, all <b class="v">five</b> born outside a brainstorm, on paths the authoring rule covered only after his S2 question. The plan against reality, and its cost, are for a later Lab note.</p>
+            </div>
+            <aside class="bn-split-r" aria-label="The epic's closure note">
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In the epic · its closure note</p>
+                <pre class="ig-rec-ex">The epic is closed (DONE) as of 2026-10-16, by the … decision, with seven of its eight outcomes graded and met. The eighth, EAC-6, is carried over to the retrospective task <span class="nw">T-841</span></pre>
+                <p class="ig-rec-src">The closure note, an excerpt, word for word, the role cut with “…”; the eighth is the bar he chose in S1.</p>
+              </div>
+            </aside>
+          </div>
+
+          <figure class="ig" aria-labelledby="ea-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real"><span class="tid">BS-117</span> · a real brainstorm</p>
+              <ul class="ig-counts" aria-label="The epic's tasks">
+                <li><span class="ig-count">9</span>planned</li>
+                <li><span class="ig-count">1</span>split</li>
+                <li><span class="ig-count">4</span>added</li>
+                <li><span class="ig-count">14</span>in the epic</li>
+              </ul>
+              <table class="ig-decide is-compact is-added">
+                <caption class="visually-hidden">The five tasks added after the plan: why each was added, how it was born, and what it changed in the design</caption>
+                <thead><tr><th scope="col">Task</th><th scope="col">Why it was added</th><th scope="col">Born</th><th scope="col">What it changed</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><span class="ig-decide-id">T-735</span><span class="ig-decide-name">Needs matched on load</span></th><td data-label="Why it was added"><span class="nw">T-705</span> mixed a safe half with a contradiction</td><td data-label="Born"> <svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>split off when <span class="nw">T-705</span> was being started </td><td class="is-res" data-label="What it changed">the epic's criteria and the low-level design</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">T-737</span><span class="ig-decide-name">The task list honours its filters</span></th><td data-label="Why it was added">the task list ignored its filters</td><td data-label="Born"> <svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>a follow-up filed when <span class="nw">T-703</span> was started </td><td class="is-res" data-label="What it changed">no design part: listing defects</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">T-754</span><span class="ig-decide-name">The lint reads headings right</span></th><td data-label="Why it was added">the lint read a heading as a collision</td><td data-label="Born"> <svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>a follow-up filed when <span class="nw">T-703</span> was finished </td><td class="is-res" data-label="What it changed">no design part; held up the switch-on</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">T-755</span><span class="ig-decide-name">The backfill refuses stale snapshots</span></th><td data-label="Why it was added">it could overwrite a concurrent edit</td><td data-label="Born"> <svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>a follow-up filed when <span class="nw">T-703</span> was finished </td><td class="is-res" data-label="What it changed">no design part; held up the switch-on</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-id">T-765</span><span class="ig-decide-name">The lint's mirror check fixed</span></th><td data-label="Why it was added">it contradicted the one-sided collision rule</td><td data-label="Born"> <svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>written by hand </td><td class="is-res" data-label="What it changed">no design part; held up the switch-on</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 V14 M2 8 H14"/></svg>a place added to the authoring rule after the engineer's question in S2</li>
+                <li>the switch-on: the new rule turned on after the backfill</li>
+              </ul>
+            </div>
+            <figcaption id="ea-cap"><strong>None of the five changed any of the ten design parts; one split changed the epic's criteria and the low-level design, and three held up the switch-on.</strong> Four came up while another task was being started or finished; one was written by hand.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section small-print essay-sp" aria-labelledby="sp-title">
+        <div class="wrap">
+          <h2 class="sec-label" id="sp-title">The small print</h2>
+          <details class="provenance">
+            <summary>Sources and method</summary>
+            <ul>
+              <li><b>Sources.</b> The record cards quote DreamTeam's repository at <code>6b947dfb1</code>, except <span class="nw">T-693</span>'s notes (<code>feeceef05fa4</code>, the board on 18 September) and DreamTeam's opening line, from the recorded session, outside Git. So are the interview, the reviewers' reports, the breaks and the timing; each count was redone from it.</li>
+              <li><b>Question 1</b> offered four options: “Dispatch + CI, both hard” (recommended), “Dispatch only, hard block”, “CI only, hard block”, “Warn everywhere, never block”. He typed his own answer.</li>
+              <li><b>“Chosen”</b> means the answer matches an offered option word for word; the record cannot show a click from typing.</li>
+              <li><b>The estimate</b> counts an area the interview must cover only when his answer is quoted; the 0.86 left one, which files change, partial.</li>
+              <li><b>The waves</b> were recomputed at S4 by the architect; every row matched.</li>
+              <li><b>The four items</b> went to the engineer because they would change an approved part of the design or, in the panel file's words, “a ruling obtained under a premise that turned out to be false”.</li>
+              <li><b>The clocks.</b> The day's parts are the gaps between a question and its answer, split by whether the session was closed in between; DreamTeam's time is the rest. The log includes the engineer's S1 answers and leaves out about 38 minutes of DreamTeam's work, among them the low-level design and compiling the plan.</li>
+              <li><b>No written link was broken:</b> none pointed at a missing task, and no finished task waited on an open one; a check for loops was not built yet.</li>
+              <li><b>Earlier cases, no rate.</b> <span class="nw">T-611</span> and <span class="nw">T-614</span> edited the same file; the collision was flagged but never recorded as one. <span class="nw">T-556</span>'s link to <span class="nw">T-566</span> was left out on purpose, accepting a red CI run, the engineer's own choice. The record gives no rate.</li>
+              <li><b>The wrong statement.</b> The stage files say his first “Include it” was given under that statement; the session shows that answer about five minutes before the statement was first written.</li>
+              <li><b>The rework estimate</b> counts the merges from #1179 to #1235, between <span class="nw">T-701</span>'s merge and the backfill's last batch, about 40 hours 35 minutes; derived, not measured.</li>
+              <li><b>Tidied.</b> The engineer's three passages are tidied: spelling and grammar corrected, the problem and his question shortened, the meaning kept.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
+      <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team in 8 weeks</a>
+        <a href="index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+    </div>
+  </footer>
+</body>
+</html>
