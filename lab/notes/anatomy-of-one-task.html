@@ -6,24 +6,27 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
   <title>Anatomy of one task — DreamTeam Lab</title>
-  <meta name="description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where I decided, and what it took in time and money.">
+  <meta name="description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
+  <meta property="og:title" content="Anatomy of one task — DreamTeam Lab">
+  <meta property="og:description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
+  <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     /* One visual note (Brief delta 3) on the shared system (assets/style.css, The Blueprint): the page head
-       (.head-84), the names picture and the results band; section labels; stage cards; the record chart as on
-       the Life Cycle page. Only what the system has no component for lives here: the before/after, the
-       dependency diagram, the Run loop, the acceptance-criteria list, the cost table's plan cell and the
-       folded small print. Tokens only; mobile first.
-       The site's system pass (standards/design-system.md): this page's faces, sizes and weights for the byline,
-       the before/after, the captions, the criteria numerals, the stage strip, the data tables, the plan cell, the notes,
-       the setup and the schema moved to assets/style.css (CSS §22); what stays here is layout. */
+       (.head-84), the names picture and the results band; section labels; stage cards; the record chart and the
+       Run loop as on the Life Cycle page (the loop is CSS §11c). Only what the system has no component for lives
+       here: the before/after, the acceptance-criteria list, the cost table's plan cell and the folded small print.
+       Tokens only; mobile first.
+       Layout only: every face, size, weight and colour of these parts is in assets/style.css (CSS §22) — the
+       site's system pass moved most; a later pass moved the rest (the code blocks, the link kinds' lines and markers,
+       the folds' summaries, the table cells, the strip's notes, and every frame, rule and ground). */
 
-    .lab-note strong, .lab-note code { color: var(--ink); }
     .head-ba { margin-top: 28px; }
-    .head-results { margin-top: 24px; border: 1px solid var(--rule); border-top: 2px solid var(--accent); background: var(--panel); }
+    .head-results { margin-top: 24px; }
     .head-links { margin-top: 24px; }
     .head-links p + p { margin-top: 8px; }
 
@@ -33,71 +36,29 @@
     .fig-wide { max-width: 1040px; }
 
     /* Before → after: drawn as one bold pair (the arrow points down below 900 px, right from 900 px),
-       code verbatim; then the plain-words note, set apart */
-    .code { margin: 0; padding: 12px 14px; font: 400 13px/1.6 var(--mono); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); white-space: pre-wrap; overflow-wrap: anywhere; }
-    .code .k { color: var(--accent); font-weight: 500; }
+       code verbatim (the code blocks themselves: CSS §22); then the plain-words note, set apart */
     .ba { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-items: center; }
     .ba .label { margin-bottom: 8px; }
     .ba .label b { display: block; }
-    /* The "before" row stays on one line at every width: 30 characters fit 320 px at 15 px */
-    .ba .before .code { padding: 12px 14px; font-size: 15px; font-weight: 500; white-space: pre; overflow-wrap: normal; }
-    .ba .after .code { padding: 14px 16px; font-size: 14px; border: 2px solid var(--accent); }
     .ba-arrow { margin: 0; text-align: center; transform: rotate(90deg); }
     .ba-plain { margin-top: 16px; max-width: 760px; }
     .ba-plain p + p { margin-top: 4px; }
     @media (min-width: 900px) {
       .ba { grid-template-columns: max-content auto minmax(0, 1fr); column-gap: 18px; }
-      .ba .before .code { padding: 16px 18px; font-size: 18px; }
       .ba-arrow { transform: none; }
     }
 
-    /* The dependency diagram: one source, two drawings — horizontal from 1,040 px, vertical below — over the
-       24 px grid (.bp). Markers live in a separate, always-rendered SVG. */
-    .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-    .diagram { padding: 14px; border: 1px solid var(--rule); }
-    .diagram svg.dg-h { display: block; width: 100%; height: auto; }
-    .diagram svg.dg-v { display: none; width: 100%; height: auto; max-width: 420px; margin: 0 auto; }
-    .dg .band { fill: var(--line); fill-opacity: .65; stroke: var(--line); stroke-width: 1; }
-    .dg .box { fill: var(--panel); stroke: var(--muted); stroke-width: 1.2; }
-    .dg .box.this { fill: var(--wash-solid); stroke: var(--accent); stroke-width: 2; }
-    .dg .box.closing { fill: var(--sunken); stroke: var(--muted); stroke-dasharray: 4 3; }
-    .dg text { font-family: var(--body); }
-    .dg .id { font-family: var(--mono); font-size: 14px; font-weight: 500; fill: var(--ink); }
-    .dg .nm { font-size: 12.5px; fill: var(--muted); }
-    .dg-v .id { font-size: 15.5px; }
-    .dg-v .nm { font-size: 14.5px; }
-    .dg .wave { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; fill: var(--muted); }
-    .dg-v .wave { font-size: 13px; }
-    .dg .e { fill: none; }
-    .dg .e-build { stroke: var(--accent); stroke-width: 1.7; }
-    .dg .e-need { stroke: var(--data); stroke-width: 2; stroke-dasharray: 6 4; }
-    .dg .e-collide { stroke: var(--muted); stroke-width: 2.6; stroke-dasharray: .1 6; stroke-linecap: round; }
-    .dg .e-close { stroke: var(--accent); stroke-width: 1.2; stroke-opacity: .38; }
-    .mk-build { fill: var(--accent); }
-    .mk-need { fill: var(--data); }
-    .mk-close { fill: var(--accent); fill-opacity: .45; }
-    .mk-collide { fill: var(--muted); }
-    .legend { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px 24px; }
-    .legend li { display: flex; align-items: center; gap: 10px; font-size: 14px; line-height: 1.4; color: var(--muted); }
-    .legend svg, .kinds svg { flex: none; width: 44px; height: 12px; }
-    .narrow-only { display: none; }
-    @media (min-width: 761px) { .legend { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 1039px) {
-      .diagram svg.dg-h { display: none; }
-      .diagram svg.dg-v { display: block; }
-      .narrow-only { display: inline; }
-    }
+    /* The link kinds' lines in the schema card's key (.kinds): their size; their strokes and markers are CSS §22,
+       the markers' hidden SVG (.svg-defs) CSS §24 */
+    .kinds svg { flex: none; width: 44px; height: 12px; }
 
     /* The acceptance criteria: nine bold one-liners, two columns from 900 px */
-    .ac-list { list-style: none; padding: 0; max-width: 1040px; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; border-top: 1px solid var(--line); }
-    .ac-list li { display: grid; grid-template-columns: 3.4em minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--line); line-height: 1.45; }
+    .ac-list { list-style: none; padding: 0; max-width: 1040px; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; }
+    .ac-list li { display: grid; grid-template-columns: 3.4em minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 9px 0; line-height: 1.45; }
     @media (min-width: 900px) { .ac-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
     /* AC-3 verbatim, folded: only the summary line and the caption show until it is opened */
     .contract-box { max-width: 880px; }
-    .contract { background: var(--sunken); }
-    .contract-box details summary { cursor: pointer; font-weight: 600; color: var(--accent); }
-    .contract-box details[open] summary { margin: 0 0 10px; color: var(--muted); }
 
     /* The stages as one strip of the shared stage cards: Run wider and highlighted, the engineer's three
        decisions as the cards' amber gate lines; one column below 1024 px */
@@ -106,51 +67,31 @@
     .strip > li + li::before { content: "↓"; position: absolute; top: -24px; left: 18px; }
     .strip .sc-body { flex: 1 1 auto; padding: 12px 14px 14px; }
     .strip .sc-body > * + * { margin-top: 10px; }
-    .strip .sc-catch { color: var(--muted); }
-    .strip .is-run { border: 1.5px solid var(--accent); }
-    .strip .is-run .stage-card-head { background: var(--wash-solid); }
     @media (min-width: 1024px) {
       .strip { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: 28px; }
       .strip > li + li::before { content: "→"; top: 13px; left: -21px; }
     }
 
-    /* The Run loop: build, review ⇄ fix (at most twice), test; Build highlighted as the step that builds */
-    .loop { display: block; width: 100%; max-width: 340px; height: auto; margin-inline: auto; }
-    .loop .lp-box { fill: var(--panel); stroke: var(--accent); stroke-width: 1.5; }
-    .loop .lp-box.is-build { fill: var(--wash-solid); stroke-width: 2.5; }
-    .loop .lp-e { fill: none; stroke: var(--accent); stroke-width: 1.7; }
-    .loop text { font-family: var(--body); }
-    .loop .lp-t { font-family: var(--head); font-size: 16px; font-weight: 600; fill: var(--ink); }
-    .loop .lp-s { font-size: 12px; fill: var(--muted); }
-    .loop .lp-c { font-family: var(--head); font-size: 15px; font-weight: 700; fill: var(--accent); }
-
     /* Tables: values in mono; below 560 px each row stacks into one block */
-    .table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--panel); }
+    .table-wrap { overflow-x: auto; }
     table.data { width: 100%; border-collapse: collapse; }
     table.data caption { padding: 12px 14px 4px; text-align: left; }
-    table.data th, table.data td { padding: 9px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); color: var(--muted); }
-    table.data tbody th { font-weight: 600; color: var(--ink); }
     table.data tbody tr:last-child th, table.data tbody tr:last-child td { border-bottom: 0; }
-    table.data tfoot th, table.data tfoot td { border-top: 2px solid var(--line); border-bottom: 0; font-weight: 600; color: var(--ink); }
     table.data .num { text-align: right; white-space: nowrap; }
 
     /* The cost table: the subscription's dollars large, in a column of their own with two short lines under them */
     .costs-fig { max-width: 780px; }
     /* Scoped past table.data .num, so the "At Claude API list prices" header wraps at 375 px */
     table.costs thead th, table.costs thead th.num { white-space: normal; }
-    table.costs tr.total th, table.costs tr.total td { border-top: 2px solid var(--line); font-weight: 600; color: var(--ink); }
-    table.costs th.plan { text-align: center; color: var(--accent); }
-    table.costs td.plan { width: 17em; vertical-align: middle; text-align: left; border-left: 1px solid var(--rule); background: var(--wash); }
+    table.costs td.plan { width: 17em; vertical-align: middle; text-align: left; }
     .plan-big { display: block; white-space: nowrap; }
     .plan-sub { display: block; margin-top: 8px; }
     .plan-list { margin: 10px 0 0; padding-left: 16px; }
     .plan-list li + li { margin-top: 4px; }
 
     /* The small print: compact folds at the bottom */
-    .small-print .fold { max-width: 1040px; padding: 10px 14px; border: 1px solid var(--line); background: var(--panel); }
+    .small-print .fold { max-width: 1040px; padding: 10px 14px; }
     .small-print .stack > .fold + .fold { margin-top: 10px; }
-    .fold summary { cursor: pointer; font-weight: 600; color: var(--accent); text-wrap: balance; }
-    .fold[open] > summary { color: var(--muted); }
     .fold > * + * { margin-top: 12px; }
     .notes { max-width: var(--measure); padding-left: 20px; }
     .notes > li + li { margin-top: 8px; }
@@ -161,12 +102,12 @@
     /* The schema, inside the small print */
     .schema-body { padding: 14px 16px 16px; }
     .fields { display: grid; gap: 10px; }
-    .fields > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; background: var(--sunken); border: 1px solid var(--line); }
+    .fields > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; }
     .kinds { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
     .kinds li { display: flex; align-items: center; gap: 8px; }
     .schema .rule { margin-top: 12px; max-width: var(--measure); }
     .schema .rule.def { margin: 0 0 12px; }
-    .schema-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .schema-foot { margin-top: 14px; padding-top: 12px; }
     .schema-foot > span { display: block; text-wrap: balance; }
 
     @media (min-width: 561px) {
@@ -176,15 +117,14 @@
     }
     @media (max-width: 560px) {
       table.costs td.plan { width: auto; }
-      .diagram { padding: 12px 8px; }
       table.data th, table.data td { padding: 8px; }
       /* Stacked tables (.stacked, not the shared .stack): one block per row, no sideways scroll */
       table.stacked thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
       table.stacked, table.stacked tbody, table.stacked tfoot, table.stacked tr, table.stacked th, table.stacked td { display: block; }
       table.stacked caption { display: block; width: 100%; }
-      table.stacked tr { padding: 10px 12px; border-bottom: 1px solid var(--line); }
+      table.stacked tr { padding: 10px 12px; }
       table.stacked tbody tr:last-child { border-bottom: 0; }
-      table.stacked tfoot tr { border-top: 2px solid var(--line); border-bottom: 0; }
+      table.stacked tfoot tr { border-bottom: 0; }
       table.stacked th, table.stacked td, table.stacked tfoot th, table.stacked tfoot td { padding: 2px 0; border: 0; text-align: left; }
       table.stacked td[data-label] { display: flex; justify-content: space-between; gap: 12px; }
       table.stacked td[data-label]::before { content: attr(data-label); text-align: left; }
@@ -214,7 +154,6 @@
     <defs>
       <marker id="mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
       <marker id="mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path class="mk-need" d="M0,0 L10,5 L0,10 z"/></marker>
-      <marker id="mk-close" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path class="mk-close" d="M0,0 L10,5 L0,10 z"/></marker>
       <marker id="mk-collide" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse"><circle class="mk-collide" cx="5" cy="5" r="4"/></marker>
     </defs>
   </svg>
@@ -243,12 +182,12 @@
               <p class="ba-arrow" aria-hidden="true">→</p>
               <div class="after">
                 <p class="label"><b>After</b> the same row, as the task's demo printed it, the reasons shortened</p>
-<pre class="code">"depends_on": ["T-701", "T-703"],
+<pre class="code">"depends_on": [<span class="nw">"T-701"</span>, <span class="nw">"T-703"</span>],
 "dependencies": {
   "relations": [
-    { "on": "T-703", <span class="k">"kind": "build-order"</span>,
+    { "on": <span class="nw">"T-703"</span>, <span class="k">"kind": "build-order"</span>,
       <span class="k">"why": "never refuse before the open tasks' records are filled in"</span> },
-    { "on": "T-701", <span class="k">"kind": "build-order"</span>,
+    { "on": <span class="nw">"T-701"</span>, <span class="k">"kind": "build-order"</span>,
       <span class="k">"why": "its two checks turn on with this task's switch"</span> }
   ]
 }</pre>
