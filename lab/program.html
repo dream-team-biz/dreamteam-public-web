@@ -6,11 +6,26 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
   <title>Your Dream Team in 8 weeks — DreamTeam Lab</title>
-  <meta name="description" content="Start with a pilot: our engineers set up the cycle with your team, ship your first features with you, and teach your team to run it.">
+  <meta name="description" content="Our engineers set up the AI-driven software development cycle in your repository, ship your first features through it, and teach your team to run it. A paid week 0, then 8 weeks: you decide three times.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* The page's own layout only: the lead and the callouts stop at the column; the section rhythm of this page and
+       the offer page (48, and 56 from 1024). The components are in assets/style.css. */
+    .page-head .lead{max-width:var(--col)}
+    .callout{max-width:var(--col)}
+    .section{padding:48px 0}
+    .page-head{padding:24px 0 32px}
+    .page-head + .section{padding-top:48px}
+    .page-head .lead{margin-top:16px}
+    .stack > * + *{margin-top:24px}
+    .stack > h2 + *{margin-top:16px}
+    .sec-label{margin-bottom:12px}
+    figure.ig + .more{margin-top:12px}
+    @media (min-width:1024px){.section{padding:56px 0}.page-head{padding:32px 0}.page-head + .section{padding-top:48px}}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +36,7 @@
         <a href="why.html">Why DreamTeam?</a>
         <a href="benefits.html">Benefits</a>
         <a href="lifecycle.html">The Life Cycle</a>
-        <a href="program.html" aria-current="page">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="offer.html">Work with us</a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
       </nav>
@@ -30,33 +45,174 @@
   </header>
 
   <main id="main">
-    <section class="page-head" id="contact" aria-labelledby="page-title">
-      <div class="wrap head-84">
-        <div class="head-main">
-          <h1 id="page-title">Your Dream Team in 8 weeks</h1>
-          <p class="lead">Start with a pilot: our engineers set up the cycle with your team, ship your first features with you, and teach your team to run it.</p>
-          <p class="gets"><strong>What your company gets:</strong> AI agents doing your team's software work while your engineers approve each plan and result.</p>
-        </div>
-        <div class="head-side">
-          <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
-          <a class="proof-strip" href="notes/anatomy-of-one-task.html"><span class="task-id">T-707</span><span><span class="ps-title">Anatomy of one task</span><span class="ps-text">One real task: <b>20&nbsp;h 25&nbsp;min</b> end to end, <b>1–2 hours</b> of human time.</span></span><span class="arr" aria-hidden="true">→</span></a>
-          <a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a>
-        </div>
+    <section class="page-head" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Your Dream Team in 8&nbsp;weeks</h1>
+        <p class="lead">Our engineers set up the AI-driven software development cycle in your repository, ship your first features through it, and teach your team to run it.</p>
+        <p class="actions"><a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us <span class="arr" aria-hidden="true">→</span></a></p>
+        <figure class="ig">
+          <ol class="ig-track is-scheme" role="list" aria-label="The program: week 0, then weeks 1 to 8, with three decision points">
+            <li class="ig-track-w0"><strong>Week&nbsp;0</strong><span>paid; until every <a href="#list-title">prerequisite</a> works</span></li>
+            <li class="ig-track-go"><span class="visually-hidden">Decision point 1, the start: go</span></li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>1</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>2</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>3</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>4</li>
+            <li class="ig-track-go"><span class="visually-hidden">Decision point 2, the middle: continue, adjust or stop</span></li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>5</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>6</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>7</li>
+            <li class="ig-track-wk"><span class="visually-hidden">Week </span>8</li>
+            <li class="ig-track-go"><span class="visually-hidden">Decision point 3, the end: decide what comes next</span></li>
+            <li class="ig-track-say is-1" aria-hidden="true">Go</li>
+            <li class="ig-track-say is-2" aria-hidden="true">Continue, adjust or stop</li>
+            <li class="ig-track-say is-3" aria-hidden="true">Decide what comes next</li>
+          </ol>
+          <figcaption><strong>A paid week&nbsp;0, then 8&nbsp;weeks: you decide three times.</strong> Either side may stop at each.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="steps-title">
+    <section class="section" aria-labelledby="week0-title">
       <div class="wrap stack">
-        <p class="sec-label">The pilot</p>
-        <h2 id="steps-title">A proof of concept on your own code</h2>
-        <ol class="nsteps" role="list">
-          <li><span class="nstep-text"><strong>Set up.</strong> We set up <a href="lifecycle.html">the cycle</a> in your repositories.</span></li>
-          <li><span class="nstep-text"><strong>Ship together.</strong> We ship your first features through it, together.</span></li>
-          <li><span class="nstep-text"><strong>Hand over.</strong> We teach your team to run&nbsp;it.</span></li>
-        </ol>
-        <p class="callout"><strong>Agreed with you:</strong> the scope, the price and your team's time.</p>
+        <p class="sec-label">Week&nbsp;0</p>
+        <h2 id="week0-title">We install and check DreamTeam with you</h2>
+        <figure class="ig">
+          <ol class="ig-tiles is-ticks" role="list" style="--n:4">
+            <li class="ig-tile"><span class="ig-tile-k">Install</span><span class="ig-tile-t">In your repository, with your engineer.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">Check</span><span class="ig-tile-t">Permissions, network and accounts in your environment.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">Run one task</span><span class="ig-tile-t">End to end, under your repository's own rules.</span></li>
+            <li class="ig-tile is-human"><span class="ig-tile-k">Decision point&nbsp;1: go</span><span class="ig-tile-t">Every <a href="#list-title">prerequisite</a> works; week&nbsp;1 begins.</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
 
-        <p class="still"><span class="k">Still to come</span>The weeks in detail.</p>
+    <section class="section" aria-labelledby="part-title">
+      <div class="wrap stack">
+        <p class="sec-label">Your part</p>
+        <h2 id="part-title">You give one engineer and a sponsor's time</h2>
+        <figure class="ig">
+          <ul class="ig-levels" role="list">
+            <li class="ig-level">
+              <div class="ig-level-head"><h3 class="ig-level-name">A representative</h3></div>
+              <div class="ig-level-fig">
+                <p><span class="ig-level-num">4–6</span> <span class="ig-level-unit">hours a week</span></p>
+                <p class="ig-level-note">at least one meeting a week</p>
+              </div>
+              <dl class="ig-task-dl">
+                <div><dt>What they do</dt><dd>Knows the code; answers questions, reviews last week's result</dd></div>
+                <div><dt>Who drives</dt><dd>We do; your team learns by watching</dd></div>
+              </dl>
+            </li>
+            <li class="ig-level">
+              <div class="ig-level-head"><h3 class="ig-level-name">A champion</h3></div>
+              <div class="ig-level-fig">
+                <p><span class="ig-level-num">50–80%</span> <span class="ig-level-unit">of their time</span></p>
+                <p class="ig-level-note">for the 8&nbsp;weeks</p>
+              </div>
+              <dl class="ig-task-dl">
+                <div><dt>What they do</dt><dd>A senior engineer who learns to run the cycle</dd></div>
+                <div><dt>Who drives</dt><dd>From week&nbsp;3; runs the cycle from week&nbsp;6</dd></div>
+              </dl>
+            </li>
+            <li class="ig-level is-sponsor">
+              <div class="ig-level-head"><p class="ig-level-k">With either level</p><h3 class="ig-level-name">Your sponsor</h3></div>
+              <div class="ig-level-fig">
+                <p><span class="ig-level-num">30</span> <span class="ig-level-unit">minutes a week</span></p>
+                <p class="ig-level-note">and an hour at each decision point</p>
+              </div>
+              <dl class="ig-task-dl">
+                <div><dt>Who they are</dt><dd>The person who decides and pays for the pilot on your side</dd></div>
+                <div><dt>What they do</dt><dd>Reads the weekly report; in week&nbsp;0, names who runs your automated checks (CI)</dd></div>
+              </dl>
+            </li>
+          </ul>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="weeks-title">
+      <div class="wrap stack">
+        <p class="sec-label">Weeks&nbsp;1–8</p>
+        <h2 id="weeks-title">Your first features go through the cycle</h2>
+        <figure class="ig">
+          <ol class="ig-weeks" role="list" aria-label="Weeks 1 to 8, one line a week">
+            <li class="ig-weeks-phase">We drive</li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;1</span><span class="ig-weeks-line">Kickoff and ground rules; your engineer's first training; first tasks.</span></li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;2</span><span class="ig-weeks-line">DreamTeam maps your code in depth; your engineer checks and corrects it.</span></li>
+            <li class="ig-weeks-phase">Your engineer drives</li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;3</span><span class="ig-weeks-line">One task at a time; we pair every day.</span></li>
+            <li class="ig-weeks-row is-turn"><span class="ig-weeks-k">Week&nbsp;4</span><span class="ig-weeks-line"><strong>Decision point&nbsp;2:</strong> you decide&nbsp;— continue, adjust or stop.</span></li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;5</span><span class="ig-weeks-line">Two tasks at once; a larger feature planned and split into tasks.</span></li>
+            <li class="ig-weeks-phase">Your engineer runs it</li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;6</span><span class="ig-weeks-line">We step back.</span></li>
+            <li class="ig-weeks-row"><span class="ig-weeks-k">Week&nbsp;7</span><span class="ig-weeks-line">A written setup for your next repository; a second engineer tests it.</span></li>
+            <li class="ig-weeks-row is-turn"><span class="ig-weeks-k">Week&nbsp;8</span><span class="ig-weeks-line"><strong>Decision point&nbsp;3:</strong> your engineer presents; you decide what comes next.</span></li>
+          </ol>
+          <figcaption><strong>For example, a plan on Monday and a one-page report on Friday.</strong> The phases follow a champion.</figcaption>
+        </figure>
+        <p class="callout"><strong>The exit:</strong> DreamTeam goes in as one change in your Git, and a revert removes it. Our access ends when either side stops.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="list-title">
+      <div class="wrap stack">
+        <p class="sec-label">Before week&nbsp;1</p>
+        <h2 id="list-title">Prerequisites</h2>
+        <figure class="ig">
+          <ul class="ig-tiles" role="list" style="--n:4">
+            <li class="ig-tile"><span class="ig-tile-k">Approval to send code</span><span class="ig-tile-t">To Anthropic, which says it keeps data <span class="nw">30 days</span> by default on Team, Enterprise or API.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">GitHub</span><span class="ig-tile-t">A merge queue that runs your CI before each merge; access through your proxy, if you use one.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">Your repository</span><span class="ig-tile-t">Approval for DreamTeam's files; your build and tests run from the command line.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">To start</span><span class="ig-tile-t">A pinned DreamTeam release in your package store; one or two tickets ready.</span></li>
+          </ul>
+          <figcaption>The full checklist comes after our first call.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="security-title">
+      <div class="wrap stack">
+        <p class="sec-label">Security</p>
+        <h2 id="security-title">Your CI, branch protection and merge queue decide what merges</h2>
+        <figure class="ig">
+          <ul class="ig-tiles" role="list" style="--n:4">
+            <li class="ig-tile"><span class="ig-tile-k">A person decides</span><span class="ig-tile-t">On every task. Your own branch protection and required reviews apply, as you set them.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">Accounts</span><span class="ig-tile-t">The agents run under your Claude accounts, with permissions you review and approve at install.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">What goes in</span><span class="ig-tile-t">The installer lists every file before it adds one; the agents work in branches and pull requests.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">Your Git</span><span class="ig-tile-t">Your code and its whole record live in your Git; there is no DreamTeam server.</span></li>
+          </ul>
+        </figure>
+        <p class="more"><a href="benefits.html#security">Security, on Benefits <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cost-title">
+      <div class="wrap stack">
+        <p class="sec-label">Cost and license</p>
+        <h2 id="cost-title">You pay for the AI; after week&nbsp;8 you keep the installed version</h2>
+        <figure class="ig">
+          <ul class="ig-tiles" role="list" style="--n:2">
+            <li class="ig-tile"><span class="ig-tile-k">AI cost</span><span class="ig-tile-t">On your Claude accounts. Today, if two review rounds don't settle a task, it stops and waits for an engineer to decide.</span></li>
+            <li class="ig-tile"><span class="ig-tile-k">After week&nbsp;8</span><span class="ig-tile-t">Under a license agreed with you, with a support package.</span></li>
+          </ul>
+        </figure>
+        <p class="more"><a href="benefits.html#business-leaders">Task costs, on Benefits <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="call-strip" id="contact">
+          <h2 class="visually-hidden" id="contact-title">Talk to us</h2>
+          <div>
+            <p class="call-strip-say">Tell us about your team and your code; we'll say which way fits.</p>
+            <p class="more call-strip-links"><a href="offer.html">Other ways in: what we offer <span aria-hidden="true">→</span></a></p>
+            <p class="call-strip-names">DreamTeam Lab is the company; DreamTeam is the team of AI agents it builds; The Dream Team Life Cycle is the method DreamTeam runs.</p>
+          </div>
+          <p><a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us <span class="arr" aria-hidden="true">→</span></a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -68,7 +224,7 @@
         <a href="why.html">Why DreamTeam?</a>
         <a href="benefits.html">Benefits</a>
         <a href="lifecycle.html">The Life Cycle</a>
-        <a href="program.html">Your Dream Team in 8 weeks</a>
+        <a href="offer.html">Work with us</a>
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
       </nav>
