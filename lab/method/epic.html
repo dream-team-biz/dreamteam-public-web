@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>The epic: a story broken into tasks, run in order and closed on self-validation — DreamTeam Lab</title>
+  <meta name="description" content="How a DreamTeam epic starts from the brainstorm, runs its tasks in the order their dependencies set on the main branch or its own long branch, and closes on self-validation and your word.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* A Life Cycle page: layout only. Its figures are the infographic family, assets/style.css §24–§25; the
+       onward link and the small print are the shared components (§15, §20). */
+    .ig-head .lead { max-width: var(--col); }
+    .stack > p { max-width: var(--col); }
+    .stack > .bn-back { margin-top: 24px; }
+    .bf-body > .bf-why + .answers { margin-top: 8px; }
+    .small-print .provenance ul { margin: 8px 0 0; padding-left: 20px; }
+    .small-print .provenance li + li { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="../index.html#contact">Talk to us</a>
+    </div>
+  </header>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ig-mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ig-mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-need" d="M1,1 L9,5 L1,9 z"/></marker>
+      <marker id="ig-mk-dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse"><circle class="ig-mk-dot" cx="5" cy="5" r="4"/></marker>
+    </defs>
+  </svg>
+
+  <main id="main" class="method is-lc">
+    <nav class="ig-toc" aria-label="On this page">
+      <div class="wrap ig-toc-in">
+        <ol class="ig-toc-list">
+          <li><a href="#top">The epic</a></li>
+          <li><a href="#from-the-brainstorm">Where it starts</a></li>
+          <li><a href="#how-it-runs">How it runs</a></li>
+          <li><a href="#main-or-long-branch">Main or long branch</a></li>
+          <li><a href="#closing">Closing the epic</a></li>
+          <li><a href="#the-end">The end</a></li>
+        </ol>
+        <a class="ig-toc-top" href="#top">Top<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a>
+      </div>
+    </nav>
+
+    <section class="page-head" id="top" aria-labelledby="page-title">
+      <div class="wrap ig-head">
+        <div class="head-main">
+          <p class="sec-label">The Dream Team Life Cycle</p>
+          <h1 id="page-title">An epic is a story broken into tasks, run in order and closed on self-validation</h1>
+          <p class="lead"><strong>You</strong> are the engineer in control; a <strong>story</strong> here is the whole thing you want built, not one ticket.</p>
+          <p class="more"><a href="#from-the-brainstorm">From the brainstorm to done <span aria-hidden="true">↓</span></a></p>
+        </div>
+        <details class="ig-toc-fold" id="toc"><summary>On this page</summary><ol class="ig-toc-list" id="toc-list">
+          <li><a href="#from-the-brainstorm">Where it starts</a></li>
+          <li><a href="#how-it-runs">How it runs</a></li>
+          <li><a href="#main-or-long-branch">Main or long branch</a></li>
+          <li><a href="#closing">Closing the epic</a></li>
+          <li><a href="#the-end">The end</a></li>
+        </ol></details>
+        <figure class="ig ig-lc-fig" aria-labelledby="e1-cap">
+          <div class="ig-frame bp">
+            <nav class="ig-lc is-b" aria-label="The Dream Team Life Cycle">
+              <ol class="ig-lc-list">
+                <li class="ig-lc-bs"><a class="ig-lc-link" href="brainstorm.html"><span class="ig-lc-w">Brainstorm</span></a></li>
+                <li class="ig-lc-epic"><a class="ig-lc-link is-epic" href="epic.html" aria-current="page"><span class="ig-lc-w">Epic</span><span class="visually-hidden">, you are here</span><span class="ig-lc-pointer" aria-hidden="true"></span></a>
+                  <ol class="ig-lc-in">
+                    <li class="ig-lc-tasks"><a class="ig-lc-link" href="dependencies.html"><span class="ig-lc-w">Tasks<span class="ig-lc-more2"> and their dependencies</span></span></a></li>
+                    <li class="ig-lc-one"><a class="ig-lc-link" href="task.html"><span class="ig-lc-w">One task<span class="ig-lc-more2">: init to close</span></span></a></li>
+                    <li class="ig-lc-close"><a class="ig-lc-link" href="epic.html#closing"><span class="ig-lc-w">Closing<span class="ig-lc-more"> the epic</span></span></a></li>
+                    <li class="ig-lc-yes"><span class="ig-lc-dia" aria-hidden="true"></span><span class="ig-lc-more">you confirm</span><span class="ig-lc-done"><span class="visually-hidden">, </span>done</span></li>
+                  </ol>
+                </li>
+              </ol>
+            </nav>
+            <div class="ig-detail">
+              <p class="ig-tag">Detail · the epic&nbsp;·&nbsp;schematic</p>
+              <ol class="ig-arc" aria-label="The life of an epic">
+                <li><p class="ig-arc-k">From the brainstorm</p><ul class="ig-arc-files">
+                    <li><svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" focusable="false"><path class="ig-file" d="M.75 .75H11L15.25 5V19.25H.75Z M11 .75V5H15.25"/></svg>Vision</li>
+                    <li><svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" focusable="false"><path class="ig-file" d="M.75 .75H11L15.25 5V19.25H.75Z M11 .75V5H15.25"/></svg>Design</li>
+                    <li><svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" focusable="false"><path class="ig-file" d="M.75 .75H11L15.25 5V19.25H.75Z M11 .75V5H15.25"/></svg>Plan</li>
+                    <li><svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true" focusable="false"><path class="ig-file" d="M.75 .75H11L15.25 5V19.25H.75Z M11 .75V5H15.25"/></svg>Panel review</li></ul></li>
+                <li><p class="ig-arc-k">The epic</p><p>its goal and its criteria</p><span class="chip">PLANNED</span></li>
+                <li><p class="ig-arc-k">Its tasks</p>
+                    <svg class="ig-arc-waves" width="40" height="24" viewBox="0 0 40 24" aria-hidden="true" focusable="false"><rect class="ig-band" x=".5" y=".5" width="15" height="5"/><rect class="ig-band" x=".5" y="9.5" width="39" height="5"/><rect class="ig-band" x=".5" y="18.5" width="27" height="5"/></svg>
+                    <p>run in the order their dependencies set</p><span class="chip">ACTIVE</span>
+                    <a class="ig-arc-zoom" href="task.html"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" focusable="false"><circle class="ig-detail-ring" cx="8" cy="8" r="6.5"/><path class="ig-l-detail" d="M14.5 8 H23.5"/></svg>One task, opened</a></li>
+                <li><p class="ig-arc-k">Closing the epic</p><p>each criterion graded</p>
+                    <ul class="ig-arc-grades"><li><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><span class="visually-hidden">criterion </span>1<span class="visually-hidden"> met</span></li>
+                      <li><svg class="ig-notmet" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4 L12 12 M12 4 L4 12"/></svg>2, not met, kept</li>
+                      <li><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg>3, carried<span class="visually-hidden"> to a named task</span></li></ul>
+                    <span class="chip">CLOSING</span></li>
+                <li class="is-you"><p class="ig-arc-k">You confirm</p></li>
+                <li><p class="ig-arc-k">Done</p><span class="chip">DONE</span></li>
+              </ol>
+            </div>
+            <p class="ig-lc-ways"><span class="ig-caps">Open</span><a href="dependencies.html">Tasks and their dependencies</a><a href="task.html">One task, Task&nbsp;F</a><a href="epic.html#closing">Closing the epic</a></p>
+          </div>
+          <figcaption id="e1-cap"><strong>One epic, from its documents to a close on self-validation.</strong> An epic's <strong>criteria</strong>, the conditions of done, say whether it reached its goal. <strong>Self-validation</strong> means the epic checks itself against them, through a reader who did not write the record, and you confirm.</figcaption>
+        </figure>
+        <div class="head-side">
+          <div class="ig-rec" data-zone="figure">
+            <p class="ig-rec-head">In DreamTeam's brainstorm · the copied documents</p>
+            <pre class="ig-rec-ex">&gt; Promoted from …
+@ &lt;sha&gt; (&lt;BS_ID&gt;
+materialization, &lt;date&gt;).</pre>
+            <p class="ig-rec-src">The line DreamTeam writes on top of every document it copies from the brainstorm into the epic, in the form its pipeline gives, cut with "…" where it names the document's file in the brainstorm. In it, <code>&lt;sha&gt;</code> is the commit, <code>&lt;BS_ID&gt;</code> the brainstorm and <code>&lt;date&gt;</code> the day. “Materialization” is DreamTeam's step that writes the epic from the approved plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="from-the-brainstorm" aria-labelledby="from-title">
+      <div class="wrap stack">
+        <p class="sec-label">Where it starts</p>
+        <h2 id="from-title">A brainstorm starts the epic: its documents, its goal and its criteria</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p>An epic comes from the full brainstorm, <strong>by copying, not writing</strong>: no agent is dispatched.</p>
+            <p>Its vision, its <a href="brainstorm.html#s2">design</a> (how the parts fit), its plan and its panel review (a panel's verdicts and findings) go into the epic's own folder. Each is marked with where it came from, and the detailed design goes too when one was made; the brainstorm's own files stay as the record.</p>
+          </div>
+          <aside class="ig-you" aria-label="What you decide"><p class="ig-you-k">You decide</p><p>You approve the plan; until you do, no task and no epic is written.</p></aside>
+        </div>
+
+        <figure class="ig" aria-labelledby="e2-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <ol class="ig-gen" aria-label="The brainstorm's approved documents">
+              <li><span class="ig-gen-box is-req">Vision</span><span class="ig-chain-dia" aria-hidden="true"></span><span class="visually-hidden">, approved by you</span></li>
+              <li><span class="ig-gen-box is-req">Design</span><span class="ig-chain-dia" aria-hidden="true"></span><span class="visually-hidden">, approved by you</span></li>
+              <li><span class="ig-gen-box is-req">Plan</span><span class="ig-chain-dia" aria-hidden="true"></span><span class="visually-hidden">, approved by you</span></li>
+              <li><span class="ig-gen-box is-req">Panel review</span><span class="ig-chain-dia" aria-hidden="true"></span><span class="visually-hidden">, approved by you</span></li>
+            </ol>
+            <span class="ig-down" aria-hidden="true"></span>
+            <article class="ig-task is-epic" aria-label="The epic of the orders project, a schematic example">
+              <div class="ig-task-head"><p class="ig-task-name">The epic</p><p class="ig-task-role">The orders project</p></div>
+              <dl class="ig-task-dl">
+                <div><dt>Goal</dt><dd>Store, import, export and search orders, with screens and a daily report.</dd></div>
+                <div><dt>Criteria, each with its owner</dt><dd><ol>
+                  <li>An order is imported and exported unchanged. <span class="ig-note">owner: Task&nbsp;D</span></li>
+                  <li>A report shows every order of the day. <span class="ig-note">owner: Task&nbsp;H</span></li>
+                  <li>The screens work for a first-time user. <span class="ig-note">owner: Task&nbsp;G</span></li>
+                </ol></dd></div>
+                <div><dt>Status</dt><dd><span class="chip">PLANNED</span></dd></div>
+                <div><dt>The last task of the epic</dt><dd>Task&nbsp;J, which closes it</dd></div>
+              </dl>
+            </article>
+          </div>
+          <figcaption id="e2-cap"><strong>The epic starts from approved documents, and its criteria carry no grade.</strong> Each criterion has an id, its text and a stated owner: the task that carries it forward, a person, or “unowned”, said openly.</figcaption>
+        </figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-runs" aria-labelledby="runs-title">
+      <div class="wrap stack">
+        <p class="sec-label">How it runs</p>
+        <h2 id="runs-title">It keeps its own order and stops for you at every task</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p><strong>What moves by itself:</strong> the order, set by the tasks' <a href="dependencies.html">dependencies</a>; its status, up to closing, except on <a href="#main-or-long-branch">a long branch</a>, a branch of its own that stays open while the epic's tasks land on it, until its last task lands it. After each close, a scan lists the tasks now free to start.</p>
+          </div>
+          <aside class="ig-you" aria-label="What you decide"><p class="ig-you-k">You decide</p><p>At each <a href="task.html">task</a>, you reply at its start and start its run, its finalize and its close.</p></aside>
+        </div>
+
+        <figure class="ig" aria-labelledby="e3-cap"><div class="ig-frame">
+          <ol class="ig-status" aria-label="The epic's status, and who moves it">
+            <li><span class="chip">PLANNED</span><p>Set when the plan <b>becomes tasks</b>.</p></li>
+            <li><span class="chip">ACTIVE</span><p><b>By itself</b>, when its first task starts.</p></li>
+            <li><span class="chip">CLOSING</span><p><b>By itself</b>, when its last task starts.</p></li>
+            <li class="is-you"><span class="chip">DONE</span><p class="ig-verb ig-status-you"><span class="ig-lc-dia" aria-hidden="true"></span>you confirm</p><p>by the methodology's rule</p></li>
+          </ol>
+          <p class="ig-status-side"><span class="chip">RETIRED</span><span class="ig-verb"><span class="ig-lc-dia" aria-hidden="true"></span>you retire it</span><span>at any time before done; it stays on the record.</span></p>
+        </div><figcaption id="e3-cap"><strong>Two of its statuses move with its tasks: written when a task starts, on the main board when that task closes, except on a long branch.</strong> By the methodology's rule, only you write done.</figcaption></figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="main-or-long-branch" aria-labelledby="branch-title">
+      <div class="wrap stack">
+        <p class="sec-label">Main or long branch</p>
+        <h2 id="branch-title">It runs on the main branch, or on its own long branch when all three conditions hold</h2>
+        <p><strong>The main branch</strong>, the shared copy of the code, is the default.</p>
+
+        <figure class="ig" aria-labelledby="e4-cap">
+          <div class="ig-frame bp">
+            <div class="ig-asks" role="group" aria-labelledby="e5-head">
+              <p class="ig-asks-head" id="e5-head">What its own long branch asks</p>
+              <ul>
+                <li><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M2.5 4.5 H21.5 V19.5 H2.5 Z M8.5 4.5 V19.5 M15.5 4.5 V19.5"/></g></svg><p><b>The board, the list of tasks, stays on the main branch.</b> The epic's own moves are written only in the task branch's copy of the board, which never lands, so the main board's epic does not move by itself.</p></li>
+                <li><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M2.5 4.5 H21.5 M2.5 19.5 H21.5 M12 5.25 V18 M9 15 L12 18 L15 15"/></g></svg><p><b>It takes in the main branch's changes</b> before each new task and before it lands. A branch that has fallen behind stops a new task from joining it: <span class="ig-whose"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>a check in code</span></span>.</p></li>
+                <li><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M2.5 4.5 H21.5 M2.5 19.5 H16 V5.25 M13 8.25 L16 5.25 L19 8.25"/></g></svg><p><b>One promotion lands it</b> at the end, in a single merge; today on GitHub.</p></li>
+              </ul>
+            </div>
+            <div class="ig-branch-fig">
+              <svg class="ig-pic is-wide is-left" width="920" height="296" viewBox="0 0 920 296" role="img" aria-labelledby="e4-t e4-d">
+                <title id="e4-t">On the main branch each task lands as it closes; on its own long branch the epic lands once, in one promotion.</title>
+                <desc id="e4-d">Two lanes. The main branch, the default: Task A, Task B and Task C each land on the main branch when they close. Its own long branch: the same three tasks land on the epic's branch, cut from the main branch, which joins the main branch in one promotion; each task's status still lands on the main branch, at its close. The three conditions are in the list below.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="14">THE MAIN BRANCH · THE DEFAULT</text>
+                  <path class="ig-branch" d="M0 96 H920"/>
+                  <text class="ig-t" x="920" y="88" text-anchor="end">main branch</text>
+                  <rect class="ig-task-box" x="120" y="28" width="120" height="40"/><path class="ig-task-top" d="M120 28 H240"/><text class="ig-box-key" x="132" y="52">Task A</text>
+                  <rect class="ig-task-box" x="340" y="28" width="120" height="40"/><path class="ig-task-top" d="M340 28 H460"/><text class="ig-box-key" x="352" y="52">Task B</text>
+                  <rect class="ig-task-box" x="560" y="28" width="120" height="40"/><path class="ig-task-top" d="M560 28 H680"/><text class="ig-box-key" x="572" y="52">Task C</text>
+                  <path class="ig-l-build" d="M180 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M400 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M620 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <text class="ig-note" x="920" y="52" text-anchor="end">each lands when it closes</text>
+                  <text class="ig-caps" x="0" y="158">ITS OWN LONG BRANCH</text>
+                  <text class="ig-note" x="820" y="176" text-anchor="end">statuses land here at close</text>
+                  <text class="ig-t" x="920" y="176" text-anchor="end">main branch</text>
+                  <path class="ig-branch" d="M0 184 H920"/>
+                  <path class="ig-branch" d="M40 184 V264 H760"/>
+                  <rect class="ig-task-box" x="120" y="204" width="120" height="40"/><path class="ig-task-top" d="M120 204 H240"/><text class="ig-box-key" x="132" y="228">Task A</text>
+                  <rect class="ig-task-box" x="340" y="204" width="120" height="40"/><path class="ig-task-top" d="M340 204 H460"/><text class="ig-box-key" x="352" y="228">Task B</text>
+                  <rect class="ig-task-box" x="560" y="204" width="120" height="40"/><path class="ig-task-top" d="M560 204 H680"/><text class="ig-box-key" x="572" y="228">Task C</text>
+                  <path class="ig-l-build" d="M180 244 V263" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M400 244 V263" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M620 244 V263" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M760 264 H776 V185" marker-end="url(#ig-mk-build)"/>
+                  <text class="ig-t" x="788" y="232">one promotion</text>
+                  <text class="ig-t" x="48" y="286">the epic's branch</text>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="288" viewBox="0 0 288 288" role="img" aria-labelledby="e4n-t e4n-d">
+                <title id="e4n-t">On the main branch each task lands as it closes; on its own long branch the epic lands once, in one promotion.</title>
+                <desc id="e4n-d">Two lanes. The main branch, the default: Task A, Task B and Task C each land on the main branch when they close. Its own long branch: the same three tasks land on the epic's branch, cut from the main branch, which joins the main branch in one promotion; each task's status still lands on the main branch, at its close. The three conditions are in the list below.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="14">THE MAIN BRANCH · THE DEFAULT</text>
+                  <rect class="ig-task-box" x="12" y="28" width="80" height="40"/><path class="ig-task-top" d="M12 28 H92"/><text class="ig-box-key" x="22" y="52">Task A</text>
+                  <rect class="ig-task-box" x="104" y="28" width="80" height="40"/><path class="ig-task-top" d="M104 28 H184"/><text class="ig-box-key" x="114" y="52">Task B</text>
+                  <rect class="ig-task-box" x="196" y="28" width="80" height="40"/><path class="ig-task-top" d="M196 28 H276"/><text class="ig-box-key" x="206" y="52">Task C</text>
+                  <path class="ig-l-build" d="M52 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M144 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M236 68 V95" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-branch" d="M0 96 H288"/>
+                  <text class="ig-t" x="0" y="116">main branch</text>
+                  <text class="ig-note" x="288" y="116" text-anchor="end">each lands when it closes</text>
+                  <text class="ig-caps" x="0" y="146">ITS OWN LONG BRANCH</text>
+                  <text class="ig-t" x="0" y="168">main branch</text>
+                  <text class="ig-note" x="288" y="168" text-anchor="end">statuses land here at close</text>
+                  <path class="ig-branch" d="M0 176 H288"/>
+                  <path class="ig-branch" d="M4 176 V256 H276"/>
+                  <rect class="ig-task-box" x="12" y="196" width="80" height="40"/><path class="ig-task-top" d="M12 196 H92"/><text class="ig-box-key" x="22" y="220">Task A</text>
+                  <rect class="ig-task-box" x="104" y="196" width="80" height="40"/><path class="ig-task-top" d="M104 196 H184"/><text class="ig-box-key" x="114" y="220">Task B</text>
+                  <rect class="ig-task-box" x="196" y="196" width="80" height="40"/><path class="ig-task-top" d="M196 196 H276"/><text class="ig-box-key" x="206" y="220">Task C</text>
+                  <path class="ig-l-build" d="M52 236 V255" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M144 236 V255" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M236 236 V255" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M276 256 H284 V177" marker-end="url(#ig-mk-build)"/>
+                  <text class="ig-t" x="0" y="278">the epic's branch</text>
+                  <text class="ig-t" x="288" y="278" text-anchor="end">one promotion</text>
+                </g>
+              </svg>
+              <div class="ig-test">
+                <p class="ig-test-head">A long branch only if all three hold</p>
+                <ol>
+                  <li><span class="ig-dim-badge">1</span><span>The epic's tasks cannot ship one by one: each alone would leave the main branch half-built.</span></li>
+                  <li class="ig-test-and" aria-hidden="true">and</li>
+                  <li><span class="ig-dim-badge">2</span><span>The work runs across several closes, so keeping the branch in sync is worth it.</span></li>
+                  <li class="ig-test-and" aria-hidden="true">and</li>
+                  <li><span class="ig-dim-badge">3</span><span>One review and one promotion are wanted, not one merge per task.</span></li>
+                </ol>
+                <p class="ig-test-who"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span>The orchestrator, the main agent that runs the others, weighs them when it writes the plan: a judgement, not a check in code.</span></p>
+                <div class="ig-test-out">
+                  <p><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg><span>All three hold → it proposes a branch, with its reason.</span></p>
+                  <ul class="ig-yes" aria-label="Your answer"><li><span class="ig-yes-text"><span>you approve →</span> <span>the branch opens</span></span></li></ul>
+                  <p class="is-default">Any fails → the main branch, the default.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption id="e4-cap"><strong>Each task lands on the main branch as it closes, or the epic's long branch, its own copy of the code, lands once: one promotion, a single merge into the main branch.</strong> By the orchestrator's instruction, a long branch opens only after you approve the plan that proposes it.</figcaption>
+        </figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="closing" aria-labelledby="closing-title">
+      <div class="wrap stack">
+        <p class="sec-label">Closing the epic</p>
+        <h2 id="closing-title">Closing the epic: a reader who did not write the evidence grades each criterion, and you confirm</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p><strong>The last task of the epic</strong>, which closes it, is free to start once the other tasks close. Besides the grades, it writes the showcase, passes over the documentation and lands a long branch.</p>
+            <p><strong>Done is written by a person</strong>, by the methodology's rule: code cannot check who asks.</p>
+          </div>
+          <aside class="ig-you" aria-label="What you decide"><p class="ig-you-k">You decide</p><p>You sign off what is left over, answer the release question (whether to make a release now) and give the verdict.</p></aside>
+        </div>
+
+        <figure class="ig" aria-labelledby="e6-cap"><div class="ig-frame bp">
+          <p class="ig-tag">Schematic</p>
+          <p class="ig-close-start"><svg class="ig-arc-waves" width="40" height="24" viewBox="0 0 40 24" aria-hidden="true" focusable="false"><rect class="ig-band" x=".5" y=".5" width="15" height="5"/><rect class="ig-band" x=".5" y="9.5" width="39" height="5"/><rect class="ig-band" x=".5" y="18.5" width="27" height="5"/></svg><span>All its other tasks close</span></p>
+          <span class="ig-down ig-close-down" aria-hidden="true"></span>
+          <div class="ig-close-box" role="group" aria-label="Closing the epic, Task J, the last task of the epic, a schematic example">
+            <div class="ig-task-head"><p class="ig-task-name">Closing the epic</p><p class="ig-task-role">Task&nbsp;J, the last task of the epic</p></div>
+            <table class="ig-grades is-ledger">
+              <thead><tr><th scope="col">Criterion</th><th scope="col">The evidence</th><th scope="col">Grade</th><th scope="col">Left over</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="n">1</span>An order is imported and exported unchanged.</th><td data-label="The evidence">Task&nbsp;D's and Task&nbsp;E's tests, run on the merged code.</td><td data-label="Grade"><span class="ig-grade"><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met</span></td><td data-label="Left over">nothing</td></tr>
+                <tr><th scope="row"><span class="n">2</span>A report shows every order of the day.</th><td data-label="The evidence">Task&nbsp;H's report leaves out cancelled orders.</td><td data-label="Grade"><span class="ig-grade"><svg class="ig-notmet" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4 L12 12 M12 4 L4 12"/></svg>not met</span><span class="ig-grade-note">kept on the record</span></td><td data-label="Left over">cancelled orders → a new task</td></tr>
+                <tr><th scope="row"><span class="n">3</span>The screens work for a first-time user.</th><td data-label="The evidence">It needs real users; none yet.</td><td data-label="Grade"><span class="ig-grade"><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg>carried to a named task</span><ul class="ig-yes is-row" aria-label="Yours"><li>you agree</li></ul></td><td data-label="Left over">the first-user check → the named task</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="ig-yes" aria-label="Your answers"><li>you sign off the leftovers</li><li>you answer the release question</li><li><span class="ig-yes-text"><span>you confirm →</span> <span>done</span></span></li></ul>
+          <div class="ig-rec"><p class="ig-rec-head">In DreamTeam's epic method · closing the epic</p>
+            <p class="ig-rec-ex">… the reader of the evidence is not its author — a closure task that grades its own work with no independent pass …</p>
+            <p class="ig-rec-src">DreamTeam's own rule, word for word, cut with "…"; its "closure task" is the last task of the epic.</p></div>
+        </div><figcaption id="e6-cap"><strong>Three criteria: met, not met, one carried to a named task; then your word.</strong></figcaption></figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="the-end" aria-labelledby="end-title">
+      <div class="wrap stack">
+        <p class="sec-label">The end</p>
+        <h2 id="end-title">The epic ends with one showcase and a record you can open</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p>At the close an agent writes <strong>one showcase</strong>, a page that presents the finished epic: no program computes its numbers, and each number has a source.</p>
+            <p>When you confirm, the epic and its last task are <strong>done</strong>.</p>
+          </div>
+          <ul class="benefits" role="list">
+            <li>
+              <details class="benefit">
+                <summary><span class="bf-head"><span class="bf-line"><strong>What it holds:</strong> ten sections, recorded demos, and five rules that keep it honest.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+                <div class="bf-body">
+                  <p class="bf-why">It has ten sections; its demos are recorded runs that can be replayed. Five rules keep it honest:</p>
+                  <table class="answers">
+                    <thead><tr><th scope="col">Rule</th><th scope="col">What it means</th></tr></thead>
+                    <tbody>
+                      <tr><th scope="row"><span class="n">1</span>No ranking where the data cannot be compared</th><td>Say the plain fact instead.</td></tr>
+                      <tr><th scope="row"><span class="n">2</span>A line naming who is left out of a figure</th><td>Whenever any task's data is missing or not comparable.</td></tr>
+                      <tr><th scope="row"><span class="n">3</span>No superlative without a source</th><td>A “best” or a “most” names where it comes from.</td></tr>
+                      <tr><th scope="row"><span class="n">4</span>The best agents as a roster, not a leaderboard, unless the data is comparable</th><td>Name the contributions rather than rank the contributors.</td></tr>
+                      <tr><th scope="row"><span class="n">5</span>No figure that cannot be true when it is written</th><td>Quote only what is true at that moment.</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="ig" aria-labelledby="e7-cap">
+          <div class="ig-frame bp">
+            <ul class="ig-parts is-6" aria-label="What a finished epic leaves">
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">1</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M5.5 21.5 V2.5 M5.5 3.5 H19.5 L16.5 8 L19.5 12.5 H5.5"/></g></svg><p class="ig-dim-name">The epic, done</p></div><p class="ig-part-line">The epic and its last task, both <span class="chip">DONE</span>, on your word.</p></li>
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">2</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M8.5 2.5 H16.5 L20.5 6.5 V17.5 H8.5 Z M16.5 2.5 V6.5 H20.5 M8.5 6.5 H3.5 V21.5 H15.5 V17.5"/></g></svg><p class="ig-dim-name">Its documents</p></div><p class="ig-part-line">Vision, design, plan and panel review, kept current as the design moves.</p></li>
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">3</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M2.5 3.5 H21.5 V20.5 H2.5 Z M2.5 9.5 H21.5 M2.5 15 H21.5 M14.5 3.5 V20.5"/></g></svg><p class="ig-dim-name">The evidence</p></div><p class="ig-part-line">Each criterion with its grade and its evidence.</p></li>
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">4</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M2.5 3.5 H21.5 V17.5 H2.5 Z M2.5 7.5 H21.5 M12 17.5 V21.5 M8 21.5 H16"/></g></svg><p class="ig-dim-name">One showcase</p></div><p class="ig-part-line">Written once, at the close: every number with its source.</p></li>
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">5</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><path d="M4.5 2.5 H15.5 L19.5 6.5 V21.5 H4.5 Z M15.5 2.5 V6.5 H19.5 M8.5 18 V14 M12 18 V10 M15.5 18 V12"/></g></svg><p class="ig-dim-name">Its report page</p></div><p class="ig-part-line">Made with the epic; it updates each time one of its tasks closes.</p></li>
+              <li class="ig-part"><div class="ig-part-head"><span class="ig-dim-badge">6</span><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><g class="ig-ring-icon"><rect x="10.5" y="6.5" width="11" height="11"/><path d="M2 12 H10.5 M8 9.5 L10.5 12 L8 14.5"/></g></svg><p class="ig-dim-name">Tasks for what is left</p></div><p class="ig-part-line">What is left over, carried by named tasks, as you signed it off.</p></li>
+            </ul>
+          </div>
+          <figcaption id="e7-cap"><strong>What a finished epic leaves: its record, in six parts.</strong></figcaption>
+        </figure>
+        <p class="more">Next: <a href="dependencies.html">Tasks and their dependencies <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section small-print essay-sp" aria-labelledby="sp-title">
+      <div class="wrap">
+        <h2 class="sec-label" id="sp-title">The small print</h2>
+        <details class="provenance">
+          <summary>The documents behind each statement</summary>
+          <p>DreamTeam's repository at commit <code>6b947dfb1</code>, read-only:</p>
+          <ul>
+            <li>the epic method, <code>docs/system/EPIC_METHODOLOGY.md</code> (§0.5, §1, §3, §5, §E);</li>
+            <li>the showcase standard, <code>docs/system/EPIC_SHOWCASE_STANDARD.md</code>;</li>
+            <li>the task schema, <code>shared/models/task_schema.py</code>;</li>
+            <li>the epic tools, <code>tools/epic_ops.py</code>;</li>
+            <li>the brainstorm's stages, the copy and the plan's approval, <code>config/workflows.yaml</code>;</li>
+            <li>the customer runbook, <code>docs/guides/customer-integration-runbook.md</code> §6;</li>
+            <li>the start command, <code>.claude/commands/dt-task-init.md</code>.</li>
+          </ul>
+        </details>
+        <details class="provenance">
+          <summary>What a long branch costs, in full</summary>
+          <p>Four shared files — the board, the decision log, the history and the changelog — never change on the branch: “a hard structural rule, not a social convention”. A task's status reaches the main board at the task's close, in its own write; until then it lives on the task's branch, and the main branch receives only each task's pending (awaiting your approval) and done. A later change on the main board never reaches the branch's copy. A task started on the branch reads the status of what it waits for from the branch's own copy of the board. The epic's moves to active and closing come only with a task's move to in progress. On a long branch that move is written only in the task branch's copy of the board, which never lands, so the main board's epic does not move by itself. Code and config files both sides changed are left for a person, and the freshness check, which stops a new task from joining a branch that has fallen behind, still calls the branch “fresh”; some document files are merged by a stated rule. A task's target is fixed when the task is locked. No epic branches from another epic.</p>
+        </details>
+        <details class="provenance">
+          <summary>A record of one real branch</summary>
+          <p>Its gap with the main branch “only grows”. Its freshness check said “fresh” while a backlog of fixes never landed.</p>
+        </details>
+        <details class="provenance">
+          <summary>Closing the epic, in DreamTeam's numbering</summary>
+          <p>1 the evidence for each criterion, with the ledger of what is left over; 2 one showcase, written by an agent; 3 a documentation pass; 4 integration: nothing on the main branch, one promotion for a long branch; 5 the release question, asked before the showcase; 6 your verdict: the last task and the epic, done.</p>
+        </details>
+        <details class="provenance">
+          <summary>Its waits</summary>
+          <p>The last task of the epic waits for every task through records written with the plan; its start stops while any is open, and a check warns if a task is left out of its waits.</p>
+        </details>
+        <details class="provenance">
+          <summary>Who reads the evidence</summary>
+          <p>In a recorded close, a fresh reviewer with no part in the epic's tasks graded every criterion at one pinned commit, and the orchestrator only copied its grades. Nothing mechanical stops a false tick in the evidence.</p>
+        </details>
+        <details class="provenance">
+          <summary>A task deferred or added late</summary>
+          <p>A deferred task blocks the close; a task added while closing sends the last task back to you, by a check that over-reports by design: a false alarm costs you a glance, a miss would cost an unchecked done.</p>
+        </details>
+        <details class="provenance">
+          <summary>How we checked</summary>
+          <p>No measured number on this page: counts, durations and costs are in the worked examples. Every excerpt is word for word, cut only with “…”. A figure tagged “Schematic” is invented. “Story” is our word for the epic, not DreamTeam's: its model keeps “story” for a tier below the epic.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
+      <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team in 8 weeks</a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+    </div>
+  </footer>
+</body>
+</html>

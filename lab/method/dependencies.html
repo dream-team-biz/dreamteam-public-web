@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>Dependencies: every wait has a kind and a reason — DreamTeam Lab</title>
+  <meta name="description" content="How each wait between DreamTeam tasks carries a kind and a reason, how the order and the waves are worked out from them, which checks refuse a task with no record, and how the last task of the epic waits for every task.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* A Life Cycle page: layout only. Its figures are the infographic family, assets/style.css §24–§25; the
+       onward link and the small print are the shared components (§15, §20). */
+    .ig-head .lead { max-width: var(--col); }
+    .stack > p { max-width: var(--col); }
+    .stack > .bn-back { margin-top: 24px; }
+    .small-print .provenance ul { margin: 8px 0 0; padding-left: 20px; }
+    .small-print .provenance li + li { margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="../index.html#contact">Talk to us</a>
+    </div>
+  </header>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ig-mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ig-mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-need" d="M1,1 L9,5 L1,9 z"/></marker>
+      <marker id="ig-mk-dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse"><circle class="ig-mk-dot" cx="5" cy="5" r="4"/></marker>
+    </defs>
+  </svg>
+
+  <main id="main" class="method is-lc">
+    <nav class="ig-toc" aria-label="On this page">
+      <div class="wrap ig-toc-in">
+        <ol class="ig-toc-list">
+          <li><a href="#top">Dependencies</a></li>
+          <li><a href="#a-wait">A wait</a></li>
+          <li><a href="#the-order">The order</a></li>
+          <li><a href="#refusals">The refusals</a></li>
+          <li><a href="#last-task">The epic's last task</a></li>
+        </ol>
+        <a class="ig-toc-top" href="#top">Top<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a>
+      </div>
+    </nav>
+
+    <section class="page-head" id="top" aria-labelledby="page-title">
+      <div class="wrap ig-head">
+        <div class="head-main">
+          <p class="sec-label">The Dream Team Life Cycle</p>
+          <h1 id="page-title">Every wait has a kind and a reason</h1>
+          <p class="bn-sub">and the board works out the order from them.</p>
+          <p class="lead"><strong>You</strong>, the engineer in control, see each <strong>wait</strong>, one task waiting for another, at a task's start.</p>
+          <p class="more"><a href="#a-wait">What a wait does <span aria-hidden="true">↓</span></a></p>
+        </div>
+        <details class="ig-toc-fold" id="toc"><summary>On this page</summary><ol class="ig-toc-list" id="toc-list">
+          <li><a href="#a-wait">A wait</a></li>
+          <li><a href="#the-order">The order</a></li>
+          <li><a href="#refusals">The refusals</a></li>
+          <li><a href="#last-task">The epic's last task</a></li>
+        </ol></details>
+        <figure class="ig ig-lc-fig" aria-labelledby="d1-cap">
+          <div class="ig-frame bp">
+            <nav class="ig-lc is-b" aria-label="The Dream Team Life Cycle">
+              <ol class="ig-lc-list">
+                <li class="ig-lc-bs"><a class="ig-lc-link" href="brainstorm.html"><span class="ig-lc-w">Brainstorm</span></a></li>
+                <li class="ig-lc-epic"><a class="ig-lc-link is-epic" href="epic.html"><span class="ig-lc-w">Epic</span></a>
+                  <ol class="ig-lc-in">
+                    <li class="ig-lc-tasks"><a class="ig-lc-link" href="dependencies.html" aria-current="page"><span class="ig-lc-w">Tasks<span class="ig-lc-more2"> and their dependencies</span></span><span class="visually-hidden">, you are here</span></a><span class="ig-lc-pointer" aria-hidden="true"></span></li>
+                    <li class="ig-lc-one"><a class="ig-lc-link" href="task.html"><span class="ig-lc-w">One task<span class="ig-lc-more2">: init to close</span></span></a></li>
+                    <li class="ig-lc-close"><a class="ig-lc-link" href="epic.html#closing"><span class="ig-lc-w">Closing<span class="ig-lc-more"> the epic</span></span></a></li>
+                    <li class="ig-lc-yes"><span class="ig-lc-dia" aria-hidden="true"></span><span class="ig-lc-more">you confirm</span><span class="ig-lc-done"><span class="visually-hidden">, </span>done</span></li>
+                  </ol>
+                </li>
+              </ol>
+            </nav>
+            <div class="ig-detail is-pair">
+              <p class="ig-tag">Detail · tasks and their dependencies&nbsp;·&nbsp;schematic</p>
+              <div class="ig-lc-pic">
+                <svg class="ig-pic is-wide" width="920" height="332" viewBox="-1 -1 920 332" role="img" aria-labelledby="d1-t d1-d">
+                  <title id="d1-t">The Dream Team Life Cycle: a brainstorm makes an epic, its tasks run in the order their waits set, and the last task of the epic closes it.</title>
+                  <desc id="d1-d">Ten tasks in four waves. Build order: C and D wait for A, F for B, G for C, H for D, I for F. Needs an output: E needs B's, H needs E's. D and E would collide. A bracket over every band leads into Task J, the last task of the epic. A dashed circle round Task F leads to its detail: init, run, finalize, close, with your three decisions. After Task J: each criterion graded, you confirm, done.</desc>
+                  <g aria-hidden="true">
+                    <text class="ig-caps" x="0" y="36">WAVE 0</text>
+                    <text class="ig-caps" x="0" y="124">WAVE 1</text>
+                    <text class="ig-caps" x="0" y="212">WAVE 2</text>
+                    <text class="ig-caps" x="0" y="300">WAVE 3</text>
+                    <rect class="ig-band" x="96" y="0" width="264" height="64"/>
+                    <rect class="ig-band" x="96" y="88" width="528" height="64"/>
+                    <rect class="ig-band" x="96" y="176" width="396" height="64"/>
+                    <rect class="ig-band is-closing" x="96" y="264" width="822" height="64"/>
+                    <path class="ig-l-build" d="M88 0 H80 V296 H96" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M80 240 H88"/>
+                    <path class="ig-l-build" d="M156 56 V96" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M196 56 V72 H264 V96" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-need" d="M280 56 V80 H436 V96" marker-end="url(#ig-mk-need)"/>
+                    <path class="ig-l-build" d="M320 56 V68 H564 V96" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M156 144 V184" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M294 144 V184" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-need" d="M400 144 V164 H334 V184" marker-end="url(#ig-mk-need)"/>
+                    <path class="ig-l-build" d="M524 144 V170 H452 V184" marker-end="url(#ig-mk-build)"/>
+                    <rect class="ig-task-box" x="96" y="8" width="120" height="48"/><path class="ig-task-top" d="M96 8 H216"/><text class="ig-box-key" x="108" y="26">Task A</text><text class="ig-name" x="108" y="46">Data</text>
+                    <rect class="ig-task-box" x="240" y="8" width="120" height="48"/><path class="ig-task-top" d="M240 8 H360"/><text class="ig-box-key" x="252" y="26">Task B</text><text class="ig-name" x="252" y="46">Auth</text>
+                    <rect class="ig-task-box" x="96" y="96" width="120" height="48"/><path class="ig-task-top" d="M96 96 H216"/><text class="ig-box-key" x="108" y="114">Task C</text><text class="ig-name" x="108" y="134">Service</text>
+                    <rect class="ig-task-box" x="224" y="96" width="120" height="48"/><path class="ig-task-top" d="M224 96 H344"/><text class="ig-box-key" x="236" y="114">Task D</text><text class="ig-name" x="236" y="134">Import</text>
+                    <rect class="ig-task-box" x="376" y="96" width="120" height="48"/><path class="ig-task-top" d="M376 96 H496"/><text class="ig-box-key" x="388" y="114">Task E</text><text class="ig-name" x="388" y="134">Export</text>
+                    <rect class="ig-task-box" x="504" y="96" width="120" height="48"/><path class="ig-task-top" d="M504 96 H624"/><text class="ig-box-key" x="516" y="114">Task F</text><text class="ig-name" x="516" y="134">Search</text>
+                    <path class="ig-l-collide" d="M344 120 H376" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                    <rect class="ig-task-box" x="96" y="184" width="120" height="48"/><path class="ig-task-top" d="M96 184 H216"/><text class="ig-box-key" x="108" y="202">Task G</text><text class="ig-name" x="108" y="222">Screens</text>
+                    <rect class="ig-task-box" x="234" y="184" width="120" height="48"/><path class="ig-task-top" d="M234 184 H354"/><text class="ig-box-key" x="246" y="202">Task H</text><text class="ig-name" x="246" y="222">Report</text>
+                    <rect class="ig-task-box" x="372" y="184" width="120" height="48"/><path class="ig-task-top" d="M372 184 H492"/><text class="ig-box-key" x="384" y="202">Task I</text><text class="ig-name" x="384" y="222">Docs</text>
+                    <rect class="ig-task-box is-closing" x="96" y="272" width="240" height="48"/><path class="ig-task-top" d="M96 272 H336"/><text class="ig-box-key" x="108" y="290">Task J</text><text class="ig-name" x="108" y="310">Last task of the epic</text>
+                    <circle class="ig-detail-ring" cx="564" cy="120" r="66"/>
+                    <path class="ig-l-detail" d="M630 120 H656"/>
+                    <g transform="translate(656 0)">
+                      <rect class="ig-lc-panel" x=".75" y=".75" width="246.5" height="238.5"/>
+                      <text class="ig-caps is-stage" x="16" y="22">DETAIL · ONE TASK, TASK F</text>
+                      <path class="ig-rail" d="M64 50 V218"/>
+                      <rect class="ig-stage" x="16" y="36" width="96" height="28"/>
+                      <rect class="ig-stage is-run" x="16" y="92" width="96" height="28"/>
+                      <rect class="ig-stage" x="16" y="148" width="96" height="28"/>
+                      <rect class="ig-stage" x="16" y="204" width="96" height="28"/>
+                      <text class="ig-name" x="64" y="55" text-anchor="middle">Init</text>
+                      <text class="ig-name" x="64" y="111" text-anchor="middle">Run</text>
+                      <text class="ig-name" x="64" y="167" text-anchor="middle">Finalize</text>
+                      <text class="ig-name" x="64" y="223" text-anchor="middle">Close</text>
+                      <polygon class="ig-dia" points="64,71 71,78 64,85 57,78"/>
+                      <polygon class="ig-dia" points="64,127 71,134 64,141 57,134"/>
+                      <polygon class="ig-dia" points="64,183 71,190 64,197 57,190"/>
+                      <text class="ig-verb" x="80" y="83">you start the run</text>
+                      <text class="ig-verb" x="80" y="139">you start finalize</text>
+                      <text class="ig-verb" x="80" y="195">you start the close</text>
+                    </g>
+                    <path class="ig-rail" d="M336 296 H754"/>
+                    <path class="ig-meets" d="M387 296.5 L390.5 300 L397 292.5"/>
+                    <path class="ig-meets" d="M411 296.5 L414.5 300 L421 292.5"/>
+                    <path class="ig-meets" d="M435 296.5 L438.5 300 L445 292.5"/>
+                    <text class="ig-t" x="416" y="320" text-anchor="middle">each criterion graded</text>
+                    <polygon class="ig-dia" points="600,289 607,296 600,303 593,296"/>
+                    <text class="ig-verb" x="600" y="322" text-anchor="middle">you confirm</text>
+                    <circle class="ig-end" cx="760" cy="296" r="6"/>
+                    <text class="ig-name" x="776" y="301">Done</text>
+                  </g>
+                </svg>
+                <svg class="ig-pic is-narrow" width="288" height="424" viewBox="-0.5 -0.5 288 424" role="img" aria-labelledby="d1n-t d1n-d">
+                  <title id="d1n-t">The Dream Team Life Cycle: a brainstorm makes an epic, its tasks run in the order their waits set, and the last task of the epic closes it.</title>
+                  <desc id="d1n-d">Ten tasks in four waves. Build order: C and D wait for A, F for B, G for C, H for D, I for F. Needs an output: E needs B's, H needs E's. D and E would collide. Task F is marked. A bracket over every band leads into Task J, the last task of the epic.</desc>
+                  <g aria-hidden="true">
+                    <text class="ig-caps" x="12" y="16">WAVE 0</text>
+                    <text class="ig-caps" x="12" y="132">WAVE 1</text>
+                    <text class="ig-caps" x="12" y="240">WAVE 2</text>
+                    <text class="ig-caps" x="12" y="348">WAVE 3</text>
+                    <rect class="ig-band" x="12" y="24" width="130" height="64"/>
+                    <rect class="ig-band" x="12" y="140" width="274" height="64"/>
+                    <rect class="ig-band" x="12" y="248" width="198" height="64"/>
+                    <rect class="ig-band is-closing" x="12" y="356" width="274" height="64"/>
+                    <path class="ig-l-build" d="M10 24 H4 V388 H12" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M4 312 H10"/>
+                    <path class="ig-l-build" d="M40 80 V148" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M56 80 V112 H111 V148" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M134 80 V96 H255 V148" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-need" d="M120 80 V104 H187 V148" marker-end="url(#ig-mk-need)"/>
+                    <path class="ig-l-build" d="M40 196 V256" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-build" d="M111 196 V256" marker-end="url(#ig-mk-build)"/>
+                    <path class="ig-l-need" d="M170 196 V212 H124 V256" marker-end="url(#ig-mk-need)"/>
+                    <path class="ig-l-build" d="M248 196 V220 H190 V256" marker-end="url(#ig-mk-build)"/>
+                    <rect class="ig-task-box" x="12" y="32" width="62" height="48"/><path class="ig-task-top" d="M12 32 H74"/><text class="ig-box-key" x="20" y="50">Task A</text><text class="ig-box-name" x="43" y="70" text-anchor="middle">Data</text>
+                    <rect class="ig-task-box" x="80" y="32" width="62" height="48"/><path class="ig-task-top" d="M80 32 H142"/><text class="ig-box-key" x="88" y="50">Task B</text><text class="ig-box-name" x="111" y="70" text-anchor="middle">Auth</text>
+                    <rect class="ig-task-box" x="12" y="148" width="62" height="48"/><path class="ig-task-top" d="M12 148 H74"/><text class="ig-box-key" x="20" y="166">Task C</text><text class="ig-box-name" x="43" y="186" text-anchor="middle">Service</text>
+                    <rect class="ig-task-box" x="80" y="148" width="62" height="48"/><path class="ig-task-top" d="M80 148 H142"/><text class="ig-box-key" x="88" y="166">Task D</text><text class="ig-box-name" x="111" y="186" text-anchor="middle">Import</text>
+                    <rect class="ig-task-box" x="156" y="148" width="62" height="48"/><path class="ig-task-top" d="M156 148 H218"/><text class="ig-box-key" x="164" y="166">Task E</text><text class="ig-box-name" x="187" y="186" text-anchor="middle">Export</text>
+                    <rect class="ig-task-box is-here" x="224" y="148" width="62" height="48"/><path class="ig-task-top" d="M224 148 H286"/><text class="ig-box-key" x="232" y="166">Task F</text><text class="ig-box-name" x="255" y="186" text-anchor="middle">Search</text>
+                    <path class="ig-l-collide" d="M142 172 H156" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                    <rect class="ig-task-box" x="12" y="256" width="62" height="48"/><path class="ig-task-top" d="M12 256 H74"/><text class="ig-box-key" x="20" y="274">Task G</text><text class="ig-box-name" x="43" y="294" text-anchor="middle">Screens</text>
+                    <rect class="ig-task-box" x="80" y="256" width="62" height="48"/><path class="ig-task-top" d="M80 256 H142"/><text class="ig-box-key" x="88" y="274">Task H</text><text class="ig-box-name" x="111" y="294" text-anchor="middle">Report</text>
+                    <rect class="ig-task-box" x="148" y="256" width="62" height="48"/><path class="ig-task-top" d="M148 256 H210"/><text class="ig-box-key" x="156" y="274">Task I</text><text class="ig-box-name" x="179" y="294" text-anchor="middle">Docs</text>
+                    <rect class="ig-task-box is-closing" x="12" y="364" width="200" height="48"/><path class="ig-task-top" d="M12 364 H212"/><text class="ig-box-key" x="20" y="382">Task J</text><text class="ig-box-name" x="112" y="402" text-anchor="middle">Last task of the epic</text>
+                  </g>
+                </svg>
+                <ol class="ig-lc-tail">
+                  <li><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>each criterion graded</li>
+                  <li class="is-you"><span class="ig-lc-dia" aria-hidden="true"></span>you confirm</li>
+                  <li>done</li>
+                </ol>
+              </div>
+              <div class="ig-foot">
+                <ul class="ig-legend" aria-label="Key">
+                  <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order</li>
+                  <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs an output</li>
+                  <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
+                  <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box" x="1" y="1" width="38" height="10"/><path class="ig-task-top" d="M1 1 H39"/></svg>a task</li>
+                  <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-closing" x="1" y="1" width="38" height="10"/></svg>the last task of the epic</li>
+                  <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-detail-ring" cx="8" cy="8" r="6.5"/></svg>a dashed circle: shown larger in its detail</li>
+                </ul>
+              </div>
+              <p class="ig-lc-ways"><span class="ig-caps">Open</span><a href="brainstorm.html">Brainstorm</a><a href="task.html">One task, Task&nbsp;F</a><a href="epic.html#closing">Closing the epic</a></p>
+            </div>
+          </div>
+          <figcaption id="d1-cap"><strong>The Dream Team Life Cycle: a brainstorm makes an epic, its tasks run in the order their waits set, and the last task of the epic closes it.</strong> A <strong>wave</strong> is the tasks that can start at the same point.</figcaption>
+        </figure>
+        <div class="head-side">
+          <div class="ig-rec" data-zone="figure">
+            <p class="ig-rec-head">In DreamTeam's board tools · a typed wait list</p>
+            <pre class="ig-rec-ex">depends_on is derived from
+'dependencies' on this task;
+edit the record instead.</pre>
+            <p class="ig-rec-src">What DreamTeam prints, word for word, when someone types a task's wait list by hand on a task that has a record.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="a-wait" aria-labelledby="wait-title">
+      <div class="wrap stack">
+        <p class="sec-label">A wait</p>
+        <h2 id="wait-title">A task's start stops while any task it waits for is not done</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p>Each wait is a record: the task, its kind, build order or needs an output, and a one-sentence reason.</p>
+            <p>A <strong>collision</strong>, two tasks that would clash if run together, is the third kind, and it orders nothing. It is declared once and checked at the start against tasks <strong>already running</strong>; what the check knows it cannot read, it reports instead of clearing.</p>
+          </div>
+          <aside class="ig-you" aria-label="What you decide"><p class="ig-you-k">You decide</p><p>If a task it would collide with is already running, the start puts that to you.</p></aside>
+        </div>
+
+        <figure class="ig" aria-labelledby="d2-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <div class="ig-tasks">
+              <article class="ig-task" aria-label="Task H, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task&nbsp;H</p><p class="ig-task-role">Report · Backend developer</p></div>
+                <dl class="ig-task-dl"><div><dt>Depends on</dt><dd>
+                  <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on Task&nbsp;D · build order</b><span>why: it reports on the orders Task&nbsp;D imports.</span></div></div>
+                  <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg><div><b>on Task&nbsp;E · needs an output</b><span>why: it reads the file Task&nbsp;E exports.</span></div></div>
+                </dd></div></dl>
+              </article>
+              <article class="ig-task" aria-label="Task D, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task&nbsp;D</p><p class="ig-task-role">Import · Backend developer</p></div>
+                <dl class="ig-task-dl"><div><dt>Depends on</dt><dd>
+                  <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on Task&nbsp;A · build order</b><span>why: it imports into the store Task&nbsp;A creates.</span></div></div>
+                  <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with Task&nbsp;E · would collide</b><span>why: both change the order file format.</span></div></div>
+                </dd></div></dl>
+              </article>
+              <article class="ig-task" aria-label="Task A, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-name">Task&nbsp;A</p><p class="ig-task-role">Data · Backend developer</p></div>
+                <dl class="ig-task-dl"><div><dt>Depends on</dt><dd><p class="ig-task-none">none · why: the first task; nothing to wait for.</p></dd></div></dl>
+              </article>
+            </div>
+            <div class="ig-gate is-small">
+              <p><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>At a task's start, the orchestrator, the main agent, checks each task it waits for; one not done stops the start, by the start command's instruction. Setting a task in progress checks no wait.</p>
+            </div>
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs an output</li>
+              <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-agent" cx="8" cy="8" r="6"/></svg>an agent's step</li>
+            </ul>
+          </div>
+          <figcaption id="d2-cap"><strong>Three task cards: two kinds of wait, a collision and a “none”, each with its reason.</strong></figcaption>
+        </figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="the-order" aria-labelledby="order-title">
+      <div class="wrap stack">
+        <p class="sec-label">The order</p>
+        <h2 id="order-title">The order is worked out from the records, not typed by hand</h2>
+        <div class="ig-split">
+          <div class="ig-split-text">
+            <p>The list a task waits on <strong>comes from its record</strong>, collisions left out. An import, which loads new tasks onto the board, ignores a typed list beside it.</p>
+          </div>
+          <div class="ig-split-key is-2" data-zone="figure"><p class="ig-caps">Key to the drawing below</p><ul class="ig-legend" aria-label="Key">
+            <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order</li>
+            <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
+            <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box" x="1" y="1" width="38" height="10"/><path class="ig-task-top" d="M1 1 H39"/></svg>a task</li>
+            <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-done" x="1" y="1" width="38" height="10"/></svg>done</li>
+            <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-task-box is-closing" x="1" y="1" width="38" height="10"/></svg>the last task of the epic</li>
+          </ul></div>
+        </div>
+
+        <figure class="ig" aria-labelledby="d3-cap">
+          <div class="ig-frame bp">
+            <p class="ig-tag">Schematic</p>
+            <div class="ig-derive">
+              <ol class="ig-gen" aria-label="How the order is worked out">
+                <li><span class="ig-gen-box is-stage">Records: task · kind · why</span><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-down" aria-hidden="true"></span></li>
+                <li><span class="ig-gen-box is-stage">The list it waits on</span><svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg><span class="ig-down" aria-hidden="true"></span></li>
+                <li><span class="ig-gen-box is-stage">Its wave: one after the last it waits on</span></li>
+              </ol>
+              <p class="ig-caps">After Task&nbsp;A and Task&nbsp;B are done</p>
+              <svg class="ig-pic is-wide is-left" width="920" height="332" viewBox="-1 -1 920 332" role="img" aria-labelledby="d3-t d3-d">
+                <title id="d3-t">After Task A and Task B are done, the waves shrink.</title>
+                <desc id="d3-d">The same tasks after task A and task B are done: tasks C, D, E and F move up to wave 0, D and E still would collide; tasks G, H and I to wave 1; task J, the last task of the epic, to wave 2, with a bracket over all the bands above leading into it. Task A and task B sit greyed in a band marked done.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="36">DONE</text>
+                  <text class="ig-caps" x="0" y="118">WAVE 0</text><text class="ig-note" x="0" y="136">was wave 1</text>
+                  <text class="ig-caps" x="0" y="206">WAVE 1</text><text class="ig-note" x="0" y="224">was wave 2</text>
+                  <text class="ig-caps" x="0" y="294">WAVE 2</text><text class="ig-note" x="0" y="312">was wave 3</text>
+                  <rect class="ig-band" x="96" y="0" width="264" height="64"/>
+                  <rect class="ig-band" x="96" y="88" width="528" height="64"/>
+                  <rect class="ig-band" x="96" y="176" width="396" height="64"/>
+                  <rect class="ig-band is-closing" x="96" y="264" width="822" height="64"/>
+                  <path class="ig-l-build" d="M88 0 H80 V296 H96" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M80 240 H88"/>
+                  <rect class="ig-task-box is-done" x="96" y="8" width="120" height="48"/><text class="ig-box-key is-done" x="108" y="26">Task A</text><text class="ig-name is-done" x="108" y="46">Data</text>
+                  <rect class="ig-task-box is-done" x="240" y="8" width="120" height="48"/><text class="ig-box-key is-done" x="252" y="26">Task B</text><text class="ig-name is-done" x="252" y="46">Auth</text>
+                  <rect class="ig-task-box" x="96" y="96" width="120" height="48"/><path class="ig-task-top" d="M96 96 H216"/><text class="ig-box-key" x="108" y="114">Task C</text><text class="ig-name" x="108" y="134">Service</text>
+                  <rect class="ig-task-box" x="224" y="96" width="120" height="48"/><path class="ig-task-top" d="M224 96 H344"/><text class="ig-box-key" x="236" y="114">Task D</text><text class="ig-name" x="236" y="134">Import</text>
+                  <rect class="ig-task-box" x="376" y="96" width="120" height="48"/><path class="ig-task-top" d="M376 96 H496"/><text class="ig-box-key" x="388" y="114">Task E</text><text class="ig-name" x="388" y="134">Export</text>
+                  <rect class="ig-task-box" x="504" y="96" width="120" height="48"/><path class="ig-task-top" d="M504 96 H624"/><text class="ig-box-key" x="516" y="114">Task F</text><text class="ig-name" x="516" y="134">Search</text>
+                  <path class="ig-l-collide" d="M344 120 H376" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                  <rect class="ig-task-box" x="96" y="184" width="120" height="48"/><path class="ig-task-top" d="M96 184 H216"/><text class="ig-box-key" x="108" y="202">Task G</text><text class="ig-name" x="108" y="222">Screens</text>
+                  <rect class="ig-task-box" x="234" y="184" width="120" height="48"/><path class="ig-task-top" d="M234 184 H354"/><text class="ig-box-key" x="246" y="202">Task H</text><text class="ig-name" x="246" y="222">Report</text>
+                  <rect class="ig-task-box" x="372" y="184" width="120" height="48"/><path class="ig-task-top" d="M372 184 H492"/><text class="ig-box-key" x="384" y="202">Task I</text><text class="ig-name" x="384" y="222">Docs</text>
+                  <rect class="ig-task-box is-closing" x="96" y="272" width="240" height="48"/><path class="ig-task-top" d="M96 272 H336"/><text class="ig-box-key" x="108" y="290">Task J</text><text class="ig-name" x="108" y="310">Last task of the epic</text>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="424" viewBox="-0.5 -0.5 288 424" role="img" aria-labelledby="d3n-t d3n-d">
+                <title id="d3n-t">After Task A and Task B are done, the waves shrink.</title>
+                <desc id="d3n-d">The same tasks after task A and task B are done: tasks C, D, E and F move up to wave 0, D and E still would collide; tasks G, H and I to wave 1; task J, the last task of the epic, to wave 2, with a bracket over all the bands above leading into it. Task A and task B sit greyed in a band marked done.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="12" y="16">DONE</text>
+                  <text class="ig-caps" x="12" y="132">WAVE 0 · WAS WAVE 1</text>
+                  <text class="ig-caps" x="12" y="240">WAVE 1 · WAS WAVE 2</text>
+                  <text class="ig-caps" x="12" y="348">WAVE 2 · WAS WAVE 3</text>
+                  <rect class="ig-band" x="12" y="24" width="130" height="64"/>
+                  <rect class="ig-band" x="12" y="140" width="274" height="64"/>
+                  <rect class="ig-band" x="12" y="248" width="198" height="64"/>
+                  <rect class="ig-band is-closing" x="12" y="356" width="274" height="64"/>
+                  <path class="ig-l-build" d="M10 24 H4 V388 H12" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M4 312 H10"/>
+                  <rect class="ig-task-box is-done" x="12" y="32" width="62" height="48"/><text class="ig-box-key is-done" x="20" y="50">Task A</text><text class="ig-box-name is-done" x="43" y="70" text-anchor="middle">Data</text>
+                  <rect class="ig-task-box is-done" x="80" y="32" width="62" height="48"/><text class="ig-box-key is-done" x="88" y="50">Task B</text><text class="ig-box-name is-done" x="111" y="70" text-anchor="middle">Auth</text>
+                  <rect class="ig-task-box" x="12" y="148" width="62" height="48"/><path class="ig-task-top" d="M12 148 H74"/><text class="ig-box-key" x="20" y="166">Task C</text><text class="ig-box-name" x="43" y="186" text-anchor="middle">Service</text>
+                  <rect class="ig-task-box" x="80" y="148" width="62" height="48"/><path class="ig-task-top" d="M80 148 H142"/><text class="ig-box-key" x="88" y="166">Task D</text><text class="ig-box-name" x="111" y="186" text-anchor="middle">Import</text>
+                  <rect class="ig-task-box" x="156" y="148" width="62" height="48"/><path class="ig-task-top" d="M156 148 H218"/><text class="ig-box-key" x="164" y="166">Task E</text><text class="ig-box-name" x="187" y="186" text-anchor="middle">Export</text>
+                  <rect class="ig-task-box" x="224" y="148" width="62" height="48"/><path class="ig-task-top" d="M224 148 H286"/><text class="ig-box-key" x="232" y="166">Task F</text><text class="ig-box-name" x="255" y="186" text-anchor="middle">Search</text>
+                  <path class="ig-l-collide" d="M142 172 H156" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                  <rect class="ig-task-box" x="12" y="256" width="62" height="48"/><path class="ig-task-top" d="M12 256 H74"/><text class="ig-box-key" x="20" y="274">Task G</text><text class="ig-box-name" x="43" y="294" text-anchor="middle">Screens</text>
+                  <rect class="ig-task-box" x="80" y="256" width="62" height="48"/><path class="ig-task-top" d="M80 256 H142"/><text class="ig-box-key" x="88" y="274">Task H</text><text class="ig-box-name" x="111" y="294" text-anchor="middle">Report</text>
+                  <rect class="ig-task-box" x="148" y="256" width="62" height="48"/><path class="ig-task-top" d="M148 256 H210"/><text class="ig-box-key" x="156" y="274">Task I</text><text class="ig-box-name" x="179" y="294" text-anchor="middle">Docs</text>
+                  <rect class="ig-task-box is-closing" x="12" y="364" width="200" height="48"/><path class="ig-task-top" d="M12 364 H212"/><text class="ig-box-key" x="20" y="382">Task J</text><text class="ig-box-name" x="112" y="402" text-anchor="middle">Last task of the epic</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <figcaption id="d3-cap"><strong>The waves shrink as tasks finish.</strong></figcaption>
+        </figure>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="refusals" aria-labelledby="refusals-title">
+      <div class="wrap stack">
+        <p class="sec-label">The refusals</p>
+        <h2 id="refusals-title">Checks refuse or report a task with no record, and the exceptions stay in view</h2>
+
+        <figure class="ig" aria-labelledby="d4-cap">
+          <div class="ig-frame">
+            <table class="ig-compare is-5">
+              <thead><tr><th scope="col">Where</th><th scope="col">What it reads</th><th scope="col">What it does</th><th scope="col">Why</th><th scope="col">The exception</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="ig-whose"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>The import</span></span></th><td data-label="What it reads">Each new open task's dependencies cell</td><td data-label="What it does">Refuses the whole import; writes nothing</td><td data-label="Why">A blank is not a stated “none” with its reason.</td><td data-label="The exception">Tasks already on the board, and done ones.</td></tr>
+                <tr><th scope="row"><span class="ig-whose"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>Setting a task to ready</span></span></th><td data-label="What it reads">Its contract's dependencies section</td><td data-label="What it does">Refuses when it is missing</td><td data-label="Why">Ready means it can be started.</td><td data-label="The exception">A logged override skips it; no contract only warns.</td></tr>
+                <tr><th scope="row"><span class="ig-whose"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>The check on every change</span></span></th><td data-label="What it reads">Every open task</td><td data-label="What it does">Reports each one with no record</td><td data-label="Why">It names the task before the change lands.</td><td data-label="The exception">—</td></tr>
+                <tr><th scope="row"><span class="ig-whose"><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>The board-and-contract check</span></span></th><td data-label="What it reads">Each planned task's contract</td><td data-label="What it does">Reports a missing section as an error</td><td data-label="Why">A planned task must say what it waits for.</td><td data-label="The exception">—</td></tr>
+                <tr><th scope="row">Loading the board</th><td data-label="What it reads">Every task</td><td data-label="What it does">Only warns</td><td data-label="Why">An older board still loads while records are added.</td><td data-label="The exception">—</td></tr>
+              </tbody>
+            </table>
+            <ul class="ig-legend" aria-label="Key">
+              <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>checked in code</li>
+            </ul>
+          </div>
+          <figcaption id="d4-cap"><strong>What refuses a task with no record, and what only warns.</strong></figcaption>
+        </figure>
+        <p>These checks are <strong>code</strong>. One setting decides whether a missing record is refused or only warned about, and it is set to refuse.</p>
+        <p class="more bn-back ig-toc-back"><a href="#toc-list">On this page<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section" id="last-task" aria-labelledby="last-title">
+      <div class="wrap stack">
+        <p class="sec-label">The epic's last task</p>
+        <h2 id="last-title">The last task of the epic waits for every task, and closing the epic begins there</h2>
+        <div class="ig-split is-under">
+          <div class="ig-split-text">
+            <p>It carries <strong>a build-order wait on every other task</strong>, written when the plan became tasks. When the last of them closes, it is free to start: <a href="epic.html#closing">how the epic closes</a>.</p>
+          </div>
+          <article class="ig-task" data-zone="figure" aria-label="Task J, the last task of the epic, a schematic example">
+            <div class="ig-task-head"><p class="ig-task-name">Task&nbsp;J</p><p class="ig-task-role">The last task of the epic, which closes it</p></div>
+            <dl class="ig-task-dl"><div><dt>Depends on</dt><dd>
+              <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on every task · build order</b><span>why: it grades the epic's criteria once all are done.</span></div></div>
+            </dd></div></dl>
+          </article>
+        </div>
+        <p class="more">Next: <a href="task.html">One task, from init to close <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section small-print essay-sp" aria-labelledby="sp-title">
+      <div class="wrap">
+        <h2 class="sec-label" id="sp-title">The small print</h2>
+        <details class="provenance">
+          <summary>The collision check's limits, as DreamTeam states them</summary>
+          <p>A partner counts as already running when its own branch copy says it has started. The check reads the remote branches as last fetched, with no network, so it is only as fresh as that fetch; its soundness is “evidence, not a proof”.</p>
+        </details>
+        <details class="provenance">
+          <summary>A named need</summary>
+          <p>A task may also name what it needs and be matched to the task that provides it.</p>
+        </details>
+        <details class="provenance">
+          <summary>Where “ready” is not checked</summary>
+          <p>The check on setting a task to ready covers that one command: an import can still write “ready” without it.</p>
+        </details>
+        <details class="provenance">
+          <summary>The files behind each statement</summary>
+          <p>DreamTeam at commit <code>6b947dfb1</code>:</p>
+          <ul>
+            <li>the dependency model, <code>docs/system/DEPENDENCIES.md</code>;</li>
+            <li>the task schema, <code>shared/models/task_schema.py</code>;</li>
+            <li>the start command, <code>.claude/commands/dt-task-init.md</code>;</li>
+            <li>the pipeline definition, <code>config/workflows.yaml</code>;</li>
+            <li>the dashboard, <code>tools/project_dashboard.py</code>.</li>
+          </ul>
+        </details>
+        <details class="provenance">
+          <summary>How we checked</summary>
+          <p>No measured number on this page: counts, durations and costs are in the worked examples. Every excerpt is word for word, cut only with “…”. A figure tagged “Schematic” is invented.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
+      <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team in 8 weeks</a>
+        <a href="../notes/index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+    </div>
+  </footer>
+</body>
+</html>
