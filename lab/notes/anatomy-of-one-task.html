@@ -24,6 +24,8 @@
     .lab-note strong, .lab-note code { color: var(--ink); }
     .head-ba { margin-top: 28px; }
     .head-results { margin-top: 24px; border: 1px solid var(--rule); border-top: 2px solid var(--accent); background: var(--panel); }
+    .head-links { margin-top: 24px; }
+    .head-links p + p { margin-top: 8px; }
 
     /* Captions under the artifact, no wider than the text (the chart's takeaway keeps its shared style) */
     .lab-note figcaption:not(.rc-takeaway), .table-note, .steps-key { max-width: var(--measure); }
@@ -268,177 +270,17 @@
               <li><a class="num-link" href="#action"><strong class="num-value">2 blockers</strong> <span class="num-label">found by a 22-minute review by 4 agents, before any code</span></a></li>
             </ul>
           </div>
+
+          <div class="head-links">
+            <p>Its own epic — a larger goal with its own promised outcomes — from plan to close: <a href="anatomy-of-one-epic.html">Anatomy of one epic</a></p>
+            <p>How the brainstorm planned its nine tasks: <a href="from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></p>
+          </div>
         </div>
       </header>
 
-      <section class="section" aria-labelledby="built">
-        <div class="wrap stack">
-          <p class="sec-label">01 · The first records</p>
-          <h2 id="built">Its first records mapped the nine tasks of its own epic</h2>
-          <p class="intro"><span class="nw">T-707</span> wrote the dependency records for the nine tasks planned with it: 20 connections between those tasks, each now with a kind and a reason.</p>
-
-          <figure class="fig-wide" aria-labelledby="dg-cap">
-            <div class="diagram bp">
-              <svg class="dg dg-h" viewBox="0 0 964 562" role="img" aria-labelledby="dg-title dg-desc">
-                <title id="dg-title">The nine planned tasks of the epic and the links between them, as T-707 wrote them on the board</title>
-                <desc id="dg-desc">Nine tasks in six waves, left to right. Wave 0: T-707, the dependency record (this task). Wave 1: T-699 checks task text, T-701 board checks, T-700 new-task rules. Wave 2: T-705 unmet needs, T-702 proposes records. Wave 3: T-703 fills open tasks. Wave 4: T-704 record required. Wave 5: T-706 closes the epic. Build order: T-699, T-700, T-701, T-702 and T-705 wait for T-707; T-705 also waits for T-699; T-703 waits for T-702; T-704 waits for T-703 and T-701; T-706 waits for all eight others. Needs output: T-702 needs T-699's output. Would collide: T-699 with T-701, and T-700 with T-705.</desc>
-
-                <g aria-hidden="true">
-                  <text class="wave" x="72" y="30" text-anchor="middle">WAVE 0</text>
-                  <text class="wave" x="236" y="30" text-anchor="middle">WAVE 1</text>
-                  <text class="wave" x="400" y="30" text-anchor="middle">WAVE 2</text>
-                  <text class="wave" x="564" y="30" text-anchor="middle">WAVE 3</text>
-                  <text class="wave" x="728" y="30" text-anchor="middle">WAVE 4</text>
-                  <text class="wave" x="892" y="30" text-anchor="middle">WAVE 5</text>
-                </g>
-
-                <g class="edges">
-                  <path class="e e-close" data-from="T-706" data-on="T-707" data-kind="build-order" d="M136 58 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-707 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-699" data-kind="build-order" d="M300 122 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-699 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-701" data-kind="build-order" d="M300 200 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-701 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-700" data-kind="build-order" d="M300 264 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-700 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-705" data-kind="build-order" d="M464 328 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-705 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-702" data-kind="build-order" d="M464 392 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-702 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-703" data-kind="build-order" d="M628 456 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-703 — build order</title></path>
-                  <path class="e e-close" data-from="T-706" data-on="T-704" data-kind="build-order" d="M792 520 H828" marker-end="url(#mk-close)"><title>T-706 waits for T-704 — build order</title></path>
-
-                  <path class="e e-build" data-from="T-699" data-on="T-707" data-kind="build-order" d="M136 78 H154 V134 H172" marker-end="url(#mk-build)"><title>T-699 waits for T-707 — build order</title></path>
-                  <path class="e e-build" data-from="T-701" data-on="T-707" data-kind="build-order" d="M136 78 H154 V212 H172" marker-end="url(#mk-build)"><title>T-701 waits for T-707 — build order</title></path>
-                  <path class="e e-build" data-from="T-700" data-on="T-707" data-kind="build-order" d="M136 78 H154 V276 H172" marker-end="url(#mk-build)"><title>T-700 waits for T-707 — build order</title></path>
-                  <path class="e e-build" data-from="T-705" data-on="T-707" data-kind="build-order" d="M136 78 H154 V334 H336" marker-end="url(#mk-build)"><title>T-705 waits for T-707 — build order</title></path>
-                  <path class="e e-build" data-from="T-702" data-on="T-707" data-kind="build-order" d="M136 78 H154 V398 H336" marker-end="url(#mk-build)"><title>T-702 waits for T-707 — build order</title></path>
-                  <path class="e e-build" data-from="T-705" data-on="T-699" data-kind="build-order" d="M300 142 H318 V348 H336" marker-end="url(#mk-build)"><title>T-705 waits for T-699 — build order</title></path>
-                  <path class="e e-build" data-from="T-704" data-on="T-701" data-kind="build-order" d="M300 220 H652 V524 H664" marker-end="url(#mk-build)"><title>T-704 waits for T-701 — build order</title></path>
-                  <path class="e e-build" data-from="T-703" data-on="T-702" data-kind="build-order" d="M464 412 H482 V462 H500" marker-end="url(#mk-build)"><title>T-703 waits for T-702 — build order</title></path>
-                  <path class="e e-build" data-from="T-704" data-on="T-703" data-kind="build-order" d="M628 476 H644 V538 H664" marker-end="url(#mk-build)"><title>T-704 waits for T-703 — build order</title></path>
-
-                  <path class="e e-need" data-from="T-702" data-on="T-699" data-kind="artifact" d="M300 150 H310 V412 H336" marker-end="url(#mk-need)"><title>T-702 needs T-699's output</title></path>
-                </g>
-
-                <g class="nodes">
-                  <rect class="box this" x="8" y="48" width="128" height="44" rx="2"/>
-                  <text class="id" x="18" y="67">T-707</text><text class="nm" x="18" y="84">Dependency record</text>
-
-                  <rect class="box" x="172" y="112" width="128" height="44" rx="2"/>
-                  <text class="id" x="182" y="131">T-699</text><text class="nm" x="182" y="148">Checks task text</text>
-
-                  <rect class="box" x="172" y="190" width="128" height="44" rx="2"/>
-                  <text class="id" x="182" y="209">T-701</text><text class="nm" x="182" y="226">Board checks</text>
-
-                  <rect class="box" x="172" y="254" width="128" height="44" rx="2"/>
-                  <text class="id" x="182" y="273">T-700</text><text class="nm" x="182" y="290">New-task rules</text>
-
-                  <rect class="box" x="336" y="318" width="128" height="44" rx="2"/>
-                  <text class="id" x="346" y="337">T-705</text><text class="nm" x="346" y="354">Unmet needs</text>
-
-                  <rect class="box" x="336" y="382" width="128" height="44" rx="2"/>
-                  <text class="id" x="346" y="401">T-702</text><text class="nm" x="346" y="418">Proposes records</text>
-
-                  <rect class="box" x="500" y="446" width="128" height="44" rx="2"/>
-                  <text class="id" x="510" y="465">T-703</text><text class="nm" x="510" y="482">Fills open tasks</text>
-
-                  <rect class="box" x="664" y="510" width="128" height="44" rx="2"/>
-                  <text class="id" x="674" y="529">T-704</text><text class="nm" x="674" y="546">Record required</text>
-
-                  <rect class="box closing" x="828" y="48" width="128" height="506" rx="2"/>
-                  <text class="id" x="892" y="280" text-anchor="middle">T-706</text>
-                  <text class="nm" x="892" y="298" text-anchor="middle">Closes the epic</text>
-                  <text class="nm" x="892" y="318" text-anchor="middle">waits for all</text>
-                  <text class="nm" x="892" y="334" text-anchor="middle">eight others</text>
-                </g>
-
-                <g class="edges">
-                  <path class="e e-collide" data-from="T-699" data-on="T-701" data-kind="conflict" d="M270 156 V190" marker-start="url(#mk-collide)" marker-end="url(#mk-collide)"><title>T-699 and T-701 would collide</title></path>
-                  <path class="e e-collide" data-from="T-700" data-on="T-705" data-kind="conflict" d="M284 298 L352 318" marker-start="url(#mk-collide)" marker-end="url(#mk-collide)"><title>T-700 and T-705 would collide</title></path>
-                </g>
-              </svg>
-
-              <svg class="dg dg-v" viewBox="0 0 340 670" role="img" aria-labelledby="dgv-title dgv-desc">
-                <title id="dgv-title">The nine planned tasks of the epic and the links between them, as T-707 wrote them on the board</title>
-                <desc id="dgv-desc">Nine tasks in six waves, top to bottom, one shaded row per wave. Wave 0: T-707, the dependency record (this task). Wave 1: T-701 board checks, T-699 checks task text, T-700 new-task rules. Wave 2: T-702 proposes records, T-705 unmet needs. Wave 3: T-703 fills open tasks. Wave 4: T-704 record required. Wave 5: T-706 closes the epic and waits for all eight others. Build order: T-699, T-700, T-701, T-702 and T-705 wait for T-707; T-705 also waits for T-699; T-703 waits for T-702; T-704 waits for T-703 and T-701. Needs output: T-702 needs T-699's output. Would collide: T-699 with T-701, and T-700 with T-705.</desc>
-
-                <g aria-hidden="true">
-                  <rect class="band" x="0.5" y="14" width="339" height="64" rx="2"/>
-                  <rect class="band" x="0.5" y="122" width="339" height="78" rx="2"/>
-                  <rect class="band" x="0.5" y="252" width="339" height="78" rx="2"/>
-                  <rect class="band" x="0.5" y="378" width="339" height="64" rx="2"/>
-                  <rect class="band" x="0.5" y="490" width="339" height="64" rx="2"/>
-                  <rect class="band" x="0.5" y="590" width="339" height="78" rx="2"/>
-                  <text class="wave" transform="translate(12 46) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 0</text>
-                  <text class="wave" transform="translate(12 161) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 1</text>
-                  <text class="wave" transform="translate(12 291) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 2</text>
-                  <text class="wave" transform="translate(12 410) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 3</text>
-                  <text class="wave" transform="translate(12 522) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 4</text>
-                  <text class="wave" transform="translate(12 629) rotate(-90)" text-anchor="middle" dy="0.35em">WAVE 5</text>
-                </g>
-
-                <g transform="translate(20 0)">
-                  <g class="edges">
-                    <path class="e e-build" data-from="T-701" data-on="T-707" data-kind="build-order" d="M85 54 H60 V132" marker-end="url(#mk-build)"><title>T-701 waits for T-707 — build order</title></path>
-                    <path class="e e-build" data-from="T-702" data-on="T-707" data-kind="build-order" d="M85 38 H6 V291 H20" marker-end="url(#mk-build)"><title>T-702 waits for T-707 — build order</title></path>
-                    <path class="e e-build" data-from="T-699" data-on="T-707" data-kind="build-order" d="M170 68 V132" marker-end="url(#mk-build)"><title>T-699 waits for T-707 — build order</title></path>
-                    <path class="e e-build" data-from="T-700" data-on="T-707" data-kind="build-order" d="M235 54 H262 V132" marker-end="url(#mk-build)"><title>T-700 waits for T-707 — build order</title></path>
-                    <path class="e e-build" data-from="T-705" data-on="T-707" data-kind="build-order" d="M235 38 H316 V291 H302" marker-end="url(#mk-build)"><title>T-705 waits for T-707 — build order</title></path>
-                    <path class="e e-build" data-from="T-705" data-on="T-699" data-kind="build-order" d="M196 190 V236 H262 V262" marker-end="url(#mk-build)"><title>T-705 waits for T-699 — build order</title></path>
-                    <path class="e e-need" data-from="T-702" data-on="T-699" data-kind="artifact" d="M150 190 V226 H60 V262" marker-end="url(#mk-need)"><title>T-702 needs T-699's output</title></path>
-                    <path class="e e-build" data-from="T-704" data-on="T-701" data-kind="build-order" d="M86 190 V210 H170 V500" marker-end="url(#mk-build)"><title>T-704 waits for T-701 — build order</title></path>
-                    <path class="e e-build" data-from="T-703" data-on="T-702" data-kind="build-order" d="M60 320 V388" marker-end="url(#mk-build)"><title>T-703 waits for T-702 — build order</title></path>
-                    <path class="e e-build" data-from="T-704" data-on="T-703" data-kind="build-order" d="M88 432 V500" marker-end="url(#mk-build)"><title>T-704 waits for T-703 — build order</title></path>
-                    <path class="e e-close" data-from="T-706" data-on="T-704" data-kind="build-order" d="M140 544 V600" marker-end="url(#mk-close)"><title>T-706 waits for T-704 — build order (and for the seven others)</title></path>
-                  </g>
-
-                  <g class="nodes">
-                    <rect class="box this" x="85" y="24" width="150" height="44" rx="2"/>
-                    <text class="id" x="95" y="43">T-707</text><text class="nm" x="95" y="61">Dependency record</text>
-
-                    <rect class="box" x="16" y="132" width="84" height="58" rx="2"/>
-                    <text class="id" x="24" y="151">T-701</text><text class="nm" x="24" y="169">Board</text><text class="nm" x="24" y="184">checks</text>
-
-                    <rect class="box" x="130" y="132" width="84" height="58" rx="2"/>
-                    <text class="id" x="138" y="151">T-699</text><text class="nm" x="138" y="169">Checks</text><text class="nm" x="138" y="184">task text</text>
-
-                    <rect class="box" x="222" y="132" width="84" height="58" rx="2"/>
-                    <text class="id" x="230" y="151">T-700</text><text class="nm" x="230" y="169">New-task</text><text class="nm" x="230" y="184">rules</text>
-
-                    <rect class="box" x="20" y="262" width="80" height="58" rx="2"/>
-                    <text class="id" x="28" y="281">T-702</text><text class="nm" x="28" y="299">Proposes</text><text class="nm" x="28" y="314">records</text>
-
-                    <rect class="box" x="222" y="262" width="80" height="58" rx="2"/>
-                    <text class="id" x="230" y="281">T-705</text><text class="nm" x="230" y="299">Unmet</text><text class="nm" x="230" y="314">needs</text>
-
-                    <rect class="box" x="20" y="388" width="136" height="44" rx="2"/>
-                    <text class="id" x="28" y="407">T-703</text><text class="nm" x="28" y="425">Fills open tasks</text>
-
-                    <rect class="box" x="60" y="500" width="160" height="44" rx="2"/>
-                    <text class="id" x="70" y="519">T-704</text><text class="nm" x="70" y="537">Record required</text>
-
-                    <rect class="box closing" x="20" y="600" width="282" height="58" rx="2"/>
-                    <text class="id" x="30" y="619">T-706</text><text class="nm" x="30" y="637">Closes the epic;</text><text class="nm" x="30" y="652">waits for all eight others</text>
-                  </g>
-
-                  <g class="edges">
-                    <path class="e e-collide" data-from="T-699" data-on="T-701" data-kind="conflict" d="M100 161 H130" marker-start="url(#mk-collide)" marker-end="url(#mk-collide)"><title>T-699 and T-701 would collide</title></path>
-                    <path class="e e-collide" data-from="T-700" data-on="T-705" data-kind="conflict" d="M290 190 V262" marker-start="url(#mk-collide)" marker-end="url(#mk-collide)"><title>T-700 and T-705 would collide</title></path>
-                  </g>
-                </g>
-              </svg>
-
-              <ul class="legend">
-                <li><svg viewBox="0 0 44 12" aria-hidden="true" class="dg"><path class="e e-build" d="M2 6 H40" marker-end="url(#mk-build)"/></svg><span><strong>Build order</strong> — waits until the other task is done</span></li>
-                <li><svg viewBox="0 0 44 12" aria-hidden="true" class="dg"><path class="e e-need" d="M2 6 H40" marker-end="url(#mk-need)"/></svg><span><strong>Needs output</strong> — uses a file or result the other task produces</span></li>
-                <li><svg viewBox="0 0 44 12" aria-hidden="true" class="dg"><path class="e e-collide" d="M7 6 H37" marker-start="url(#mk-collide)" marker-end="url(#mk-collide)"/></svg><span><strong>Would collide</strong> — should not run at the same time; recorded now, marked on the board from <span class="nw">T-701</span></span></li>
-                <li><svg viewBox="0 0 44 12" aria-hidden="true" class="dg"><path class="e e-close" d="M2 6 H40" marker-end="url(#mk-close)"/></svg><span>Build order into <span class="nw">T-706</span>, the closing task, drawn faint<span class="narrow-only"> (one shown; all eight on wider screens)</span></span></li>
-              </ul>
-            </div>
-            <figcaption id="dg-cap">Every other task in the epic waits on <span class="nw">T-707</span>, directly or through another task; arrows point from the task that comes first. As of 4 October 2026, six of the eight after it are done. Their reasons: in the small print.</figcaption>
-          </figure>
-          <p>How the brainstorm planned these nine tasks, stage by stage: <a href="from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a>.</p>
-        </div>
-      </section>
-
       <section class="section" aria-labelledby="task">
         <div class="wrap stack">
-          <p class="sec-label">02 · Acceptance criteria</p>
+          <p class="sec-label">01 · Acceptance criteria</p>
           <h2 id="task">Nine acceptance criteria: the definition of done</h2>
           <ol class="ac-list" role="list">
             <li><span class="n">AC-1</span> <span><strong>Define the record:</strong> the task it waits for, the kind of wait, and why.</span></li>
@@ -482,7 +324,7 @@
 
       <section class="section" aria-labelledby="action">
         <div class="wrap stack">
-          <p class="sec-label">03 · The stages</p>
+          <p class="sec-label">02 · The stages</p>
           <h2 id="action">Agents did the work in four stages; I decided at three points</h2>
 
           <ol class="stage-cards strip" role="list" aria-label="T-707's four stages and the engineer's three decisions">
@@ -539,7 +381,7 @@
 
       <section class="section" id="took" aria-labelledby="took-title">
         <div class="wrap stack">
-          <p class="sec-label">04 · What it took</p>
+          <p class="sec-label">03 · What it took</p>
           <h2 id="took-title">Where the time and the money went</h2>
 
           <div class="record frame">
@@ -645,39 +487,6 @@
       <section class="section small-print" aria-labelledby="sp-title">
         <div class="wrap stack">
           <p class="sec-label" id="sp-title">The small print</p>
-
-          <details class="fold">
-            <summary>The 20 connections between the epic's tasks, and their reasons</summary>
-            <div class="table-wrap" role="region" aria-label="The 20 connections between the epic's tasks, and their reasons" tabindex="0">
-              <table class="data stacked links">
-                <caption>The nine dependency records as <span class="nw">T-707</span> wrote them, with their reasons translated</caption>
-                <thead><tr><th scope="col">Task</th><th scope="col">Waits for</th><th scope="col">Kind</th><th scope="col">Why</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row"><span class="nw">T-699</span> Checks task text</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">It reads the dependency record, and its list of accepted exceptions, to sort what it finds.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-699</span> Checks task text</th><td data-label="Waits for"><span class="nw">T-701</span></td><td data-label="Kind">would collide</td><td data-label="Why">Both change the same checking tool in different places; no order, but not at the same time.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-700</span> New-task rules</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">Its rules tell people to fill in a Dependencies column that the spreadsheet import must already accept.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-700</span> New-task rules</th><td data-label="Waits for"><span class="nw">T-705</span></td><td data-label="Kind">would collide</td><td data-label="Why">Both edit the brainstorm pipeline's steps and the same rules files; no order between them.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-701</span> Board checks</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">It shows, checks and counts the dependency record, and reads the switch <span class="nw">T-707</span> adds, which decides whether a missing record gets a warning or a refusal.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-702</span> Proposes records</th><td data-label="Waits for"><span class="nw">T-699</span></td><td data-label="Kind">needs output</td><td data-label="Why">It reuses two parts the text checker builds: the one that finds ordering words and the one that sorts findings.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-702</span> Proposes records</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">It writes dependency records only through the edit command <span class="nw">T-707</span> teaches to write them.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-703</span> Fills open tasks</th><td data-label="Waits for"><span class="nw">T-702</span></td><td data-label="Kind">build order</td><td data-label="Why">It runs the proposing tool and writes through it.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-704</span> Record required</th><td data-label="Waits for"><span class="nw">T-703</span></td><td data-label="Kind">build order</td><td data-label="Why">The board must not refuse tasks without a dependency record before the open tasks have one.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-704</span> Record required</th><td data-label="Waits for"><span class="nw">T-701</span></td><td data-label="Kind">build order</td><td data-label="Why">Two checks from <span class="nw">T-701</span> turn on with the switch this task flips; it verifies both afterwards.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-705</span> Unmet needs</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">The dependency record's “needs” field exists after <span class="nw">T-707</span>; this task makes it work and adds “provides”.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-705</span> Unmet needs</th><td data-label="Waits for"><span class="nw">T-699</span></td><td data-label="Kind">build order</td><td data-label="Why">Its report of needs that no task provides is part of the text checker.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-707</span></td><td data-label="Kind">build order</td><td data-label="Why">It re-checks the dependency record and the ID list derived from it.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-699</span></td><td data-label="Kind">build order</td><td data-label="Why">The text checker's strict run is evidence for two of the epic's criteria.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-700</span></td><td data-label="Kind">build order</td><td data-label="Why">It checks the five places where tasks are created for the new rules.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-701</span></td><td data-label="Kind">build order</td><td data-label="Why">It inspects what <span class="nw">T-701</span> adds: the dependency section in each task contract, a board check, and a mark on tasks that would collide.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-702</span></td><td data-label="Kind">build order</td><td data-label="Why">The proposing tool's reports are its audit trail.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-703</span></td><td data-label="Kind">build order</td><td data-label="Why">It grades the board after the open tasks are filled in.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-704</span></td><td data-label="Kind">build order</td><td data-label="Why">One of the epic's criteria can't pass until the dependency record is required.</td></tr>
-                  <tr><th scope="row"><span class="nw">T-706</span> Closes the epic</th><td data-label="Waits for"><span class="nw">T-705</span></td><td data-label="Kind">build order</td><td data-label="Why">It grades the needs-and-provides behavior.</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="table-note">Links added after <span class="nw">T-707</span> merged are not shown, such as <span class="nw">T-701</span> waiting for <span class="nw">T-700</span>, by my ruling on 19 September.</p>
-          </details>
 
           <details class="fold schema">
             <summary>What every link in a dependency record carries</summary>

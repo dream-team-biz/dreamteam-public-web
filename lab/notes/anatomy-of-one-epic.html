@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>Anatomy of one epic — DreamTeam Lab</title>
+  <meta name="description" content="One real DreamTeam epic, from an engineer's problem to working, checked software: every task on one timeline, how it was graded, and what it would cost.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team<span class="nav-more"> in 8 weeks</span></a>
+        <a href="index.html" aria-current="page">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="../index.html#contact">Talk to us</a>
+    </div>
+  </header>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ig-mk-build" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-build" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ig-mk-need" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-need" d="M1,1 L9,5 L1,9 z"/></marker>
+      <marker id="ig-mk-dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse"><circle class="ig-mk-dot" cx="5" cy="5" r="4"/></marker>
+      <marker id="ig-mk-born" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="ig-mk-born" d="M0 0 L8 4 L0 8 z"/></marker>
+    </defs>
+  </svg>
+
+  <main id="main">
+    <article class="essay note" aria-labelledby="page-title">
+
+      <header class="page-head">
+        <div class="wrap stack">
+          <p class="sec-label">Lab note</p>
+          <h1 id="page-title">Anatomy of one epic</h1>
+          <p class="bn-sub">One real DreamTeam epic, from an engineer's problem to working, checked software</p>
+          <p class="lead">Job cards say what they wait for and why, or the foreman refuses them. An engineer's problem went through a brainstorm, fourteen tasks and independent checks, and came out as working, checked software — at a cost shown task by task.</p>
+          <p class="byline">Lab note · <a href="../about.html">DreamTeam Lab</a> · <span class="nw">October&nbsp;2026</span></p>
+
+          <div class="record-results is-band">
+            <p class="results-label">Results · the epic, from the brainstorm to the close</p>
+            <ul class="results is-pre-above" role="list">
+              <li><a class="num-link" href="#timeline"><strong class="num-value"><span class="num-pre">at least</span> $1,479.57</strong> <span class="num-label">would cost at API list prices — a list-price equivalent, not spend</span></a></li>
+              <li><a class="num-link" href="#timeline"><strong class="num-value">14 tasks</strong> <span class="num-label">9 planned, 1 split, 4 added</span></a></li>
+              <li><a class="num-link" href="#timeline"><strong class="num-value is-range"><span class="nw">17&nbsp;Sep</span> – <span class="nw">16&nbsp;Oct</span></strong> <span class="num-label">2026, from the brainstorm to the engineer's close</span></a></li>
+              <li><a class="num-link" href="#close"><strong class="num-value">7 of 8</strong> <span class="num-label">outcomes met — four on narrow evidence, one carried over</span></a></li>
+              <li><a class="num-link" href="#timeline"><strong class="num-value"><span class="num-pre">at most</span> $49.42</strong> <span class="num-label">its share of our subscription</span></a></li>
+            </ul>
+          </div>
+
+          <p>How the brainstorm planned it: <a href="from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></p>
+        </div>
+      </header>
+
+      <section class="section" id="problem" aria-labelledby="problem-title">
+        <div class="wrap stack">
+          <div class="bn-split is-84">
+            <div class="bn-split-l essay-col stack">
+              <h2 id="problem-title">Tasks started before the work they needed existed, and stopped halfway</h2>
+              <p><strong>DreamTeam ran tasks out of the planned order, and some stopped halfway</strong>: a part another task was meant to build did not exist yet.</p>
+              <p><strong>The board, DreamTeam's list of tasks, was right about every wait it recorded.</strong> The failure was omission, not wrong order.</p>
+              <p><strong>The damage came from waits never written down</strong>: 264 of 685 tasks named nothing they waited for — a task may rightly need nothing, but none said so where the board reads — and 47 stated an order only in their own words.</p>
+              <p><strong><a href="from-a-problem-to-nine-tasks.html#problem">The brainstorm traced the cause</a> and planned the fix as this epic</strong>: a larger goal with promised outcomes (acceptance criteria), closed only on evidence.</p>
+            </div>
+            <aside class="bn-split-r" aria-label="The problem, on record">
+              <div class="ig-rec" data-zone="figure">
+                <p class="ig-rec-head">In the brainstorm · its vision</p>
+                <p class="ig-rec-q">“in the end I waste time and tokens on something that I don't do”</p>
+                <pre class="ig-rec-ex">Only two can be written as “this task must follow that one”.</pre>
+                <p class="ig-rec-src">The engineer's words, a fragment; then its finding.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="timeline" aria-labelledby="timeline-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="timeline-title">Every task is on the record: when it ran, where it came from, what it would cost</h2>
+          </div>
+
+          <figure class="ig" aria-labelledby="v1-cap">
+            <div class="ig-frame">
+              <p class="ig-tag is-real">A real epic · the brainstorm, 9 planned tasks, 5 born on the way</p>
+              <svg class="ig-pic is-wide" width="920" height="660" viewBox="-1 -1 920 660" role="img" aria-labelledby="v1-t v1-d">
+                <title id="v1-t">From the brainstorm to the close: when each task ran, where it came from, and what it would cost</title>
+                <desc id="v1-d">A UTC timeline, 17&nbsp;September to 16&nbsp;October. The brainstorm and eight planned tasks are solid bars, first step to merge; the closing task is dashed; five born on the way are outlined, each with an arrow from the task it came from and its reason, or a ring if written by hand. Amber diamonds: the plan approved, the switch held, both failed outcomes decided, the epic closed. Prices in two columns; the small print has every row.</desc>
+                <g aria-hidden="true">
+                  <path class="ig-sep" d="M256 64 V584 M354 64 V584 M452 64 V584 M550 64 V584"/>
+                  <path class="ig-tl-axis" d="M200 64 H620"/>
+                  <path class="ig-tl-axis" d="M200 60 V64 M214 60 V64 M228 60 V64 M242 60 V64 M256 60 V64 M270 60 V64 M284 60 V64 M298 60 V64 M312 60 V64 M326 60 V64 M340 60 V64 M354 60 V64 M368 60 V64 M382 60 V64 M396 60 V64 M410 60 V64 M424 60 V64 M438 60 V64 M452 60 V64 M466 60 V64 M480 60 V64 M494 60 V64 M508 60 V64 M522 60 V64 M536 60 V64 M550 60 V64 M564 60 V64 M578 60 V64 M592 60 V64 M606 60 V64 M620 60 V64"/>
+                  <path class="ig-tl-axis" d="M256 56 V64 M354 56 V64 M452 56 V64 M550 56 V64"/>
+                  <text class="ig-caps" x="202" y="50">17 SEP</text>
+                  <text class="ig-caps" x="259" y="50">21 SEP</text>
+                  <text class="ig-caps" x="357" y="50">28 SEP</text>
+                  <text class="ig-caps" x="455" y="50">5 OCT</text>
+                  <text class="ig-caps" x="553" y="50">12 OCT</text>
+                  <text class="ig-caps" x="780" y="20" text-anchor="end">AT LEAST</text>
+                  <text class="ig-caps" x="780" y="36" text-anchor="end">API LIST</text>
+                  <text class="ig-caps" x="780" y="52" text-anchor="end">PRICE</text>
+                  <text class="ig-caps" x="912" y="20" text-anchor="end">AT MOST</text>
+                  <text class="ig-caps" x="912" y="36" text-anchor="end">SUBSCRIPTION</text>
+                  <text class="ig-caps" x="912" y="52" text-anchor="end">SHARE</text>
+                  <rect class="ig-tl-bar" x="200" y="82" width="28" height="12"/>
+                  <rect class="ig-tl-bar" x="214" y="114" width="28" height="12"/>
+                  <rect class="ig-tl-bar" x="228" y="146" width="14" height="12"/>
+                  <rect class="ig-tl-bar" x="228" y="178" width="14" height="12"/>
+                  <rect class="ig-tl-bar" x="228" y="210" width="42" height="12"/>
+                  <rect class="ig-tl-bar" x="256" y="242" width="28" height="12"/>
+                  <rect class="ig-tl-bar" x="270" y="274" width="28" height="12"/>
+                  <rect class="ig-tl-bar is-later" x="312.75" y="306.75" width="12.5" height="10.5"/>
+                  <rect class="ig-tl-bar" x="270" y="338" width="28" height="12"/>
+                  <rect class="ig-tl-bar is-later" x="298.75" y="370.75" width="12.5" height="10.5"/>
+                  <rect class="ig-tl-bar is-later" x="438.75" y="402.75" width="26.5" height="10.5"/>
+                  <rect class="ig-tl-bar is-later" x="438.75" y="434.75" width="26.5" height="10.5"/>
+                  <rect class="ig-tl-bar" x="284" y="466" width="14" height="12"/>
+                  <rect class="ig-tl-bar" x="452" y="466" width="28" height="12"/>
+                  <rect class="ig-tl-bar is-later" x="354.75" y="498.75" width="26.5" height="10.5"/>
+                  <rect class="ig-tl-bar is-closing" x="578.75" y="530.75" width="26.5" height="10.5"/>
+                  <path class="ig-tl-hold" d="M298 472 H452"/>
+                  <path class="ig-l-born" d="M270 280 H263 V312 H312" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M270 344 H247 V440 H438" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M298 344 H445 V402" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M305 344 V370" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M351 504 H354"/>
+                  <circle class="ig-born-dot" cx="270" cy="280" r="3"/>
+                  <circle class="ig-born-dot" cx="270" cy="344" r="3"/>
+                  <circle class="ig-born-dot" cx="298" cy="344" r="3"/>
+                  <circle class="ig-born-hand" cx="347" cy="504" r="4"/>
+                  <text class="ig-name" x="0" y="94">The brainstorm</text>
+                  <text class="ig-name" x="0" y="126">Dependency record</text>
+                  <text class="ig-name" x="0" y="158">Checks task text</text>
+                  <text class="ig-name" x="0" y="190">New-task rules</text>
+                  <text class="ig-name" x="0" y="222">Board checks</text>
+                  <text class="ig-name" x="0" y="254">Proposes records</text>
+                  <text class="ig-name" x="0" y="286">Unmet needs</text>
+                  <text class="ig-name" x="0" y="318">Needs matched on load</text>
+                  <text class="ig-name" x="0" y="350">Fills open tasks</text>
+                  <text class="ig-name" x="0" y="382">Lint reads headings</text>
+                  <text class="ig-name" x="0" y="414">Refuses stale snapshots</text>
+                  <text class="ig-name" x="0" y="446">List honours filters</text>
+                  <text class="ig-name" x="0" y="478">Record required</text>
+                  <text class="ig-name" x="0" y="510">Mirror check fixed</text>
+                  <text class="ig-name" x="0" y="542">Closes the epic</text>
+                  <text class="ig-t ig-tl-halo" x="474" y="317">half had open rulings</text>
+                  <text class="ig-t ig-tl-halo" x="474" y="381">lint misread a heading</text>
+                  <text class="ig-t ig-tl-halo" x="474" y="413">could overwrite concurrent edits</text>
+                  <text class="ig-t ig-tl-halo" x="474" y="445">list ignored its filters</text>
+                  <text class="ig-t ig-tl-halo" x="474" y="509">checker contradicted its rule</text>
+                  <text class="ig-tl-v" x="780" y="93" text-anchor="end">$31.30</text><text class="ig-tl-v" x="912" y="93" text-anchor="end">$3.54</text>
+                  <text class="ig-tl-v" x="780" y="125" text-anchor="end">$163.09</text><text class="ig-tl-v" x="912" y="125" text-anchor="end">$4.75</text>
+                  <text class="ig-tl-v" x="780" y="157" text-anchor="end">$90.38</text><text class="ig-tl-v" x="912" y="157" text-anchor="end">$2.78</text>
+                  <text class="ig-tl-v" x="780" y="189" text-anchor="end">$84.31</text><text class="ig-tl-v" x="912" y="189" text-anchor="end">$3.95</text>
+                  <text class="ig-tl-v" x="780" y="221" text-anchor="end">$121.61</text><text class="ig-tl-v" x="912" y="221" text-anchor="end">$4.66</text>
+                  <text class="ig-tl-v" x="780" y="253" text-anchor="end">$113.20</text><text class="ig-tl-v" x="912" y="253" text-anchor="end">$3.51</text>
+                  <text class="ig-tl-v" x="780" y="285" text-anchor="end">$138.47</text><text class="ig-tl-v" x="912" y="285" text-anchor="end">$3.14</text>
+                  <text class="ig-tl-v" x="780" y="317" text-anchor="end">$168.86</text><text class="ig-tl-v" x="912" y="317" text-anchor="end">$4.35</text>
+                  <text class="ig-tl-v" x="780" y="349" text-anchor="end">$125.01</text><text class="ig-tl-v" x="912" y="349" text-anchor="end">$4.40</text>
+                  <text class="ig-tl-v" x="780" y="381" text-anchor="end">$71.52</text><text class="ig-tl-v" x="912" y="381" text-anchor="end">$1.37</text>
+                  <text class="ig-tl-v" x="780" y="413" text-anchor="end">$36.87</text><text class="ig-tl-v" x="912" y="413" text-anchor="end">$1.72</text>
+                  <text class="ig-tl-v" x="780" y="445" text-anchor="end">$42.90</text><text class="ig-tl-v" x="912" y="445" text-anchor="end">$2.15</text>
+                  <text class="ig-tl-v" x="780" y="477" text-anchor="end">$128.93</text><text class="ig-tl-v" x="912" y="477" text-anchor="end">$5.76</text>
+                  <text class="ig-tl-v" x="780" y="509" text-anchor="end">$41.04</text><text class="ig-tl-v" x="912" y="509" text-anchor="end">$1.25</text>
+                  <text class="ig-tl-v" x="780" y="541" text-anchor="end">$122.08</text><text class="ig-tl-v" x="912" y="541" text-anchor="end">$2.09</text>
+                  <polygon class="ig-dia is-cut" points="214,81 221,88 214,95 207,88"/>
+                  <text class="ig-verb ig-tl-halo" x="236" y="94">approved the plan</text>
+                  <text class="ig-note ig-tl-halo" x="389" y="94">18 Sep, the plan's own date</text>
+                  <polygon class="ig-dia is-cut" points="298,465 305,472 298,479 291,472"/>
+                  <text class="ig-verb ig-tl-halo" x="375" y="478" text-anchor="middle">held the switch</text>
+                  <polygon class="ig-dia is-cut" points="585,529 592,536 585,543 578,536"/>
+                  <text class="ig-verb ig-tl-halo" x="566" y="542" text-anchor="end">decided both fails</text>
+                  <polygon class="ig-dia is-cut" points="613,561 620,568 613,575 606,568"/>
+                  <text class="ig-verb ig-tl-halo" x="594" y="574" text-anchor="end">closed the epic</text>
+                  <path class="ig-sep" d="M0 592 H912"/>
+                  <text class="ig-sent is-strong" x="0" y="618">The 14 tasks</text>
+                  <text class="ig-tl-v" x="780" y="618" text-anchor="end"><tspan class="ig-note">at least </tspan><tspan class="ig-tl-v is-total">$1,448.27</tspan></text>
+                  <text class="ig-sent is-strong" x="0" y="646">All 15 rows</text>
+                  <text class="ig-tl-v" x="780" y="646" text-anchor="end"><tspan class="ig-note">at least </tspan><tspan class="ig-tl-v is-total">$1,479.57</tspan></text>
+                  <text class="ig-tl-v" x="912" y="646" text-anchor="end"><tspan class="ig-note">at most </tspan><tspan class="ig-tl-v is-total">$49.42</tspan></text>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="1272" viewBox="-0.5 -0.5 288 1272" role="img" aria-labelledby="v1n-t v1n-d">
+                <title id="v1n-t">From the brainstorm to the close: when each task ran, where it came from, and what it would cost</title>
+                <desc id="v1n-d">A UTC timeline, 17&nbsp;September to 16&nbsp;October. The brainstorm and eight planned tasks are solid bars, first step to merge; the closing task is dashed; five born on the way are outlined, each with an arrow from the task it came from and its reason, or a ring if written by hand. Amber diamonds: the plan approved, the switch held, both failed outcomes decided, the epic closed. Prices in two columns; the small print has every row.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="286" y="14" text-anchor="end">AT MOST · SUBSCRIPTION SHARE</text>
+                  <text class="ig-caps" x="226" y="32" text-anchor="end">AT LEAST · API LIST PRICE</text>
+                  <path class="ig-tl-axis" d="M284 18 V44 M224 36 V44"/>
+                  <path class="ig-sep" d="M0 48 H288"/>
+                  <path class="ig-rail" d="M8 67 V1104"/>
+                  <rect class="ig-tl-bar" x="3" y="62" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="166" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="218" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="270" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="322" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="374" width="10" height="10"/>
+                  <rect class="ig-tl-bar" x="3" y="426" width="10" height="10"/>
+                  <rect class="ig-tl-bar is-later" x="3.75" y="478.75" width="8.5" height="8.5"/>
+                  <rect class="ig-tl-bar" x="3" y="550" width="10" height="10"/>
+                  <rect class="ig-tl-bar is-later" x="3.75" y="602.75" width="8.5" height="8.5"/>
+                  <rect class="ig-tl-bar is-later" x="3.75" y="674.75" width="8.5" height="8.5"/>
+                  <rect class="ig-tl-bar is-later" x="3.75" y="746.75" width="8.5" height="8.5"/>
+                  <rect class="ig-tl-bar" x="3" y="818" width="10" height="10"/>
+                  <rect class="ig-tl-bar is-later" x="3.75" y="922.75" width="8.5" height="8.5"/>
+                  <rect class="ig-tl-bar is-closing" x="3.75" y="994.75" width="8.5" height="8.5"/>
+                  <path class="ig-l-born" d="M13 431 H26 V483 H13" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M13 555 H26 V751 H13" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M26 607 H13" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M26 679 H13" marker-end="url(#ig-mk-born)"/>
+                  <path class="ig-l-born" d="M22 927 H13"/>
+                  <circle class="ig-born-dot" cx="13" cy="431" r="3"/>
+                  <circle class="ig-born-dot" cx="13" cy="555" r="3"/>
+                  <circle class="ig-born-hand" cx="26" cy="927" r="4"/>
+                  <polygon class="ig-dia is-cut" points="8,113 15,120 8,127 1,120"/>
+                  <polygon class="ig-dia is-cut" points="8,869 15,876 8,883 1,876"/>
+                  <polygon class="ig-dia is-cut" points="8,1045 15,1052 8,1059 1,1052"/>
+                  <polygon class="ig-dia is-cut" points="8,1097 15,1104 8,1111 1,1104"/>
+                  <text class="ig-name" x="40" y="72">The brainstorm</text>
+                  <text class="ig-note" x="40" y="92">17–18 Sep</text><text class="ig-tl-v" x="226" y="92" text-anchor="end">$31.30</text><text class="ig-tl-v" x="286" y="92" text-anchor="end">$3.54</text>
+                  <text class="ig-verb" x="40" y="126">approved the plan</text>
+                  <text class="ig-note" x="40" y="146">18 Sep, the plan's own date</text>
+                  <text class="ig-name" x="40" y="176">Dependency record</text>
+                  <text class="ig-note" x="40" y="196">18–19 Sep</text><text class="ig-tl-v" x="226" y="196" text-anchor="end">$163.09</text><text class="ig-tl-v" x="286" y="196" text-anchor="end">$4.75</text>
+                  <text class="ig-name" x="40" y="228">Checks task text</text>
+                  <text class="ig-note" x="40" y="248">19 Sep</text><text class="ig-tl-v" x="226" y="248" text-anchor="end">$90.38</text><text class="ig-tl-v" x="286" y="248" text-anchor="end">$2.78</text>
+                  <text class="ig-name" x="40" y="280">New-task rules</text>
+                  <text class="ig-note" x="40" y="300">19 Sep</text><text class="ig-tl-v" x="226" y="300" text-anchor="end">$84.31</text><text class="ig-tl-v" x="286" y="300" text-anchor="end">$3.95</text>
+                  <text class="ig-name" x="40" y="332">Board checks</text>
+                  <text class="ig-note" x="40" y="352">19–21 Sep</text><text class="ig-tl-v" x="226" y="352" text-anchor="end">$121.61</text><text class="ig-tl-v" x="286" y="352" text-anchor="end">$4.66</text>
+                  <text class="ig-name" x="40" y="384">Proposes records</text>
+                  <text class="ig-note" x="40" y="404">21–22 Sep</text><text class="ig-tl-v" x="226" y="404" text-anchor="end">$113.20</text><text class="ig-tl-v" x="286" y="404" text-anchor="end">$3.51</text>
+                  <text class="ig-name" x="40" y="436">Unmet needs</text>
+                  <text class="ig-note" x="40" y="456">22–23 Sep</text><text class="ig-tl-v" x="226" y="456" text-anchor="end">$138.47</text><text class="ig-tl-v" x="286" y="456" text-anchor="end">$3.14</text>
+                  <text class="ig-name" x="40" y="488">Needs matched on load</text>
+                  <text class="ig-note" x="40" y="508">25 Sep</text><text class="ig-tl-v" x="226" y="508" text-anchor="end">$168.86</text><text class="ig-tl-v" x="286" y="508" text-anchor="end">$4.35</text>
+                  <text class="ig-t" x="40" y="528">half had open rulings</text>
+                  <text class="ig-name" x="40" y="560">Fills open tasks</text>
+                  <text class="ig-note" x="40" y="580">22–23 Sep</text><text class="ig-tl-v" x="226" y="580" text-anchor="end">$125.01</text><text class="ig-tl-v" x="286" y="580" text-anchor="end">$4.40</text>
+                  <text class="ig-name" x="40" y="612">Lint reads headings</text>
+                  <text class="ig-note" x="40" y="632">24 Sep</text><text class="ig-tl-v" x="226" y="632" text-anchor="end">$71.52</text><text class="ig-tl-v" x="286" y="632" text-anchor="end">$1.37</text>
+                  <text class="ig-t" x="40" y="652">lint misread a heading</text>
+                  <text class="ig-name" x="40" y="684">Refuses stale snapshots</text>
+                  <text class="ig-note" x="40" y="704">4–5 Oct</text><text class="ig-tl-v" x="226" y="704" text-anchor="end">$36.87</text><text class="ig-tl-v" x="286" y="704" text-anchor="end">$1.72</text>
+                  <text class="ig-t" x="40" y="724">could overwrite concurrent edits</text>
+                  <text class="ig-name" x="40" y="756">List honours filters</text>
+                  <text class="ig-note" x="40" y="776">4–5 Oct</text><text class="ig-tl-v" x="226" y="776" text-anchor="end">$42.90</text><text class="ig-tl-v" x="286" y="776" text-anchor="end">$2.15</text>
+                  <text class="ig-t" x="40" y="796">list ignored its filters</text>
+                  <text class="ig-name" x="40" y="828">Record required</text>
+                  <text class="ig-note" x="40" y="848">23 Sep – 6 Oct</text><text class="ig-tl-v" x="226" y="848" text-anchor="end">$128.93</text><text class="ig-tl-v" x="286" y="848" text-anchor="end">$5.76</text>
+                  <text class="ig-verb" x="40" y="882">held the switch</text>
+                  <text class="ig-note" x="40" y="902">at its gate, 23 Sep → 5 Oct</text>
+                  <text class="ig-name" x="40" y="932">Mirror check fixed</text>
+                  <text class="ig-note" x="40" y="952">28–29 Sep</text><text class="ig-tl-v" x="226" y="952" text-anchor="end">$41.04</text><text class="ig-tl-v" x="286" y="952" text-anchor="end">$1.25</text>
+                  <text class="ig-t" x="40" y="972">checker contradicted its rule</text>
+                  <text class="ig-name" x="40" y="1004">Closes the epic</text>
+                  <text class="ig-note" x="40" y="1024">14–15 Oct</text><text class="ig-tl-v" x="226" y="1024" text-anchor="end">$122.08</text><text class="ig-tl-v" x="286" y="1024" text-anchor="end">$2.09</text>
+                  <text class="ig-verb" x="40" y="1058">decided both fails</text>
+                  <text class="ig-note" x="40" y="1078">14 Oct, inside the closing task</text>
+                  <text class="ig-verb" x="40" y="1110">closed the epic</text>
+                  <text class="ig-note" x="40" y="1130">16 Oct</text>
+                  <path class="ig-sep" d="M0 1148 H286"/>
+                  <text class="ig-sent is-strong" x="0" y="1172">The 14 tasks</text>
+                  <text class="ig-tl-v" x="226" y="1192" text-anchor="end"><tspan class="ig-note">at least </tspan><tspan class="ig-tl-v is-total">$1,448.27</tspan></text>
+                  <text class="ig-sent is-strong" x="0" y="1222">All 15 rows</text>
+                  <text class="ig-tl-v" x="226" y="1242" text-anchor="end"><tspan class="ig-note">at least </tspan><tspan class="ig-tl-v is-total">$1,479.57</tspan></text>
+                  <text class="ig-tl-v" x="286" y="1262" text-anchor="end"><tspan class="ig-note">at most </tspan><tspan class="ig-tl-v is-total">$49.42</tspan></text>
+                </g>
+              </svg>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-tl-bar" x="0" y="0" width="40" height="12"/></svg>planned task, first step to merge</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-tl-bar is-later" x="0.75" y="0.75" width="38.5" height="10.5"/></svg>born on the way: split or added</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-born" d="M3 6 H38" marker-end="url(#ig-mk-born)"/><circle class="ig-born-dot" cx="3" cy="6" r="3"/></svg>born from that task, with the reason</li>
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><circle class="ig-born-hand" cx="8" cy="8" r="4"/></svg>written by hand</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-tl-hold" d="M0 6 H40"/></svg>held: not running</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-tl-bar is-closing" x="0.75" y="0.75" width="38.5" height="10.5"/></svg>the closing task</li>
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>the engineer's decision</li>
+                <li>Dates in UTC</li>
+              </ul>
+            </div>
+            <figcaption id="v1-cap"><strong>From the brainstorm to the close: when each task ran, where it came from, and what it would cost.</strong> The amber diamonds are four of the engineer's decisions; the small print has every row.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>This picture holds the whole epic.</strong> Each of the 14 tasks passed a reviewer agent and a tester before it closed.</p>
+            <p><strong>One decision up close: the engineer held the switch that turned refusal on.</strong> On 23&nbsp;September a review found it not ready: the text checker, which had to pass first, still failed, and a trial switch broke 24 tests.</p>
+            <p><strong>It restarted on 5&nbsp;October</strong>; before any change, the checker printed 31 findings, none that blocks. It merged the next day.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="plan" aria-labelledby="plan-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="plan-title">Nine tasks planned, fourteen done</h2>
+          </div>
+
+          <figure class="ig" aria-labelledby="v2-cap">
+            <div class="ig-frame bp">
+              <p class="ig-tag is-real">A real plan · links as first recorded, 19&nbsp;September</p>
+              <svg class="ig-pic is-wide" width="920" height="506" viewBox="-1 -1 920 506" role="img" aria-labelledby="v2-t v2-d">
+                <title id="v2-t">The plan as the engineer approved it: every link has a kind, and the waves follow from the links</title>
+                <desc id="v2-d">Nine planned tasks in six waves. Wave 0: Dependency record. Wave 1: Checks task text, New-task rules, Board checks. Wave 2: Proposes records, Unmet needs. Wave 3: Fills open tasks. Wave 4: Record required. Wave 5: Closes the epic, which waits for all eight others. 17 build-order links; 1 needs-output link, Proposes records on Checks task text; 2 would-collide pairs, Checks task text with Board checks and New-task rules with Unmet needs. As first recorded, 19&nbsp;September&nbsp;2026.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="36">WAVE 0</text>
+                  <text class="ig-caps" x="0" y="124">WAVE 1</text>
+                  <text class="ig-caps" x="0" y="212">WAVE 2</text>
+                  <text class="ig-caps" x="0" y="300">WAVE 3</text>
+                  <text class="ig-caps" x="0" y="388">WAVE 4</text>
+                  <text class="ig-caps" x="0" y="476">WAVE 5</text>
+                  <rect class="ig-band" x="88" y="0" width="792" height="64"/>
+                  <rect class="ig-band" x="88" y="88" width="792" height="64"/>
+                  <rect class="ig-band" x="88" y="176" width="792" height="64"/>
+                  <rect class="ig-band" x="88" y="264" width="792" height="64"/>
+                  <rect class="ig-band" x="88" y="352" width="792" height="64"/>
+                  <rect class="ig-band is-closing" x="88" y="440" width="792" height="64"/>
+                  <path class="ig-l-build" d="M96 32 H76 V208 H88" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M76 120 H88" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M152 144 V184" marker-end="url(#ig-mk-need)"/>
+                  <path class="ig-l-build" d="M232 144 V160 H344 V184" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M584 144 V340 H232 V360" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M184 232 V272" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M152 320 V360" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M880 32 H900 V472 H880" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M880 120 H900 M880 208 H900 M880 296 H900 M880 384 H900"/>
+                  <rect class="ig-task-box" x="96" y="8" width="176" height="48"/><path class="ig-task-top" d="M96 8 H272"/><text class="ig-id" x="108" y="26">T-707</text><text class="ig-name" x="108" y="46">Dependency record</text>
+                  <rect class="ig-task-box" x="96" y="96" width="176" height="48"/><path class="ig-task-top" d="M96 96 H272"/><text class="ig-id" x="108" y="114">T-699</text><text class="ig-name" x="108" y="134">Checks task text</text>
+                  <rect class="ig-task-box" x="296" y="96" width="176" height="48"/><path class="ig-task-top" d="M296 96 H472"/><text class="ig-id" x="308" y="114">T-700</text><text class="ig-name" x="308" y="134">New-task rules</text>
+                  <rect class="ig-task-box" x="496" y="96" width="176" height="48"/><path class="ig-task-top" d="M496 96 H672"/><text class="ig-id" x="508" y="114">T-701</text><text class="ig-name" x="508" y="134">Board checks</text>
+                  <rect class="ig-task-box" x="96" y="184" width="176" height="48"/><path class="ig-task-top" d="M96 184 H272"/><text class="ig-id" x="108" y="202">T-702</text><text class="ig-name" x="108" y="222">Proposes records</text>
+                  <rect class="ig-task-box" x="296" y="184" width="176" height="48"/><path class="ig-task-top" d="M296 184 H472"/><text class="ig-id" x="308" y="202">T-705</text><text class="ig-name" x="308" y="222">Unmet needs</text>
+                  <rect class="ig-task-box" x="96" y="272" width="176" height="48"/><path class="ig-task-top" d="M96 272 H272"/><text class="ig-id" x="108" y="290">T-703</text><text class="ig-name" x="108" y="310">Fills open tasks</text>
+                  <rect class="ig-task-box" x="96" y="360" width="176" height="48"/><path class="ig-task-top" d="M96 360 H272"/><text class="ig-id" x="108" y="378">T-704</text><text class="ig-name" x="108" y="398">Record required</text>
+                  <rect class="ig-task-box is-closing" x="96" y="448" width="376" height="48"/><path class="ig-task-top" d="M96 448 H472"/><text class="ig-id" x="108" y="466">T-706</text><text class="ig-name" x="108" y="486">Closes the epic</text><text class="ig-note" x="244" y="486">waits for every other task</text>
+                </g>
+              </svg>
+              <svg class="ig-pic is-narrow" width="288" height="434" viewBox="-0.5 -0.5 288 434" role="img" aria-labelledby="v2n-t v2n-d">
+                <title id="v2n-t">The plan as the engineer approved it: every link has a kind, and the waves follow from the links</title>
+                <desc id="v2n-d">Nine planned tasks in six waves. Wave 0: Dependency record. Wave 1: Checks task text, New-task rules, Board checks. Wave 2: Proposes records, Unmet needs. Wave 3: Fills open tasks. Wave 4: Record required. Wave 5: Closes the epic, which waits for all eight others. 17 build-order links; 1 needs-output link, Proposes records on Checks task text; 2 would-collide pairs, Checks task text with Board checks and New-task rules with Unmet needs. As first recorded, 19&nbsp;September&nbsp;2026.</desc>
+                <g aria-hidden="true">
+                  <text class="ig-caps" x="0" y="13">WAVE</text>
+                  <text class="ig-caps" x="2" y="53">0</text>
+                  <text class="ig-caps" x="2" y="125">1</text>
+                  <text class="ig-caps" x="2" y="197">2</text>
+                  <text class="ig-caps" x="2" y="269">3</text>
+                  <text class="ig-caps" x="2" y="341">4</text>
+                  <text class="ig-caps" x="2" y="413">5</text>
+                  <rect class="ig-band" x="28" y="24" width="236" height="48"/>
+                  <rect class="ig-band" x="28" y="96" width="236" height="48"/>
+                  <rect class="ig-band" x="28" y="168" width="236" height="48"/>
+                  <rect class="ig-band" x="28" y="240" width="236" height="48"/>
+                  <rect class="ig-band" x="28" y="312" width="236" height="48"/>
+                  <rect class="ig-band is-closing" x="28" y="384" width="236" height="48"/>
+                  <path class="ig-l-build" d="M36 48 H18 V192 H28" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M18 120 H28" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M52 136 V176" marker-end="url(#ig-mk-need)"/>
+                  <path class="ig-l-build" d="M84 136 V152 H144 V176" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M220 136 V300 H84 V320" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M68 208 V248" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M52 280 V320" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M264 48 H276 V408 H264" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-build" d="M264 120 H276 M264 192 H276 M264 264 H276 M264 336 H276"/>
+                  <rect class="ig-task-box" x="36" y="32" width="64" height="32"/><path class="ig-task-top" d="M36 32 H100"/><text class="ig-id" x="68" y="53" text-anchor="middle">T-707</text>
+                  <rect class="ig-task-box" x="36" y="104" width="64" height="32"/><path class="ig-task-top" d="M36 104 H100"/><text class="ig-id" x="68" y="125" text-anchor="middle">T-699</text>
+                  <rect class="ig-task-box" x="112" y="104" width="64" height="32"/><path class="ig-task-top" d="M112 104 H176"/><text class="ig-id" x="144" y="125" text-anchor="middle">T-700</text>
+                  <rect class="ig-task-box" x="188" y="104" width="64" height="32"/><path class="ig-task-top" d="M188 104 H252"/><text class="ig-id" x="220" y="125" text-anchor="middle">T-701</text>
+                  <rect class="ig-task-box" x="36" y="176" width="64" height="32"/><path class="ig-task-top" d="M36 176 H100"/><text class="ig-id" x="68" y="197" text-anchor="middle">T-702</text>
+                  <rect class="ig-task-box" x="112" y="176" width="64" height="32"/><path class="ig-task-top" d="M112 176 H176"/><text class="ig-id" x="144" y="197" text-anchor="middle">T-705</text>
+                  <rect class="ig-task-box" x="36" y="248" width="64" height="32"/><path class="ig-task-top" d="M36 248 H100"/><text class="ig-id" x="68" y="269" text-anchor="middle">T-703</text>
+                  <rect class="ig-task-box" x="36" y="320" width="64" height="32"/><path class="ig-task-top" d="M36 320 H100"/><text class="ig-id" x="68" y="341" text-anchor="middle">T-704</text>
+                  <rect class="ig-task-box is-closing" x="36" y="392" width="152" height="32"/><path class="ig-task-top" d="M36 392 H188"/><text class="ig-id" x="112" y="413" text-anchor="middle">T-706</text>
+                </g>
+              </svg>
+              <ol class="ig-key" aria-label="The nine planned tasks in plain words, by wave">
+                <li><span class="ig-caps">0</span><span class="ig-id">T-707</span><span>Dependency record</span></li>
+                <li><span class="ig-caps">1</span><span class="ig-id">T-699</span><span>Checks task text</span></li>
+                <li><span class="ig-caps">1</span><span class="ig-id">T-700</span><span>New-task rules</span></li>
+                <li><span class="ig-caps">1</span><span class="ig-id">T-701</span><span>Board checks</span></li>
+                <li><span class="ig-caps">2</span><span class="ig-id">T-702</span><span>Proposes records</span></li>
+                <li><span class="ig-caps">2</span><span class="ig-id">T-705</span><span>Unmet needs</span></li>
+                <li><span class="ig-caps">3</span><span class="ig-id">T-703</span><span>Fills open tasks</span></li>
+                <li><span class="ig-caps">4</span><span class="ig-id">T-704</span><span>Record required</span></li>
+                <li><span class="ig-caps">5</span><span class="ig-id">T-706</span><span>Closes the epic</span></li>
+              </ol>
+              <div class="ig-gloss">
+                <p class="ig-caps">Would collide · never orders the work</p>
+                <ul class="ig-collide" aria-label="The two pairs that would collide">
+                  <li><span class="ig-id nw">T-699</span><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><span class="ig-id nw">T-701</span><p>Checks task text and Board checks</p></li>
+                  <li><span class="ig-id nw">T-700</span><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><span class="ig-id nw">T-705</span><p>New-task rules and Unmet needs</p></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg>build order (17): waits until the other is done</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>needs output (1): uses what the other produces</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide (2): must not run at the same time</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-band" x="0.5" y="0.5" width="39" height="11"/></svg>wave: tasks that can run together</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><rect class="ig-band" x="31.5" y="0.5" width="8" height="11"/><path class="ig-l-build" d="M2 6 H31.5" marker-end="url(#ig-mk-build)"/></svg>arrow into a band: every task in that wave</li>
+                <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M8 1.5 H32 V10.5 H8" marker-end="url(#ig-mk-build)"/></svg>closing task: waits for every other task</li>
+              </ul>
+            </div>
+            <figcaption id="v2-cap"><strong>The plan as the engineer approved it: every link has a kind, and the waves follow from the links.</strong> The closing task waits for every other task; the links are as the record first wrote them.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>The plan the engineer approved had nine tasks in six waves</strong>; the first, Dependency record, has its own note: <a href="anatomy-of-one-task.html">Anatomy of one task</a>.</p>
+            <p><strong>The work added five</strong>: one planned task split in two, and four new ones, all born outside a brainstorm — four on the engineer's instruction, one with his approval. The four new tasks all landed before the switch to refusal. <a href="from-a-problem-to-nine-tasks.html#after">Why each was added</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="now" aria-labelledby="now-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="now-title">Each open task now says what it waits for; a new one that doesn't is refused</h2>
+          </div>
+
+          <figure class="ig" aria-labelledby="v3-cap">
+            <div class="ig-frame">
+              <ul class="ig-ba">
+                <li>
+                  <p class="ig-ba-head">All 685 task rows <span>· 17&nbsp;Sep</span></p>
+                  <div class="ig-bar" aria-hidden="true"><span class="is-sys" style="--s:421"></span><span class="is-gap" style="--s:264"></span></div>
+                  <p class="ig-ba-val"><span class="ig-sw is-gap" aria-hidden="true"></span><span><b>264</b> named nothing they waited for</span></p>
+                </li>
+                <li>
+                  <p class="ig-ba-head">Open task rows <span>· 14&nbsp;Oct</span></p>
+                  <div class="ig-bar" aria-hidden="true"><span class="is-sys" style="--s:103"></span></div>
+                  <p class="ig-ba-val"><span class="ig-sw is-sys" aria-hidden="true"></span><span><b>103 of 103</b> carry a record</span></p>
+                </li>
+              </ul>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><span class="ig-sw is-sys" aria-hidden="true"></span>something on the record</li>
+                <li><span class="ig-sw is-gap" aria-hidden="true"></span>nothing on the record</li>
+              </ul>
+            </div>
+            <figcaption id="v3-cap"><strong>Before the epic, many tasks named nothing they waited for; at the first grade, every open task had a record.</strong> The bars count different groups.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>The fix is a duty</strong>: every open task records what it waits for and why, or “none” with a reason. A checker reads each task's notes, criteria and contract, which holds a copy of the record, for orders the record misses.</p>
+            <p><strong>The checker judges a reason's form only — blank, very short or repeated — never its sense.</strong> It flags a “none” when the task's own words state an order; weak reasons on links are reported, not refused — 22 at the first grade.</p>
+            <p><strong>By backfill, 72 of the 73 open tasks without a record got one</strong> (the 73rd had finished): a tool proposed them, and the agent that runs the work applied them under the engineer's rulings, in 17 batches, each merged before the next.</p>
+            <p><strong>How it works, in five steps:</strong></p>
+          </div>
+
+          <figure class="ig" aria-labelledby="v4-cap">
+            <div class="ig-frame bp">
+              <ol class="nsteps is-row is-checks" role="list">
+                <li><span class="nstep-text"><span>Every open task records what it waits for</span></span></li>
+                <li><span class="nstep-text"><svg class="ig-glyph is-mark is-inline" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>A new task without a record is refused</span></span></li>
+                <li><span class="nstep-text"><svg class="ig-glyph is-mark is-inline" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>A checker reads task text for unrecorded order</span></span></li>
+                <li><span class="nstep-text"><svg class="ig-glyph is-mark is-inline" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg><span>The task's contract warns of unrecorded links</span></span></li>
+                <li><span class="nstep-text"><span>Blocked tasks wait; colliding tasks are marked</span></span></li>
+              </ol>
+              <div class="ig-rec-pair is-cards is-2-1">
+                <div class="ig-rec">
+                  <p class="ig-rec-head">On the board · the main line at <code class="nw">ae9bd1943</code></p>
+                  <p class="ig-rec-task">Prove it, switch it on <span class="ig-id nw">T-688</span></p>
+                  <div class="ig-rec-links">
+                    <div>
+                      <p class="ig-rec-k"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg>Needs output</p>
+                      <pre class="ig-rec-ex is-lines">on: T-749 [The publisher]
+kind: artifact
+why: switches on the
+schedule entries T-749
+wrote.</pre>
+                    </div>
+                    <div>
+                      <p class="ig-rec-k"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>Would collide</p>
+                      <pre class="ig-rec-ex is-lines">on: T-752 [The living
+status report]
+kind: conflict
+why: both edit
+config/headless/
+schedules.yaml and the
+tool catalog.</pre>
+                    </div>
+                  </div>
+                  <p class="ig-rec-src">Word for word, [names] added; line breaks ours.</p>
+                </div>
+                <div class="ig-rec">
+                  <p class="ig-rec-head">A dry run with a made-up practice row · 6&nbsp;October&nbsp;2026</p>
+                  <pre class="ig-rec-ex is-lines">Error: 1 new non-DONE T-*
+row(s) declare no
+'dependencies' record
+(severity=refuse):
+T-9999.
+Nothing was written.</pre>
+                  <p class="ig-rec-src">Word for word; line breaks ours.</p>
+                </div>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
+              </ul>
+            </div>
+            <figcaption id="v4-cap"><strong>The board reads the record, checks it, and refuses a new task without one.</strong> Two real excerpts below the steps: a record with two kinds of link — one that needs another's output, one that would collide — and one refusal.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>The links are a snapshot</strong>; the board has moved on. The checks' limits are in the small print.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="close" aria-labelledby="close-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="close-title">Graded by reviewer agents that built none of it, then closed by the engineer</h2>
+          </div>
+
+          <figure class="ig" aria-labelledby="v5-cap">
+            <div class="ig-frame bp">
+              <ul class="ig-counts" aria-label="The promised outcomes, counted">
+                <li><span class="ig-count">7 of 8</span>met</li>
+                <li><span class="ig-count">4</span>on narrow evidence</li>
+                <li><span class="ig-count">1</span>carried over</li>
+              </ul>
+              <table class="ig-decide is-score">
+                <caption class="visually-hidden">The eight promised outcomes: the first grade, and the grade that stands now</caption>
+                <thead><tr><th scope="col">Promised outcome</th><th scope="col">First grade</th><th scope="col">Now</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><span class="ig-decide-name">Every open task has a record</span></th><td data-label="First grade">pass</td><td data-label="Now"><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">The text checker finds no unrecorded order, bar accepted exceptions with reasons</span></th><td data-label="First grade">pass</td><td data-label="Now"><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">A real example reads right on the board</span></th><td data-label="First grade"><svg class="ig-fail" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4 L12 12 M12 4 L4 12"/></svg><b>fail</b></td><td data-label="Now"><svg class="ig-meets is-narrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="15" height="15"/><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met, on narrow evidence</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">The rule applies wherever a task is born</span></th><td data-label="First grade">pass</td><td data-label="Now"><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">A task can name a need beyond its links</span></th><td data-label="First grade">pass, narrow</td><td data-label="Now"><svg class="ig-meets is-narrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="15" height="15"/><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met, on narrow evidence</td></tr>
+                  <tr class="is-carried"><th scope="row"><span class="ig-decide-name">No task stalls across a full epic</span></th><td data-label="First grade">not gradeable yet</td><td data-label="Now"><svg class="ig-carry" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8 H9"/><polygon points="8,3.5 14,8 8,12.5"/></svg>carried over</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">The task's contract agrees with the board</span></th><td data-label="First grade"><svg class="ig-fail" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4 L12 12 M12 4 L4 12"/></svg><b>fail</b></td><td data-label="Now"><svg class="ig-meets is-narrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="15" height="15"/><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met, on narrow evidence</td></tr>
+                  <tr><th scope="row"><span class="ig-decide-name">A matched need becomes a real link</span></th><td data-label="First grade">pass, narrow</td><td data-label="Now"><svg class="ig-meets is-narrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="15" height="15"/><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met, on narrow evidence</td></tr>
+                </tbody>
+              </table>
+              <div class="ig-rec-pair is-cards">
+                <div class="ig-rec">
+                  <p class="ig-rec-head">The first grader · on the card outcome</p>
+                  <pre class="ig-rec-ex">No production surface surfaces it, so I classify it fail.</pre>
+                  <p class="ig-rec-src">Word for word. The warning reached no one.</p>
+                </div>
+                <div class="ig-rec">
+                  <p class="ig-rec-head">The engineer · closing the epic, 16&nbsp;October</p>
+                  <p class="ig-rec-q">“this specific epic is done”</p>
+                  <p class="ig-rec-src">As DreamTeam's records quote him; a fragment.</p>
+                </div>
+              </div>
+            </div>
+            <div class="ig-foot">
+              <ul class="ig-legend" aria-label="Key">
+                <li><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met</li>
+                <li><svg class="ig-meets is-narrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="15" height="15"/><path d="M3 8.5 L6.5 12 L13 4.5"/></svg>met, on narrow evidence: real but limited</li>
+                <li><svg class="ig-carry" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8 H9"/><polygon points="8,3.5 14,8 8,12.5"/></svg>carried over to a follow-up task</li>
+                <li><svg class="ig-fail" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4 L12 12 M12 4 L4 12"/></svg>failed the first grade</li>
+              </ul>
+            </div>
+            <figcaption id="v5-cap"><strong>The first grade's fails stay on the record beside the grades that stand.</strong> What each narrow outcome lacks is in the small print.</figcaption>
+          </figure>
+
+          <div class="essay-col stack">
+            <p><strong>Fresh reviewer agents, with no part in building it, graded the eight promised outcomes</strong> read-only: the grade and the re-grade, each at its own pinned commit.</p>
+            <p><strong>The first grade failed two.</strong> The engineer had one fixed inside the closing task, and the other rewritten as a live example.</p>
+            <p><strong>A fresh re-grade passed both, on narrow evidence.</strong> The engineer then approved the final wording, which names the board as it stood at commit <code class="nw">ae9bd1943</code>; the agent that runs the work re-checked it, and no fresh reviewer graded it again.</p>
+            <p><strong>The one carried over is the problem itself</strong>: whether tasks still stall. It can only be graded across a whole later epic, and waits for another, already under way, to finish.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cost" aria-labelledby="cost-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="cost-title">Two prices, two bounds: at least by the token, at most from our subscription</h2>
+            <table class="answers">
+              <caption class="visually-hidden">The two prices and what each means</caption>
+              <thead><tr><th scope="col">Price</th><th scope="col">What it means</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">At least: the API price</th><td>What this work would cost, bought by the token, at Anthropic's list prices in force when it ran: a list-price equivalent, not spend.</td></tr>
+                <tr><th scope="row">At most: our subscription share</th><td>Its part of what our seats cost in the weeks it ran, in proportion to the work they recorded at list prices: 56 sessions, 17&nbsp;September to 16&nbsp;October. Some rows are upper bounds, so the total is too.</td></tr>
+              </tbody>
+            </table>
+            <p><strong>The bases differ; we never divide them.</strong> The engineer's hours were not measured.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pilot" aria-labelledby="pilot-title">
+        <div class="wrap stack">
+          <div class="essay-col stack">
+            <h2 id="pilot-title">A pilot runs the same recorded path on your team's own ideas</h2>
+            <p class="callout"><strong>In a pilot, our engineers run it with your team.</strong> One epic is an example, not a benchmark. This is DreamTeam building itself: there is no outside case to show yet.</p>
+            <p class="actions"><a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a> <a class="btn btn-ghost" href="../program.html">The pilot: Your Dream Team in 8 weeks</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section small-print essay-sp" id="small-print" aria-labelledby="sp-title">
+        <div class="wrap stack">
+          <h2 class="sec-label" id="sp-title">The small print</h2>
+
+          <details class="provenance">
+            <summary>The 15 rows: dates, where each came from, and both prices</summary>
+            <div class="table-wrap" role="region" aria-label="The 15 rows: dates, where each came from, and both prices" tabindex="0">
+              <table class="data stacked">
+                <caption class="visually-hidden">The 15 rows: dates, where each came from, and both prices</caption>
+                <thead><tr><th scope="col">Row</th><th scope="col">Kind, or where it came from</th><th scope="col">Dates</th><th scope="col" class="num">At least</th><th scope="col" class="num">At most</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">The brainstorm <span class="nw">(BS-117)</span></th><td data-label="Kind, or where it came from">the brainstorm</td><td data-label="Dates"><span class="nw">17–18&nbsp;Sep</span></td><td class="num" data-label="At least">$31.30</td><td class="num" data-label="At most">$3.54</td></tr>
+                  <tr><th scope="row">Dependency record <span class="nw">(T-707)</span></th><td data-label="Kind, or where it came from">planned, wave 0</td><td data-label="Dates"><span class="nw">18–19&nbsp;Sep</span></td><td class="num" data-label="At least">$163.09</td><td class="num" data-label="At most">$4.75</td></tr>
+                  <tr><th scope="row">Checks task text <span class="nw">(T-699)</span></th><td data-label="Kind, or where it came from">planned, wave 1</td><td data-label="Dates"><span class="nw">19&nbsp;Sep</span></td><td class="num" data-label="At least">$90.38</td><td class="num" data-label="At most">$2.78</td></tr>
+                  <tr><th scope="row">New-task rules <span class="nw">(T-700)</span></th><td data-label="Kind, or where it came from">planned, wave 1</td><td data-label="Dates"><span class="nw">19&nbsp;Sep</span></td><td class="num" data-label="At least">$84.31</td><td class="num" data-label="At most">$3.95</td></tr>
+                  <tr><th scope="row">Board checks <span class="nw">(T-701)</span></th><td data-label="Kind, or where it came from">planned, wave 1</td><td data-label="Dates"><span class="nw">19–21&nbsp;Sep</span></td><td class="num" data-label="At least">$121.61</td><td class="num" data-label="At most">$4.66</td></tr>
+                  <tr><th scope="row">Proposes records <span class="nw">(T-702)</span></th><td data-label="Kind, or where it came from">planned, wave 2</td><td data-label="Dates"><span class="nw">21–22&nbsp;Sep</span></td><td class="num" data-label="At least">$113.20</td><td class="num" data-label="At most">$3.51</td></tr>
+                  <tr><th scope="row">Unmet needs <span class="nw">(T-705)</span></th><td data-label="Kind, or where it came from">planned, wave 2</td><td data-label="Dates"><span class="nw">22–23&nbsp;Sep</span></td><td class="num" data-label="At least">$138.47</td><td class="num" data-label="At most">$3.14</td></tr>
+                  <tr><th scope="row">Fills open tasks <span class="nw">(T-703)</span></th><td data-label="Kind, or where it came from">planned, wave 3</td><td data-label="Dates"><span class="nw">22–23&nbsp;Sep</span></td><td class="num" data-label="At least">$125.01</td><td class="num" data-label="At most">$4.40</td></tr>
+                  <tr><th scope="row">Record required <span class="nw">(T-704)</span></th><td data-label="Kind, or where it came from">planned, wave 4; held at its gate <span class="nw">23&nbsp;Sep – 5&nbsp;Oct</span></td><td data-label="Dates"><span class="nw">23&nbsp;Sep</span> – <span class="nw">6&nbsp;Oct</span></td><td class="num" data-label="At least">$128.93</td><td class="num" data-label="At most">$5.76</td></tr>
+                  <tr><th scope="row">Lint reads headings <span class="nw">(T-754)</span></th><td data-label="Kind, or where it came from">filed when Fills open tasks finished: lint misread a heading</td><td data-label="Dates"><span class="nw">24&nbsp;Sep</span></td><td class="num" data-label="At least">$71.52</td><td class="num" data-label="At most">$1.37</td></tr>
+                  <tr><th scope="row">Needs matched on load <span class="nw">(T-735)</span></th><td data-label="Kind, or where it came from">split from Unmet needs at its start: half had open rulings</td><td data-label="Dates"><span class="nw">25&nbsp;Sep</span></td><td class="num" data-label="At least">$168.86</td><td class="num" data-label="At most">$4.35</td></tr>
+                  <tr><th scope="row">Mirror check fixed <span class="nw">(T-765)</span></th><td data-label="Kind, or where it came from">written by hand: checker contradicted its rule</td><td data-label="Dates"><span class="nw">28–29&nbsp;Sep</span></td><td class="num" data-label="At least">$41.04</td><td class="num" data-label="At most">$1.25</td></tr>
+                  <tr><th scope="row">Refuses stale snapshots <span class="nw">(T-755)</span></th><td data-label="Kind, or where it came from">filed when Fills open tasks finished: could overwrite concurrent edits</td><td data-label="Dates"><span class="nw">4–5&nbsp;Oct</span></td><td class="num" data-label="At least">$36.87</td><td class="num" data-label="At most">$1.72</td></tr>
+                  <tr><th scope="row">List honours filters <span class="nw">(T-737)</span></th><td data-label="Kind, or where it came from">filed when Fills open tasks started: list ignored its filters</td><td data-label="Dates"><span class="nw">4–5&nbsp;Oct</span></td><td class="num" data-label="At least">$42.90</td><td class="num" data-label="At most">$2.15</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Kind, or where it came from">planned, wave 5: the closing task</td><td data-label="Dates"><span class="nw">14–15&nbsp;Oct</span></td><td class="num" data-label="At least">$122.08</td><td class="num" data-label="At most">$2.09</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr><th scope="row">The 14 tasks</th><td></td><td></td><td class="num" data-label="At least">at least<br>$1,448.27</td><td></td></tr>
+                  <tr><th scope="row">All 15 rows</th><td></td><td data-label="Dates"><span class="nw">17&nbsp;Sep</span> – <span class="nw">15&nbsp;Oct</span></td><td class="num" data-label="At least">at least<br>$1,479.57</td><td class="num" data-label="At most">at most<br>$49.42</td></tr>
+                </tfoot>
+              </table>
+            </div>
+            <p>Dates in UTC, from a task's first recorded step to its merge into the main line. At least: the API list price; at most: the subscription share. The share for Closes the epic is from a week still open.</p>
+          </details>
+
+          <details class="provenance">
+            <summary>How the prices were counted</summary>
+            <p><b>At least, at API list prices</b>: DreamTeam's own record of each step's tokens, plus the helper agents it missed, recovered from the session files, at Anthropic's list prices in force when the work ran. <b>At most, our subscription share</b>: a row's part of each account-week it ran in, × $28.85 a seat-week ($125 a month × 12 ÷ 52); an upper bound, since one account was also used outside Claude Code, one week's files had lost messages, and one week was still open.</p>
+          </details>
+
+          <details class="provenance">
+            <summary>The 20 connections between the epic's tasks, and their reasons</summary>
+            <div class="table-wrap">
+              <table class="data stacked">
+                <caption class="visually-hidden">The 20 connections between the epic's tasks, and their reasons</caption>
+                <thead><tr><th scope="col">Task</th><th scope="col">Waits for</th><th scope="col">Kind</th><th scope="col">Why</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Checks task text <span class="nw">(T-699)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">It reads the dependency record, and its list of accepted exceptions, to sort what it finds.</td></tr>
+                  <tr><th scope="row">Checks task text <span class="nw">(T-699)</span></th><td data-label="Waits for">Board checks <span class="nw">(T-701)</span></td><td data-label="Kind">would collide</td><td data-label="Why">Both change the same checking tool in different places; no order, but not at the same time.</td></tr>
+                  <tr><th scope="row">New-task rules <span class="nw">(T-700)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">Its rules tell people to fill in a Dependencies column that the spreadsheet import must already accept.</td></tr>
+                  <tr><th scope="row">New-task rules <span class="nw">(T-700)</span></th><td data-label="Waits for">Unmet needs <span class="nw">(T-705)</span></td><td data-label="Kind">would collide</td><td data-label="Why">Both edit the brainstorm pipeline's steps and the same rules files; no order between them.</td></tr>
+                  <tr><th scope="row">Board checks <span class="nw">(T-701)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">It shows, checks and counts the dependency record, and reads the switch added with it, which decides whether a missing record gets a warning or a refusal.</td></tr>
+                  <tr><th scope="row">Proposes records <span class="nw">(T-702)</span></th><td data-label="Waits for">Checks task text <span class="nw">(T-699)</span></td><td data-label="Kind">needs output</td><td data-label="Why">It reuses two parts the text checker builds: the one that finds ordering words and the one that sorts findings.</td></tr>
+                  <tr><th scope="row">Proposes records <span class="nw">(T-702)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">It writes dependency records only through the edit command that Dependency record teaches to write them.</td></tr>
+                  <tr><th scope="row">Fills open tasks <span class="nw">(T-703)</span></th><td data-label="Waits for">Proposes records <span class="nw">(T-702)</span></td><td data-label="Kind">build order</td><td data-label="Why">It runs the proposing tool and writes through it.</td></tr>
+                  <tr><th scope="row">Record required <span class="nw">(T-704)</span></th><td data-label="Waits for">Fills open tasks <span class="nw">(T-703)</span></td><td data-label="Kind">build order</td><td data-label="Why">The board must not refuse tasks without a dependency record before the open tasks have one.</td></tr>
+                  <tr><th scope="row">Record required <span class="nw">(T-704)</span></th><td data-label="Waits for">Board checks <span class="nw">(T-701)</span></td><td data-label="Kind">build order</td><td data-label="Why">Two checks from Board checks turn on with the switch this task flips; it verifies both afterwards.</td></tr>
+                  <tr><th scope="row">Unmet needs <span class="nw">(T-705)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">The dependency record's “needs” field exists after Dependency record; this task makes it work and adds “provides”.</td></tr>
+                  <tr><th scope="row">Unmet needs <span class="nw">(T-705)</span></th><td data-label="Waits for">Checks task text <span class="nw">(T-699)</span></td><td data-label="Kind">build order</td><td data-label="Why">Its report of needs that no task provides is part of the text checker.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Dependency record <span class="nw">(T-707)</span></td><td data-label="Kind">build order</td><td data-label="Why">It re-checks the dependency record and the ID list derived from it.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Checks task text <span class="nw">(T-699)</span></td><td data-label="Kind">build order</td><td data-label="Why">The text checker's strict run is evidence for two of the epic's promised outcomes.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">New-task rules <span class="nw">(T-700)</span></td><td data-label="Kind">build order</td><td data-label="Why">It checks every place where tasks are created for the new rules.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Board checks <span class="nw">(T-701)</span></td><td data-label="Kind">build order</td><td data-label="Why">It inspects what Board checks adds: the dependency section in each task contract, a board check, and a mark on tasks that would collide.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Proposes records <span class="nw">(T-702)</span></td><td data-label="Kind">build order</td><td data-label="Why">The proposing tool's reports are its audit trail.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Fills open tasks <span class="nw">(T-703)</span></td><td data-label="Kind">build order</td><td data-label="Why">It grades the board after the open tasks are filled in.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Record required <span class="nw">(T-704)</span></td><td data-label="Kind">build order</td><td data-label="Why">One of the epic's promised outcomes can't pass until the dependency record is required.</td></tr>
+                  <tr><th scope="row">Closes the epic <span class="nw">(T-706)</span></th><td data-label="Waits for">Unmet needs <span class="nw">(T-705)</span></td><td data-label="Kind">build order</td><td data-label="Why">It grades the needs-and-provides behavior.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The nine planned tasks' 20 links, as the dependency record first wrote them. Not drawn: links added after the plan — Board checks waiting for New-task rules, by the engineer's ruling on 19&nbsp;September, and those to the five later tasks.</p>
+          </details>
+
+          <details class="provenance">
+            <summary>Who checked, and at which commits</summary>
+            <div class="table-wrap">
+              <table class="data stacked">
+                <caption class="visually-hidden">Who checked, and at which commits</caption>
+                <thead><tr><th scope="col">Check</th><th scope="col">Who</th><th scope="col">When</th><th scope="col">At</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Each task's review and tests</th><td data-label="Who">Each of the 14 tasks passed a reviewer agent and a tester before it closed; four were sent back at code review, and three had a test run end in FAIL, before they passed</td><td data-label="When"><span class="nw">19&nbsp;Sep</span> – <span class="nw">14&nbsp;Oct</span></td><td data-label="At">—</td></tr>
+                  <tr><th scope="row">The plan</th><td data-label="Who">Three read-only reviewer agents, which all asked for changes before the engineer approved it</td><td data-label="When"><span class="nw">17&nbsp;Sep</span></td><td data-label="At">the brainstorm's plan</td></tr>
+                  <tr><th scope="row">First grade</th><td data-label="Who">One fresh reviewer agent with no role in any of the epic's tasks; read-only; all eight outcomes</td><td data-label="When"><span class="nw">14&nbsp;Oct</span></td><td data-label="At">the main line's <code>a967a919d</code></td></tr>
+                  <tr><th scope="row">Re-grade</th><td data-label="Who">Another fresh reviewer agent, which wrote none of the fix; read-only; the two fails</td><td data-label="When"><span class="nw">14&nbsp;Oct</span></td><td data-label="At">the closing task's <code>335c2bc6c</code>, based on the main line's <code>ae9bd1943</code></td></tr>
+                  <tr><th scope="row">Validation</th><td data-label="Who">Two more fresh reviewer agents; one asked to correct statements that overreached; no grade changed</td><td data-label="When"><span class="nw">14&nbsp;Oct</span></td><td data-label="At">the closing task's branch</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The agent that runs the work briefed the graders; it ran two of the epic's tasks itself and wrote no grade. Every grader and validator was the same reviewer agent definition, each time in a fresh context; no person graded.</p>
+            <p>One catch by review: in Fills open tasks, one batch had overwritten a link that another change added meanwhile; the reviewer caught it, and the link was restored.</p>
+          </details>
+
+          <details class="provenance">
+            <summary>What each narrow outcome lacks</summary>
+            <div class="table-wrap">
+              <table class="data stacked">
+                <caption class="visually-hidden">What each narrow outcome lacks</caption>
+                <thead><tr><th scope="col">Outcome</th><th scope="col">What its evidence lacks</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">A real example reads right on the board</th><td data-label="What its evidence lacks">Its first example was copied from a test's practice board, and its tasks had all finished. The rewrite names the board at one past commit, which has moved on, and the task held back had other open waits too. The re-grader: “a pass by substitution”</td></tr>
+                  <tr><th scope="row">A task can name a need beyond its links</th><td data-label="What its evidence lacks">Works on practice boards, small boards built only for a test; no real task uses it yet</td></tr>
+                  <tr><th scope="row">A matched need becomes a real link</th><td data-label="What its evidence lacks">Works on practice boards; no real need exists yet</td></tr>
+                  <tr><th scope="row">The task's contract agrees with the board</th><td data-label="What its evidence lacks">New contracts only; an import can skip the check; the automated checks drop the warning; it compares task ids one way. Its fix's test run came one commit before its last test</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>For the two practice-board outcomes, think of a fire alarm that works in a test building: no fire has happened in the real one yet.</p>
+          </details>
+
+          <details class="provenance">
+            <summary>What the checks do not catch</summary>
+            <div class="table-wrap">
+              <table class="data stacked">
+                <caption class="visually-hidden">What the checks do not catch</caption>
+                <thead><tr><th scope="col">Check</th><th scope="col">What it does not catch</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">The text checker</th><td data-label="What it does not catch">One of its rules is a heuristic with known misses; it reads the board at one moment. Every exception it accepts carries a written reason</td></tr>
+                  <tr><th scope="row">The rule wherever a task is born</th><td data-label="What it does not catch">Shown by its text being there, not by watching agents work</td></tr>
+                  <tr><th scope="row">Collision marks and holding back</th><td data-label="What it does not catch">One report section shows no collision mark; no permanent test yet covers a task held back</td></tr>
+                  <tr><th scope="row">The refusal</th><td data-label="What it does not catch">At its task's close, no test checked that a dry run is refused</td></tr>
+                  <tr><th scope="row">Ready only with a dependencies section</th><td data-label="What it does not catch">An import sets a task ready without the check, and one override flag skips it; the board-wide check that would catch it runs for planned rows only, by hand, not in CI</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="provenance">
+            <summary>Sources</summary>
+            <p>DreamTeam's records at the main line's commit <code>a1957023a</code>: the epic's closure note, its evidence for each grade, its showcase and its plan; the brainstorm's vision and log; each task's log and merge record. The grades at <code>a967a919d</code> and <code>335c2bc6c</code>; the worked example at <code>ae9bd1943</code>. The prices: our evidence register, counted from each row's records and session files.</p>
+            <p>The excerpts, word for word. Beside the problem: the engineer's words as DreamTeam's records quote him, a fragment, and the brainstorm's finding on seven kinds of ordering constraint. The record of links: a snapshot of the board at <code>ae9bd1943</code>, plain names added in brackets; the board kept Prove it, switch it on off its ready list while The publisher was open; it had other open waits too. The refusal: a dry-run import of a made-up practice row (<span class="nw">T-9999</span>), from the recorded demo of the task that turned refusal on; the terminal wrapped its line, and the record keeps the wrap; the breaks here are ours. The checker on 5&nbsp;October, before the restart's first change: “31 finding(s); 0 unsuppressed in the <span class="nw">--strict</span> set.” The first grader's line means the command a person runs printed no warning.</p>
+          </details>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
+      <nav aria-label="Footer">
+        <a href="../why.html">Why DreamTeam?</a>
+        <a href="../benefits.html">Benefits</a>
+        <a href="../lifecycle.html">The Life Cycle</a>
+        <a href="../program.html">Your Dream Team in 8 weeks</a>
+        <a href="index.html">Lab notes</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+    </div>
+  </footer>
+</body>
+</html>
