@@ -31,8 +31,13 @@
     .pg-first .more { margin-top: 16px; }
     .pg-first .ig-rec { max-width: none; }
     .pg-first .stack { margin-top: 8px; }
-    /* V1: the wide drawing and its key from 1024; below, the strip carries them and the figure keeps its caption */
-    .pg-ov .ig-frame, .pg-ov .ig-legend { display: none; }
+    /* V1: the chapter menu in the frame (as Epic, Dependencies and Task); from 1024 its detail, the six-stage drawing
+       with its key 12 below, then the Open line; below 1024 the menu and the Open line only (the head's strip carries the
+       stages, and the caption, which describes them, is hidden) */
+    .pg-ov .ig-detail > .ig-legend { margin-top: 12px; }
+    @media (max-width: 1023px) { .pg-ov :is(.ig-detail, .ig-lc-pointer, figcaption) { display: none; } }
+    /* Below 1024 the Open line keeps only the link to the whole Life Cycle (the menu above carries the rest) */
+    @media (max-width: 1023px) { .pg-ov .ig-lc-ways > a:not(:last-child) { display: none; } }
     /* The stages: the benefit line with its fold under the h2, the figure (its record card inside the frame), the
        text, then the way back up */
     .stack > p, .stack > .benefits { max-width: var(--col); }
@@ -42,16 +47,12 @@
     #leaves .proof-strip { max-width: var(--col); }
     #sp-sources ul { margin: 8px 0 0; padding-left: 20px; }
     #sp-sources li + li { margin-top: 4px; }
-    /* S3: the three task cards, then the waves 16 below, on the frame's left edge, the rule in text beside them from
+    /* S3: the four task cards, then the waves 16 below, on the frame's left edge, the rule in text beside them from
        1024 and under them below (so no ground stays empty beside the drawing) */
     .pg-s3-waves { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 48px; margin-top: 16px; }
     .pg-s3-waves > .ig-pic { margin-inline: 0; }
     .pg-s3-rule { flex: 1 1 20rem; max-width: var(--col); }
     .pg-s3-rule > * + * { margin-top: 4px; }
-    @media (min-width: 1024px) {
-      .pg-ov .ig-frame { display: block; }
-      .pg-ov .ig-legend { display: flex; }
-    }
   </style>
 </head>
 <body>
@@ -118,8 +119,23 @@
        </div>
       </div>
       <div class="wrap stack">
-        <figure class="ig pg-ov" aria-labelledby="v1-cap">
+        <figure class="ig pg-ov ig-lc-fig" aria-labelledby="v1-cap">
           <div class="ig-frame bp">
+            <nav class="ig-lc is-b" aria-label="The Dream Team Life Cycle">
+              <ol class="ig-lc-list">
+                <li class="ig-lc-bs"><a class="ig-lc-link" href="brainstorm.html" aria-current="page"><span class="ig-lc-w">Brainstorm</span><span class="visually-hidden">, you are here</span></a><span class="ig-lc-pointer" aria-hidden="true"></span></li>
+                <li class="ig-lc-epic"><a class="ig-lc-link is-epic" href="epic.html"><span class="ig-lc-w">Epic</span></a>
+                  <ol class="ig-lc-in">
+                    <li class="ig-lc-tasks"><a class="ig-lc-link" href="dependencies.html"><span class="ig-lc-w">Tasks<span class="ig-lc-more2"> and their dependencies</span></span></a></li>
+                    <li class="ig-lc-one"><a class="ig-lc-link" href="task.html"><span class="ig-lc-w">One task<span class="ig-lc-more2">: init to close</span></span></a></li>
+                    <li class="ig-lc-close"><a class="ig-lc-link" href="epic.html#closing"><span class="ig-lc-w">Closing<span class="ig-lc-more"> the epic</span></span></a></li>
+                    <li class="ig-lc-yes"><span class="ig-lc-dia" aria-hidden="true"></span><span class="ig-lc-more">you confirm</span><span class="ig-lc-done"><span class="visually-hidden">, </span>done</span></li>
+                  </ol>
+                </li>
+              </ol>
+            </nav>
+            <div class="ig-detail">
+            <p class="ig-tag">Detail · the brainstorm</p>
             <svg class="ig-pic is-wide" width="920" height="132" viewBox="0 0 920 132" role="img" aria-labelledby="v1-t v1-d">
               <title id="v1-t">Six stages for a larger goal; your yes closes the first five.</title>
               <desc id="v1-d">Your idea, then six stages on one line: S1 Vision, S2 Design, S3 Draft plan, S4 Panel, S5 Plan and S6 Materialize, then the tasks created. On the line after each of S1 to S5, an amber diamond: you approve. Between S5 and S6, also on the line, a teal square with a tick: the check in code.</desc>
@@ -163,12 +179,12 @@
                 <text class="ig-name" x="920" y="108" text-anchor="end">Tasks created</text>
               </g>
             </svg>
-          </div>
-          <div class="ig-foot">
             <ul class="ig-legend" aria-label="Key">
               <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><polygon class="ig-dia" points="8,1 15,8 8,15 1,8"/></svg>you approve</li>
               <li><svg class="ig-glyph is-mark" viewBox="0 0 16 16" aria-hidden="true"><rect class="ig-check-bg" x="1" y="1" width="14" height="14"/><rect class="ig-check" x="1" y="1" width="14" height="14"/><path class="ig-check" d="M4.5 8 L7 10.5 L11.5 5.5"/></svg>check in code</li>
             </ul>
+            </div>
+            <p class="ig-lc-ways"><span class="ig-caps">Open</span><a href="epic.html">The epic</a><a href="dependencies.html">Tasks and their dependencies</a><a href="task.html">One task</a><a href="epic.html#closing">Closing the epic</a><a href="../lifecycle.html">The whole Life&nbsp;Cycle</a></p>
           </div>
           <figcaption id="v1-cap"><strong>Six stages for a larger goal; your yes closes the first five.</strong> Reviewer agents read the plan apart; every finding gets a decision; a blocker is deferred only with your sign-off; a script reads your approvals before tasks are written.</figcaption>
         </figure>
@@ -401,9 +417,9 @@
         <figure class="ig" aria-labelledby="v4-cap">
           <div class="ig-frame bp">
             <p class="ig-tag">Schematic</p>
-            <div class="ig-tasks">
+            <div class="ig-tasks is-2">
               <article class="ig-task" aria-label="Task A, a schematic example">
-                <div class="ig-task-head"><p class="ig-task-name">Task A</p><p class="ig-task-role">Backend developer</p></div>
+                <div class="ig-task-head"><p class="ig-task-key">Task A</p><p class="ig-task-name">Data</p><p class="ig-task-role">Backend developer</p></div>
                 <dl class="ig-task-dl">
                   <div><dt>Files</dt><dd><code>src/orders/store.py</code> · <code>tests/test_store.py</code></dd></div>
                   <div><dt>Criteria</dt><dd><ol><li>Every order is saved with its id and time.</li><li>A saved order reads back unchanged.</li></ol></dd></div>
@@ -412,57 +428,72 @@
                 </dl>
               </article>
               <article class="ig-task" aria-label="Task B, a schematic example">
-                <div class="ig-task-head"><p class="ig-task-name">Task B</p><p class="ig-task-role">Backend developer</p></div>
+                <div class="ig-task-head"><p class="ig-task-key">Task B</p><p class="ig-task-name">Auth</p><p class="ig-task-role">Backend developer</p></div>
                 <dl class="ig-task-dl">
-                  <div><dt>Files</dt><dd><code>src/orders/export.py</code> · <code>src/orders/__init__.py</code></dd></div>
-                  <div><dt>Criteria</dt><dd><ol><li>Every order is exported as one CSV row.</li><li>An empty store exports the header only.</li></ol></dd></div>
+                  <div><dt>Files</dt><dd><code>src/auth/session.py</code> · <code>tests/test_session.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>A signed-in user gets a session.</li><li>An expired session is refused.</li></ol></dd></div>
+                  <div><dt>Confidence</dt><dd>Medium-High — how long a session lasts is still open.</dd></div>
+                  <div><dt>Depends on</dt><dd><p class="ig-task-none">none · why: it builds on no other task.</p></dd></div>
+                </dl>
+              </article>
+              <article class="ig-task" aria-label="Task D, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-key">Task D</p><p class="ig-task-name">Import</p><p class="ig-task-role">Backend developer</p></div>
+                <dl class="ig-task-dl">
+                  <div><dt>Files</dt><dd><code>src/orders/import_csv.py</code> · <code>src/orders/__init__.py</code> · <code>tests/test_import_csv.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>Every row of a CSV file becomes one order.</li><li>A row with no id is reported, not saved.</li></ol></dd></div>
                   <div><dt>Confidence</dt><dd>High — one module, its tests named.</dd></div>
                   <div><dt>Depends on</dt><dd>
-                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on A · build order</b><span>why: must land after A's schema change.</span></div></div>
-                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with C · would collide</b><span>why: both edit the package file.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-build" d="M2 6 H38" marker-end="url(#ig-mk-build)"/></svg><div><b>on A · build order</b><span>why: it imports into the store Task A creates.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with E · would collide</b><span>why: both change the order file format.</span></div></div>
                   </dd></div>
                 </dl>
               </article>
-              <article class="ig-task" aria-label="Task C, a schematic example">
-                <div class="ig-task-head"><p class="ig-task-name">Task C</p><p class="ig-task-role">Backend developer</p></div>
+              <article class="ig-task" aria-label="Task E, a schematic example">
+                <div class="ig-task-head"><p class="ig-task-key">Task E</p><p class="ig-task-name">Export</p><p class="ig-task-role">Backend developer</p></div>
                 <dl class="ig-task-dl">
-                  <div><dt>Files</dt><dd><code>src/orders/search.py</code> · <code>src/orders/__init__.py</code></dd></div>
-                  <div><dt>Criteria</dt><dd><ol><li>Orders are found by customer or by date.</li><li>A search with no match returns an empty list.</li></ol></dd></div>
-                  <div><dt>Confidence</dt><dd>Medium-High — one query is still open.</dd></div>
+                  <div><dt>Files</dt><dd><code>src/orders/export.py</code> · <code>src/orders/__init__.py</code> · <code>tests/test_export.py</code></dd></div>
+                  <div><dt>Criteria</dt><dd><ol><li>Every order is exported as one CSV row.</li><li>An empty store exports the header only.</li></ol></dd></div>
+                  <div><dt>Confidence</dt><dd>High — one module, its tests named.</dd></div>
                   <div><dt>Depends on</dt><dd>
-                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg><div><b>on A · needs an output</b><span>why: it reads the order index A writes.</span></div></div>
-                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with B · would collide</b><span>why: both edit the package file.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-need" d="M2 6 H38" marker-end="url(#ig-mk-need)"/></svg><div><b>on B · needs an output</b><span>why: it reads the session Task B issues.</span></div></div>
+                    <div class="ig-task-dep"><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg><div><b>with D · would collide</b><span>why: both change the order file format.</span></div></div>
                   </dd></div>
                 </dl>
               </article>
             </div>
             <div class="pg-s3-waves">
-              <svg class="ig-pic is-wide" width="362" height="128" viewBox="-1 0 362 128" role="img" aria-labelledby="v4-t v4-d">
-                <title id="v4-t">Task A in wave 0; tasks B and C in wave 1.</title>
-                <desc id="v4-d">Two waves. Wave 0: task A. Wave 1: task B, which waits for A, build order; and task C, which needs an output from A. B and C would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
+              <svg class="ig-pic is-wide" width="362" height="154" viewBox="-1 -1 362 154" role="img" aria-labelledby="v4-t v4-d">
+                <title id="v4-t">Tasks A and B in wave 0; tasks D and E in wave 1.</title>
+                <desc id="v4-d">Two waves. Wave 0: task A and task B. Wave 1: task D, which waits for A, build order; and task E, which needs an output from B. D and E would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
                 <g aria-hidden="true">
-                  <text class="ig-caps" x="0" y="10">WAVE 0</text>
-                  <text class="ig-caps" x="240" y="10">WAVE 1</text>
-                  <path class="ig-l-build" d="M120 52 H180 V36 H240" marker-end="url(#ig-mk-build)"/>
-                  <path class="ig-l-need" d="M120 68 H180 V100 H240" marker-end="url(#ig-mk-need)"/>
-                  <rect class="ig-task-box" x="0" y="40" width="120" height="40"/><path class="ig-task-top" d="M0 40 H120"/><text class="ig-name" x="60" y="65" text-anchor="middle">Task A</text>
-                  <rect class="ig-task-box" x="240" y="16" width="120" height="40"/><path class="ig-task-top" d="M240 16 H360"/><text class="ig-name" x="300" y="41" text-anchor="middle">Task B</text>
-                  <rect class="ig-task-box" x="240" y="80" width="120" height="40"/><path class="ig-task-top" d="M240 80 H360"/><text class="ig-name" x="300" y="105" text-anchor="middle">Task C</text>
-                  <path class="ig-l-collide" d="M300 56 V80" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                  <text class="ig-caps" x="0" y="36">WAVE 0</text>
+                  <text class="ig-caps" x="0" y="124">WAVE 1</text>
+                  <rect class="ig-band" x="96" y="0" width="264" height="64"/>
+                  <rect class="ig-band" x="96" y="88" width="264" height="64"/>
+                  <path class="ig-l-build" d="M156 56 V96" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M300 56 V96" marker-end="url(#ig-mk-need)"/>
+                  <rect class="ig-task-box" x="96" y="8" width="120" height="48"/><path class="ig-task-top" d="M96 8 H216"/><text class="ig-box-key" x="108" y="26">Task A</text><text class="ig-name" x="108" y="46">Data</text>
+                  <rect class="ig-task-box" x="240" y="8" width="120" height="48"/><path class="ig-task-top" d="M240 8 H360"/><text class="ig-box-key" x="252" y="26">Task B</text><text class="ig-name" x="252" y="46">Auth</text>
+                  <rect class="ig-task-box" x="96" y="96" width="120" height="48"/><path class="ig-task-top" d="M96 96 H216"/><text class="ig-box-key" x="108" y="114">Task D</text><text class="ig-name" x="108" y="134">Import</text>
+                  <rect class="ig-task-box" x="240" y="96" width="120" height="48"/><path class="ig-task-top" d="M240 96 H360"/><text class="ig-box-key" x="252" y="114">Task E</text><text class="ig-name" x="252" y="134">Export</text>
+                  <path class="ig-l-collide" d="M216 120 H240" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
                 </g>
               </svg>
-              <svg class="ig-pic is-narrow" width="288" height="128" viewBox="-1 0 288 128" role="img" aria-labelledby="v4n-t v4n-d">
-                <title id="v4n-t">Task A in wave 0; tasks B and C in wave 1.</title>
-                <desc id="v4n-d">Two waves. Wave 0: task A. Wave 1: task B, which waits for A, build order; and task C, which needs an output from A. B and C would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
+              <svg class="ig-pic is-narrow" width="288" height="198" viewBox="-1 -1 288 198" role="img" aria-labelledby="v4n-t v4n-d">
+                <title id="v4n-t">Tasks A and B in wave 0; tasks D and E in wave 1.</title>
+                <desc id="v4n-d">Two waves. Wave 0: task A and task B. Wave 1: task D, which waits for A, build order; and task E, which needs an output from B. D and E would collide: that never orders the work, and it is flagged if one starts while the other runs.</desc>
                 <g aria-hidden="true">
-                  <text class="ig-caps" x="0" y="10">WAVE 0</text>
-                  <text class="ig-caps" x="168" y="10">WAVE 1</text>
-                  <path class="ig-l-build" d="M96 52 H132 V36 H168" marker-end="url(#ig-mk-build)"/>
-                  <path class="ig-l-need" d="M96 68 H132 V100 H168" marker-end="url(#ig-mk-need)"/>
-                  <rect class="ig-task-box" x="0" y="40" width="96" height="40"/><path class="ig-task-top" d="M0 40 H96"/><text class="ig-name" x="48" y="65" text-anchor="middle">Task A</text>
-                  <rect class="ig-task-box" x="168" y="16" width="96" height="40"/><path class="ig-task-top" d="M168 16 H264"/><text class="ig-name" x="216" y="41" text-anchor="middle">Task B</text>
-                  <rect class="ig-task-box" x="168" y="80" width="96" height="40"/><path class="ig-task-top" d="M168 80 H264"/><text class="ig-name" x="216" y="105" text-anchor="middle">Task C</text>
-                  <path class="ig-l-collide" d="M216 56 V80" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
+                  <text class="ig-caps" x="12" y="16">WAVE 0</text>
+                  <text class="ig-caps" x="12" y="124">WAVE 1</text>
+                  <rect class="ig-band" x="12" y="24" width="264" height="64"/>
+                  <rect class="ig-band" x="12" y="132" width="264" height="64"/>
+                  <path class="ig-l-build" d="M96 80 V140" marker-end="url(#ig-mk-build)"/>
+                  <path class="ig-l-need" d="M216 80 V140" marker-end="url(#ig-mk-need)"/>
+                  <rect class="ig-task-box" x="12" y="32" width="120" height="48"/><path class="ig-task-top" d="M12 32 H132"/><text class="ig-box-key" x="24" y="50">Task A</text><text class="ig-name" x="24" y="70">Data</text>
+                  <rect class="ig-task-box" x="156" y="32" width="120" height="48"/><path class="ig-task-top" d="M156 32 H276"/><text class="ig-box-key" x="168" y="50">Task B</text><text class="ig-name" x="168" y="70">Auth</text>
+                  <rect class="ig-task-box" x="12" y="140" width="120" height="48"/><path class="ig-task-top" d="M12 140 H132"/><text class="ig-box-key" x="24" y="158">Task D</text><text class="ig-name" x="24" y="178">Import</text>
+                  <rect class="ig-task-box" x="156" y="140" width="120" height="48"/><path class="ig-task-top" d="M156 140 H276"/><text class="ig-box-key" x="168" y="158">Task E</text><text class="ig-name" x="168" y="178">Export</text>
+                  <path class="ig-l-collide" d="M132 164 H156" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/>
                 </g>
               </svg>
               <div class="pg-s3-rule">
@@ -483,7 +514,7 @@
               <li><svg class="ig-glyph" viewBox="0 0 40 12" aria-hidden="true"><path class="ig-l-collide" d="M6 6 H34" marker-start="url(#ig-mk-dot)" marker-end="url(#ig-mk-dot)"/></svg>would collide</li>
             </ul>
           </div>
-          <figcaption id="v4-cap"><strong>Three tasks of a draft plan, and the waves their links set.</strong> The tasks are invented; the card is <span class="tid">BS-117</span>'s own draft-plan approval.</figcaption>
+          <figcaption id="v4-cap"><strong>Four tasks of a draft plan, and the waves their links set.</strong> They are four of the tasks in S5's plan, with its letters. The tasks are invented; the approval line is <span class="tid">BS-117</span>'s own.</figcaption>
         </figure>
 
         <p>The <strong>draft plan</strong> breaks the design into tasks like those above. <strong>Acceptance criteria</strong> are the conditions of done, written to be copied word for word into the task.</p>
@@ -917,7 +948,7 @@
         <p><strong>The cost:</strong> each stage takes a conversation, and the panel takes agent time; it pays off where rework costs more.</p>
         <p>The worked example, one real brainstorm from start to end: <a href="../notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a>.</p>
         <a class="proof-strip" href="../notes/anatomy-of-one-task.html"><span class="task-id">T-707</span><span><span class="ps-title">Anatomy of one task</span><span class="ps-text"><span class="tid">BS-117</span>'s first planned task, from plan to merge.</span></span><span class="arr" aria-hidden="true">→</span></a>
-        <p class="more"><a href="../lifecycle.html">How DreamTeam runs each task, from its start to the result you approve <span aria-hidden="true">→</span></a></p>
+        <p class="more"><a href="../lifecycle.html">The whole method, from this brainstorm to the epic's close: The Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
