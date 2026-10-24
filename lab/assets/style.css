@@ -2334,6 +2334,85 @@ main.is-lc .stack > h3 { font-size: var(--fs-h3); line-height: 1.15; letter-spac
 .lc-chip { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 2px; background: var(--panel); color: var(--accent); font: 600 var(--t-text)/1.25 var(--body); text-decoration: none; }
 .lc-chip:hover { background: var(--wash-solid); text-decoration: underline; }
 
+.hero.hero-story { padding: 16px 0 48px; }
+@media (min-width: 768px) { .hero.hero-story { padding-top: 24px; } }
+@media (min-width: 1024px) { .hero.hero-story { padding: 24px 0 56px; } }
+.hero-story > .wrap { display: grid; grid-template-columns: minmax(0, var(--col)); align-items: start; }
+.hero-story > .wrap > * { min-width: 0; }
+.hero-story h1.is-hero { overflow-wrap: normal; }
+.hero-story .bn-sub + .hero-actions { margin-top: 24px; }
+.hero-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+.hero-story .btn-primary + .btn-ghost { margin-top: 12px; }
+.hero-story .btn { justify-self: stretch; }
+@media (min-width: 560px) and (max-width: 1179px) {
+  .hero-story .btn { justify-self: start; }
+}
+.btn-label { min-width: 0; }
+.btn-label .arr { margin-left: 10px; }
+.hero-story .story { margin-top: 24px; }
+@media (min-width: 1180px) {
+  .hero-story > .wrap {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas:
+      "title figure"
+      "sub figure"
+      "actions figure";
+    column-gap: 56px;
+    align-items: center;
+  }
+  .hero-story h1.is-hero { grid-area: title; }
+  .hero-story .bn-sub { grid-area: sub; }
+  .hero-story .hero-actions { grid-area: actions; }
+  .hero-story .story { grid-area: figure; margin-top: 0; }
+}
+
+section.routes { padding: 0 0 48px; }
+div.routes { border-top: 2px solid var(--accent); border-bottom: 1px solid var(--rule); }
+.routes-list { display: grid; grid-template-columns: minmax(0, 1fr); list-style: none; margin: 0; padding: 0; }
+.route { min-width: 0; padding: 16px 0; }
+.route + .route { border-top: 1px solid var(--line); }
+.route-name { font: 600 var(--t-title)/1.25 var(--head); color: var(--ink); text-wrap: balance; }
+.route-body { margin-top: 12px; }
+.route-body > :first-child { margin-top: 0; }
+.route-say { font: 400 var(--t-text)/1.5 var(--body); color: var(--ink); text-wrap: pretty; }
+@media (min-width: 560px) { .route-s { display: block; } }
+.route-s { text-wrap: balance; }
+.route-links { text-wrap: balance; }
+.route-links { font: 400 var(--t-text)/1.5 var(--body); color: var(--ink); }
+.route-links a { white-space: nowrap; }
+.route-links .sep { color: var(--muted); }
+.route-links.is-examples { margin-top: 4px; }
+.route-k { color: var(--muted); }
+.route-go { display: block; width: fit-content; max-width: 100%; margin-top: 12px; font: 600 var(--t-text)/1.5 var(--body); white-space: nowrap; }
+.routes-foot { padding: 16px 0; border-top: 1px solid var(--line); }
+.routes-fact { max-width: var(--col); font: 400 var(--t-text)/1.5 var(--body); color: var(--muted); text-wrap: pretty; }
+.routes-fact strong { color: var(--ink); }
+.routes-fact + .routes-fact { margin-top: 8px; }
+.routes-fact a strong { color: inherit; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .route { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); column-gap: 24px; align-items: baseline; }
+  .route-body { margin-top: 0; }
+}
+@media (min-width: 1024px) {
+  section.routes { padding-bottom: 56px; }
+  .routes-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .route { display: flex; flex-direction: column; }
+  .route + .route { border-top: 0; border-left: 1px solid var(--line); padding-left: 16px; }
+  .route:not(:last-child) { padding-right: 16px; }
+  .route-body { flex: 1 1 auto; display: flex; flex-direction: column; align-items: flex-start; }
+  .route-body > .route-go { margin-top: auto; padding-top: 12px; }
+  .route-body > .route-go:first-child { padding-top: 0; }
+  .routes-foot { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; }
+  .routes-fact { grid-column: 1 / span 2; max-width: none; padding: 16px 16px 16px 0; }
+  .routes-fact + .routes-fact { grid-column: 3; margin-top: 0; padding: 16px 0 16px 16px; border-left: 1px solid var(--line); }
+}
+@media (min-width: 1180px) {
+  .route + .route { padding-left: 24px; }
+  .route:not(:last-child) { padding-right: 24px; }
+  .routes-fact { padding-right: 24px; }
+  .routes-fact + .routes-fact { padding-left: 24px; padding-right: 0; }
+}
+
 
 :root {
   --dur-1: 100ms;
@@ -2433,6 +2512,13 @@ h1.is-hero { max-width: var(--col); font: 700 var(--fs-hero)/1.05 var(--head); l
 .story-pulse { fill: none; stroke: var(--amber); stroke-width: 3; stroke-linecap: butt; stroke-dasharray: 20 100; stroke-dashoffset: 20; opacity: 0; }
 .story-spark { fill: var(--amber); opacity: 0; }
 .story-task, .story-out-part { opacity: 1; }
+.ig-pic.is-wide .cycle-beat { font-size: 26px; }
+.ig-pic.is-narrow .cycle-beat { font-size: 24px; }
+.story-act-dia { fill: var(--panel); stroke: var(--muted); stroke-width: 2; }
+.story-act-fill { stroke-width: 2; opacity: 1; }
+.story-act-fill.is-1, .story-act-fill.is-3 { fill: var(--amber); stroke: var(--amber); }
+.story-act-fill.is-2 { fill: var(--accent); stroke: var(--accent); }
+.story-to-users { opacity: 1; }
 
 .cycle-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 32px; margin-bottom: 12px; }
 .cycle-pulse { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: butt; stroke-dasharray: 24 976; opacity: 0; }
@@ -3877,6 +3963,34 @@ figure.ig.motion.deck-window > .ig-frame { padding: 16px; }
     96.6667% { transform: translate(0px, -48px); animation-timing-function: linear; }
     100% { transform: translate(0px, 0px); }
   }
+  @keyframes story--story-act-fill-is-1 {
+    0% { opacity: 0; }
+    2.5% { opacity: 0; }
+    4.5833% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story--story-act-fill-is-2 {
+    0% { opacity: 0; }
+    14.1667% { opacity: 0; }
+    16.25% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story--story-act-fill-is-3 {
+    0% { opacity: 0; }
+    75.8333% { opacity: 0; }
+    77.9167% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story--story-to-users {
+    0% { opacity: 0; }
+    75.8333% { opacity: 0; }
+    77.9167% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
   .motion[data-motion~="story"] .is-wide .story-lit {
     animation-name: story--story-lit;
     animation-duration: 12s;
@@ -4033,6 +4147,38 @@ figure.ig.motion.deck-window > .ig-frame { padding: 16px; }
     animation-name: story--story-ship--linear, story--story-ship--transform;
     animation-duration: 12s;
     animation-timing-function: linear, linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story"] .is-wide .story-act-fill.is-1 {
+    animation-name: story--story-act-fill-is-1;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story"] .is-wide .story-act-fill.is-2 {
+    animation-name: story--story-act-fill-is-2;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story"] .is-wide .story-act-fill.is-3 {
+    animation-name: story--story-act-fill-is-3;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story"] .is-wide .story-to-users {
+    animation-name: story--story-to-users;
+    animation-duration: 12s;
+    animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
@@ -4258,6 +4404,34 @@ figure.ig.motion.deck-window > .ig-frame { padding: 16px; }
     96.6667% { transform: translate(0px, 48px); animation-timing-function: linear; }
     100% { transform: translate(0px, 0px); }
   }
+  @keyframes story-narrow--story-act-fill-is-1--n {
+    0% { opacity: 0; }
+    2.5% { opacity: 0; }
+    4.5833% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story-narrow--story-act-fill-is-2--n {
+    0% { opacity: 0; }
+    14.1667% { opacity: 0; }
+    16.25% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story-narrow--story-act-fill-is-3--n {
+    0% { opacity: 0; }
+    75.8333% { opacity: 0; }
+    77.9167% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes story-narrow--story-to-users--n {
+    0% { opacity: 0; }
+    75.8333% { opacity: 0; }
+    77.9167% { opacity: 1; }
+    96.6667% { opacity: 1; }
+    100% { opacity: 0; }
+  }
   .motion[data-motion~="story-narrow"] .is-narrow .story-lit {
     animation-name: story-narrow--story-lit--n;
     animation-duration: 12s;
@@ -4406,6 +4580,38 @@ figure.ig.motion.deck-window > .ig-frame { padding: 16px; }
     animation-name: story-narrow--story-ship--linear--n, story-narrow--story-ship--transform--n;
     animation-duration: 12s;
     animation-timing-function: linear, linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story-narrow"] .is-narrow .story-act-fill.is-1 {
+    animation-name: story-narrow--story-act-fill-is-1--n;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story-narrow"] .is-narrow .story-act-fill.is-2 {
+    animation-name: story-narrow--story-act-fill-is-2--n;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story-narrow"] .is-narrow .story-act-fill.is-3 {
+    animation-name: story-narrow--story-act-fill-is-3--n;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  .motion[data-motion~="story-narrow"] .is-narrow .story-to-users {
+    animation-name: story-narrow--story-to-users--n;
+    animation-duration: 12s;
+    animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;

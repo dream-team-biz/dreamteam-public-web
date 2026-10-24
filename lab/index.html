@@ -5,41 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>DreamTeam Lab — Give every engineer a dream team</title>
-  <meta name="description" content="An AI-driven software development cycle with humans in control. DreamTeam Lab builds DreamTeam, AI agents that do a software team's work while your engineers make the decisions, and runs it with your team as a pilot.">
-  <meta property="og:title" content="DreamTeam Lab — Give every engineer a dream team">
-  <meta property="og:description" content="An AI-driven software development cycle with humans in control. DreamTeam Lab builds DreamTeam, AI agents that do a software team's work while your engineers make the decisions, and runs it with your team as a pilot.">
+  <title>DreamTeam Lab — AI agents do the work; you approve what ships</title>
+  <meta name="description" content="The Dream Team Life Cycle: AI agents do a software team's work, and a person approves what ships. Learn the methodology, or set it up with our engineers.">
+  <meta property="og:title" content="DreamTeam Lab — AI agents do the work; you approve what ships">
+  <meta property="og:description" content="The Dream Team Life Cycle: AI agents do a software team's work, and a person approves what ships. Learn the methodology, or set it up with our engineers.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    /* Home's own layout. Its shared pieces (the task log, the result chips, the review card, the task schema and
-       the steps in a row) are in assets/style.css, section 19. Tokens only; mobile first. */
-
-    /* First screen: one button and one text link */
-    .hero-split .actions { align-items: center; gap: 12px 24px; }
-    .text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
-    .hero-log { min-width: 0; }
-
-    /* Two columns from 1024 px: the point on the left (5), its statement or picture on the right (7) */
-    .pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
-    .pair-text > * + * { margin-top: 16px; }
-    .pair-text > .sec-label + * { margin-top: 0; }
-    /* Section 02 (G3-A): the core cards, the T-687 card and the link, 24 px apart (variants-spec-r3.md §2); the fourth
-       card's second sentence 12 below its line, as vetted on the variants page */
-    .stack > h2 + .bn-core, .stack > .bn-core + .review-card, .stack > .review-card + .more { margin-top: 24px; }
-    .bn-core-line + .bf-why { margin-top: 12px; }
-
-    @media (min-width: 1024px) {
-      /* The log is taller than the head: the head and its actions stay at the top of the first screen */
-      .hero .hero-split { align-items: start; padding-top: 8px; }
-      .pair { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 56px; align-items: start; }
-      .pair.is-statement { align-items: start; }
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -54,278 +29,278 @@
         <a href="notes/index.html">Lab notes</a>
         <a href="about.html">About</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="#contact">Talk to us</a>
+      <a class="btn btn-primary header-cta" href="program.html">Talk to us</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-split">
-        <div>
-          <h1 id="hero-title">Give every engineer a dream&nbsp;team.</h1>
-          <p class="lead">DreamTeam Lab builds DreamTeam: AI agents that do a software team's work while your engineers make the decisions. Today we run it with your team, as a pilot.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a>
-            <a class="text-link" href="notes/anatomy-of-one-task.html">See one real task <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
-
-        <figure class="hero-log">
-          <div class="runlog is-replay frame">
-            <p class="runlog-head"><span><strong>T-707</strong> · our task board learns to say why a task waits</span><span>UTC</span></p>
-            <ol class="runlog-list" role="list" aria-label="The log of one DreamTeam task, T-707, from its first step to the merge, shortened" style="--mid:52.29%">
-              <li class="runlog-day" style="--i:0">18 September 2026 <span class="runlog-start"><span aria-hidden="true">· ▶</span> 13:19 the task starts</span></li>
-              <li class="runlog-row" style="--i:2; --l:.08%; --w:1.77%"><span class="t">13:20–13:42</span><span class="who">4 agents</span><span><span class="chip raise">CONCERNS</span></span><span class="note">team meeting: are we ready? 2 blockers</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:3; --l:22.96%; --wl:1.92%; --ww:21.04%"><span class="t">18:00</span><span class="who">engineer</span><span></span><span class="note">ready, with a design change</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-build" style="--i:4; --l:26.73%; --w:31.08%"><span class="t">18:46–01:07</span><span class="who">developer</span><span><span class="chip build">BUILT</span></span><span class="note">the feature, in three parts</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-day" style="--i:5">19 September 2026</li>
-              <li class="runlog-group" style="--i:6"><span aria-hidden="true">↻ </span>Review, fix and test · each review at most 2 rounds</li>
-              <li class="runlog-row in-group" style="--i:7; --l:58.50%; --w:1.84%"><span class="t">01:16–01:38</span><span class="who">reviewer</span><span><span class="chip pass">APPROVED</span></span><span class="note">the code, with 1 medium finding</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row in-group" style="--i:8; --l:60.35%; --w:.54%"><span class="t">01:38–01:45</span><span class="who">developer</span><span><span class="chip">FIXED</span></span><span class="note">the finding, with a test that failed first</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row in-group" style="--i:9; --l:60.89%; --w:3.83%"><span class="t">01:45–02:32</span><span class="who">tester</span><span><span class="chip pass">PASSED</span></span><span class="note">criteria checked against code; 0 failed</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row in-group" style="--i:10; --l:64.79%; --w:.58%"><span class="t">02:33–02:40</span><span class="who">reviewer</span><span><span class="chip changes">CHANGES</span></span><span class="note">sent the design documents back</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row in-group" style="--i:11; --l:65.38%; --w:.36%"><span class="t">02:40–02:44</span><span class="who">architect</span><span><span class="chip">FIXED</span></span><span class="note">the design documents</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row in-group" style="--i:12; --l:65.73%; --w:.49%"><span class="t">02:44–02:50</span><span class="who">reviewer</span><span><span class="chip pass">APPROVED</span></span><span class="note">the design, in round 2 of 2</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:13; --l:95.96%; --wl:67.03%; --ww:28.93%"><span class="t">08:54</span><span class="who">engineer</span><span></span><span class="note">started Finalize</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row" style="--i:14; --l:96.07%; --w:1.11%"><span class="t">08:56–09:09</span><span class="who">agents</span><span><span class="chip pass">PASSED</span></span><span class="note">Finalize: a last review, the demo replayed</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-human" style="--i:15; --l:97.43%; --wl:97.18%; --ww:.25%"><span class="t">09:12</span><span class="who">engineer</span><span></span><span class="note">approved the result, by starting Close</span><span class="runlog-bar" aria-hidden="true"></span></li>
-              <li class="runlog-row is-end" style="--i:16; --l:99.04%; --w:.96%"><span class="t">09:32–09:44</span><span class="who">GitHub</span><span><span class="chip">MERGED</span></span><span class="note">after 9 automated checks passed</span><span class="runlog-bar" aria-hidden="true"></span></li>
-            </ol>
-          </div>
-          <figcaption class="runlog-caption">One real task, replayed from DreamTeam's record and session transcripts, shortened. Each bar runs from the task's first step to the merge, to scale; the hairline is midnight. <span class="key-human">Amber: the engineer's decisions, and the wait before each.</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="problem-title">
-      <div class="wrap pair is-statement">
-        <div>
-          <p class="sec-label">01 · The problem</p>
-          <h2 id="problem-title">The traditional software process is broken.</h2>
-        </div>
-        <div class="pair-text">
-          <p class="lead">It was built for people who wrote and understood their own code. Now AI can write the code — and someone still has to understand it and answer for it.</p>
-          <p class="lead"><strong>AI-driven development isn't a tool you install.<br>It's a process you build.</strong></p>
-          <p class="more"><a href="why.html">Why DreamTeam? <span aria-hidden="true">→</span></a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="benefits-title">
-      <div class="wrap stack">
-        <p class="sec-label">02 · The core benefits</p>
-        <h2 id="benefits-title">A team behind every engineer, on record</h2>
-        <ul class="bn-core" role="list">
-          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect class="is-panel" x="10" y="3" width="15" height="11"/><rect class="is-panel" x="6.5" y="8.5" width="15" height="11"/><rect class="is-panel" x="3" y="14" width="15" height="11"/></svg><h3 class="bn-core-line">Each task gets the roles it needs, from architect to tester</h3></li>
-          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M3 4H17M3 8H12"/><path d="M5 11V17"/><path d="M5 20H23"/><rect class="is-panel" x="2" y="17" width="6" height="6"/><rect class="is-panel" x="11" y="17" width="6" height="6"/><polygon class="is-amber-fill" points="23,15.5 27.5,20 23,24.5 18.5,20"/></svg><h3 class="bn-core-line">A line of code leads back to its task and its decision</h3></li>
-          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M4 3H17L21 7V25H4Z"/><path d="M17 3V7H21"/><path d="M8 11H16M8 15H13"/><circle class="is-panel" cx="19" cy="19" r="4.5"/><path d="M22.2 22.2 26 26"/></svg><h3 class="bn-core-line">Agents find design mistakes in the contract before any code</h3></li>
-          <li class="bn-core-card"><svg class="bn-core-mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><polygon class="is-amber" points="14,3 25,14 14,25 3,14"/><polygon class="is-amber-fill" points="14,9.5 18.5,14 14,18.5 9.5,14"/></svg><h3 class="bn-core-line">A person decides on every task.</h3><p class="bf-why">Your own branch protection and required reviews apply, as you set them.</p></li>
-        </ul>
-
-        <figure class="review-card is-row" aria-labelledby="t687-title">
-          <figcaption class="review-card-head" id="t687-title"><span><strong>T-687</strong> · one readiness review</span><span>before any code</span></figcaption>
-          <ol class="findings" role="list">
-            <li class="finding">
-              <p class="finding-k"><span>Readiness review</span> <span class="chip raise">BLOCKED</span></p>
-              <p class="finding-point">As specified, the report would have rendered empty</p>
-              <p class="finding-detail">One of the four agents found it in the task's contract.</p>
-            </li>
-            <li class="finding is-human">
-              <p class="finding-k"><span>Engineer, at the gate</span></p>
-              <p class="finding-point">Changed the design before the build</p>
-              <p class="finding-detail">Two decisions at the gate shaped what was built.</p>
-            </li>
-          </ol>
-        </figure>
-        <p class="more"><a href="benefits.html">All benefits, by role <span aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="cycle-title">
-      <div class="wrap stack">
-        <p class="sec-label">03 · The life cycle</p>
-        <h2 id="cycle-title">The agents build. You decide.</h2>
-
-        <figure class="rchart bp is-schema" aria-labelledby="schema-cap">
-          <div class="rchart-grid">
-            <ol class="rchart-rail" role="list" aria-label="One task: four stages, and the engineer's three decisions between them" style="--rc-cols: 1.1fr .95fr 2.8fr .95fr 1.1fr 1.05fr 1.1fr .45fr">
-              <li class="rc-stop is-stage">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Init</span></div>
-                <div class="rc-who"><p class="rc-who-note">agents review the task contract</p></div>
-              </li>
-              <li class="rc-stop is-gate">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">The engineer decides:</span></div>
-                <div class="rc-who"><p class="rc-call">You confirm it's ready</p></div>
-              </li>
-              <li class="rc-stop is-stage is-run">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Run</span></div>
-                <div class="rc-who">
-                  <p class="run-chain"><span class="visually-hidden">Build, then review and fix, at most 2 rounds, then test.</span><span class="step is-build" aria-hidden="true">Build</span><span class="op" aria-hidden="true">→</span><span class="run-loop" aria-hidden="true"><span class="run-loop-steps"><span class="step">Review</span><span class="op">⇄</span><span class="step">Fix</span></span><span class="run-loop-label">at most 2 rounds</span></span><span class="run-end" aria-hidden="true"><span class="op">→</span><span class="step">Test</span></span></p>
-                  <ul class="rc-roles" role="list" aria-label="Who works in Run"><li>developer</li><li>reviewer</li><li>architect</li><li>tester</li><li>technical writer</li></ul>
-                </div>
-              </li>
-              <li class="rc-stop is-gate">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">The engineer decides:</span></div>
-                <div class="rc-who"><p class="rc-call">You start Finalize</p></div>
-              </li>
-              <li class="rc-stop is-stage">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Finalize</span></div>
-                <div class="rc-who"><p class="rc-who-note">a last review; the demo replayed</p></div>
-              </li>
-              <li class="rc-stop is-gate">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="visually-hidden">The engineer decides:</span></div>
-                <div class="rc-who"><p class="rc-call">You approve the result</p><p class="rc-who-note">starting Close is your sign-off</p></div>
-              </li>
-              <li class="rc-stop is-stage">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span><span class="rc-box">Close</span></div>
-                <div class="rc-who"><p class="rc-who-note">GitHub checks it, then merges</p></div>
-              </li>
-              <li class="rc-stop is-end">
-                <div class="rc-node"><span class="rc-mark" aria-hidden="true"></span></div>
-                <p class="rc-elapsed"><span class="rc-note">merged</span></p>
-              </li>
-            </ol>
-          </div>
-          <figcaption class="rc-takeaway" id="schema-cap">Run is where the agents build; at each amber diamond the task waits for you.</figcaption>
-        </figure>
-        <p class="more"><a href="lifecycle.html">The whole method: The Dream Team Life Cycle <span aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="engineers-title">
-      <div class="wrap pair">
-        <div class="pair-text">
-          <p class="sec-label">04 · Engineers in control</p>
-          <h2 id="engineers-title">AI agents do the work. Your engineers make the decisions.</h2>
-          <p class="intro">Agents find the problems; the engineer decides at the gates. From one real task:</p>
-          <p class="more"><a href="lifecycle.html#control-title">Three kinds of control, on the Life Cycle page <span aria-hidden="true">→</span></a></p>
-        </div>
-
-        <figure class="review-card" aria-labelledby="review-title">
-          <figcaption class="review-card-head" id="review-title"><span><strong>T-707</strong> · what the reviewers found, and the engineer's call</span><span>before and after the code</span></figcaption>
-          <ol class="findings" role="list">
-            <li class="finding">
-              <p class="finding-k"><span>Before any code</span> <span class="chip raise">CONCERNS</span></p>
-              <p class="finding-point">One word, read two ways</p>
-              <p class="finding-detail">A dependency typed the natural way: one YAML parser reads the word <code>on</code> as <em>true</em>; another keeps it as text.</p>
-<pre class="finding-ex"><span class="k">typed     </span>{on: T-187}
-<span class="k">YAML 1.1  </span>{True: 'T-187'}  ✗
-<span class="k">YAML 1.2  </span>{'on': 'T-187'}  <span class="ok">✓</span></pre>
-            </li>
-            <li class="finding is-human">
-              <p class="finding-k"><span>Engineer, at the gate</span></p>
-              <p class="finding-point">Chose the architect's redesign</p>
-              <p class="finding-detail">A task whose dependency list disagrees with its record is corrected and logged, instead of stopping the whole board.</p>
-            </li>
-            <li class="finding">
-              <p class="finding-k"><span>Code review</span> <span class="chip pass">APPROVED</span></p>
-              <p class="finding-point">An apostrophe broke a printed command</p>
-              <p class="finding-detail">Reproduced by a reviewer agent with no editing tools, though it can run commands, on the same model as the developer; fixed with a test that failed first.</p>
-            </li>
-            <li class="finding">
-              <p class="finding-k"><span>Design review</span> <span class="chip changes">CHANGES</span> <span class="chip pass">APPROVED</span></p>
-              <p class="finding-point">The design said exit code 1; the code exits with 2</p>
-              <p class="finding-detail">Sent back once; approved in round 2.</p>
-            </li>
-          </ol>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="record-title">
-      <div class="wrap stack">
-        <p class="sec-label">05 · What you can see</p>
-        <h2 id="record-title">Every step records what it took</h2>
-        <div class="record-results is-band frame">
-          <p class="results-label">Results · <span class="nw">T-707</span>, 18–19 September 2026</p>
-          <p class="results-task"><strong>The change:</strong> +1,125 lines of code in 6 files, +3,091 lines of tests in 9.</p>
-          <ul class="results" role="list">
-            <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">20&nbsp;h 25&nbsp;min</strong> <span class="num-label">end to end</span></a></li>
-            <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">10&nbsp;h 18&nbsp;min</strong> <span class="num-label">of it, waiting for the engineer's decisions</span></a></li>
-            <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">at least</span> $163</strong> <span class="num-label">at Claude API list prices</span></a></li>
-            <li><a class="num-link" href="notes/anatomy-of-one-task.html#cost"><strong class="num-value"><span class="num-pre">about</span> $5</strong> <span class="num-label">Claude Team subscription + DreamTeam cost optimization</span></a></li>
-            <li><a class="num-link" href="notes/anatomy-of-one-task.html#took"><strong class="num-value">1–2 hours</strong> <span class="num-label">of human time</span></a></li>
-          </ul>
-          <p class="results-note"><span><strong>Claude API list prices:</strong> the work bought by the token, from the task's record and session transcripts; not yet reconciled with provider invoices. <strong>Claude Team subscription:</strong> a flat price; this is the task's share of one seat's week. <strong>DreamTeam's cost optimization</strong> records every step's tokens and time and gives each step the model its job needs.</span></p>
-          <p class="record-link"><strong>No DreamTeam server:</strong> the task's record lives in your Git. <a href="notes/anatomy-of-one-task.html">Anatomy of one task</a>: the full record, step by step.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="pilot-title">
-      <div class="wrap stack">
-        <p class="sec-label">06 · The pilot</p>
-        <h2 id="pilot-title">Your Dream Team in 8 weeks</h2>
-        <ol class="nsteps is-row" role="list">
-          <li><span class="nstep-text"><strong>Set up.</strong> The cycle, in your repositories.</span></li>
-          <li><span class="nstep-text"><strong>Ship together.</strong> Your first features, through it.</span></li>
-          <li><span class="nstep-text"><strong>Hand over.</strong> Your team learns to run&nbsp;it.</span></li>
-        </ol>
-        <p class="callout"><strong>Where we are:</strong> DreamTeam builds itself almost every day; making it work inside anyone's repository is what we are building now. No outside case yet: our proof is one task, end to end.</p>
-        <p class="more"><a href="program.html">How the pilot works <span aria-hidden="true">→</span></a></p>
-      </div>
-    </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="hero hero-story" aria-labelledby="hero-title">
       <div class="wrap">
-        <div class="offer frame">
-          <div class="offer-main">
-            <p class="sec-label">Talk to us</p>
-            <h2 id="contact-title">Run a pilot on your own code</h2>
-            <p class="intro">Tell us about your team. We'll walk you through a real task, end to end, and agree the scope of a pilot with you.</p>
-            <p class="offer-terms">DreamTeam Lab is Alex Rapoport and Boris Daich — <a href="about.html">about us</a>.</p>
-            <p class="more"><a href="offer.html">What we offer <span aria-hidden="true">→</span></a></p>
-          </div>
-          <div class="offer-side">
-            <p><a class="btn btn-primary" href="mailto:sasha@daich.biz,boris@daich.biz">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a></p>
-          </div>
+        <h1 class="is-hero" id="hero-title">Give every engineer a&nbsp;dream&nbsp;team.</h1>
+        <p class="bn-sub">An AI-driven software development cycle with humans in control.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="program.html">Your Dream&nbsp;Team in 8&nbsp;weeks <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="lifecycle.html"><span class="btn-label"><span class="nw">Explore The Dream Team</span> <span class="nw">Life Cycle methodology<span class="arr" aria-hidden="true">→</span></span></span></a>
         </div>
+
+        <figure class="ig motion story" data-motion="story story-narrow" aria-labelledby="story-cap">
+          <div class="ig-frame bp">
+            <label class="motion-pause"><input class="motion-pause-input visually-hidden" type="checkbox"><span class="motion-pause-icon" aria-hidden="true"></span><span class="visually-hidden">Pause the animation</span></label>
+
+            <svg class="ig-pic is-wide" viewBox="0 0 576 320" width="576" height="320" role="img" aria-labelledby="story-w-t story-w-d">
+              <title id="story-w-t">Dream it, Dream Team it, Ship it</title>
+              <desc id="story-w-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into DreamTeam, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
+              <rect class="story-box" x="112" y="40" width="272" height="272"/>
+              <rect class="story-core" x="120" y="80" width="256" height="224"/>
+              <rect class="story-plan" x="128" y="168" width="240" height="128"/>
+              <path class="ig-rail" d="M54 120H104"/>
+              <polygon class="ig-mk-build" points="104,116 112,120 104,124"/>
+              <path class="ig-rail" d="M168 148V160"/>
+              <polygon class="ig-mk-build" points="164,160 172,160 168,168"/>
+              <path class="ig-rail" d="M128 238H344"/>
+              <g class="story-out-part">
+                <path class="ig-rail" d="M360 238H408"/>
+                <polygon class="ig-mk-build" points="408,234 416,238 408,242"/>
+                <path class="ig-rail" d="M448 214V183"/>
+              </g>
+              <g class="story-to-users">
+                <path class="ig-rail" d="M448 169V137"/>
+                <polygon class="ig-mk-build" points="444,137 452,137 448,129"/>
+              </g>
+              <circle class="story-idea" cx="48" cy="120" r="6"/>
+              <circle class="story-who" cx="48" cy="168" r="20"/>
+              <path class="story-who" d="M16 228A32 32 0 0 1 80 228Z"/>
+              <rect class="story-glyph" x="129" y="53" width="16" height="16"/>
+              <rect class="story-glyph-core" x="133" y="57" width="8" height="8"/>
+              <circle class="ig-agent" cx="148" cy="100" r="6"/>
+              <circle class="ig-agent" cx="188" cy="100" r="6"/>
+              <circle class="ig-agent" cx="148" cy="140" r="6"/>
+              <circle class="ig-agent" cx="188" cy="140" r="6"/>
+              <circle class="ig-finding is-top" cx="168" cy="100" r="4"/>
+              <circle class="ig-finding is-right" cx="188" cy="120" r="4"/>
+              <circle class="ig-finding is-bottom" cx="168" cy="140" r="4"/>
+              <circle class="ig-finding is-left" cx="148" cy="120" r="4"/>
+              <g class="story-task is-a1">
+                <rect class="ig-task-box" x="140" y="196" width="56" height="28"/>
+                <path class="ig-task-top" d="M139.5 196.5H196.5"/>
+                <text class="ig-box-key" x="168" y="215" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-a2">
+                <rect class="ig-task-box" x="208" y="196" width="56" height="28"/>
+                <path class="ig-task-top" d="M207.5 196.5H264.5"/>
+                <text class="ig-box-key" x="236" y="215" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-a3">
+                <rect class="ig-task-box" x="276" y="196" width="56" height="28"/>
+                <path class="ig-task-top" d="M275.5 196.5H332.5"/>
+                <text class="ig-box-key" x="304" y="215" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-b1">
+                <rect class="ig-task-box" x="140" y="252" width="56" height="28"/>
+                <path class="ig-task-top" d="M139.5 252.5H196.5"/>
+                <text class="ig-box-key" x="168" y="271" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-b2">
+                <rect class="ig-task-box" x="208" y="252" width="56" height="28"/>
+                <path class="ig-task-top" d="M207.5 252.5H264.5"/>
+                <text class="ig-box-key" x="236" y="271" text-anchor="middle">Task</text>
+              </g>
+              <circle class="ig-agent is-worker" cx="202" cy="238" r="6"/>
+              <circle class="ig-agent is-worker" cx="270" cy="238" r="6"/>
+              <rect class="ig-check-bg" x="344" y="230" width="16" height="16"/>
+              <rect class="ig-check" x="344" y="230" width="16" height="16"/>
+              <path class="ig-check cycle-tick" d="M347.5 238L350.5 241L356.5 234.5" pathLength="1"/>
+              <g class="story-product is-main">
+                <rect x="416" y="214" width="64" height="48"/>
+                <path d="M416 226H480"/>
+                <path d="M426 242H470"/>
+                <path d="M426 252H454"/>
+              </g>
+              <polygon class="ig-dia is-wait" points="448,169 455,176 448,183 441,176"/>
+              <polygon class="cycle-fill" points="448,169 455,176 448,183 441,176"/>
+              <g class="story-who is-users">
+                <circle cx="428" cy="104" r="6"/>
+                <circle cx="448" cy="104" r="6"/>
+                <circle cx="468" cy="104" r="6"/>
+                <path d="M418 128A10 10 0 0 1 438 128Z"/>
+                <path d="M438 128A10 10 0 0 1 458 128Z"/>
+                <path d="M458 128A10 10 0 0 1 478 128Z"/>
+              </g>
+              <text class="cycle-beat" x="0" y="26">Dream it</text>
+              <polygon class="story-act-dia" points="113,13 120,20 113,27 106,20"/>
+              <polygon class="story-act-fill is-1" points="113,13 120,20 113,27 106,20"/>
+              <text class="cycle-beat" x="248" y="26" text-anchor="middle">Dream Team it</text>
+              <polygon class="story-act-dia" points="344,13 351,20 344,27 337,20"/>
+              <polygon class="story-act-fill is-2" points="344,13 351,20 344,27 337,20"/>
+              <text class="cycle-beat" x="448" y="26" text-anchor="middle">Ship it</text>
+              <polygon class="story-act-dia" points="498,13 505,20 498,27 491,20"/>
+              <polygon class="story-act-fill is-3" points="498,13 505,20 498,27 491,20"/>
+              <text class="ig-name" x="48" y="88" text-anchor="middle">Your idea</text>
+              <text class="ig-name" x="48" y="252" text-anchor="middle">You</text>
+              <text class="story-name" x="154" y="67">DreamTeam</text>
+              <text class="ig-name" x="216" y="116">Brainstorm</text>
+              <text class="ig-note" x="216" y="136">with AI agents</text>
+              <text class="ig-caps" x="140" y="186">The plan</text>
+              <text class="ig-caps is-check" x="360" y="266" text-anchor="end">Checked</text>
+              <text class="ig-name story-out-part" x="448" y="286" text-anchor="middle">your product</text>
+              <text class="ig-verb" x="467" y="181">you approve</text>
+              <text class="ig-name" x="448" y="84" text-anchor="middle">your users</text>
+              <circle class="story-face" cx="48" cy="168" r="19"/>
+              <circle class="story-lit" cx="48" cy="120" r="6"/>
+              <path class="story-ray" d="M48 108V102"/>
+              <path class="story-ray" d="M40 112L36 108"/>
+              <path class="story-ray" d="M56 112L60 108"/>
+              <path class="story-pulse" d="M54 120H112" pathLength="100"/>
+              <circle class="story-spark" cx="168" cy="120" r="6"/>
+              <g class="story-product story-ship">
+                <rect x="436" y="188" width="24" height="16"/>
+                <path d="M436 193H460"/>
+              </g>
+            </svg>
+
+            <svg class="ig-pic is-narrow" viewBox="0 0 288 608" width="288" height="608" role="img" aria-labelledby="story-n-t story-n-d">
+              <title id="story-n-t">Dream it, Dream Team it, Ship it</title>
+              <desc id="story-n-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into DreamTeam, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
+              <rect class="story-box" x="8" y="148" width="272" height="272"/>
+              <rect class="story-core" x="16" y="188" width="256" height="224"/>
+              <rect class="story-plan" x="24" y="276" width="240" height="128"/>
+              <path class="ig-rail" d="M38 36H40A24 24 0 0 1 64 60V140"/>
+              <polygon class="ig-mk-build" points="60,140 68,140 64,148"/>
+              <path class="ig-rail" d="M64 256V268"/>
+              <polygon class="ig-mk-build" points="60,268 68,268 64,276"/>
+              <path class="ig-rail" d="M24 346H232A16 16 0 0 1 248 362V372"/>
+              <g class="story-out-part">
+                <path class="ig-rail" d="M248 388V436"/>
+                <polygon class="ig-mk-build" points="244,436 252,436 248,444"/>
+                <path class="ig-rail" d="M248 492V525"/>
+              </g>
+              <g class="story-to-users">
+                <path class="ig-rail" d="M248 539V565"/>
+                <polygon class="ig-mk-build" points="244,565 252,565 248,573"/>
+              </g>
+              <circle class="story-idea" cx="32" cy="36" r="6"/>
+              <circle class="story-who" cx="32" cy="72" r="16"/>
+              <path class="story-who" d="M8 120A24 24 0 0 1 56 120Z"/>
+              <rect class="story-glyph" x="137" y="161" width="16" height="16"/>
+              <rect class="story-glyph-core" x="141" y="165" width="8" height="8"/>
+              <circle class="ig-agent" cx="44" cy="208" r="6"/>
+              <circle class="ig-agent" cx="84" cy="208" r="6"/>
+              <circle class="ig-agent" cx="44" cy="248" r="6"/>
+              <circle class="ig-agent" cx="84" cy="248" r="6"/>
+              <circle class="ig-finding is-top" cx="64" cy="208" r="4"/>
+              <circle class="ig-finding is-right" cx="84" cy="228" r="4"/>
+              <circle class="ig-finding is-bottom" cx="64" cy="248" r="4"/>
+              <circle class="ig-finding is-left" cx="44" cy="228" r="4"/>
+              <g class="story-task is-a1">
+                <rect class="ig-task-box" x="44" y="304" width="56" height="28"/>
+                <path class="ig-task-top" d="M43.5 304.5H100.5"/>
+                <text class="ig-box-key" x="72" y="323" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-a2">
+                <rect class="ig-task-box" x="116" y="304" width="56" height="28"/>
+                <path class="ig-task-top" d="M115.5 304.5H172.5"/>
+                <text class="ig-box-key" x="144" y="323" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-a3">
+                <rect class="ig-task-box" x="188" y="304" width="56" height="28"/>
+                <path class="ig-task-top" d="M187.5 304.5H244.5"/>
+                <text class="ig-box-key" x="216" y="323" text-anchor="middle">Task</text>
+              </g>
+              <g class="story-task is-b1">
+                <rect class="ig-task-box" x="44" y="360" width="56" height="28"/>
+                <path class="ig-task-top" d="M43.5 360.5H100.5"/>
+                <text class="ig-box-key" x="72" y="379" text-anchor="middle">Task</text>
+              </g>
+              <circle class="ig-agent is-worker" cx="108" cy="346" r="6"/>
+              <circle class="ig-agent is-worker" cx="180" cy="346" r="6"/>
+              <rect class="ig-check-bg" x="240" y="372" width="16" height="16"/>
+              <rect class="ig-check" x="240" y="372" width="16" height="16"/>
+              <path class="ig-check cycle-tick" d="M243.5 380L246.5 383L252.5 376.5" pathLength="1"/>
+              <g class="story-product is-main">
+                <rect x="216" y="444" width="64" height="48"/>
+                <path d="M216 456H280"/>
+                <path d="M226 472H270"/>
+                <path d="M226 482H254"/>
+              </g>
+              <polygon class="ig-dia is-wait" points="248,525 255,532 248,539 241,532"/>
+              <polygon class="cycle-fill" points="248,525 255,532 248,539 241,532"/>
+              <g class="story-who is-users">
+                <circle cx="228" cy="580" r="6"/>
+                <circle cx="248" cy="580" r="6"/>
+                <circle cx="268" cy="580" r="6"/>
+                <path d="M218 604A10 10 0 0 1 238 604Z"/>
+                <path d="M238 604A10 10 0 0 1 258 604Z"/>
+                <path d="M258 604A10 10 0 0 1 278 604Z"/>
+              </g>
+              <text class="cycle-beat" x="76" y="22">Dream it</text>
+              <polygon class="story-act-dia" points="181,9 188,16 181,23 174,16"/>
+              <polygon class="story-act-fill is-1" points="181,9 188,16 181,23 174,16"/>
+              <text class="ig-name" x="76" y="41">Your idea</text>
+              <text class="ig-name" x="76" y="80">You</text>
+              <text class="cycle-beat" x="76" y="140">Dream Team it</text>
+              <polygon class="story-act-dia" points="245,127 252,134 245,141 238,134"/>
+              <polygon class="story-act-fill is-2" points="245,127 252,134 245,141 238,134"/>
+              <text class="story-name" x="162" y="175">DreamTeam</text>
+              <text class="ig-name" x="112" y="224">Brainstorm</text>
+              <text class="ig-note" x="112" y="244">with AI agents</text>
+              <text class="ig-caps" x="44" y="294">The plan</text>
+              <text class="ig-caps is-check" x="228" y="385" text-anchor="end">Checked</text>
+              <text class="cycle-beat" x="76" y="452">Ship it</text>
+              <polygon class="story-act-dia" points="159,439 166,446 159,453 152,446"/>
+              <polygon class="story-act-fill is-3" points="159,439 166,446 159,453 152,446"/>
+              <text class="ig-name story-out-part" x="204" y="473" text-anchor="end">your product</text>
+              <text class="ig-verb" x="229" y="537" text-anchor="end">you approve</text>
+              <text class="ig-name" x="204" y="594" text-anchor="end">your users</text>
+              <circle class="story-face" cx="32" cy="72" r="15"/>
+              <circle class="story-lit" cx="32" cy="36" r="6"/>
+              <path class="story-ray" d="M32 24V18"/>
+              <path class="story-ray" d="M24 28L20 24"/>
+              <path class="story-ray" d="M40 28L44 24"/>
+              <path class="story-pulse" d="M38 36H40A24 24 0 0 1 64 60V148" pathLength="100"/>
+              <circle class="story-spark" cx="64" cy="228" r="6"/>
+              <g class="story-product story-ship">
+                <rect x="236" y="496" width="24" height="16"/>
+                <path d="M236 501H260"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption id="story-cap"><strong>One idea, start to finish.</strong> AI agents do the work; you approve what ships.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section small-print" aria-labelledby="sp-title">
+    <section class="routes" aria-labelledby="routes-title">
       <div class="wrap">
-        <h2 class="sec-label" id="sp-title">The small print</h2>
-        <details class="provenance">
-          <summary>Where each log row and number comes from</summary>
-          <p>DreamTeam's record of <span class="nw">T-707</span> is in a private repository, so its sources are listed here: files in <span class="nw">T-707</span>'s task folder in DreamTeam's repository unless another path is given, with line numbers. Times are UTC, truncated to the minute. The runlog records when each step ended and how long it took; a step's start is its end minus its duration.</p>
-
-          <h3>The log</h3>
-          <ul>
-            <li><b>13:19</b> — the first step of Init starts at 13:19:28: it ends at 13:19:49 after 21 s (<code>runlog.md</code> L5).</li>
-            <li><b>13:20–13:42</b> — the team meeting, which DreamTeam calls the alignment review, 13:20:27–13:42:06 (L7). The 4 agents who would do the task checked its contract by the rules set for them, without the engineer: 3 raised concerns, 1 said ready. The orchestrator, an agent too, collected their concerns, 2 blockers among them, and presented them to the engineer (<code>approval-findings.json</code>; <code>tcb.md</code> L612–625, L755).</li>
-            <li><b>18:00</b> — the engineer's decision at the readiness gate, 18:00:43 (init session transcript), with the design change in <code>tcb.md</code> L522 and L575–577.</li>
-            <li><b>18:46–01:07</b> — Build, in three parts, 18:46:55–01:07:33 (<code>runlog.md</code> L22–L24).</li>
-            <li><b>01:16–01:45</b> — code review, 01:16:05–01:38:37: approved with 0 critical, 0 high and 1 medium finding (L25–L26); the developer's fix, 01:38:38–01:45:18 (L27).</li>
-            <li><b>01:45–02:32</b> — the tester, 01:45:19–02:32:13: all 9 acceptance criteria checked against the code, not taken from the developer's report; the test run, which leaves out the local end-to-end tests, 15,680 passed and 0 failed (L28–L29).</li>
-            <li><b>02:33–02:50</b> — the design review asks for changes, 02:33:07–02:40:13 (L32–L33); the architect's fix, 02:40:14–02:44:35 (L34); approved in round 2 of at most 2, 02:44:36–02:50:39 (L35–L36).</li>
-            <li><b>08:54, 09:12</b> — the engineer's commands that start Finalize (08:54:53) and Close (09:12:53), from the session transcripts; Run had ended at 03:00:34 (L40). Finalize expects a person to start it, and asks one if an agent does (DreamTeam's <code>config/workflows.yaml</code> L2775–2781); starting Close is the approval (L5953, “invocation = approval”).</li>
-            <li><b>08:56–09:09</b> — Finalize, 08:56:10–09:09:47: the tester's last review (L44–L45) and the replay of the task's demo, every step that runs a command passed (L46–L51).</li>
-            <li><b>09:32–09:44</b> — GitHub's merge queue, which runs automated checks before it merges a change: in the queue at 09:32:32, merged at 09:44:21 after 9 check runs, all successful, including the 5 the branch requires (<code>squash-trace.json</code> L114–120, L291–352; the required five: <code>reports/close-receipt-T-707.md</code> L15–28).</li>
-            <li><b>The bars</b> — each step's start and length, in seconds from 13:19:28, over the 73,493 s to the merge; a short step is drawn at least 3 px wide. Amber: the task waiting for the engineer, 13:42:58–18:00:43 at the readiness gate (<code>rollup.json</code>, the gate's recorded wait), 03:00:34–08:54:53 and 09:09:47–09:12:53. The hairline is midnight.</li>
+        <h2 class="visually-hidden" id="routes-title">The methodology, the problem and the benefits</h2>
+        <div class="routes">
+          <ul class="routes-list" role="list">
+            <li class="route">
+              <h3 class="route-name">The methodology</h3>
+              <div class="route-body">
+                <p class="route-links"><span class="route-k">Chapters:</span> <a href="method/brainstorm.html">Brainstorm</a><span class="sep" aria-hidden="true">&nbsp;·</span> <a href="method/epic.html">Epic</a><span class="sep" aria-hidden="true">&nbsp;·</span> <a href="method/dependencies.html">Dependencies</a><span class="sep" aria-hidden="true">&nbsp;·</span> <a href="method/task.html">Task</a></p>
+                <p class="route-links is-examples"><span class="route-k">Examples:</span> <a href="notes/from-a-problem-to-nine-tasks.html">a brainstorm</a><span class="sep" aria-hidden="true">&nbsp;·</span> <a href="notes/anatomy-of-one-epic.html">an epic</a><span class="sep" aria-hidden="true">&nbsp;·</span> <a href="notes/anatomy-of-one-task.html">a task</a></p>
+                <a class="more route-go" href="lifecycle.html">The Dream Team Life Cycle <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li class="route">
+              <h3 class="route-name">The problem</h3>
+              <div class="route-body">
+                <p class="route-say"><span class="route-s">AI-driven development isn't a tool you install.</span> <span class="route-s">It's a process you build.</span></p>
+                <a class="more route-go" href="why.html">Understand the problem <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
+            <li class="route">
+              <h3 class="route-name">The benefits</h3>
+              <div class="route-body">
+                <a class="more route-go" href="benefits.html">DreamTeam benefits <span aria-hidden="true">→</span></a>
+              </div>
+            </li>
           </ul>
-
-          <h3>The review card</h3>
-          <ul>
-            <li>The excerpt: the table measured at Init in <code>tcb.md</code>, criterion 3; PyYAML 6.0.3 reads YAML 1.1, ruamel 0.19.1 reads YAML 1.2. It is one of the 2 blockers.</li>
-            <li>The engineer's call: the architect proposed correcting instead of refusing (<code>approval-findings.json</code> L25); the engineer approved it at the readiness gate, inside this task, with the design documents updated to match (<code>tcb.md</code> L522–524, L575–577).</li>
-            <li>The apostrophe: found and reproduced in code review (<code>runlog.md</code> L25), fixed 01:38–01:45 (L27) with a test that failed before the fix (Closure Notes, L207–209). The reviewer's tools are Read, Grep, Glob and Bash (<code>.claude/agents/dt-reviewer.md</code> L10–11); it and the developer ran on Opus.</li>
-            <li>The design review: <code>runlog.md</code> L32–L35.</li>
-          </ul>
-
-          <h3>The results</h3>
-          <ul>
-            <li>The change: the production code and the tests in the merged commit, 953d683f, counted file by file; with the task's records, the commit is 39 files.</li>
-            <li>20 h 25 min: 73,493 s from the first step, 13:19:28 on 18 September (<code>rollup.json</code>), to the merge (<code>squash-trace.json</code> L120).</li>
-            <li>10 h 18 min: the waits for the engineer at Init's gate, before Finalize and before Close: 15,465 + 21,336 + 268 s.</li>
-            <li>At least $163: the record's tokens at Claude API list prices (<code>config/models.yaml</code> v2.3), $143.37, plus the contract review recovered from the init transcript, $19.72. A lower bound.</li>
-            <li>About $5: <span class="nw">T-707</span> was 16.46% of the seat's recorded work that week; a seat is $125 a month, $28.85 a week; its share is $4.75. An upper bound.</li>
-            <li>1–2 hours: Alex's own account of his time as the engineer.</li>
-          </ul>
-
-          <h3>The schema</h3>
-          <p>The stages and the engineer's three points, in DreamTeam's <code>config/workflows.yaml</code>: the readiness decision (L1225–1262), Finalize started by a person (L2775–2781), Close as the approval (L5953). Review and fix: at most 2 rounds, then the task goes to the engineer (L2363–2375). Who worked in <span class="nw">T-707</span>'s Run: its subagent records.</p>
-        </details>
+          <div class="routes-foot">
+            <p class="routes-fact"><strong>DreamTeam Lab</strong> is the company; <strong>DreamTeam</strong> is the team of AI agents it builds; <strong>The&nbsp;Dream&nbsp;Team&nbsp;Life&nbsp;Cycle</strong> is the method DreamTeam runs.</p>
+            <p class="routes-fact"><a href="program.html"><strong>Your Dream&nbsp;Team in 8&nbsp;weeks</strong></a>: our engineers set it up with your team.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
