@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>The Dream Team Life Cycle — DreamTeam Lab</title>
+  <title>The Dream Team Life Cycle — Dream Team Lab</title>
   <meta name="description" content="A software factory with the lights on: AI agents run every stage from your idea to merged code, and you stay in control: you approve the vision, the plan and every result.">
-  <meta property="og:title" content="The Dream Team Life Cycle — DreamTeam Lab">
+  <meta property="og:title" content="The Dream Team Life Cycle — Dream Team Lab">
   <meta property="og:description" content="A software factory with the lights on: AI agents run every stage from your idea to merged code, and you stay in control: you approve the vision, the plan and every result.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/menu.js" defer></script>
   <style>
     /* The Life Cycle page: layout only. Its figures are the motion kit's Fig. 1 (style.css, its "Motion" section),
        the control trees (§11c) and the generated team diagram; the chapter links are .lc-chip in nav.lc-chapters, in the row .lc-row; the small print
@@ -99,6 +100,7 @@
       .ct-system.ct-at-8 { grid-column: 4; }
     }
     .control .stack > .control-trees + .more { margin-top: 24px; }
+    .stack > .lc-names-phone + .more { margin-top: 24px; }
     /* The team: the generated drawings unchanged, centred at 1:1 in a blueprint panel across the wrap; the wide one
        from 944, the narrow one (360 wide) below; below 400 the narrow one still scales to the width. From 768 to 943
        the panel frames only the narrow drawing and the caption stands beside it, outside the panel, in view while
@@ -117,16 +119,58 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header is-e">
     <div class="wrap">
       <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="lifecycle.html" aria-current="page">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <nav class="menu" aria-label="Main">
+        <ul class="menu-list" role="list">
+          <li class="menu-door"><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span></a></li>
+          <li class="menu-door"><a href="lifecycle.html" aria-current="page"><span class="menu-name">Methodology</span><span class="visually-hidden">: </span> <span class="menu-sub">The Dream&nbsp;Team Life&nbsp;Cycle</span></a></li>
+          <li class="menu-more">
+            <details name="menu">
+              <summary><span class="menu-icon" aria-hidden="true"></span>Menu</summary>
+              <div class="menu-sheet">
+                <div class="map-group">
+                  <p class="map-k" id="map-offer">Our Offerings</p>
+                  <ul role="list" aria-labelledby="map-offer">
+                    <li><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Three ways to work with us</span></a></li>
+                    <li><a href="program.html"><span class="menu-name">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span><span class="visually-hidden">: </span> <span class="menu-sub">A pilot on your code</span></a></li>
+                    <li><a href="offer.html#build-together"><span class="menu-name">Build together</span><span class="visually-hidden">: </span> <span class="menu-sub">We build the project with your team</span></a></li>
+                    <li><a href="offer.html#learn"><span class="menu-name">Learn <span class="nw">AI-driven</span> development</span><span class="visually-hidden">: </span> <span class="menu-sub">Lectures, seminars and webinars</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-method">Methodology</p>
+                  <ul role="list" aria-labelledby="map-method">
+                    <li><a href="lifecycle.html" aria-current="page"><span class="menu-name">The Dream&nbsp;Team Life&nbsp;Cycle</span><span class="visually-hidden">: </span> <span class="menu-sub">From your idea to merged code</span></a></li>
+                    <li><a href="method/brainstorm.html"><span class="menu-name">Brainstorm</span><span class="visually-hidden">: </span> <span class="menu-sub">The planning session</span></a></li>
+                    <li><a href="method/epic.html"><span class="menu-name">Epic</span><span class="visually-hidden">: </span> <span class="menu-sub">A story broken into tasks</span></a></li>
+                    <li><a href="method/dependencies.html"><span class="menu-name">Dependencies</span><span class="visually-hidden">: </span> <span class="menu-sub">Which task waits for which, and why</span></a></li>
+                    <li><a href="method/task.html"><span class="menu-name">Task</span><span class="visually-hidden">: </span> <span class="menu-sub">One task, start to finish</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-why">Why Dream&nbsp;Team?</p>
+                  <ul role="list" aria-labelledby="map-why">
+                    <li><a href="why.html"><span class="menu-name">Why Dream&nbsp;Team?</span><span class="visually-hidden">: </span> <span class="menu-sub">A process, not a tool you install</span></a></li>
+                    <li><a href="benefits.html"><span class="menu-name">Benefits</span><span class="visually-hidden">: </span> <span class="menu-sub">A team behind each engineer</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-lab">The Lab</p>
+                  <ul role="list" aria-labelledby="map-lab">
+                    <li><a href="notes/index.html"><span class="menu-name">Lab notes</span><span class="visually-hidden">: </span> <span class="menu-sub">Real work taken apart</span></a></li>
+                    <li><a href="notes/anatomy-of-one-task.html"><span class="menu-name">Anatomy of one task</span><span class="visually-hidden">: </span> <span class="menu-sub">One real task, from plan to merge</span></a></li>
+                    <li><a href="notes/anatomy-of-one-epic.html"><span class="menu-name">Anatomy of one epic</span><span class="visually-hidden">: </span> <span class="menu-sub">One real epic, task by task</span></a></li>
+                    <li><a href="notes/from-a-problem-to-nine-tasks.html"><span class="menu-name">How a brainstorm turned a problem into nine tasks</span><span class="visually-hidden">: </span> <span class="menu-sub">One real brainstorm, stage by stage</span></a></li>
+                    <li><a href="about.html"><span class="menu-name">About</span><span class="visually-hidden">: </span> <span class="menu-sub">Who builds Dream&nbsp;Team</span></a></li>
+                    <li><a href="contact-us.html"><span class="menu-name">Talk to us</span><span class="visually-hidden">: </span> <span class="menu-sub">Tell us about your team</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
       <a class="btn btn-primary header-cta" href="contact-us.html">Talk to us</a>
     </div>
@@ -145,7 +189,7 @@
       <div class="wrap lc-head">
         <p class="sec-label">The methodology</p>
         <h1 class="is-hero" id="page-title">The Dream&nbsp;Team Life&nbsp;Cycle</h1>
-        <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+        <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; Dream Team is the agentic team; Dream Team Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
         <p class="lead">A software factory with the lights on: AI agents run every stage from your idea to merged code, and you stay in control: you approve the vision, the plan and every result.</p>
         <div class="lc-row">
           <a class="btn btn-primary" href="method/brainstorm.html">Read the methodology <span class="arr" aria-hidden="true">→</span></a>
@@ -156,7 +200,7 @@
             <a class="lc-chip" href="method/task.html">Task</a>
             <a class="lc-chip" href="notes/index.html">Real examples from the Lab</a>
           </nav>
-          <a class="text-link" href="program.html">Your Dream&nbsp;Team in 8 weeks <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="program.html">Your Dream&nbsp;Team in 8&nbsp;weeks <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -164,7 +208,7 @@
         <figure class="ig motion lc-fig" data-motion="lifecycle lifecycle-narrow" aria-labelledby="lc-cap">
           <div class="ig-frame bp">
             <div class="cycle-top">
-              <p class="ig-tag">Fig. 1 · The Dream&nbsp;Team Life&nbsp;Cycle</p>
+              <p class="ig-tag">Fig. 1 · The&nbsp;Dream&nbsp;Team Life&nbsp;Cycle</p>
               <label class="motion-pause"><input class="motion-pause-input visually-hidden" type="checkbox"><span class="motion-pause-icon" aria-hidden="true"></span><span class="visually-hidden">Pause the animation</span></label>
             </div>
 
@@ -786,9 +830,10 @@
 <text class="tm-t-soft" font-size="14" font-weight="400" fill="#4B5565"><tspan x="48" y="864.4">Arrows: who passes work or results</tspan><tspan x="48" y="883.4">to whom.</tspan></text>
 </svg>
           </div>
-          <figcaption>An orchestrator agent hands the work to specialist AI agents. Generated from DreamTeam's own agent and step definitions as of 4&nbsp;October&nbsp;2026.</figcaption>
+          <figcaption>An orchestrator agent hands the work to specialist AI agents. Generated from Dream&nbsp;Team's own agent and step definitions as of 4&nbsp;October&nbsp;2026.</figcaption>
         </figure>
-        <figure class="names-map lc-names-phone" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+        <figure class="names-map lc-names-phone" aria-label="The names: the Dream Team Life Cycle is the methodology; Dream Team is the agentic team; Dream Team Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+        <p class="more"><a href="benefits.html">What a team behind each engineer gives you: Benefits&nbsp;<span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -797,7 +842,7 @@
         <h2 class="sec-label" id="sp-title">The small print</h2>
         <details class="provenance">
           <summary>The files behind it</summary>
-          <p>DreamTeam at commit <code>6b947dfb1</code> (17 October 2026). Fig. 1 is drawn by hand from <code>config/workflows.yaml</code> and the commands in <code>.claude/commands/</code>: <code>dt-bs-init.md</code>, <code>dt-task-init.md</code>, <code>-run.md</code>, <code>-finalize.md</code> and <code>-close.md</code>. The closing check: <code>docs/system/EPIC_METHODOLOGY.md</code>. The team diagram: generated at commit <code>c08179ba00a2</code> (4&nbsp;October&nbsp;2026); the orchestrator's role: <code>docs/system/ROLE_CHARTER.md</code> at <code>6b947dfb1</code>. The merge queue's ruleset, <code>config/github-ruleset.json</code>, lets a repository admin bypass it.</p>
+          <p>Dream&nbsp;Team at commit <code>6b947dfb1</code> (17 October 2026). Fig. 1 is drawn by hand from <code>config/workflows.yaml</code> and the commands in <code>.claude/commands/</code>: <code>dt-bs-init.md</code>, <code>dt-task-init.md</code>, <code>-run.md</code>, <code>-finalize.md</code> and <code>-close.md</code>. The closing check: <code>docs/system/EPIC_METHODOLOGY.md</code>. The team diagram: generated at commit <code>c08179ba00a2</code> (4&nbsp;October&nbsp;2026); the orchestrator's role: <code>docs/system/ROLE_CHARTER.md</code> at <code>6b947dfb1</code>. The merge queue's ruleset, <code>config/github-ruleset.json</code>, lets a repository admin bypass it.</p>
         </details>
         <details class="provenance">
           <summary>How we checked</summary>
@@ -807,18 +852,45 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer is-map">
     <div class="wrap">
-      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
-      <nav aria-label="Footer">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="lifecycle.html">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <p class="slogan"><span class="slogan-beat">Dream it<span class="visually-hidden">.</span><span class="slogan-dia is-1" aria-hidden="true"></span></span> <span class="slogan-beat">Dream Team it<span class="visually-hidden">.</span><span class="slogan-dia is-2" aria-hidden="true"></span></span> <span class="slogan-beat">Ship it<span class="visually-hidden">.</span><span class="slogan-dia is-3" aria-hidden="true"></span></span></p>
+      <nav class="foot-map" aria-label="Footer">
+        <div class="foot-group">
+          <p class="foot-k"><a href="offer.html">Our Offerings</a></p>
+          <ul role="list">
+            <li><a href="program.html">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</a></li>
+            <li><a href="offer.html#build-together">Build together</a></li>
+            <li><a href="offer.html#learn">Learn <span class="nw">AI-driven</span> development</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="lifecycle.html">Methodology</a></p>
+          <ul role="list">
+            <li><a href="method/brainstorm.html">Brainstorm</a></li>
+            <li><a href="method/epic.html">Epic</a></li>
+            <li><a href="method/dependencies.html">Dependencies</a></li>
+            <li><a href="method/task.html">Task</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="why.html">Why Dream&nbsp;Team?</a></p>
+          <ul role="list"><li><a href="benefits.html">Benefits</a></li></ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="notes/index.html">Lab notes</a></p>
+          <ul role="list">
+            <li><a href="notes/anatomy-of-one-task.html">Anatomy of one task</a></li>
+            <li><a href="notes/anatomy-of-one-epic.html">Anatomy of one epic</a></li>
+            <li><a href="notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="about.html">About</a></p>
+          <ul role="list"><li><a href="contact-us.html">Talk to us</a></li></ul>
+        </div>
       </nav>
-      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+      <p class="colophon"><span class="nw">Dream Team Lab ·</span> <span class="nw">Built on Claude Code and GitHub ·</span> <span class="nw">©&nbsp;2026</span></p>
     </div>
   </footer>
 </body>

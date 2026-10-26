@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>The brainstorm: the planning session — DreamTeam Lab</title>
-  <meta name="description" content="How a DreamTeam brainstorm takes your idea through vision, architecture and design to a plan you approve, in six stages: the interview, the design, the draft plan, the panel, the plan and the tasks created.">
-  <meta property="og:title" content="The brainstorm: the planning session — DreamTeam Lab">
-  <meta property="og:description" content="How a DreamTeam brainstorm takes your idea through vision, architecture and design to a plan you approve, in six stages: the interview, the design, the draft plan, the panel, the plan and the tasks created.">
+  <title>The brainstorm: the planning session — Dream Team Lab</title>
+  <meta name="description" content="How a Dream Team brainstorm takes your idea through vision, architecture and design to a plan you approve, in six stages: the interview, the design, the draft plan, the panel, the plan and the tasks created.">
+  <meta property="og:title" content="The brainstorm: the planning session — Dream Team Lab">
+  <meta property="og:description" content="How a Dream Team brainstorm takes your idea through vision, architecture and design to a plan you approve, in six stages: the interview, the design, the draft plan, the panel, the plan and the tasks created.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/menu.js" defer></script>
   <style>
     /* The method page: layout only. Its figures are the infographic family, assets/style.css §24; the onward link and
        the small print are the shared components (§15, §20). */
@@ -57,16 +58,58 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header is-e">
     <div class="wrap">
       <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="../why.html">Why DreamTeam?</a>
-        <a href="../benefits.html">Benefits</a>
-        <a href="../lifecycle.html">The Life Cycle</a>
-        <a href="../offer.html">Work with us</a>
-        <a href="../notes/index.html">Lab notes</a>
-        <a href="../about.html">About</a>
+      <nav class="menu" aria-label="Main">
+        <ul class="menu-list" role="list">
+          <li class="menu-door"><a href="../offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span></a></li>
+          <li class="menu-door"><a href="../lifecycle.html" aria-current="true"><span class="menu-name">Methodology</span><span class="visually-hidden">: </span> <span class="menu-sub">The Dream&nbsp;Team Life&nbsp;Cycle</span></a></li>
+          <li class="menu-more">
+            <details name="menu">
+              <summary><span class="menu-icon" aria-hidden="true"></span>Menu</summary>
+              <div class="menu-sheet">
+                <div class="map-group">
+                  <p class="map-k" id="map-offer">Our Offerings</p>
+                  <ul role="list" aria-labelledby="map-offer">
+                    <li><a href="../offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Three ways to work with us</span></a></li>
+                    <li><a href="../program.html"><span class="menu-name">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span><span class="visually-hidden">: </span> <span class="menu-sub">A pilot on your code</span></a></li>
+                    <li><a href="../offer.html#build-together"><span class="menu-name">Build together</span><span class="visually-hidden">: </span> <span class="menu-sub">We build the project with your team</span></a></li>
+                    <li><a href="../offer.html#learn"><span class="menu-name">Learn <span class="nw">AI-driven</span> development</span><span class="visually-hidden">: </span> <span class="menu-sub">Lectures, seminars and webinars</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-method">Methodology</p>
+                  <ul role="list" aria-labelledby="map-method">
+                    <li><a href="../lifecycle.html"><span class="menu-name">The Dream&nbsp;Team Life&nbsp;Cycle</span><span class="visually-hidden">: </span> <span class="menu-sub">From your idea to merged code</span></a></li>
+                    <li><a href="../method/brainstorm.html" aria-current="page"><span class="menu-name">Brainstorm</span><span class="visually-hidden">: </span> <span class="menu-sub">The planning session</span></a></li>
+                    <li><a href="../method/epic.html"><span class="menu-name">Epic</span><span class="visually-hidden">: </span> <span class="menu-sub">A story broken into tasks</span></a></li>
+                    <li><a href="../method/dependencies.html"><span class="menu-name">Dependencies</span><span class="visually-hidden">: </span> <span class="menu-sub">Which task waits for which, and why</span></a></li>
+                    <li><a href="../method/task.html"><span class="menu-name">Task</span><span class="visually-hidden">: </span> <span class="menu-sub">One task, start to finish</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-why">Why Dream&nbsp;Team?</p>
+                  <ul role="list" aria-labelledby="map-why">
+                    <li><a href="../why.html"><span class="menu-name">Why Dream&nbsp;Team?</span><span class="visually-hidden">: </span> <span class="menu-sub">A process, not a tool you install</span></a></li>
+                    <li><a href="../benefits.html"><span class="menu-name">Benefits</span><span class="visually-hidden">: </span> <span class="menu-sub">A team behind each engineer</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-lab">The Lab</p>
+                  <ul role="list" aria-labelledby="map-lab">
+                    <li><a href="../notes/index.html"><span class="menu-name">Lab notes</span><span class="visually-hidden">: </span> <span class="menu-sub">Real work taken apart</span></a></li>
+                    <li><a href="../notes/anatomy-of-one-task.html"><span class="menu-name">Anatomy of one task</span><span class="visually-hidden">: </span> <span class="menu-sub">One real task, from plan to merge</span></a></li>
+                    <li><a href="../notes/anatomy-of-one-epic.html"><span class="menu-name">Anatomy of one epic</span><span class="visually-hidden">: </span> <span class="menu-sub">One real epic, task by task</span></a></li>
+                    <li><a href="../notes/from-a-problem-to-nine-tasks.html"><span class="menu-name">How a brainstorm turned a problem into nine tasks</span><span class="visually-hidden">: </span> <span class="menu-sub">One real brainstorm, stage by stage</span></a></li>
+                    <li><a href="../about.html"><span class="menu-name">About</span><span class="visually-hidden">: </span> <span class="menu-sub">Who builds Dream&nbsp;Team</span></a></li>
+                    <li><a href="../contact-us.html"><span class="menu-name">Talk to us</span><span class="visually-hidden">: </span> <span class="menu-sub">Tell us about your team</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
       <a class="btn btn-primary header-cta" href="../contact-us.html">Talk to us</a>
     </div>
@@ -85,7 +128,7 @@
       <div class="wrap head-84">
        <div class="head-main">
         <p class="sec-label">The method</p>
-        <h1 id="page-title">A DreamTeam brainstorm is the planning session</h1>
+        <h1 id="page-title">A Dream&nbsp;Team brainstorm is the planning session</h1>
         <ol class="ig-chain" aria-label="From your idea to the plan">
           <li class="is-end"><svg class="ig-chain-ring" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="5"/></svg>Idea<svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg></li>
           <li>vision<svg class="ig-chain-go" viewBox="0 0 16 12" aria-hidden="true" focusable="false"><path d="M0 6 H10"/><polygon points="9,1 16,6 9,11"/></svg></li>
@@ -114,7 +157,7 @@
           <p class="ig-rec-head">In <code>BS-117</code> · the vision</p>
           <pre class="ig-rec-ex">Status: **APPROVED v1**
 (… — "approve")</pre>
-          <p class="ig-rec-src"><span class="tid">BS-117</span> is one real DreamTeam brainstorm, about DreamTeam's own dependency record: which task waits for which, and why. Its excerpts below are about that. Here, its vision's approval line, word for word, cut with "…".</p>
+          <p class="ig-rec-src"><span class="tid">BS-117</span> is one real Dream&nbsp;Team brainstorm, about Dream&nbsp;Team's own dependency record: which task waits for which, and why. Its excerpts below are about that. Here, its vision's approval line, word for word, cut with "…".</p>
         </div>
        </div>
       </div>
@@ -194,7 +237,7 @@
     <section class="section" id="s1" aria-labelledby="s1-title">
       <div class="wrap stack">
         <p class="sec-label">S1 · Vision</p>
-        <h2 id="s1-title">DreamTeam interviews you hard on eight dimensions and quotes your answers</h2>
+        <h2 id="s1-title">Dream&nbsp;Team interviews you hard on eight dimensions and quotes your answers</h2>
         <ul class="benefits" role="list">
           <li>
             <details class="benefit">
@@ -264,11 +307,11 @@
               </div>
             </div>
           </div>
-          <figcaption id="v2-cap"><strong>The eight dimensions DreamTeam interviews you on, around the vision.</strong> A dimension counts only with your answer quoted; the 0.80 is the agent's own estimate, and you can dispute it.</figcaption>
+          <figcaption id="v2-cap"><strong>The eight dimensions Dream&nbsp;Team interviews you on, around the vision.</strong> A dimension counts only with your answer quoted; the 0.80 is the agent's own estimate, and you can dispute it.</figcaption>
         </figure>
 
-        <p>The grilling: DreamTeam <strong>interviews you on each dimension</strong>, in rounds, and looks the facts up in your code itself. It goes on until it can state that the whole task set could be written from the vision.</p>
-        <p>The eight are <strong>tuned to DreamTeam</strong>: one person decides, and tasks are scheduled by priority and readiness, not by date. So there is no stakeholder or timeline dimension; who does the work is asked instead.</p>
+        <p>The grilling: Dream&nbsp;Team <strong>interviews you on each dimension</strong>, in rounds, and looks the facts up in your code itself. It goes on until it can state that the whole task set could be written from the vision.</p>
+        <p>The eight are <strong>tuned to Dream&nbsp;Team</strong>: one person decides, and tasks are scheduled by priority and readiness, not by date. So there is no stakeholder or timeline dimension; who does the work is asked instead.</p>
         <p>The <strong>vision</strong> states the goal, the requirements and the non-goals. It <strong>holds no design</strong>: “orders are kept in one database table” could only be proven wrong by reading the code, so it moves to S2.</p>
         <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
       </div>
@@ -286,7 +329,7 @@
                 <p class="bf-why">Each contract is numbered, so the plan and the reviewers can cite it on its own.</p>
                 <p class="bf-why">The low-level design adds exact data shapes, command contracts, algorithms and the file plan; where the two differ, the high level governs.</p>
                 <p class="bf-why">Rejected alternatives are named, each with the reason it was rejected.</p>
-                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, the engineer took the low-level design DreamTeam offered, choosing its recommended option, “Yes, write the LLD”.</p>
+                <p class="bf-ex"><strong class="bf-k">On record:</strong> in <span class="tid">BS-117</span>, the engineer took the low-level design Dream&nbsp;Team offered, choosing its recommended option, “Yes, write the LLD”.</p>
               </div>
             </details>
           </li>
@@ -393,7 +436,7 @@
         </figure>
 
         <p>The <strong>high-level design (HLD)</strong> maps every requirement to a named component or a contract: a numbered piece of the design that tasks build on.</p>
-        <p>The <strong>low-level design (LLD)</strong>, offered at this stage, fixes the exact shapes. HLD and LLD are software design's standard stages; DreamTeam develops both with you, and you approve each.</p>
+        <p>The <strong>low-level design (LLD)</strong>, offered at this stage, fixes the exact shapes. HLD and LLD are software design's standard stages; Dream&nbsp;Team develops both with you, and you approve each.</p>
         <p class="more bn-back"><a href="#stages">Back to the six stages<svg class="bn-back-go" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13.5V3M3.5 7.5 8 3 12.5 7.5"/></svg></a></p>
       </div>
     </section>
@@ -882,15 +925,15 @@
           <div class="ig-frame">
             <table class="ig-compare">
               <thead>
-                <tr><th scope="col">Stage</th><th scope="col">The industry's standard</th><th scope="col">DreamTeam</th></tr>
+                <tr><th scope="col">Stage</th><th scope="col">The industry's standard</th><th scope="col">Dream&nbsp;Team</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">S1 · Vision</th><td data-label="The industry's standard">Needs drawn out by interview; goals and non-goals; work deemed ready before planning</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> eight fixed dimensions, tuned to DreamTeam, in rounds until its stated confidence reaches 0.80.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> each covered dimension quotes your answer; a test keeps design out of the requirements.</p></td></tr>
-                <tr><th scope="row">S2 · Design</th><td data-label="The industry's standard">Design documents naming rejected alternatives; decision records; high- and low-level design; requirements traced to design</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> every requirement traced to a component or contract; a low-level design offered, and approved by you; rejected alternatives named; each design approved in your words.</p></td></tr>
-                <tr><th scope="row">S3 · Draft plan</th><td data-label="The industry's standard">Requirements with acceptance criteria; tasks traced to them; dependencies between tasks; work scheduled from them</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> criteria written to be copied as they are; typed dependencies with reasons; waves derived from them; collisions flagged at start.</p></td></tr>
-                <tr><th scope="row">S4 · Panel</th><td data-label="The industry's standard">Review beyond the authors, in rounds; a final comment period; inspections grading defects by severity</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> at least two reviewer agents, each with a verdict, a confidence and its blockers; reviewers prepare apart; every finding gets a decision.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> a blocker is deferred only with your sign-off.</p></td></tr>
-                <tr><th scope="row">S5 · Plan</th><td data-label="The industry's standard">You verify each phase, then refine it</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> full task cards, a confidence each; what changed since the draft; approve all or one by one.</p></td></tr>
-                <tr><th scope="row">S6 · Materialize</th><td data-label="The industry's standard">Tasks listed from the specification, traced back to its requirements</td><td data-label="DreamTeam"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> tasks, the epic and a closing task created in one batch; criteria copied word for word.</p></td></tr>
+                <tr><th scope="row">S1 · Vision</th><td data-label="The industry's standard">Needs drawn out by interview; goals and non-goals; work deemed ready before planning</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> eight fixed dimensions, tuned to Dream&nbsp;Team, in rounds until its stated confidence reaches 0.80.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> each covered dimension quotes your answer; a test keeps design out of the requirements.</p></td></tr>
+                <tr><th scope="row">S2 · Design</th><td data-label="The industry's standard">Design documents naming rejected alternatives; decision records; high- and low-level design; requirements traced to design</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> every requirement traced to a component or contract; a low-level design offered, and approved by you; rejected alternatives named; each design approved in your words.</p></td></tr>
+                <tr><th scope="row">S3 · Draft plan</th><td data-label="The industry's standard">Requirements with acceptance criteria; tasks traced to them; dependencies between tasks; work scheduled from them</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> criteria written to be copied as they are; typed dependencies with reasons; waves derived from them; collisions flagged at start.</p></td></tr>
+                <tr><th scope="row">S4 · Panel</th><td data-label="The industry's standard">Review beyond the authors, in rounds; a final comment period; inspections grading defects by severity</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> at least two reviewer agents, each with a verdict, a confidence and its blockers; reviewers prepare apart; every finding gets a decision.</p><p><svg class="ig-beyond" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3 V13 M3 8 H13"/></svg><strong>Beyond</strong> a blocker is deferred only with your sign-off.</p></td></tr>
+                <tr><th scope="row">S5 · Plan</th><td data-label="The industry's standard">You verify each phase, then refine it</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> full task cards, a confidence each; what changed since the draft; approve all or one by one.</p></td></tr>
+                <tr><th scope="row">S6 · Materialize</th><td data-label="The industry's standard">Tasks listed from the specification, traced back to its requirements</td><td data-label="Dream&nbsp;Team"><p><svg class="ig-meets" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5 L6.5 12 L13 4.5"/></svg><strong>Meets</strong> tasks, the epic and a closing task created in one batch; criteria copied word for word.</p></td></tr>
               </tbody>
             </table>
           </div>
@@ -948,7 +991,7 @@
         <p><strong>The cost:</strong> each stage takes a conversation, and the panel takes agent time; it pays off where rework costs more.</p>
         <p>The worked example, one real brainstorm from start to end: <a href="../notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a>.</p>
         <a class="proof-strip" href="../notes/anatomy-of-one-task.html"><span class="task-id">T-707</span><span><span class="ps-title">Anatomy of one task</span><span class="ps-text"><span class="tid">BS-117</span>'s first planned task, from plan to merge.</span></span><span class="arr" aria-hidden="true">→</span></a>
-        <p class="more"><a href="../lifecycle.html">The whole method, from this brainstorm to the epic's close: The Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
+        <p class="more"><a href="../lifecycle.html">The whole method, from this brainstorm to the epic's close: The&nbsp;Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -956,8 +999,8 @@
       <div class="wrap">
         <h2 class="sec-label" id="sp-title">The small print</h2>
         <details class="provenance">
-          <summary>DreamTeam's files behind each stage</summary>
-          <p>All at commit <code>6b947dfb1</code> of DreamTeam's repository: the interview rubric and stage contracts, <code>docs/system/BS_INTERVIEW_RUBRIC.md</code>; the brainstorm pipeline, <code>config/workflows.yaml</code>, steps <code>step_bs_init_brainstorm</code> (S1), <code>step_bs_init_architecture</code> (S2), <code>step_bs_init_draft_plan</code> (S3), <code>step_bs_init_panel</code> (S4), <code>step_bs_init_staging_report</code> (S5) and <code>step_bs_init_materialize</code> (S6); the check before S6, <code>bs-gate-check</code> in <code>tools/task_ops/query.py</code>; the reviewer agents, <code>.claude/agents/dt-reviewer.md</code>, <code>dt-architect.md</code> and <code>dt-devops.md</code>; <span class="tid">BS-117</span>'s stage files, <code>vision.md</code>, <code>architecture.md</code>, <code>plan-draft.md</code>, <code>panel-review.md</code> and <code>plan.md</code>, in its own folder.</p>
+          <summary>Dream&nbsp;Team's files behind each stage</summary>
+          <p>All at commit <code>6b947dfb1</code> of Dream&nbsp;Team's repository: the interview rubric and stage contracts, <code>docs/system/BS_INTERVIEW_RUBRIC.md</code>; the brainstorm pipeline, <code>config/workflows.yaml</code>, steps <code>step_bs_init_brainstorm</code> (S1), <code>step_bs_init_architecture</code> (S2), <code>step_bs_init_draft_plan</code> (S3), <code>step_bs_init_panel</code> (S4), <code>step_bs_init_staging_report</code> (S5) and <code>step_bs_init_materialize</code> (S6); the check before S6, <code>bs-gate-check</code> in <code>tools/task_ops/query.py</code>; the reviewer agents, <code>.claude/agents/dt-reviewer.md</code>, <code>dt-architect.md</code> and <code>dt-devops.md</code>; <span class="tid">BS-117</span>'s stage files, <code>vision.md</code>, <code>architecture.md</code>, <code>plan-draft.md</code>, <code>panel-review.md</code> and <code>plan.md</code>, in its own folder.</p>
         </details>
         <details class="provenance" id="sp-sources">
           <summary>The industry's sources</summary>
@@ -977,24 +1020,51 @@
         </details>
         <details class="provenance">
           <summary>The method</summary>
-          <p>DreamTeam read at one commit; no measured number on this page (counts, durations and costs are in the worked examples); every excerpt word for word, cut only with "…"; a figure tagged "Schematic" is invented, and everything marked <span class="tid">BS-117</span> is its real record.</p>
+          <p>Dream&nbsp;Team read at one commit; no measured number on this page (counts, durations and costs are in the worked examples); every excerpt word for word, cut only with "…"; a figure tagged "Schematic" is invented, and everything marked <span class="tid">BS-117</span> is its real record.</p>
         </details>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer is-map">
     <div class="wrap">
-      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
-      <nav aria-label="Footer">
-        <a href="../why.html">Why DreamTeam?</a>
-        <a href="../benefits.html">Benefits</a>
-        <a href="../lifecycle.html">The Life Cycle</a>
-        <a href="../offer.html">Work with us</a>
-        <a href="../notes/index.html">Lab notes</a>
-        <a href="../about.html">About</a>
+      <p class="slogan"><span class="slogan-beat">Dream it<span class="visually-hidden">.</span><span class="slogan-dia is-1" aria-hidden="true"></span></span> <span class="slogan-beat">Dream Team it<span class="visually-hidden">.</span><span class="slogan-dia is-2" aria-hidden="true"></span></span> <span class="slogan-beat">Ship it<span class="visually-hidden">.</span><span class="slogan-dia is-3" aria-hidden="true"></span></span></p>
+      <nav class="foot-map" aria-label="Footer">
+        <div class="foot-group">
+          <p class="foot-k"><a href="../offer.html">Our Offerings</a></p>
+          <ul role="list">
+            <li><a href="../program.html">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</a></li>
+            <li><a href="../offer.html#build-together">Build together</a></li>
+            <li><a href="../offer.html#learn">Learn <span class="nw">AI-driven</span> development</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../lifecycle.html">Methodology</a></p>
+          <ul role="list">
+            <li><a href="../method/brainstorm.html">Brainstorm</a></li>
+            <li><a href="../method/epic.html">Epic</a></li>
+            <li><a href="../method/dependencies.html">Dependencies</a></li>
+            <li><a href="../method/task.html">Task</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../why.html">Why Dream&nbsp;Team?</a></p>
+          <ul role="list"><li><a href="../benefits.html">Benefits</a></li></ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../notes/index.html">Lab notes</a></p>
+          <ul role="list">
+            <li><a href="../notes/anatomy-of-one-task.html">Anatomy of one task</a></li>
+            <li><a href="../notes/anatomy-of-one-epic.html">Anatomy of one epic</a></li>
+            <li><a href="../notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../about.html">About</a></p>
+          <ul role="list"><li><a href="../contact-us.html">Talk to us</a></li></ul>
+        </div>
       </nav>
-      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+      <p class="colophon"><span class="nw">Dream Team Lab ·</span> <span class="nw">Built on Claude Code and GitHub ·</span> <span class="nw">©&nbsp;2026</span></p>
     </div>
   </footer>
 </body>

@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>Anatomy of one task — DreamTeam Lab</title>
-  <meta name="description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
-  <meta property="og:title" content="Anatomy of one task — DreamTeam Lab">
-  <meta property="og:description" content="One real DreamTeam task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
+  <title>Anatomy of one task — Dream Team Lab</title>
+  <meta name="description" content="One real Dream Team task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
+  <meta property="og:title" content="Anatomy of one task — Dream Team Lab">
+  <meta property="og:description" content="One real Dream Team task, from plan to merge: what it built, the four stages the AI agents ran, where the engineer decided, and what it took in time and money.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/menu.js" defer></script>
   <style>
     /* One visual note (Brief delta 3) on the shared system (assets/style.css, The Blueprint): the page head
        (.head-84), the names picture and the results band; section labels; stage cards; the record chart and the
@@ -136,16 +137,58 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header is-e">
     <div class="wrap">
       <a class="wordmark" href="../index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="../why.html">Why DreamTeam?</a>
-        <a href="../benefits.html">Benefits</a>
-        <a href="../lifecycle.html">The Life Cycle</a>
-        <a href="../offer.html">Work with us</a>
-        <a href="index.html">Lab notes</a>
-        <a href="../about.html">About</a>
+      <nav class="menu" aria-label="Main">
+        <ul class="menu-list" role="list">
+          <li class="menu-door"><a href="../offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span></a></li>
+          <li class="menu-door"><a href="../lifecycle.html"><span class="menu-name">Methodology</span><span class="visually-hidden">: </span> <span class="menu-sub">The Dream&nbsp;Team Life&nbsp;Cycle</span></a></li>
+          <li class="menu-more">
+            <details name="menu">
+              <summary class="is-current"><span class="menu-icon" aria-hidden="true"></span>Menu</summary>
+              <div class="menu-sheet">
+                <div class="map-group">
+                  <p class="map-k" id="map-offer">Our Offerings</p>
+                  <ul role="list" aria-labelledby="map-offer">
+                    <li><a href="../offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Three ways to work with us</span></a></li>
+                    <li><a href="../program.html"><span class="menu-name">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span><span class="visually-hidden">: </span> <span class="menu-sub">A pilot on your code</span></a></li>
+                    <li><a href="../offer.html#build-together"><span class="menu-name">Build together</span><span class="visually-hidden">: </span> <span class="menu-sub">We build the project with your team</span></a></li>
+                    <li><a href="../offer.html#learn"><span class="menu-name">Learn <span class="nw">AI-driven</span> development</span><span class="visually-hidden">: </span> <span class="menu-sub">Lectures, seminars and webinars</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-method">Methodology</p>
+                  <ul role="list" aria-labelledby="map-method">
+                    <li><a href="../lifecycle.html"><span class="menu-name">The Dream&nbsp;Team Life&nbsp;Cycle</span><span class="visually-hidden">: </span> <span class="menu-sub">From your idea to merged code</span></a></li>
+                    <li><a href="../method/brainstorm.html"><span class="menu-name">Brainstorm</span><span class="visually-hidden">: </span> <span class="menu-sub">The planning session</span></a></li>
+                    <li><a href="../method/epic.html"><span class="menu-name">Epic</span><span class="visually-hidden">: </span> <span class="menu-sub">A story broken into tasks</span></a></li>
+                    <li><a href="../method/dependencies.html"><span class="menu-name">Dependencies</span><span class="visually-hidden">: </span> <span class="menu-sub">Which task waits for which, and why</span></a></li>
+                    <li><a href="../method/task.html"><span class="menu-name">Task</span><span class="visually-hidden">: </span> <span class="menu-sub">One task, start to finish</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-why">Why Dream&nbsp;Team?</p>
+                  <ul role="list" aria-labelledby="map-why">
+                    <li><a href="../why.html"><span class="menu-name">Why Dream&nbsp;Team?</span><span class="visually-hidden">: </span> <span class="menu-sub">A process, not a tool you install</span></a></li>
+                    <li><a href="../benefits.html"><span class="menu-name">Benefits</span><span class="visually-hidden">: </span> <span class="menu-sub">A team behind each engineer</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-lab">The Lab</p>
+                  <ul role="list" aria-labelledby="map-lab">
+                    <li><a href="../notes/index.html"><span class="menu-name">Lab notes</span><span class="visually-hidden">: </span> <span class="menu-sub">Real work taken apart</span></a></li>
+                    <li><a href="../notes/anatomy-of-one-task.html" aria-current="page"><span class="menu-name">Anatomy of one task</span><span class="visually-hidden">: </span> <span class="menu-sub">One real task, from plan to merge</span></a></li>
+                    <li><a href="../notes/anatomy-of-one-epic.html"><span class="menu-name">Anatomy of one epic</span><span class="visually-hidden">: </span> <span class="menu-sub">One real epic, task by task</span></a></li>
+                    <li><a href="../notes/from-a-problem-to-nine-tasks.html"><span class="menu-name">How a brainstorm turned a problem into nine tasks</span><span class="visually-hidden">: </span> <span class="menu-sub">One real brainstorm, stage by stage</span></a></li>
+                    <li><a href="../about.html"><span class="menu-name">About</span><span class="visually-hidden">: </span> <span class="menu-sub">Who builds Dream&nbsp;Team</span></a></li>
+                    <li><a href="../contact-us.html"><span class="menu-name">Talk to us</span><span class="visually-hidden">: </span> <span class="menu-sub">Tell us about your team</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
       <a class="btn btn-primary header-cta" href="../contact-us.html">Talk to us</a>
     </div>
@@ -167,11 +210,11 @@
           <div class="head-main">
             <h1 id="page-title">Anatomy of one task</h1>
             <p class="lead">One real task, from plan to merge. Our tasks kept stalling halfway on work another task hadn't built yet, so <span class="nw">T-707</span> gave our task board a dependency record: each link now has a kind and a reason.</p>
-            <p class="more">The method it shows: <a href="../method/task.html">Task <span aria-hidden="true">→</span></a><span aria-hidden="true"> · </span><a href="../lifecycle.html">The Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
-            <p class="byline">Lab note · <a href="../about.html">Alex Rapoport</a>, founder of DreamTeam Lab · October 2026</p>
+            <p class="more">The method it shows: <a href="../method/task.html">Task <span aria-hidden="true">→</span></a><span aria-hidden="true"> · </span><a href="../lifecycle.html">The&nbsp;Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
+            <p class="byline">Lab note · <a href="../about.html">Alex Rapoport</a>, founder of Dream&nbsp;Team Lab · October 2026</p>
           </div>
           <div class="head-side">
-            <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; DreamTeam is the agentic team; DreamTeam Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
+            <figure class="names-map" aria-label="The names: the Dream Team Life Cycle is the methodology; Dream Team is the agentic team; Dream Team Lab is the company"><span class="nm-root" aria-hidden="true">Dream Team</span><span class="nm-name" aria-hidden="true">Life Cycle</span><span class="nm-desc" aria-hidden="true">the methodology</span><span class="nm-team" aria-hidden="true">agentic team</span><span class="nm-name" aria-hidden="true">Lab</span><span class="nm-desc" aria-hidden="true">the company</span></figure>
           </div>
         </div>
         <div class="wrap">
@@ -329,7 +372,7 @@
             <header class="record-head">
               <p class="fig-tag">An example · the record</p>
               <h3 id="proof-title">One real task, measured end to end</h3>
-              <p class="record-source"><span class="task-id">T-707</span> · a DreamTeam feature, built by DreamTeam · the engineer: Alex Rapoport, our founder · 18–19 September 2026 · UTC</p>
+              <p class="record-source"><span class="task-id">T-707</span> · a Dream&nbsp;Team feature, built by Dream&nbsp;Team · the engineer: Alex Rapoport, our founder · 18–19 September 2026 · UTC</p>
             </header>
             <p class="record-goal"><span class="k">The task's goal:</span> give every task dependency a kind and a reason <span class="gloss">so our task board says why one task waits for another</span></p>
 
@@ -402,10 +445,10 @@
               <table class="data costs">
                 <caption>What <span class="nw">T-707</span> cost</caption>
                 <thead>
-                  <tr><th scope="col">Stage</th><th scope="col" class="num">At Claude API list prices</th><th scope="col" class="plan">Claude Team subscription + DreamTeam cost optimization</th></tr>
+                  <tr><th scope="col">Stage</th><th scope="col" class="num">At Claude API list prices</th><th scope="col" class="plan">Claude Team subscription + Dream&nbsp;Team cost optimization</th></tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">Init, with the alignment review</th><td class="num">$32</td><td class="plan" rowspan="5"><span class="plan-big"><span class="num-pre">about</span> $5</span><ul class="plan-list"><li>Claude Team subscription: a flat price; this task's share of one seat's week</li><li>DreamTeam records every step's tokens and time</li><li>and gives each step the model it needs; big builds run in parts</li></ul><span class="plan-sub plan-open">We keep optimizing the process to do more work for the same money.</span></td></tr>
+                  <tr><th scope="row">Init, with the alignment review</th><td class="num">$32</td><td class="plan" rowspan="5"><span class="plan-big"><span class="num-pre">about</span> $5</span><ul class="plan-list"><li>Claude Team subscription: a flat price; this task's share of one seat's week</li><li>Dream&nbsp;Team records every step's tokens and time</li><li>and gives each step the model it needs; big builds run in parts</li></ul><span class="plan-sub plan-open">We keep optimizing the process to do more work for the same money.</span></td></tr>
                   <tr><th scope="row">Run</th><td class="num">$116</td></tr>
                   <tr><th scope="row">Finalize</th><td class="num">$4</td></tr>
                   <tr><th scope="row">Close</th><td class="num">$11</td></tr>
@@ -420,8 +463,8 @@
 
       <section class="section" aria-label="An example, not a benchmark">
         <div class="wrap stack">
-          <p class="callout"><strong>One task is an example, not a benchmark.</strong> <span class="nw">T-707</span> built something new and had no unexpected failure; we haven't yet measured whether fewer tasks stall. This is DreamTeam building itself: there is no outside case to show yet.</p>
-          <p class="actions"><a class="btn btn-primary" href="../contact-us.html">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a> <a class="btn btn-ghost" href="../program.html">The pilot: Your Dream Team in 8 weeks</a></p>
+          <p class="callout"><strong>One task is an example, not a benchmark.</strong> <span class="nw">T-707</span> built something new and had no unexpected failure; we haven't yet measured whether fewer tasks stall. This is Dream&nbsp;Team building itself: there is no outside case to show yet.</p>
+          <p class="actions"><a class="btn btn-primary" href="../contact-us.html">Talk to us about a pilot <span class="arr" aria-hidden="true">→</span></a> <a class="btn btn-ghost" href="../program.html">The pilot: Your Dream&nbsp;Team in 8&nbsp;weeks</a></p>
         </div>
       </section>
 
@@ -493,7 +536,7 @@
                 </tbody>
               </table>
             </div>
-            <p class="table-note">The other 4 checks that ran aren't required; one tests what differs on Windows: line endings, text encoding and file paths. From DreamTeam's <code>config/required-checks.yaml</code>, <code>config/github-ruleset.json</code> L41–79 and <code>.github/workflows/ci.yaml</code>.</p>
+            <p class="table-note">The other 4 checks that ran aren't required; one tests what differs on Windows: line endings, text encoding and file paths. From Dream&nbsp;Team's <code>config/required-checks.yaml</code>, <code>config/github-ruleset.json</code> L41–79 and <code>.github/workflows/ci.yaml</code>.</p>
           </details>
 
           <details class="fold">
@@ -540,8 +583,8 @@
                   <li>an agreement (an interface, file or value) that no one defined before the code was written.</li>
                 </ol>
                 Only the first two fit “this task must follow that one”. The dependency record covers the first three; the fourth and fifth are out of scope by design; <span class="nw">T-705</span> reports the sixth; the seventh fits a link only in part.</li>
-              <li>The $163 is a lower bound, priced from the token counts in <span class="nw">T-707</span>'s record at DreamTeam's rate table v2.3 (read 4 October 2026; last refreshed against Anthropic's pricing page on 29 September). The alignment review left no token rows; its cost, $19.72, was recovered from the session transcript. The record leaves out some orchestrator calls and undercounts the agents' output; every write to the cache is priced at the five-minute rate. Not reconciled with any invoice. Neither price includes people's time, the brainstorm that planned the work, or building DreamTeam itself.</li>
-              <li>The subscription's $5: <span class="nw">T-707</span> ran on one seat of our Team plan; a seat costs $125 a month, so about $28.85 a week. <span class="nw">T-707</span> was 16.5% of that seat's recorded work that week, $4.75: its share of everything the seat did in Claude Code, the tool our agents run in, from 14 to 21 September, each call weighted by its list price. Both sides of the share come from the seat's session transcripts, not from the $163. An upper bound: any use of the seat outside those transcripts would lower it. Per-step tokens and time: DreamTeam's <code>tools/pipeline_timing.py</code> and <code>tools/telemetry_task_cost.py</code>; the model for each step: <code>.claude/commands/dt-task-run.md</code> L23 and <span class="nw">T-707</span>'s runlog L20.</li>
+              <li>The $163 is a lower bound, priced from the token counts in <span class="nw">T-707</span>'s record at Dream&nbsp;Team's rate table v2.3 (read 4 October 2026; last refreshed against Anthropic's pricing page on 29 September). The alignment review left no token rows; its cost, $19.72, was recovered from the session transcript. The record leaves out some orchestrator calls and undercounts the agents' output; every write to the cache is priced at the five-minute rate. Not reconciled with any invoice. Neither price includes people's time, the brainstorm that planned the work, or building Dream&nbsp;Team itself.</li>
+              <li>The subscription's $5: <span class="nw">T-707</span> ran on one seat of our Team plan; a seat costs $125 a month, so about $28.85 a week. <span class="nw">T-707</span> was 16.5% of that seat's recorded work that week, $4.75: its share of everything the seat did in Claude Code, the tool our agents run in, from 14 to 21 September, each call weighted by its list price. Both sides of the share come from the seat's session transcripts, not from the $163. An upper bound: any use of the seat outside those transcripts would lower it. Per-step tokens and time: Dream&nbsp;Team's <code>tools/pipeline_timing.py</code> and <code>tools/telemetry_task_cost.py</code>; the model for each step: <code>.claude/commands/dt-task-run.md</code> L23 and <span class="nw">T-707</span>'s runlog L20.</li>
               <li>The task took 16 agent runs in 4 sessions, one per stage. My part was six messages: the four commands that started the stages and two answers before Run.</li>
             </ol>
             <div class="setup">
@@ -558,18 +601,45 @@
     </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer is-map">
     <div class="wrap">
-      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
-      <nav aria-label="Footer">
-        <a href="../why.html">Why DreamTeam?</a>
-        <a href="../benefits.html">Benefits</a>
-        <a href="../lifecycle.html">The Life Cycle</a>
-        <a href="../offer.html">Work with us</a>
-        <a href="index.html">Lab notes</a>
-        <a href="../about.html">About</a>
+      <p class="slogan"><span class="slogan-beat">Dream it<span class="visually-hidden">.</span><span class="slogan-dia is-1" aria-hidden="true"></span></span> <span class="slogan-beat">Dream Team it<span class="visually-hidden">.</span><span class="slogan-dia is-2" aria-hidden="true"></span></span> <span class="slogan-beat">Ship it<span class="visually-hidden">.</span><span class="slogan-dia is-3" aria-hidden="true"></span></span></p>
+      <nav class="foot-map" aria-label="Footer">
+        <div class="foot-group">
+          <p class="foot-k"><a href="../offer.html">Our Offerings</a></p>
+          <ul role="list">
+            <li><a href="../program.html">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</a></li>
+            <li><a href="../offer.html#build-together">Build together</a></li>
+            <li><a href="../offer.html#learn">Learn <span class="nw">AI-driven</span> development</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../lifecycle.html">Methodology</a></p>
+          <ul role="list">
+            <li><a href="../method/brainstorm.html">Brainstorm</a></li>
+            <li><a href="../method/epic.html">Epic</a></li>
+            <li><a href="../method/dependencies.html">Dependencies</a></li>
+            <li><a href="../method/task.html">Task</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../why.html">Why Dream&nbsp;Team?</a></p>
+          <ul role="list"><li><a href="../benefits.html">Benefits</a></li></ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../notes/index.html">Lab notes</a></p>
+          <ul role="list">
+            <li><a href="../notes/anatomy-of-one-task.html">Anatomy of one task</a></li>
+            <li><a href="../notes/anatomy-of-one-epic.html">Anatomy of one epic</a></li>
+            <li><a href="../notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="../about.html">About</a></p>
+          <ul role="list"><li><a href="../contact-us.html">Talk to us</a></li></ul>
+        </div>
       </nav>
-      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+      <p class="colophon"><span class="nw">Dream Team Lab ·</span> <span class="nw">Built on Claude Code and GitHub ·</span> <span class="nw">©&nbsp;2026</span></p>
     </div>
   </footer>
 </body>

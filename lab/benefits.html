@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>Benefits — DreamTeam Lab</title>
-  <meta name="description" content="More finished work from every engineer: a team behind each one, measured on your own numbers. What DreamTeam changes for heads of engineering, team leads, developers, business leaders and security.">
-  <meta property="og:title" content="Benefits — DreamTeam Lab">
-  <meta property="og:description" content="More finished work from every engineer: a team behind each one, measured on your own numbers. What DreamTeam changes for heads of engineering, team leads, developers, business leaders and security.">
+  <title>Benefits — Dream Team Lab</title>
+  <meta name="description" content="More finished work from every engineer: a team behind each one, measured on your own numbers. What Dream Team changes for heads of engineering, team leads, developers, business leaders and security.">
+  <meta property="og:title" content="Benefits — Dream Team Lab">
+  <meta property="og:description" content="More finished work from every engineer: a team behind each one, measured on your own numbers. What Dream Team changes for heads of engineering, team leads, developers, business leaders and security.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/menu.js" defer></script>
   <style>
     /* The page's own layout only. Its components — the team figure, the headline's sub-point, the core cards, the benefit
        row, the why-chain and the role chooser — are in assets/style.css §23; the readiness card and the record cards
@@ -50,16 +51,58 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header is-e">
     <div class="wrap">
       <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html" aria-current="page">Benefits</a>
-        <a href="lifecycle.html">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <nav class="menu" aria-label="Main">
+        <ul class="menu-list" role="list">
+          <li class="menu-door"><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span></a></li>
+          <li class="menu-door"><a href="lifecycle.html"><span class="menu-name">Methodology</span><span class="visually-hidden">: </span> <span class="menu-sub">The Dream&nbsp;Team Life&nbsp;Cycle</span></a></li>
+          <li class="menu-more">
+            <details name="menu">
+              <summary class="is-current"><span class="menu-icon" aria-hidden="true"></span>Menu</summary>
+              <div class="menu-sheet">
+                <div class="map-group">
+                  <p class="map-k" id="map-offer">Our Offerings</p>
+                  <ul role="list" aria-labelledby="map-offer">
+                    <li><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Three ways to work with us</span></a></li>
+                    <li><a href="program.html"><span class="menu-name">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span><span class="visually-hidden">: </span> <span class="menu-sub">A pilot on your code</span></a></li>
+                    <li><a href="offer.html#build-together"><span class="menu-name">Build together</span><span class="visually-hidden">: </span> <span class="menu-sub">We build the project with your team</span></a></li>
+                    <li><a href="offer.html#learn"><span class="menu-name">Learn <span class="nw">AI-driven</span> development</span><span class="visually-hidden">: </span> <span class="menu-sub">Lectures, seminars and webinars</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-method">Methodology</p>
+                  <ul role="list" aria-labelledby="map-method">
+                    <li><a href="lifecycle.html"><span class="menu-name">The Dream&nbsp;Team Life&nbsp;Cycle</span><span class="visually-hidden">: </span> <span class="menu-sub">From your idea to merged code</span></a></li>
+                    <li><a href="method/brainstorm.html"><span class="menu-name">Brainstorm</span><span class="visually-hidden">: </span> <span class="menu-sub">The planning session</span></a></li>
+                    <li><a href="method/epic.html"><span class="menu-name">Epic</span><span class="visually-hidden">: </span> <span class="menu-sub">A story broken into tasks</span></a></li>
+                    <li><a href="method/dependencies.html"><span class="menu-name">Dependencies</span><span class="visually-hidden">: </span> <span class="menu-sub">Which task waits for which, and why</span></a></li>
+                    <li><a href="method/task.html"><span class="menu-name">Task</span><span class="visually-hidden">: </span> <span class="menu-sub">One task, start to finish</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-why">Why Dream&nbsp;Team?</p>
+                  <ul role="list" aria-labelledby="map-why">
+                    <li><a href="why.html"><span class="menu-name">Why Dream&nbsp;Team?</span><span class="visually-hidden">: </span> <span class="menu-sub">A process, not a tool you install</span></a></li>
+                    <li><a href="benefits.html" aria-current="page"><span class="menu-name">Benefits</span><span class="visually-hidden">: </span> <span class="menu-sub">A team behind each engineer</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-lab">The Lab</p>
+                  <ul role="list" aria-labelledby="map-lab">
+                    <li><a href="notes/index.html"><span class="menu-name">Lab notes</span><span class="visually-hidden">: </span> <span class="menu-sub">Real work taken apart</span></a></li>
+                    <li><a href="notes/anatomy-of-one-task.html"><span class="menu-name">Anatomy of one task</span><span class="visually-hidden">: </span> <span class="menu-sub">One real task, from plan to merge</span></a></li>
+                    <li><a href="notes/anatomy-of-one-epic.html"><span class="menu-name">Anatomy of one epic</span><span class="visually-hidden">: </span> <span class="menu-sub">One real epic, task by task</span></a></li>
+                    <li><a href="notes/from-a-problem-to-nine-tasks.html"><span class="menu-name">How a brainstorm turned a problem into nine tasks</span><span class="visually-hidden">: </span> <span class="menu-sub">One real brainstorm, stage by stage</span></a></li>
+                    <li><a href="about.html"><span class="menu-name">About</span><span class="visually-hidden">: </span> <span class="menu-sub">Who builds Dream&nbsp;Team</span></a></li>
+                    <li><a href="contact-us.html"><span class="menu-name">Talk to us</span><span class="visually-hidden">: </span> <span class="menu-sub">Tell us about your team</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
       <a class="btn btn-primary header-cta" href="contact-us.html">Talk to us</a>
     </div>
@@ -73,7 +116,7 @@
         <p class="bn-sub">Measured on your own numbers.</p>
         <div class="bn-hero">
           <div class="bn-hero-text">
-            <p class="lead">DreamTeam gives each engineer a team of AI agents; your engineers decide. A pilot counts merged, reviewed and tested changes per engineer against your last <span class="nw">8–12 weeks</span> of history.</p>
+            <p class="lead">Dream&nbsp;Team gives each engineer a team of AI agents; your engineers decide. A pilot counts merged, reviewed and tested changes per engineer against your last <span class="nw">8–12 weeks</span> of history.</p>
             <p class="fig-line"><a class="num-link" href="notes/anatomy-of-one-task.html"><strong class="num-value">1–2 hours</strong> <span class="num-label">of the engineer's own time on one merged task</span></a></p>
             <p class="actions"><a class="text-link" href="#contact">Run a pilot on your own code <span aria-hidden="true">→</span></a></p>
           </div>
@@ -139,7 +182,7 @@
         <div class="bn-head">
           <p class="sec-label">The core benefits</p>
           <h2 id="everyone-title">A team does the work; the decisions, and the reasons, stay yours</h2>
-          <p class="more"><a href="why.html">The problem: Why DreamTeam? <span aria-hidden="true">→</span></a><span aria-hidden="true"> · </span><a href="lifecycle.html">How it runs: The Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
+          <p class="more"><a href="why.html">The problem: Why Dream&nbsp;Team? <span aria-hidden="true">→</span></a><span aria-hidden="true"> · </span><a href="lifecycle.html">How it runs: The&nbsp;Dream&nbsp;Team Life&nbsp;Cycle <span aria-hidden="true">→</span></a></p>
         </div>
         <ul class="bn-core" role="list">
           <li class="bn-core-card">
@@ -159,7 +202,7 @@
             <details class="benefit bn-core-more">
               <summary aria-describedby="core-2"><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></summary>
               <div class="bf-body">
-                <p class="bf-why">A task's merged commit names the task; its record names its epic and, where there was one, the brainstorm behind it. <a href="why.html#lesson-4">Lesson 4 on Why DreamTeam?</a> says why that matters.</p>
+                <p class="bf-why">A task's merged commit names the task; its record names its epic and, where there was one, the brainstorm behind it. <a href="why.html#lesson-4">Lesson 4 on Why Dream&nbsp;Team?</a> says why that matters.</p>
                 <p class="bf-ex"><strong class="bf-k">On record:</strong> the code's own note names <span class="nw">T-687</span> and the engineer's decision at its gate.</p>
               </div>
             </details>
@@ -247,7 +290,7 @@
                   <summary><span class="bf-head"><span class="bf-line">A goal becomes a plan: the tasks, their order, and which would collide.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why">Each link in a task's dependency record says why one waits on the other.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the plan of one goal on DreamTeam's own board; the record card shows it.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the plan of one goal on Dream&nbsp;Team's own board; the record card shows it.</p>
                   </div>
                 </details>
               </li>
@@ -265,16 +308,16 @@
                   <summary><span class="bf-head"><span class="bf-line">Runs on Claude Code and GitHub Copilot, from one process definition.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why">If your teams use Claude Code or GitHub Copilot, they keep it. Both setups come from one source, and CI fails a build whose agent files drift from it.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on <span class="nw">26 June 2026</span>, <span class="nw">T-276</span> was the first DreamTeam task run from VS Code Copilot: its orchestrator dispatched the architect, the reviewer and the technical writer.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on <span class="nw">26 June 2026</span>, <span class="nw">T-276</span> was the first Dream&nbsp;Team task run from VS Code Copilot: its orchestrator dispatched the architect, the reviewer and the technical writer.</p>
                   </div>
                 </details>
               </li>
               <li>
                 <details class="benefit">
-                  <summary><span class="bf-head"><span class="bf-line">Made for the codebase you already have (brownfield): DreamTeam studies it first.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+                  <summary><span class="bf-head"><span class="bf-line">Made for the codebase you already have (brownfield): Dream&nbsp;Team studies it first.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
-                    <p class="bf-why">Before it writes code, DreamTeam's archaeologist studies your codebase and writes a Discovery Report. Its first pass is a mechanical scan, before any AI review; with your consent it writes its findings and report into DreamTeam's own folder in your repository, and nothing more until you ask.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on DreamTeam's own repository, about 630,000 lines of code, the first, mechanical pass mapped its layout, where the code changes most and what depends on what.</p>
+                    <p class="bf-why">Before it writes code, Dream&nbsp;Team's archaeologist studies your codebase and writes a Discovery Report. Its first pass is a mechanical scan, before any AI review; with your consent it writes its findings and report into Dream&nbsp;Team's own folder in your repository, and nothing more until you ask.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on Dream&nbsp;Team's own repository, about 630,000 lines of code, the first, mechanical pass mapped its layout, where the code changes most and what depends on what.</p>
                   </div>
                 </details>
               </li>
@@ -282,7 +325,7 @@
           </div>
           <div class="bn-split-r">
             <figure class="review-card" aria-labelledby="heads-card-title">
-              <figcaption class="review-card-head" id="heads-card-title"><span><strong>BS-117</strong> · one goal, planned before code</span><span>DreamTeam's own board</span></figcaption>
+              <figcaption class="review-card-head" id="heads-card-title"><span><strong>BS-117</strong> · one goal, planned before code</span><span>Dream&nbsp;Team's own board</span></figcaption>
               <ol class="findings" role="list">
                 <li class="finding">
                   <p class="finding-k"><span>The plan</span></p>
@@ -297,7 +340,7 @@
                 <li class="finding">
                   <p class="finding-k"><span>Before the plan</span></p>
                   <p class="finding-point"><b class="v">264</b> of 685 task rows had no dependency</p>
-                  <p class="finding-detail">DreamTeam's own board, counted before this goal was planned.</p>
+                  <p class="finding-detail">Dream&nbsp;Team's own board, counted before this goal was planned.</p>
                 </li>
               </ol>
             </figure>
@@ -319,7 +362,7 @@
                 <details class="benefit">
                   <summary><span class="bf-head"><span class="bf-line">Your reviewers get the findings, the fixes and the test results with the change.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
-                    <p class="bf-why">The agents' review and the tests run before a person looks. <a href="why.html#lesson-2">Lesson 2 on Why DreamTeam?</a> says why that matters now.</p>
+                    <p class="bf-why">The agents' review and the tests run before a person looks. <a href="why.html#lesson-2">Lesson 2 on Why Dream&nbsp;Team?</a> says why that matters now.</p>
                     <p class="bf-ex"><strong class="bf-k">On record:</strong> <span class="nw">T-707</span>'s code review and test run; the record card shows both.</p>
                   </div>
                 </details>
@@ -406,7 +449,7 @@
                 <details class="benefit">
                   <summary><span class="bf-head"><span class="bf-line">The agents are technology-neutral: your team's own skills rank first, and your conventions are wired in where you keep them.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
-                    <p class="bf-why">Know-how for your stack comes as skills. For each one your team needs, your own wins if you have it; next comes DreamTeam's reviewed library; a skill drafted for your stack needs a person's sign-off. Your conventions are referenced where you keep them, so they stay yours.</p>
+                    <p class="bf-why">Know-how for your stack comes as skills. For each one your team needs, your own wins if you have it; next comes Dream&nbsp;Team's reviewed library; a skill drafted for your stack needs a person's sign-off. Your conventions are referenced where you keep them, so they stay yours.</p>
                     <p class="bf-ex"><strong class="bf-k">On record:</strong> <span class="nw">T-707</span>'s contract named the nine skills its agents were to load, from code review to Python testing.</p>
                   </div>
                 </details>
@@ -487,7 +530,7 @@
               </li>
               <li>
                 <details class="benefit">
-                  <summary><span class="bf-head"><span class="bf-line">Our engineers set the cycle up with your team: Your Dream Team in 8 weeks.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+                  <summary><span class="bf-head"><span class="bf-line">Our engineers set the cycle up with your team: Your Dream&nbsp;Team in 8&nbsp;weeks.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why"><a href="program.html">The program</a>, in three steps: set up the cycle in your repositories; ship your first features through it, together; teach your team to run it.</p>
                   </div>
@@ -533,7 +576,7 @@
             <ul class="benefits" role="list">
               <li>
                 <details class="benefit">
-                  <summary><span class="bf-head"><span class="bf-line">No DreamTeam server: the whole history lives in your Git.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
+                  <summary><span class="bf-head"><span class="bf-line">No Dream&nbsp;Team server: the whole history lives in your Git.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why">What leaves goes to the model provider (your code and the context a task needs) and to the services you connect: GitHub, Jira, the web pages the agents read. None of it goes to us.</p>
                     <p class="bf-ex"><strong class="bf-k">On record:</strong> <span class="nw">T-707</span>'s merged commit carried its task records with its code, 39 files in all.</p>
@@ -544,8 +587,8 @@
                 <details class="benefit">
                   <summary><span class="bf-head"><span class="bf-line">Deleting, force-pushing, rewriting history and outbound posts wait for a person.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
-                    <p class="bf-why">The permission profile DreamTeam installs asks before them, refuses to read <code>.env</code> files, and pre-approves commits, pushes, Python and web reads, which run without asking. DreamTeam's own rules call its hooks “process discipline — NOT a security control”: the control is your branch protection and merge queue.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the profile ships with DreamTeam's installer, in <code>.claude/settings.json</code>.</p>
+                    <p class="bf-why">The permission profile Dream&nbsp;Team installs asks before them, refuses to read <code>.env</code> files, and pre-approves commits, pushes, Python and web reads, which run without asking. Dream&nbsp;Team's own rules call its hooks “process discipline — NOT a security control”: the control is your branch protection and merge queue.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the profile ships with Dream&nbsp;Team's installer, in <code>.claude/settings.json</code>.</p>
                   </div>
                 </details>
               </li>
@@ -554,7 +597,7 @@
                   <summary><span class="bf-head"><span class="bf-line">Changes made by AI carry a paper trail: the task's contract and its runlog.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why">Audit and incident questions start from a task, not from someone's memory.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> 96% of DreamTeam's closed tasks have both.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> 96% of Dream&nbsp;Team's closed tasks have both.</p>
                   </div>
                 </details>
               </li>
@@ -562,8 +605,8 @@
                 <details class="benefit">
                   <summary><span class="bf-head"><span class="bf-line">Our engineers install it with you. The installer lists every file before it adds one.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
-                    <p class="bf-why">The installer writes nothing you have not seen and approved. Your install contract, <code>.dt/contract.yaml</code>, is one file you approve: which files are DreamTeam's and which are yours, and when a push must ask first. A hook blocks writes and pushes outside it, but lets them through if it cannot run; until you approve and commit the contract, the agents' writes are not checked against it.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the installer's file list, and a defect DreamTeam found in it and fixed; the record card shows both.</p>
+                    <p class="bf-why">The installer writes nothing you have not seen and approved. Your install contract, <code>.dt/contract.yaml</code>, is one file you approve: which files are Dream&nbsp;Team's and which are yours, and when a push must ask first. A hook blocks writes and pushes outside it, but lets them through if it cannot run; until you approve and commit the contract, the agents' writes are not checked against it.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> the installer's file list, and a defect Dream&nbsp;Team found in it and fixed; the record card shows both.</p>
                   </div>
                 </details>
               </li>
@@ -572,7 +615,7 @@
                   <summary><span class="bf-head"><span class="bf-line">The first scan of your code reads your assistant's settings and runs nothing.</span><span class="bf-more"><span class="bf-more-word">Elaborate</span></span></span></summary>
                   <div class="bf-body">
                     <p class="bf-why">The task that built its security screen checked that it executes nothing.</p>
-                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on DreamTeam's own repository, it flagged our own unscoped auto-approve shell permissions.</p>
+                    <p class="bf-ex"><strong class="bf-k">On record:</strong> on Dream&nbsp;Team's own repository, it flagged our own unscoped auto-approve shell permissions.</p>
                   </div>
                 </details>
               </li>
@@ -583,7 +626,7 @@
               <figcaption class="review-card-head" id="install-card-title"><span>The installer's file list</span><span>before it adds one</span></figcaption>
               <ol class="findings" role="list">
                 <li class="finding">
-                  <p class="finding-k"><span>In DreamTeam 0.5.0</span></p>
+                  <p class="finding-k"><span>In Dream&nbsp;Team 0.5.0</span></p>
                   <p class="finding-point"><b class="v">28 files</b>, each listed before it is written</p>
                   <p class="finding-detail">The first install: a dry run prints the plan and writes nothing; the onboarding guide says to run it first.</p>
                 </li>
@@ -612,7 +655,7 @@
             <p class="sec-label">Talk to us</p>
             <h2 id="contact-title">Run a pilot on your own code</h2>
             <p class="intro">Tell us about your team. We'll walk you through a real task, end to end, and agree the scope of a pilot with you.</p>
-            <p class="offer-terms">DreamTeam Lab is Alex Rapoport and Boris Daich — <a href="about.html">about us</a>.</p>
+            <p class="offer-terms">Dream&nbsp;Team Lab is Alex Rapoport and Boris Daich — <a href="about.html">about us</a>.</p>
             <p class="more"><a href="offer.html">What we offer <span aria-hidden="true">→</span></a></p>
           </div>
           <div class="offer-side">
@@ -627,14 +670,14 @@
         <h2 class="sec-label" id="sp-title">The small print</h2>
         <details class="provenance">
           <summary>Where each example comes from</summary>
-          <p>Every example above is a DreamTeam record. DreamTeam's repository is private, so its sources are listed here: files in each task's own folder unless another path is given, with line numbers. Read on <span class="nw">16 October 2026</span>.</p>
+          <p>Every example above is a Dream&nbsp;Team record. Dream&nbsp;Team's repository is private, so its sources are listed here: files in each task's own folder unless another path is given, with line numbers. Read on <span class="nw">16 October 2026</span>.</p>
           <ul>
             <li><b><span class="nw">T-707</span></b>: <code>runlog.md</code> (L20 the team; L25 the code review; L28 the tester; L30 the architect's decision; L37 and L180–182 the records written; L124–130 the verdict; L199 the follow-ups); <code>tcb.md</code> (L581–582, its branch and working copy; L739–749, its skills); its row in <code>tasks.yaml</code> (the twelve corrections); its merged commit <code>953d683f</code> (its files), named, never linked.</li>
             <li><b><span class="nw">T-687</span></b>: <code>tcb.md</code> (L449, L453–454, L459, L580–581) and <code>runlog.md</code> (L79–82): the readiness review and the status report. Its chain: the line of code, <code>tools/board_narrative.py</code> L398–405, and the code's note, L182; the merged commit <code>990b2119</code>, named, never linked; its row in <code>tasks.yaml</code> (L19059–19082: its epic and its brainstorm); <b><span class="nw">BS-115</span></b>: <code>runlog.md</code> (L5); the decision, <code>docs/decisions/fragments/2026-09-17__t687-board-narrative-table-widgets-and-widened-tasks-cli.md</code> (L42–53), <span class="nw">DL-952</span> in <code>docs/decisions/decision-log.md</code> (L825).</li>
             <li><b><span class="nw">T-393</span></b>: <code>runlog.md</code> (L26, L77). <b><span class="nw">T-276</span></b>: <code>runlog.md</code> (L33). <b><span class="nw">BS-117</span></b>: its plan (the nine tasks, their links and waves) and <code>vision.md</code> (L33, the board before it).</li>
             <li>The month of <span class="nw">9 July</span> – <span class="nw">9 August 2026</span>: <code>docs/partner-brief/DATA.md</code> (L6–7, L18–19, L103) and <code>docs/partner-brief/DATA-COST-AND-PROBLEMS.md</code> (L368–373).</li>
             <li>The Discovery Report: <code>docs/partner-brief/artifacts/discovery-report.md</code> (L1, L5–7, L13, L31, L69, L167–178).</li>
-            <li>The permission profile and the hooks' limit, as DreamTeam installs them: <code>dreamteam/data/scaffold/shared/.claude/settings.json</code>, and <code>.claude/rules/dt-commit-discipline.md</code> in the same folder (L8, L24–25, L139–142, L164–168).</li>
+            <li>The permission profile and the hooks' limit, as Dream&nbsp;Team installs them: <code>dreamteam/data/scaffold/shared/.claude/settings.json</code>, and <code>.claude/rules/dt-commit-discipline.md</code> in the same folder (L8, L24–25, L139–142, L164–168).</li>
             <li>The installer's file list and the install contract: <code>docs/public/onboarding.md</code> (L3, L14–15, L115–145, L155, L167; the contract, L386–428), and the hook, <code>dreamteam/data/scaffold/shared/.claude/hooks/contract_guard_hook.py</code> (L43–51, L83–95); <b><span class="nw">T-698</span></b>: <code>runlog.md</code> (L9); <b><span class="nw">T-708</span></b>: <code>runlog.md</code> (L24, L26, L36, L116) and its merged commit <code>a696d9cb</code>, named, never linked.</li>
             <li>How a run resumes: <code>config/agents.yaml</code> (L503) and <code>.claude/commands/dt-task-run.md</code> (L18). The tester's rule: <code>.claude/agents/dt-tester.md</code> (L3); a failing test stops the task: <code>dt-task-run.md</code> (L41–42). How skills are chosen: <code>tools/skill_binder.py</code> (L6–12, L22) and <code>docs/public/onboarding.md</code> (L520–541). The dependency record: <code>shared/models/task_schema.py</code> (L419–421, L444–466; a collision, L714–715).</li>
             <li>Copilot: <code>docs/guides/ghcp-vscode-operator-guide.md</code> (L215).</li>
@@ -643,7 +686,7 @@
         <details class="provenance">
           <summary>Method and limits</summary>
           <ul>
-            <li>13 of the 25 benefits draw their example from one task, <span class="nw">T-707</span>. Every example comes from DreamTeam's own repository: DreamTeam building itself. <span class="nw">T-707</span>'s engineer is Alex Rapoport, DreamTeam Lab's founder.</li>
+            <li>13 of the 25 benefits draw their example from one task, <span class="nw">T-707</span>. Every example comes from Dream&nbsp;Team's own repository: Dream&nbsp;Team building itself. <span class="nw">T-707</span>'s engineer is Alex Rapoport, Dream&nbsp;Team Lab's founder.</li>
             <li>The 248 work items are volume, not proof.</li>
           </ul>
         </details>
@@ -651,18 +694,45 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer is-map">
     <div class="wrap">
-      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
-      <nav aria-label="Footer">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="lifecycle.html">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <p class="slogan"><span class="slogan-beat">Dream it<span class="visually-hidden">.</span><span class="slogan-dia is-1" aria-hidden="true"></span></span> <span class="slogan-beat">Dream Team it<span class="visually-hidden">.</span><span class="slogan-dia is-2" aria-hidden="true"></span></span> <span class="slogan-beat">Ship it<span class="visually-hidden">.</span><span class="slogan-dia is-3" aria-hidden="true"></span></span></p>
+      <nav class="foot-map" aria-label="Footer">
+        <div class="foot-group">
+          <p class="foot-k"><a href="offer.html">Our Offerings</a></p>
+          <ul role="list">
+            <li><a href="program.html">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</a></li>
+            <li><a href="offer.html#build-together">Build together</a></li>
+            <li><a href="offer.html#learn">Learn <span class="nw">AI-driven</span> development</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="lifecycle.html">Methodology</a></p>
+          <ul role="list">
+            <li><a href="method/brainstorm.html">Brainstorm</a></li>
+            <li><a href="method/epic.html">Epic</a></li>
+            <li><a href="method/dependencies.html">Dependencies</a></li>
+            <li><a href="method/task.html">Task</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="why.html">Why Dream&nbsp;Team?</a></p>
+          <ul role="list"><li><a href="benefits.html">Benefits</a></li></ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="notes/index.html">Lab notes</a></p>
+          <ul role="list">
+            <li><a href="notes/anatomy-of-one-task.html">Anatomy of one task</a></li>
+            <li><a href="notes/anatomy-of-one-epic.html">Anatomy of one epic</a></li>
+            <li><a href="notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="about.html">About</a></p>
+          <ul role="list"><li><a href="contact-us.html">Talk to us</a></li></ul>
+        </div>
       </nav>
-      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+      <p class="colophon"><span class="nw">Dream Team Lab ·</span> <span class="nw">Built on Claude Code and GitHub ·</span> <span class="nw">©&nbsp;2026</span></p>
     </div>
   </footer>
 </body>

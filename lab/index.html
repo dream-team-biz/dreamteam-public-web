@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
-  <title>DreamTeam Lab — AI agents do the work; you approve what ships</title>
+  <title>Dream Team Lab — AI agents do the work; you approve what ships</title>
   <meta name="description" content="The Dream Team Life Cycle: AI agents do a software team's work, and a person approves what ships. Learn the methodology, or set it up with our engineers.">
-  <meta property="og:title" content="DreamTeam Lab — AI agents do the work; you approve what ships">
+  <meta property="og:title" content="Dream Team Lab — AI agents do the work; you approve what ships">
   <meta property="og:description" content="The Dream Team Life Cycle: AI agents do a software team's work, and a person approves what ships. Learn the methodology, or set it up with our engineers.">
   <meta property="og:image" content="https://dream-team-lab.com/assets/preview-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -15,19 +15,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/menu.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header is-e">
     <div class="wrap">
       <a class="wordmark" href="index.html"><span class="glyph" aria-hidden="true"></span>DreamTeam <span class="lab">Lab</span></a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="lifecycle.html">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <nav class="menu" aria-label="Main">
+        <ul class="menu-list" role="list">
+          <li class="menu-door"><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span></a></li>
+          <li class="menu-door"><a href="lifecycle.html"><span class="menu-name">Methodology</span><span class="visually-hidden">: </span> <span class="menu-sub">The Dream&nbsp;Team Life&nbsp;Cycle</span></a></li>
+          <li class="menu-more">
+            <details name="menu">
+              <summary><span class="menu-icon" aria-hidden="true"></span>Menu</summary>
+              <div class="menu-sheet">
+                <div class="map-group">
+                  <p class="map-k" id="map-offer">Our Offerings</p>
+                  <ul role="list" aria-labelledby="map-offer">
+                    <li><a href="offer.html"><span class="menu-name">Our Offerings</span><span class="visually-hidden">: </span> <span class="menu-sub">Three ways to work with us</span></a></li>
+                    <li><a href="program.html"><span class="menu-name">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</span><span class="visually-hidden">: </span> <span class="menu-sub">A pilot on your code</span></a></li>
+                    <li><a href="offer.html#build-together"><span class="menu-name">Build together</span><span class="visually-hidden">: </span> <span class="menu-sub">We build the project with your team</span></a></li>
+                    <li><a href="offer.html#learn"><span class="menu-name">Learn <span class="nw">AI-driven</span> development</span><span class="visually-hidden">: </span> <span class="menu-sub">Lectures, seminars and webinars</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-method">Methodology</p>
+                  <ul role="list" aria-labelledby="map-method">
+                    <li><a href="lifecycle.html"><span class="menu-name">The Dream&nbsp;Team Life&nbsp;Cycle</span><span class="visually-hidden">: </span> <span class="menu-sub">From your idea to merged code</span></a></li>
+                    <li><a href="method/brainstorm.html"><span class="menu-name">Brainstorm</span><span class="visually-hidden">: </span> <span class="menu-sub">The planning session</span></a></li>
+                    <li><a href="method/epic.html"><span class="menu-name">Epic</span><span class="visually-hidden">: </span> <span class="menu-sub">A story broken into tasks</span></a></li>
+                    <li><a href="method/dependencies.html"><span class="menu-name">Dependencies</span><span class="visually-hidden">: </span> <span class="menu-sub">Which task waits for which, and why</span></a></li>
+                    <li><a href="method/task.html"><span class="menu-name">Task</span><span class="visually-hidden">: </span> <span class="menu-sub">One task, start to finish</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-why">Why Dream&nbsp;Team?</p>
+                  <ul role="list" aria-labelledby="map-why">
+                    <li><a href="why.html"><span class="menu-name">Why Dream&nbsp;Team?</span><span class="visually-hidden">: </span> <span class="menu-sub">A process, not a tool you install</span></a></li>
+                    <li><a href="benefits.html"><span class="menu-name">Benefits</span><span class="visually-hidden">: </span> <span class="menu-sub">A team behind each engineer</span></a></li>
+                  </ul>
+                </div>
+                <div class="map-group">
+                  <p class="map-k" id="map-lab">The Lab</p>
+                  <ul role="list" aria-labelledby="map-lab">
+                    <li><a href="notes/index.html"><span class="menu-name">Lab notes</span><span class="visually-hidden">: </span> <span class="menu-sub">Real work taken apart</span></a></li>
+                    <li><a href="notes/anatomy-of-one-task.html"><span class="menu-name">Anatomy of one task</span><span class="visually-hidden">: </span> <span class="menu-sub">One real task, from plan to merge</span></a></li>
+                    <li><a href="notes/anatomy-of-one-epic.html"><span class="menu-name">Anatomy of one epic</span><span class="visually-hidden">: </span> <span class="menu-sub">One real epic, task by task</span></a></li>
+                    <li><a href="notes/from-a-problem-to-nine-tasks.html"><span class="menu-name">How a brainstorm turned a problem into nine tasks</span><span class="visually-hidden">: </span> <span class="menu-sub">One real brainstorm, stage by stage</span></a></li>
+                    <li><a href="about.html"><span class="menu-name">About</span><span class="visually-hidden">: </span> <span class="menu-sub">Who builds Dream&nbsp;Team</span></a></li>
+                    <li><a href="contact-us.html"><span class="menu-name">Talk to us</span><span class="visually-hidden">: </span> <span class="menu-sub">Tell us about your team</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
       <a class="btn btn-primary header-cta" href="contact-us.html">Talk to us</a>
     </div>
@@ -49,7 +92,7 @@
 
             <svg class="ig-pic is-wide" viewBox="0 0 576 320" width="576" height="320" role="img" aria-labelledby="story-w-t story-w-d">
               <title id="story-w-t">Dream it, Dream Team it, Ship it</title>
-              <desc id="story-w-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into DreamTeam, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
+              <desc id="story-w-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into Dream Team, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
               <rect class="story-box" x="112" y="40" width="272" height="272"/>
               <rect class="story-core" x="120" y="80" width="256" height="224"/>
               <rect class="story-plan" x="128" y="168" width="240" height="128"/>
@@ -160,7 +203,7 @@
 
             <svg class="ig-pic is-narrow" viewBox="0 0 288 608" width="288" height="608" role="img" aria-labelledby="story-n-t story-n-d">
               <title id="story-n-t">Dream it, Dream Team it, Ship it</title>
-              <desc id="story-n-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into DreamTeam, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
+              <desc id="story-n-d">Dream it: you have an idea, and it lights up. Dream Team it: the idea goes into Dream Team, where AI agents brainstorm it with you, turn it into a plan you approve, work through the tasks and check them. Ship it: your product comes out, you approve it, and it goes to your users.</desc>
               <rect class="story-box" x="8" y="148" width="272" height="272"/>
               <rect class="story-core" x="16" y="188" width="256" height="224"/>
               <rect class="story-plan" x="24" y="276" width="240" height="128"/>
@@ -292,12 +335,12 @@
             <li class="route">
               <h3 class="route-name">The benefits</h3>
               <div class="route-body">
-                <a class="more route-go" href="benefits.html">DreamTeam benefits <span aria-hidden="true">→</span></a>
+                <a class="more route-go" href="benefits.html">Dream Team benefits <span aria-hidden="true">→</span></a>
               </div>
             </li>
           </ul>
           <div class="routes-foot">
-            <p class="routes-fact"><strong>DreamTeam Lab</strong> is the company; <strong>DreamTeam</strong> is the team of AI agents it builds; <strong>The&nbsp;Dream&nbsp;Team&nbsp;Life&nbsp;Cycle</strong> is the method DreamTeam runs.</p>
+            <p class="routes-fact"><strong>Dream&nbsp;Team Lab</strong> is the company; <strong>Dream&nbsp;Team</strong> is the team of AI agents it builds; <strong>The&nbsp;Dream&nbsp;Team&nbsp;Life&nbsp;Cycle</strong> is the method Dream&nbsp;Team runs.</p>
             <p class="routes-fact"><a href="program.html"><strong>Your Dream&nbsp;Team in 8&nbsp;weeks</strong></a>: our engineers set it up with your team.</p>
           </div>
         </div>
@@ -305,18 +348,45 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer is-map">
     <div class="wrap">
-      <p class="slogan"><span class="glyph" aria-hidden="true"></span><span><span class="nw">Dream it.</span> <span class="nw">Dream Team it.</span> <span class="nw">Ship it.</span></span></p>
-      <nav aria-label="Footer">
-        <a href="why.html">Why DreamTeam?</a>
-        <a href="benefits.html">Benefits</a>
-        <a href="lifecycle.html">The Life Cycle</a>
-        <a href="offer.html">Work with us</a>
-        <a href="notes/index.html">Lab notes</a>
-        <a href="about.html">About</a>
+      <p class="slogan"><span class="slogan-beat">Dream it<span class="visually-hidden">.</span><span class="slogan-dia is-1" aria-hidden="true"></span></span> <span class="slogan-beat">Dream Team it<span class="visually-hidden">.</span><span class="slogan-dia is-2" aria-hidden="true"></span></span> <span class="slogan-beat">Ship it<span class="visually-hidden">.</span><span class="slogan-dia is-3" aria-hidden="true"></span></span></p>
+      <nav class="foot-map" aria-label="Footer">
+        <div class="foot-group">
+          <p class="foot-k"><a href="offer.html">Our Offerings</a></p>
+          <ul role="list">
+            <li><a href="program.html">Your Dream&nbsp;Team in&nbsp;8&nbsp;weeks</a></li>
+            <li><a href="offer.html#build-together">Build together</a></li>
+            <li><a href="offer.html#learn">Learn <span class="nw">AI-driven</span> development</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="lifecycle.html">Methodology</a></p>
+          <ul role="list">
+            <li><a href="method/brainstorm.html">Brainstorm</a></li>
+            <li><a href="method/epic.html">Epic</a></li>
+            <li><a href="method/dependencies.html">Dependencies</a></li>
+            <li><a href="method/task.html">Task</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="why.html">Why Dream&nbsp;Team?</a></p>
+          <ul role="list"><li><a href="benefits.html">Benefits</a></li></ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="notes/index.html">Lab notes</a></p>
+          <ul role="list">
+            <li><a href="notes/anatomy-of-one-task.html">Anatomy of one task</a></li>
+            <li><a href="notes/anatomy-of-one-epic.html">Anatomy of one epic</a></li>
+            <li><a href="notes/from-a-problem-to-nine-tasks.html">How a brainstorm turned a problem into nine tasks</a></li>
+          </ul>
+        </div>
+        <div class="foot-group">
+          <p class="foot-k"><a href="about.html">About</a></p>
+          <ul role="list"><li><a href="contact-us.html">Talk to us</a></li></ul>
+        </div>
       </nav>
-      <p class="colophon">DreamTeam Lab · Built on Claude Code and GitHub · ©&nbsp;2026</p>
+      <p class="colophon"><span class="nw">Dream Team Lab ·</span> <span class="nw">Built on Claude Code and GitHub ·</span> <span class="nw">©&nbsp;2026</span></p>
     </div>
   </footer>
 </body>
