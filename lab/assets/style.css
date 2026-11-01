@@ -347,6 +347,9 @@ button.btn { cursor: pointer; }
 .site-footer.is-map .foot-map li a { font: 400 14px/20px var(--body); }
 .site-footer.is-map .foot-map a:hover { color: var(--accent); text-decoration: underline 1px; text-underline-offset: 3px; }
 .site-footer.is-map .colophon { margin-top: 16px; }
+.site-footer.is-map .colophon a { position: relative; color: var(--ink); text-decoration: underline 1px; text-underline-offset: 3px; }
+.site-footer.is-map .colophon a:hover { color: var(--accent); }
+.site-footer.is-map .colophon a::after { content: ""; position: absolute; inset: -14px 0; }
 @media (min-width: 768px) {
   .site-footer.is-map .foot-map { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
   .site-footer.is-map .foot-map ul { display: block; }
@@ -355,6 +358,7 @@ button.btn { cursor: pointer; }
 @media (min-width: 1024px) {
   .site-footer.is-map .foot-map { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .site-footer.is-map .foot-map a { padding-block: 8px; }
+  .site-footer.is-map .colophon a::after { inset: -10px 0; }
 }
 .colophon { font: 400 14px/1.5 var(--body); }
 
