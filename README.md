@@ -1,20 +1,8 @@
 # dreamteam-public-web
 
-Static HTML website for **dream-team.biz**, hosted on GitHub Pages. Created by Boris 2026-07-09.
+The source of www.dream-team.biz, served by GitHub Pages from the `main` branch.
 
-## Pages
+- www.dream-team.biz forwards to https://dream-team-lab.com/, the site of Dream Team Lab: `index.html` and `thanks.html` send each visitor there.
+- `/lab/` is staging for dream-team-lab.com: its pages are marked `noindex`, and no page outside `/lab/` links to its pages.
 
-- `index.html` — landing page: DreamTeam, AI agent team platform centered around a human driver/overseer. Coming soon to enterprises worldwide.
-- `thanks.html` — post-signup confirmation page.
-
-## Third-party integrations
-
-| Feature | Provider | Notes |
-|---|---|---|
-| Visitor comments | [giscus](https://giscus.app) | Backed by this repo's GitHub Discussions (category: General). **One-time setup required:** install the giscus GitHub App on this repo at https://github.com/apps/giscus — comments widget shows an error until installed. Discussions are already enabled. |
-| Launch-notification signups | [Web3Forms](https://web3forms.com) | Form posts to the Web3Forms API with an access key tied to boris@daich.biz; each signup arrives there by email. Key is public-by-design (client-side form key, delivery address is fixed server-side). Manage/rotate the key at web3forms.com. (Originally FormSubmit — replaced 2026-07-09 after a formsubmit.co outage, HTTP 522.) |
-
-## Deployment
-
-GitHub Pages serves from the `main` branch root (`.nojekyll` present, no build step). Live at:
-https://www.dream-team.biz/
+A publishing tool writes `index.html`, `thanks.html`, this README and `/lab/`, and overwrites any hand edit to them.

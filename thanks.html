@@ -1,33 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're on the list — DreamTeam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Dream Team Lab — dream-team-lab.com</title>
+  <meta http-equiv="refresh" content="0; url=https://dream-team-lab.com/">
+  <link rel="canonical" href="https://dream-team-lab.com/">
   <style>
-    body {
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-      background: #0b0e14; color: #e8ecf4;
-      display: flex; align-items: center; justify-content: center;
-      min-height: 100vh; margin: 0; text-align: center; padding: 24px;
-    }
-    .box { max-width: 480px; }
-    .check { font-size: 4rem; margin-bottom: 16px; }
-    h1 { letter-spacing: -0.02em; }
-    p { color: #9aa5b8; }
-    a {
-      display: inline-block; margin-top: 24px; padding: 12px 28px;
-      border-radius: 10px; text-decoration: none; color: #fff; font-weight: 600;
-      background: linear-gradient(90deg, #4f8cff, #8b5cf6);
-    }
+:root {
+  color-scheme: light dark;
+  --bg: #F5F8FC;
+  --ink: #0B1B33;
+  --accent: #0B57D0;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0A1628; --ink: #E3ECFA; --accent: #7EB0FF; }
+}
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 clamp(20px, 17.6px + .65vw, 23px)/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { width: min(1200px, 100% - 40px); margin-inline: auto; padding-block: 48px; }
+p { margin: 0; max-width: 44rem; text-wrap: balance; }
+a, a:visited {
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (min-width: 768px) { main { width: min(1200px, 100% - 64px); } }
+@media (min-width: 1024px) { main { padding-block: 56px; } }
   </style>
+  <link rel="icon" href="lab/assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="lab/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="lab/assets/apple-touch-icon.png">
 </head>
-<body>
-  <div class="box">
-    <div class="check">✅</div>
-    <h1>You're on the list!</h1>
-    <p>We'll email you the moment DreamTeam is available for your enterprise. No spam, promise.</p>
-    <a href="index.html">← Back to DreamTeam</a>
-  </div>
-</body>
+<body><main><p>Dream&nbsp;Team&nbsp;Lab is at <a href="https://dream-team-lab.com/">dream-team-lab.com</a>.</p></main></body>
 </html>
